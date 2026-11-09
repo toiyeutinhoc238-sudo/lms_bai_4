@@ -58,6 +58,7 @@ flowchart LR
 ---
 
 ## 🚀 HƯỚNG DẪN MỞ VÀ TRẢI NGHIỆM TRỰC TIẾP
-* Nhấp đúp mở file `index.html` trên trình duyệt web (Google Chrome, Microsoft Edge, Cốc Cốc) để trải nghiệm toàn bộ hệ thống lớp học trực tuyến.
-* Giáo viên có thể nhúng trực tiếp các file `.html` vào hệ thống LMS thông qua thẻ `<iframe>` hoặc xuất thành gói chuẩn SCORM 1.2.
+* **GitHub Pages Trực tuyến:** [https://toiyeutinhoc238-sudo.github.io/lms_bai_4/](https://toiyeutinhoc238-sudo.github.io/lms_bai_4/)
+* **Chạy cục bộ:** Nhấp đúp mở file `index.html` trên trình duyệt web (Google Chrome, Microsoft Edge, Cốc Cốc) để trải nghiệm toàn bộ hệ thống lớp học trực tuyến.
+* **Tích hợp LMS:** Giáo viên có thể nhúng trực tiếp các file `.html` vào hệ thống LMS (Moodle, Canvas, K12Online, vnEdu) thông qua thẻ `<iframe>` hoặc xuất thành gói chuẩn SCORM 1.2.
 
