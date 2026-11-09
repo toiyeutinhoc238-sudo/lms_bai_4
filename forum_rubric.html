@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diễn đàn thảo luận kèm Rubric chấm điểm: Thoát khỏi Bong bóng thông tin</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #0f172a;
+      --border: #cbd5e1;
+      --bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #1e3a8a;
+      margin-bottom: 6px;
+    }
+
+    .guidance-banner {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .rubric-box {
+      background: #fdfefe;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+
+    .rubric-title {
+      font-weight: 700;
+      color: #334155;
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      font-size: 0.88rem;
+    }
+
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+
+    .criterion-name {
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    .grade-chip {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    .chip-high { background: #dcfce7; color: #166534; }
+    .chip-mid { background: #fef3c7; color: #92400e; }
+    .chip-low { background: #fee2e2; color: #991b1b; }
+
+    .form-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+    }
+
+    .btn-submit {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-dark);
+    }
+
+    .post-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+      background: white;
+    }
+
+    .post-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .author-meta {
+      font-size: 0.75rem;
+      color: #94a3b8;
+    }
+
+    .reply-section {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed #e2e8f0;
+      padding-left: 18px;
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Hoạt động 4: Vận dụng</div>
+    <h1>Diễn đàn: "Làm sao để thoát khỏi bong bóng thông tin?"</h1>
+    <p style="color: #64748b; font-size: 0.95rem;">Đề xuất giải pháp kiểm soát thông tin, bảo vệ quyền riêng tư và rèn luyện đạo đức AI</p>
+  </header>
+
+  <div class="guidance-banner">
+    <h4 style="margin-bottom: 6px; color: #1e40af;">🎯 Đề bài thảo luận:</h4>
+    <p>Thuật toán gợi ý AI mang lại sự tiện lợi vượt trội nhưng cũng tiềm ẩn rủi ro nhốt chúng ta vào "bong bóng thông tin" và âm thầm thu thập dữ liệu cá nhân.</p>
+    <ol style="margin-left: 20px; margin-top: 6px;">
+      <li><b>Đề xuất từ 02 thao tác kỹ thuật thực tế</b> mà em có thể áp dụng ngay để hạn chế bị thuật toán thao túng.</li>
+      <li><b>Giải thích cơ sở khoa học:</b> Vì sao thao tác đó lại hiệu quả dựa trên bản chất cách thuật toán thu thập dữ liệu?</li>
+      <li><b>Tương tác:</b> Đọc và viết ít nhất 01 phản hồi xây dựng cho bạn học trong lớp.</li>
+    </ol>
+  </div>
+
+  <!-- Rubric Table -->
+  <div class="rubric-box">
+    <div class="rubric-title">
+      <span>📋 Rubric chấm điểm diễn đàn (Tích hợp LMS)</span>
+      <span style="font-size: 0.85rem; color: var(--primary);">Thang điểm 10</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">Tiêu chí</th>
+          <th style="width: 30%;">Tốt (Mức cao)</th>
+          <th style="width: 25%;">Đạt (Mức TB)</th>
+          <th style="width: 20%;">Cần cố gắng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="criterion-name">1. Tính khả thi của giải pháp</div>
+            <div style="font-size: 0.75rem; color: #64748b;">Trọng số: 6.0 điểm</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-high">5.0 - 6.0 điểm</div>
+            <div>Đề xuất từ <b>2 thao tác kỹ thuật hợp lý trở lên</b> (VD: Xóa lịch sử, dùng tab ẩn danh, tìm từ khóa mới, tắt cá nhân hóa quảng cáo).</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-mid">3.0 - 4.5 điểm</div>
+            <div>Chỉ nêu <b>1 thao tác kỹ thuật</b> hoặc giải pháp chung chung cảm tính ("ít dùng máy lại").</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-low">0 - 2.5 điểm</div>
+            <div>Đề xuất sai phương pháp hoặc giải pháp không liên quan đến thuật toán.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="criterion-name">2. Hiểu bản chất thuật toán</div>
+            <div style="font-size: 0.75rem; color: #64748b;">Trọng số: 2.0 điểm</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-high">2.0 điểm</div>
+            <div>Giải thích rõ ràng cơ sở: Xóa lịch sử để xóa nguồn dữ liệu cũ AI dùng để dự đoán; tìm từ khóa mới để AI đa dạng hóa gợi ý.</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-mid">1.0 điểm</div>
+            <div>Nêu được giải pháp nhưng chưa giải thích được lý do tại sao phương pháp đó hiệu quả.</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-low">0 điểm</div>
+            <div>Không thể hiện được sự hiểu biết về cách thuật toán sử dụng dữ liệu.</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="criterion-name">3. Trình bày & Tương tác</div>
+            <div style="font-size: 0.75rem; color: #64748b;">Trọng số: 2.0 điểm</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-high">2.0 điểm</div>
+            <div>Đăng đúng hạn, câu văn rõ ràng, chuẩn chính tả, <b>có phản hồi lịch sự, xây dựng với ít nhất 1 bạn</b>.</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-mid">1.0 điểm</div>
+            <div>Đúng hạn, câu cú rõ ràng nhưng thiếu tương tác với bạn bè.</div>
+          </td>
+          <td>
+            <div class="grade-chip chip-low">0 điểm</div>
+            <div>Nộp trễ hạn, cẩu thả, sai nhiều lỗi chính tả.</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Form Post -->
+  <div class="form-box">
+    <h3 style="margin-bottom: 12px; font-size: 1.1rem;">✍️ Viết bài thảo luận</h3>
+    <div class="form-group">
+      <label>Tiêu đề bài viết:</label>
+      <input type="text" id="inpTitle" class="form-control" placeholder="Ví dụ: Hai thao tác kỹ thuật mình áp dụng để thoát khỏi bong bóng lọc">
+    </div>
+    <div class="form-group">
+      <label>Nội dung trình bày:</label>
+      <textarea id="inpContent" class="form-control" rows="4" placeholder="Trình bày giải pháp, giải thích lý do và kêu gọi bạn bè thảo luận..."></textarea>
+    </div>
+    <button class="btn-submit" onclick="submitPost()">Gửi bài lên diễn đàn 📤</button>
+  </div>
+
+  <!-- Thread Feed -->
+  <div id="threadContainer">
+    <h3 style="margin-bottom: 14px; font-size: 1.1rem;">Bình luận của các thành viên trong lớp</h3>
+
+    <div class="post-item">
+      <div class="post-top">
+        <div>
+          <span class="author-name">Trần Minh Thư (Lớp 6A)</span>
+          <div class="author-meta">10 phút trước</div>
+        </div>
+        <span style="background: #dcfce7; color: #166534; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: bold;">Điểm Rubric: 10/10</span>
+      </div>
+      <p style="font-size: 0.92rem;">
+        <b>Tiêu đề: Cách kiểm soát gợi ý trên YouTube cá nhân của mình</b><br>
+        Chào các bạn, mình áp dụng 2 biện pháp: (1) Định kỳ vào cài đặt Google để Xóa lịch sử xem và tìm kiếm. Lý do: xóa dữ liệu này sẽ khiến thuật toán mất đi căn cứ phán đoán thói quen cũ của mình. (2) Bật tab Ẩn danh khi tra cứu các chủ đề lạ. Như vậy thuật toán sẽ không lưu vết để gửi quảng cáo bám đuổi!
+      </p>
+      <div class="reply-section">
+        <b>Hoàng Tuấn:</b> Mình cũng rất thích cách dùng tab ẩn danh! Rất cảm ơn chia sẻ bổ ích của Thư.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function submitPost() {
+    const title = document.getElementById('inpTitle').value.trim();
+    const content = document.getElementById('inpContent').value.trim();
+
+    if (!title || !content) {
+      alert("Vui lòng nhập đầy đủ tiêu đề và nội dung bài viết!");
+      return;
+    }
+
+    const container = document.getElementById('threadContainer');
+    const newPost = document.createElement('div');
+    newPost.className = 'post-item';
+    newPost.innerHTML = `
+      <div class="post-top">
+        <div>
+          <span class="author-name">Nguyễn Văn An (Em)</span>
+          <div class="author-meta">Vừa xong</div>
+        </div>
+        <span style="background: #e0f2fe; color: #0369a1; font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: bold;">Đã gửi • Đang chờ GV chấm Rubric</span>
+      </div>
+      <p style="font-size: 0.92rem;">
+        <b>Tiêu đề: ${title}</b><br>
+        ${content.replace(/\n/g, '<br>')}
+      </p>
+      <div class="reply-section" style="color: #15803d; font-weight: 500;">
+        ✅ Đã đăng bài thành công! Em hãy phản hồi thêm ý kiến của bạn học nhé.
+      </div>
+    `;
+
+    container.insertBefore(newPost, container.children[1]);
+    document.getElementById('inpTitle').value = '';
+    document.getElementById('inpContent').value = '';
+    alert("Bài thảo luận của em đã được đăng lên hệ thống LMS!");
+  }
+</script>
+
+</body>
+</html>
+

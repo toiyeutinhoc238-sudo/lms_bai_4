@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sách Học Sinh & Phiếu Học Tập Đồng Hành - Bài 4 (Tin học 6)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-light: #6366f1;
+      --border-color: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #f1f5f9;
+      color: var(--text-main);
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    /* Web control bar */
+    .top-toolbar {
+      max-width: 900px;
+      margin: 0 auto 24px auto;
+      background: #ffffff;
+      padding: 16px 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .toolbar-title h1 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #1e1b4b;
+    }
+
+    .toolbar-title p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #3730a3;
+    }
+
+    .btn-outline {
+      background: white;
+      border-color: #cbd5e1;
+      color: #334155;
+    }
+
+    .btn-outline:hover {
+      background: #f8fafc;
+    }
+
+    /* A4 Page Container */
+    .a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 18mm 20mm;
+      margin: 0 auto 24px auto;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #1e1b4b;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    .header-left h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      text-transform: uppercase;
+    }
+
+    .header-left p {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 11px;
+      font-weight: 600;
+      color: #4338ca;
+    }
+
+    .document-title {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .document-title h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e1b4b;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+    }
+
+    .document-title p {
+      font-size: 12px;
+      color: #475569;
+      font-style: italic;
+    }
+
+    .student-info-bar {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-block {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      background: #eef2ff;
+      border-left: 4px solid var(--primary);
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: 800;
+      color: #1e1b4b;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-badge {
+      font-size: 10px;
+      background: var(--primary);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+      margin-bottom: 12px;
+    }
+
+    th, td {
+      border: 1px solid #94a3b8;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .fill-box {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 11.5px;
+      line-height: 1.8;
+      background: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .dotted-line {
+      display: inline-block;
+      border-bottom: 1px dotted #64748b;
+      min-width: 120px;
+      height: 16px;
+    }
+
+    .page-footer {
+      position: absolute;
+      bottom: 12mm;
+      left: 20mm;
+      right: 20mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .top-toolbar {
+        display: none !important;
+      }
+      .a4-page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Web Toolbar -->
+  <div class="top-toolbar">
+    <div class="toolbar-title">
+      <h1>SÁCH HỌC SINH / PHIẾU HỌC TẬP ĐỒNG HÀNH (KHỔ A4)</h1>
+      <p>Chuyên đề Trí tuệ nhân tạo • Bài 4: Khám phá mặt tích cực và tiêu cực của một số tính năng AI</p>
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn btn-primary" onclick="window.print()">
+        <span>🖨️ In ấn / Xuất PDF</span>
+      </button>
+      <button class="btn btn-outline" onclick="alert('Đã sẵn sàng in ấn ở khổ giấy A4 chuẩn!')">
+        <span>📄 Định dạng chuẩn A4</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- PAGE 1: KHỞI ĐỘNG & HÌNH THÀNH KIẾN THỨC -->
+  <div class="a4-page">
+    <div class="page-header">
+      <div class="header-left">
+        <h3>Trường THCS: ...........................................................</h3>
+        <p>Tổ Chuyên môn: Tin học — Công nghệ</p>
+      </div>
+      <div class="header-right">
+        <div>BÀI HỌC E-LEARNING (100% LMS)</div>
+        <div>MÔN: TIN HỌC 6</div>
+      </div>
+    </div>
+
+    <div class="document-title">
+      <h2>SÁCH HỌC SINH ĐỒNG HÀNH — BÀI 4</h2>
+      <p>KHÁM PHÁ MẶT TÍCH CỰC VÀ TIÊU CỰC CỦA MỘT SỐ TÍNH NĂNG AI (MỨC PHÂN TÍCH)</p>
+    </div>
+
+    <div class="student-info-bar">
+      <div>Họ và tên: <b>...........................................................................</b></div>
+      <div>Lớp: <b>6A......</b></div>
+      <div>Mã HS (LMS): <b>...................</b></div>
+    </div>
+
+    <!-- HĐ 1 -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>I. HOẠT ĐỘNG 1: KHỞI ĐỘNG (10 PHÚT) — THỐNG KÊ YOUTUBE CÁ NHÂN</span>
+        <span class="section-badge">Học liệu 1</span>
+      </div>
+      <p style="font-size: 11px; color: #475569; margin-bottom: 8px;">
+        * Nhiệm vụ: Quan sát 10 video đầu tiên trên trang chủ YouTube của em, đếm số video đúng sở thích gần đây và chụp ảnh nộp lên LMS.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 10%; text-align: center;">STT</th>
+            <th style="width: 70%;">Tên hoặc Chủ đề video hiển thị trên Trang chủ YouTube của em</th>
+            <th style="width: 20%; text-align: center;">Trùng sở thích? (✓)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="text-align: center;">1</td><td>........................................................................................................................</td><td style="text-align: center;">[ &nbsp; ]</td></tr>
+          <tr><td style="text-align: center;">2</td><td>........................................................................................................................</td><td style="text-align: center;">[ &nbsp; ]</td></tr>
+          <tr><td style="text-align: center;">3</td><td>........................................................................................................................</td><td style="text-align: center;">[ &nbsp; ]</td></tr>
+          <tr><td style="text-align: center;">4</td><td>........................................................................................................................</td><td style="text-align: center;">[ &nbsp; ]</td></tr>
+          <tr><td style="text-align: center;">5</td><td>........................................................................................................................</td><td style="text-align: center;">[ &nbsp; ]</td></tr>
+        </tbody>
+      </table>
+
+      <div class="fill-box">
+        • Tổng số video trùng khớp chủ đề em vừa xem gần đây: <b>....... / 10 video</b>.<br>
+        • Cảm nghĩ nhanh của em khi quan sát trang chủ: .........................................................................................................................................<br>
+        • Thời gian đã nộp minh chứng ảnh chụp lên LMS: ..........................................................................................................................................
+      </div>
+    </div>
+
+    <!-- HĐ 2 -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>II. HOẠT ĐỘNG 2: HÌNH THÀNH KIẾN THỨC (15 PHÚT) — ĐIỀN KHUYẾT LÝ THUYẾT</span>
+        <span class="section-badge">Học liệu 2</span>
+      </div>
+      <p style="font-size: 11px; color: #475569; margin-bottom: 8px;">
+        * Nhiệm vụ: Sau khi hoàn thành trò chơi mô phỏng trên LMS, em hãy điền các từ khóa thích hợp vào chỗ trống để chốt kiến thức:
+      </p>
+
+      <div class="fill-box">
+        <b>1. Khái niệm Cá nhân hóa (Personalization):</b><br>
+        Hệ thống gợi ý hoạt động bằng cách thu thập và phân tích dữ liệu lịch sử tương tác của người dùng để <span class="dotted-line" style="min-width: 180px;"></span> và đề xuất nội dung phù hợp với sở thích cá nhân.<br><br>
+        <b>2. Mặt tích cực của tính năng AI gợi ý:</b><br>
+        Giúp người dùng <span class="dotted-line" style="min-width: 250px;"></span> và tiết kiệm thời gian tìm kiếm thông tin.<br><br>
+        <b>3. Hiện tượng "Bong bóng thông tin" (Filter Bubbles):</b><br>
+        Khi thuật toán liên tục chỉ gợi ý nội dung người dùng thích để giữ chân họ, người dùng sẽ rơi vào một chiếc bong bóng chỉ toàn thông tin <span class="dotted-line" style="min-width: 150px;"></span>, khiến họ bị cô lập khỏi các <span class="dotted-line" style="min-width: 200px;"></span>.<br><br>
+        <b>4. Rủi ro về Quyền riêng tư (Privacy):</b><br>
+        Để đưa ra gợi ý chính xác, các nền tảng âm thầm thu thập lượng lớn <span class="dotted-line" style="min-width: 160px;"></span> (thời gian dừng, nhấp chuột, vị trí...), làm tăng nguy cơ người dùng <span class="dotted-line" style="min-width: 200px;"></span>.
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tin học 6 • Chuyên đề Trí tuệ nhân tạo • Bài 4</span>
+      <span>Trang 1 / 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2: LUYỆN TẬP & VẬN DỤNG -->
+  <div class="a4-page">
+    <div class="page-header">
+      <div class="header-left">
+        <h3>Họ và tên: ...........................................................</h3>
+        <p>Lớp: 6A......</p>
+      </div>
+      <div class="header-right">
+        <div>BÀI HỌC E-LEARNING (100% LMS)</div>
+        <div>MÔN: TIN HỌC 6</div>
+      </div>
+    </div>
+
+    <!-- HĐ 3 -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>III. HOẠT ĐỘNG 3: LUYỆN TẬP (15 PHÚT) — BẢNG TỔNG HỢP MINH CHỨNG TỰ HỌC</span>
+        <span class="section-badge">Học liệu 3</span>
+      </div>
+      <div style="font-size: 11px; margin-bottom: 8px;">
+        • Điểm số bài tập Kéo - Thả em đạt được trên LMS: <b>....... / 10 điểm</b> <i>(Yêu cầu đạt chuẩn: tối thiểu 8/10)</i>.<br>
+        • Hãy chọn ra <b>02 ví dụ tâm đắc nhất</b> từ bài tập kéo thả để chép lại vào bảng dưới đây:
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 25%;">Phân loại tính năng</th>
+            <th style="width: 45%;">Tình huống thực tế em tâm đắc</th>
+            <th style="width: 30%;">Giải thích vì sao em chọn</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Mặt tích cực (Ưu điểm)</b></td>
+            <td>....................................................................................<br>....................................................................................</td>
+            <td>....................................................................<br>....................................................................</td>
+          </tr>
+          <tr>
+            <td><b>Mặt hạn chế (Rủi ro)</b></td>
+            <td>....................................................................................<br>....................................................................................</td>
+            <td>....................................................................<br>....................................................................</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HĐ 4 -->
+    <div class="section-block">
+      <div class="section-title">
+        <span>IV. HOẠT ĐỘNG 4: VẬN DỤNG (20 PHÚT) — LẬP DÀN Ý DIỄN ĐÀN THẢO LUẬN</span>
+        <span class="section-badge">Học liệu 4</span>
+      </div>
+      <p style="font-size: 11px; color: #475569; margin-bottom: 8px;">
+        * Chủ đề: "Làm sao để thoát khỏi bong bóng thông tin?". Em hãy viết nháp dàn ý trước khi đăng bài lên Forum:
+      </p>
+
+      <div class="fill-box">
+        <b>1. Thao tác kỹ thuật 1:</b> ................................................................................................................................................................<br>
+        <i>Giải thích nguyên lý (Vì sao cách này giúp hạn chế thuật toán?):</i><br>
+        ....................................................................................................................................................................................................................<br><br>
+        <b>2. Thao tác kỹ thuật 2:</b> ................................................................................................................................................................<br>
+        <i>Giải thích nguyên lý (Vì sao cách này giúp hạn chế thuật toán?):</i><br>
+        ....................................................................................................................................................................................................................<br><br>
+        <b>3. Nhật ký tương tác trên Diễn đàn:</b> Em đã đọc và bình luận cho bài viết của bạn: ...........................................................
+      </div>
+    </div>
+
+    <!-- GV Evaluation Box -->
+    <div class="section-block" style="border: 1.5px solid #1e1b4b; border-radius: 8px; padding: 12px; background: #fafafa;">
+      <div style="font-weight: 800; font-size: 12px; color: #1e1b4b; margin-bottom: 6px; text-transform: uppercase;">
+        V. PHẦN ĐÁNH GIÁ CỦA GIÁO VIÊN (Kiểm tra chéo tại buổi học trực tiếp)
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; font-size: 11.5px; gap: 10px; margin-bottom: 8px;">
+        <div>• Trạng thái hoàn thành LMS: [ &nbsp; ] Hoàn thành 100% &nbsp; [ &nbsp; ] Chưa hoàn thành</div>
+        <div>• Điểm bài tập kéo thả: <b>....... / 10</b></div>
+        <div>• Điểm Diễn đàn (Rubric): <b>....... / 10</b></div>
+        <div>• Đánh giá Sách học sinh: [ &nbsp; ] Đạt chuẩn &nbsp; [ &nbsp; ] Cần bổ sung</div>
+      </div>
+      <div style="font-size: 11.5px;">
+        Nhận xét của thầy/cô: ....................................................................................................................................................................
+      </div>
+      <div style="text-align: right; margin-top: 10px; font-size: 11.5px;">
+        <i>Chữ ký của Giáo viên</i><br><br>
+        ...............................................................
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Tin học 6 • Chuyên đề Trí tuệ nhân tạo • Bài 4</span>
+      <span>Trang 2 / 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
+

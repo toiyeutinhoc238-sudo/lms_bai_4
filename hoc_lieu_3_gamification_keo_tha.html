@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Học liệu 3: Trò chơi Kéo - Thả Phân loại Tính hai mặt của AI gợi ý</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-hover: #3730a3;
+      --positive: #10b981;
+      --positive-bg: #ecfdf5;
+      --negative: #ef4444;
+      --negative-bg: #fef2f2;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #cbd5e1;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: var(--text);
+      line-height: 1.5;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 960px;
+      width: 100%;
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #8b5cf6;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.55rem;
+      color: #1e1b4b;
+      margin-bottom: 4px;
+    }
+
+    .info-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+    }
+
+    .pool-box {
+      background: #f8fafc;
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 20px;
+      min-height: 110px;
+    }
+
+    .pool-title {
+      font-weight: 700;
+      color: #475569;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .drag-card {
+      background: white;
+      border: 1.5px solid #94a3b8;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: grab;
+      user-select: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      flex: 1 1 calc(50% - 10px);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .drag-card:active {
+      cursor: grabbing;
+      transform: scale(0.98);
+      opacity: 0.8;
+    }
+
+    .drag-card.selected {
+      border-color: var(--primary);
+      background: #e0e7ff;
+      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.2);
+    }
+
+    .drop-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .drop-zone {
+      border-radius: 14px;
+      padding: 16px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .zone-positive {
+      background: var(--positive-bg);
+      border-color: #a7f3d0;
+    }
+
+    .zone-negative {
+      background: var(--negative-bg);
+      border-color: #fecaca;
+    }
+
+    .zone-title {
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .zone-positive .zone-title { color: #065f46; }
+    .zone-negative .zone-title { color: #991b1b; }
+
+    .drop-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 180px;
+    }
+
+    .controls-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 10px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+
+    .btn-submit {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-reset {
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    .result-box {
+      display: none;
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+      border: 2px solid #e2e8f0;
+      animation: popIn 0.3s ease;
+    }
+
+    .score-badge {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .pass-bg { background: #10b981; box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+    .fail-bg { background: #f59e0b; box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
+
+    .correct-card { background: #dcfce7 !important; border-color: #22c55e !important; color: #166534; }
+    .wrong-card { background: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b; }
+
+    @keyframes popIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 700px) {
+      .drop-container { grid-template-columns: 1fr; }
+      .drag-card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Hoạt động 3: Luyện tập (15 phút)</div>
+    <h1>Thử thách Kéo - Thả: Phân loại tính hai mặt của AI</h1>
+    <p style="color: #64748b; font-size: 0.92rem;">Kéo (hoặc nhấp chọn) các thẻ tình huống và đưa vào đúng 2 cột Tích cực hoặc Hạn chế.</p>
+  </header>
+
+  <div class="info-bar">
+    <div>🎯 Yêu cầu đạt chuẩn: <strong>Tối thiểu 8/10 điểm (80%)</strong></div>
+    <div>Đã xếp: <strong id="placedCount">0/10</strong> thẻ</div>
+  </div>
+
+  <div class="pool-box">
+    <div class="pool-title">
+      <span>📦 HỘP THẺ TÌNH HUỐNG THỰC TẾ (Kéo hoặc nhấp để chọn thẻ):</span>
+      <span style="font-size: 0.8rem; color: #64748b;">Mẹo: Trên điện thoại, nhấp thẻ rồi nhấp vào cột đích</span>
+    </div>
+    <div class="cards-grid" id="cardPool" ondrop="drop(event, 'pool')" ondragover="allowDrop(event)"></div>
+  </div>
+
+  <div class="drop-container">
+    <div class="drop-zone zone-positive" id="zonePos" onclick="placeSelected('positive')" ondrop="drop(event, 'positive')" ondragover="allowDrop(event)">
+      <div class="zone-title">👍 MẶT TÍCH CỰC (ƯU ĐIỂM)</div>
+      <div class="drop-content" id="contentPos"></div>
+    </div>
+
+    <div class="drop-zone zone-negative" id="zoneNeg" onclick="placeSelected('negative')" ondrop="drop(event, 'negative')" ondragover="allowDrop(event)">
+      <div class="zone-title">⚠️ MẶT HẠN CHẾ (RỦI RO / THÁCH THỨC)</div>
+      <div class="drop-content" id="contentNeg"></div>
+    </div>
+  </div>
+
+  <div class="controls-row">
+    <button class="btn btn-submit" onclick="checkAnswers()">Chấm điểm tự động 📝</button>
+    <button class="btn btn-reset" onclick="resetCards()">Làm lại từ đầu 🔄</button>
+  </div>
+
+  <div class="result-box" id="resultBox">
+    <div class="score-badge" id="scoreBadge">0/10</div>
+    <h3 id="resTitle" style="margin-bottom: 6px;">Kết quả</h3>
+    <p id="resDesc" style="color: #475569; font-size: 0.92rem; margin-bottom: 14px;"></p>
+    <div id="resNext"></div>
+  </div>
+</div>
+
+<script>
+  const cards = [
+    { id: 1, text: "Tự động đề xuất các bài hát phù hợp với tâm trạng và sở thích âm nhạc mà không mất công tìm kiếm.", cat: "positive" },
+    { id: 2, text: "Người dùng bị cuốn vào màn hình quá nhiều giờ do các video hấp dẫn liên tục tự động phát nối tiếp.", cat: "negative" },
+    { id: 3, text: "Gợi ý các khóa học tiếng Anh, bài giảng trực tuyến phù hợp đúng với trình độ và nhu cầu học tập của em.", cat: "positive" },
+    { id: 4, text: "Tạo ra 'Bong bóng thông tin', khiến người dùng chỉ nhìn thấy thông tin một chiều và thiếu cái nhìn đa chiều.", cat: "negative" },
+    { id: 5, text: "Nền tảng âm thầm thu thập toàn bộ lịch sử xem, vị trí và thời gian dừng màn hình để xây dựng hồ sơ cá nhân.", cat: "negative" },
+    { id: 6, text: "Hỗ trợ người mua sắm trực tuyến nhanh chóng tìm được món hàng ưng ý với mức giá và mẫu mã phù hợp.", cat: "positive" },
+    { id: 7, text: "Dễ dẫn dắt người dùng đến các nội dung giật gân, tin giả (fake news) để câu lượt xem và tương tác.", cat: "negative" },
+    { id: 8, text: "Ứng dụng bản đồ gợi ý tuyến đường thông thoáng nhất dựa trên tình trạng ùn tắc giao thông thời gian thực.", cat: "positive" },
+    { id: 9, text: "Quảng cáo một món đồ vừa nhắc tới liên tục xuất hiện 'bám đuổi' trên mọi trang web em truy cập.", cat: "negative" },
+    { id: 10, text: "Giúp người dùng nhanh chóng tiếp cận thông tin thời sự mới nhất mà bản thân đang quan tâm.", cat: "positive" }
+  ];
+
+  let selected = null;
+
+  function init() {
+    const pool = document.getElementById('cardPool');
+    pool.innerHTML = '';
+    document.getElementById('contentPos').innerHTML = '';
+    document.getElementById('contentNeg').innerHTML = '';
+    document.getElementById('resultBox').style.display = 'none';
+
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+
+    shuffled.forEach(c => {
+      const el = document.createElement('div');
+      el.className = 'drag-card';
+      el.id = `card-${c.id}`;
+      el.draggable = true;
+      el.dataset.id = c.id;
+      el.dataset.cat = c.cat;
+      el.innerHTML = `<span style="color: #94a3b8;">⠿</span> <span>${c.text}</span>`;
+
+      el.addEventListener('dragstart', (e) => e.dataTransfer.setData('text/plain', e.target.id));
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (selected) selected.classList.remove('selected');
+        if (selected === el) {
+          selected = null;
+        } else {
+          selected = el;
+          el.classList.add('selected');
+        }
+      });
+
+      pool.appendChild(el);
+    });
+
+    updateCount();
+  }
+
+  function placeSelected(target) {
+    if (!selected) return;
+    const dest = target === 'positive' ? document.getElementById('contentPos') : document.getElementById('contentNeg');
+    dest.appendChild(selected);
+    selected.classList.remove('selected');
+    selected = null;
+    updateCount();
+  }
+
+  function allowDrop(e) { e.preventDefault(); }
+
+  function drop(e, zone) {
+    e.preventDefault();
+    const id = e.dataTransfer.getData('text/plain');
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    if (zone === 'pool') document.getElementById('cardPool').appendChild(el);
+    else if (zone === 'positive') document.getElementById('contentPos').appendChild(el);
+    else if (zone === 'negative') document.getElementById('contentNeg').appendChild(el);
+
+    updateCount();
+  }
+
+  function updateCount() {
+    const total = document.querySelectorAll('.drop-content .drag-card').length;
+    document.getElementById('placedCount').innerText = `${total}/10`;
+  }
+
+  function checkAnswers() {
+    const pos = document.querySelectorAll('#contentPos .drag-card');
+    const neg = document.querySelectorAll('#contentNeg .drag-card');
+
+    if (pos.length + neg.length < 10) {
+      alert(`Em mới phân loại được ${pos.length + neg.length}/10 thẻ. Hãy xếp đủ cả 10 thẻ trước khi chấm điểm nhé!`);
+      return;
+    }
+
+    let score = 0;
+
+    pos.forEach(c => {
+      c.classList.remove('correct-card', 'wrong-card');
+      if (c.dataset.cat === 'positive') {
+        score++;
+        c.classList.add('correct-card');
+      } else {
+        c.classList.add('wrong-card');
+      }
+    });
+
+    neg.forEach(c => {
+      c.classList.remove('correct-card', 'wrong-card');
+      if (c.dataset.cat === 'negative') {
+        score++;
+        c.classList.add('correct-card');
+      } else {
+        c.classList.add('wrong-card');
+      }
+    });
+
+    const box = document.getElementById('resultBox');
+    const badge = document.getElementById('scoreBadge');
+    const title = document.getElementById('resTitle');
+    const desc = document.getElementById('resDesc');
+    const next = document.getElementById('resNext');
+
+    box.style.display = 'block';
+    badge.innerText = `${score}/10`;
+
+    if (score >= 8) {
+      badge.className = 'score-badge pass-bg';
+      title.innerText = '🎉 XUẤT SẮC! EM ĐÃ ĐẠT CHUẨN!';
+      desc.innerHTML = `Chúc mừng em đạt <b>${score}/10 điểm</b> (Yêu cầu: $\\ge 8/10$).<br>Em đã phân biệt rất sắc bén giữa mặt tích cực và hạn chế của tính năng AI gợi ý.`;
+      next.innerHTML = `
+        <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 10px; border-radius: 8px; margin-bottom: 12px; font-size: 0.88rem; text-align: left;">
+          📌 <b>Nhiệm vụ Sách học sinh:</b> Chọn <b>02 ví dụ tâm đắc nhất</b> (1 tích cực, 1 hạn chế) ghi lại vào bảng trong Sách học sinh.
+        </div>
+        <button class="btn btn-submit" onclick="unlockAct4(${score})">Tiến sang Diễn đàn Thảo luận (HĐ 4) ➡️</button>
+      `;
+
+      if (window.parent && window.parent.postMessage) {
+        window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 3, score: score }, '*');
+      }
+    } else {
+      badge.className = 'score-badge fail-bg';
+      title.innerText = '⚠️ CHƯA ĐẠT ĐIỂM CHUẨN (CẦN TỐI THIỂU 8/10)';
+      desc.innerHTML = `Em đạt <b>${score}/10 điểm</b>. Những thẻ viền đỏ là thẻ bị xếp nhầm nhóm. Em hãy quan sát và bấm "Làm lại" để thử lại nhé!`;
+      next.innerHTML = `<button class="btn btn-reset" onclick="init()">Làm lại thử thách 🔄</button>`;
+    }
+
+    box.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function unlockAct4(score) {
+    if (window.parent && window.parent.goToActivity) {
+      window.parent.goToActivity(4);
+    }
+  }
+
+  function resetCards() {
+    if (confirm("Em có muốn làm lại từ đầu không?")) init();
+  }
+
+  init();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Học liệu 2: Trò chơi mô phỏng Thuật toán AI & Bong bóng thông tin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-dark: #312e81;
+      --accent: #ec4899;
+      --warning: #f59e0b;
+      --success: #10b981;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 860px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #4338ca 100%);
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .badge-role {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.55rem;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 0.92rem;
+      opacity: 0.9;
+    }
+
+    /* Live Metrics */
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 18px 24px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .metric-card {
+      background: white;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .metric-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .metric-value {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .progress-bar-bg {
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      transition: width 0.4s ease;
+    }
+
+    .game-body {
+      padding: 24px;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+    }
+
+    .user-avatar {
+      width: 52px;
+      height: 52px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .user-info h3 {
+      font-size: 1.05rem;
+      color: #1e3a8a;
+    }
+
+    .user-info p {
+      font-size: 0.85rem;
+      color: #3b82f6;
+    }
+
+    .round-tag {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+
+    .scenario-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #1e293b;
+    }
+
+    .choices-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .choice-card {
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .choice-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(67, 56, 202, 0.1);
+    }
+
+    .choice-tag {
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 6px;
+      width: fit-content;
+    }
+
+    .tag-match { background: #dcfce7; color: #166534; }
+    .tag-diff { background: #fef3c7; color: #92400e; }
+
+    .choice-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #0f172a;
+    }
+
+    .choice-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .btn-choose {
+      background: #f1f5f9;
+      color: #334155;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: all 0.2s;
+    }
+
+    .choice-card:hover .btn-choose {
+      background: var(--primary);
+      color: white;
+    }
+
+    .result-alert {
+      padding: 14px 18px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      display: none;
+      font-size: 0.92rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .alert-success { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
+    .alert-warning { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; }
+
+    /* Bubble Visualizer */
+    .bubble-visualizer {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .bubble-sphere {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #93c5fd, #2563eb);
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.35);
+      margin: 12px auto;
+      transition: all 0.5s ease;
+      color: white;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .btn-action {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      display: none;
+      margin: 16px auto 0;
+      transition: all 0.2s;
+    }
+
+    /* Quiz Card */
+    .quiz-card {
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .quiz-title {
+      font-weight: 800;
+      color: #6b21a8;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .quiz-option {
+      background: white;
+      border: 1px solid #d8b4fe;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .quiz-option:hover { background: #f3e8ff; border-color: #9333ea; }
+    .quiz-option.correct { background: #dcfce7; border-color: #22c55e; color: #15803d; font-weight: 700; }
+    .quiz-option.incorrect { background: #fee2e2; border-color: #ef4444; color: #b91c1c; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge-role">Hoạt động 2 • Hình thành kiến thức (15 phút)</div>
+    <h1>Trò chơi mô phỏng: "Em là Thuật toán Gợi ý"</h1>
+    <p>Đóng vai Kỹ sư điều khiển thuật toán AI mạng xã hội VideoTube để khám phá hiện tượng Bong bóng thông tin</p>
+  </header>
+
+  <div class="dashboard">
+    <div class="metric-card">
+      <div class="metric-title">⏱️ Thời gian giữ chân (Retention)</div>
+      <div class="metric-value" id="valRetention">15 phút</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="barRetention" style="width: 20%; background: var(--primary);"></div>
+      </div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-title">🫧 Bong bóng thông tin (Filter Bubble)</div>
+      <div class="metric-value" id="valBubble" style="color: var(--accent);">15%</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="barBubble" style="width: 15%; background: var(--accent);"></div>
+      </div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-title">📊 Dữ liệu cá nhân thu thập</div>
+      <div class="metric-value" id="valData" style="color: var(--warning);">20%</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="barData" style="width: 20%; background: var(--warning);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-body">
+    <div class="user-profile">
+      <div class="user-avatar">👦</div>
+      <div class="user-info">
+        <h3>Đối tượng theo dõi: Bạn Nam (12 tuổi)</h3>
+        <p id="userStatus">Lịch sử vừa xem: 1 clip về "Cách xây nhà gỗ trong Minecraft". Đang rảnh rỗi lướt web.</p>
+      </div>
+    </div>
+
+    <!-- Play Area -->
+    <div id="playArea">
+      <div class="round-tag" id="roundTag">LƯỢT 1 / 3: PHÂN TÍCH SỞ THÍCH</div>
+      <div class="scenario-text" id="scenarioPrompt">
+        Mục tiêu của bạn là <b>giữ chân Nam ở lại VideoTube càng lâu càng tốt</b> để nền tảng kiếm tiền quảng cáo. Bạn sẽ chọn video nào sau đây để đề xuất lên đầu trang chủ của Nam?
+      </div>
+
+      <div class="choices-grid">
+        <div class="choice-card" onclick="chooseOption('A')">
+          <div>
+            <span class="choice-tag tag-match">Cùng chủ đề vừa xem</span>
+            <div class="choice-title" id="titleA">🎬 "Cách chế tạo vũ khí bí mật phá đảo Minecraft"</div>
+            <div class="choice-desc" id="descA">Đánh đúng sở thích game của Nam, kích thích tính tò mò muốn nâng cấp trang bị.</div>
+          </div>
+          <button class="btn-choose">Đề xuất video này 👉</button>
+        </div>
+
+        <div class="choice-card" onclick="chooseOption('B')">
+          <div>
+            <span class="choice-tag tag-diff">Chủ đề mới mẻ</span>
+            <div class="choice-title" id="titleB">🌍 "Khám phá thế giới hoang dã: Cuộc sống chim cánh cụt"</div>
+            <div class="choice-desc" id="descB">Mở rộng kiến thức khoa học tự nhiên, cung cấp góc nhìn phong phú.</div>
+          </div>
+          <button class="btn-choose">Đề xuất video này 👉</button>
+        </div>
+      </div>
+
+      <div class="result-alert" id="resultAlert"></div>
+
+      <!-- Bubble Visualizer -->
+      <div class="bubble-visualizer">
+        <div style="font-weight: 700; font-size: 0.9rem; color: #475569;">Mô phỏng "Vùng nhận thức" của người dùng Nam:</div>
+        <div class="bubble-sphere" id="bubbleSphere">
+          Nhận thức rộng mở<br>(Đa dạng chủ đề)
+        </div>
+        <p id="bubbleDesc" style="font-size: 0.82rem; color: #64748b;">Nam vẫn tiếp cận được nhiều góc nhìn đa dạng trên mạng xã hội.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <button class="btn-action" id="btnNext" onclick="goToNextRound()">Tiếp tục lượt tiếp theo ➡️</button>
+      </div>
+    </div>
+
+    <!-- Debrief Area -->
+    <div id="debriefArea" style="display: none;">
+      <h3 style="color: #1e1b4b; margin-bottom: 12px;">🎓 Tổng kết bài học: Bí mật phía sau Thuật toán gợi ý</h3>
+      <p style="font-size: 0.92rem; color: #475569; margin-bottom: 18px;">Bạn vừa trải nghiệm cách thuật toán AI giữ chân người dùng. Hãy trả lời 2 câu hỏi sau để chốt kiến thức vào Sách học sinh:</p>
+
+      <div class="quiz-card">
+        <div class="quiz-title">Câu 1: Mặt TÍCH CỰC lớn nhất của thuật toán AI gợi ý là gì?</div>
+        <div class="quiz-option" onclick="answerQuiz(1, 0, this)">A. Nó chặn hoàn toàn các nội dung độc hại trên mạng.</div>
+        <div class="quiz-option" onclick="answerQuiz(1, 1, this)">B. Giúp người dùng nhanh chóng tiếp cận nội dung đúng sở thích và nhu cầu mà không mất nhiều công tìm kiếm.</div>
+        <div class="quiz-option" onclick="answerQuiz(1, 2, this)">C. Nó xóa toàn bộ lịch sử dữ liệu của người dùng sau mỗi lần xem.</div>
+      </div>
+
+      <div class="quiz-card">
+        <div class="quiz-title">Câu 2: Mặt HẠN CHẾ nguy hiểm nhất khi thuật toán liên tục chỉ gợi ý nội dung cùng chủ đề?</div>
+        <div class="quiz-option" onclick="answerQuiz(2, 0, this)">A. Máy bị nóng và tốn pin.</div>
+        <div class="quiz-option" onclick="answerQuiz(2, 1, this)">B. Tạo ra "Bong bóng thông tin" (giam giữ người dùng trong góc nhìn một chiều) và âm thầm thu thập quá mức dữ liệu cá nhân.</div>
+        <div class="quiz-option" onclick="answerQuiz(2, 2, this)">C. Không có hạn chế nào vì càng xem video mình thích thì càng tốt.</div>
+      </div>
+    </div>
+
+    <!-- Finish Screen -->
+    <div id="finishScreen" style="display: none; text-align: center; padding: 24px 10px;">
+      <div style="font-size: 3rem; margin-bottom: 10px;">🏆</div>
+      <h2 style="color: #15803d; font-size: 1.5rem; margin-bottom: 10px;">HOÀN THÀNH HOẠT ĐỘNG 2!</h2>
+      <p style="color: #475569; font-size: 0.95rem; margin-bottom: 18px;">Em đã hiểu rõ cách hệ thống gợi ý hình thành nên <b>Bong bóng thông tin (Filter Bubbles)</b> và nguy cơ mất kiểm soát dữ liệu cá nhân.</p>
+
+      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 14px; text-align: left; font-size: 0.9rem; margin-bottom: 18px;">
+        📌 <b>Nhiệm vụ Sách học sinh:</b> Mở Sách học sinh và điền 3 từ khóa cốt lõi: <i>Cá nhân hóa</i>, <i>Bong bóng thông tin</i>, <i>Quyền riêng tư</i>.
+      </div>
+
+      <button class="btn-action" style="display: inline-block;" onclick="proceedToAct3()">Tiếp tục sang Hoạt động 3 (Luyện tập) ➡️</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let round = 1;
+  let retention = 15;
+  let bubble = 15;
+  let dataVal = 20;
+  let quizCount = 0;
+
+  function updateMetrics() {
+    document.getElementById('valRetention').innerText = retention + ' phút';
+    document.getElementById('barRetention').style.width = Math.min(retention, 100) + '%';
+
+    document.getElementById('valBubble').innerText = bubble + '%';
+    document.getElementById('barBubble').style.width = bubble + '%';
+
+    document.getElementById('valData').innerText = dataVal + '%';
+    document.getElementById('barData').style.width = dataVal + '%';
+
+    const sphere = document.getElementById('bubbleSphere');
+    const desc = document.getElementById('bubbleDesc');
+
+    if (bubble < 35) {
+      sphere.style.background = 'radial-gradient(circle at 35% 35%, #93c5fd, #2563eb)';
+      sphere.style.width = '120px';
+      sphere.style.height = '120px';
+      sphere.innerHTML = 'Nhận thức rộng mở<br>(Đa dạng chủ đề)';
+      desc.innerText = 'Nam vẫn tiếp cận được nhiều góc nhìn đa dạng trên mạng xã hội.';
+    } else if (bubble < 70) {
+      sphere.style.background = 'radial-gradient(circle at 35% 35%, #f472b6, #db2777)';
+      sphere.style.width = '150px';
+      sphere.style.height = '150px';
+      sphere.style.boxShadow = '0 0 25px rgba(219, 39, 119, 0.45)';
+      sphere.innerHTML = 'Bong bóng hình thành<br>(Chủ yếu Minecraft)';
+      desc.innerText = 'Trang chủ của Nam bắt đầu ngập tràn game, các chủ đề khác dần biến mất!';
+    } else {
+      sphere.style.background = 'radial-gradient(circle at 35% 35%, #fb7185, #e11d48)';
+      sphere.style.width = '190px';
+      sphere.style.height = '190px';
+      sphere.style.boxShadow = '0 0 35px rgba(225, 29, 72, 0.65)';
+      sphere.innerHTML = '⚠️ BONG BÓNG KHÉP KÍN<br>(100% video game & giật gân)';
+      desc.innerText = 'Nam hoàn toàn bị cô lập trong bong bóng thông tin! Toàn bộ dữ liệu hành vi đã bị AI thu thập.';
+    }
+  }
+
+  function chooseOption(opt) {
+    const alertBox = document.getElementById('resultAlert');
+    const btnNext = document.getElementById('btnNext');
+    alertBox.style.display = 'block';
+
+    if (round === 1) {
+      if (opt === 'A') {
+        retention += 35;
+        bubble += 30;
+        dataVal += 25;
+        alertBox.className = 'result-alert alert-success';
+        alertBox.innerHTML = '🎯 <b>Chính xác theo quy luật thuật toán!</b> Nam bị cuốn hút và bấm xem ngay. Thuật toán ghi nhận Nam thích Minecraft. Bong bóng thông tin bắt đầu hình thành.';
+        document.getElementById('userStatus').innerText = 'Nam vừa xem xong clip vũ khí. Bạn ấy rất hào hứng muốn xem tiếp!';
+        btnNext.style.display = 'inline-block';
+      } else {
+        retention -= 5;
+        alertBox.className = 'result-alert alert-warning';
+        alertBox.innerHTML = '⚠️ <b>Nam lướt qua!</b> Video chim cánh cụt không trúng sở thích tức thời của Nam. Thời gian xem sụt giảm! Hãy chọn phương án bám sát sở thích của Nam.';
+        btnNext.style.display = 'none';
+      }
+    } else if (round === 2) {
+      if (opt === 'A') {
+        retention += 45;
+        bubble += 35;
+        dataVal += 35;
+        alertBox.className = 'result-alert alert-success';
+        alertBox.innerHTML = '🔥 <b>Hiệu quả giữ chân tăng vọt!</b> Tiêu đề giật gân đánh trúng tính tò mò. Nam dán mắt vào màn hình liên tục 45 phút! AI âm thầm thu thập mọi thao tác nhấp chuột.';
+        document.getElementById('userStatus').innerText = 'Nam dán mắt vào màn hình hơn 1 tiếng rưỡi, quên cả giờ ăn cơm tối!';
+        btnNext.style.display = 'inline-block';
+      } else {
+        retention -= 10;
+        alertBox.className = 'result-alert alert-warning';
+        alertBox.innerHTML = '⚠️ Nam thấy bài toán khó nên chán nản bấm thoát ứng dụng. Doanh thu quảng cáo sụt giảm!';
+        btnNext.style.display = 'none';
+      }
+    } else if (round === 3) {
+      if (opt === 'A') {
+        retention = 100;
+        bubble = 100;
+        dataVal = 100;
+        alertBox.className = 'result-alert alert-success';
+        alertBox.innerHTML = '🚨 <b>ĐỈNH ĐIỂM: BONG BÓNG THÔNG TIN KHÉP KÍN HOÀN TOÀN!</b> Bảng tin của Nam giờ đây 100% chỉ có game Minecraft. Nam không còn biết tin tức đời sống bên ngoài.';
+        btnNext.innerText = 'Đến phần Chốt kiến thức 🎓';
+        btnNext.style.display = 'inline-block';
+      } else {
+        alertBox.className = 'result-alert alert-warning';
+        alertBox.innerHTML = 'Thông báo nghỉ ngơi làm Nam tắt máy, nền tảng bị giảm thời gian giữ chân!';
+        btnNext.style.display = 'none';
+      }
+    }
+
+    updateMetrics();
+  }
+
+  function goToNextRound() {
+    round++;
+    document.getElementById('resultAlert').style.display = 'none';
+    document.getElementById('btnNext').style.display = 'none';
+
+    if (round === 2) {
+      document.getElementById('roundTag').innerText = 'LƯỢT 2 / 3: TỐI ƯU THỜI GIAN XEM';
+      document.getElementById('scenarioPrompt').innerHTML = 'Nam đã xem xong. Để giữ chân Nam không rời ứng dụng, bạn sẽ chọn video nào?';
+      document.getElementById('titleA').innerHTML = '🎬 "10 Bí mật rùng rợn chưa từng tiết lộ trong thế giới Minecraft"';
+      document.getElementById('descA').innerHTML = 'Tiêu đề giật gân khơi dậy trí tò mò cực độ cùng chủ đề game.';
+      document.getElementById('titleB').innerHTML = '📐 "Thử thách giải đố Toán học vui nhộn cùng bạn bè"';
+      document.getElementById('descB').innerHTML = 'Nội dung giáo dục tư duy nhưng đòi hỏi người xem phải động não.';
+    } else if (round === 3) {
+      document.getElementById('roundTag').innerText = 'LƯỢT 3 / 3: KHÉP KÍN BONG BÓNG THÔNG TIN';
+      document.getElementById('scenarioPrompt').innerHTML = 'Nam đã online liên tục gần 2 tiếng. Bạn sẽ điều khiển bảng tin thế nào tiếp theo?';
+      document.getElementById('titleA').innerHTML = '🤖 Tự động phát liên hoàn clip Minecraft tương tự & chèn quảng cáo đồ chơi';
+      document.getElementById('descA').innerHTML = 'Giữ chặt Nam trong luồng video liên tục, thu thập tối đa dữ liệu hành vi.';
+      document.getElementById('titleB').innerHTML = '🔔 Gửi thông báo: "Bạn đã xem quá 60 phút, hãy nghỉ ngơi và tập thể dục nhé"';
+      document.getElementById('descB').innerHTML = 'Bảo vệ sức khỏe người dùng nhưng làm giảm thời gian ở lại trên ứng dụng.';
+    } else {
+      document.getElementById('playArea').style.display = 'none';
+      document.getElementById('debriefArea').style.display = 'block';
+    }
+  }
+
+  function answerQuiz(qNum, optIdx, el) {
+    if (el.classList.contains('correct') || el.classList.contains('incorrect')) return;
+
+    if (optIdx === 1) {
+      el.classList.add('correct');
+    } else {
+      el.classList.add('incorrect');
+    }
+
+    quizCount++;
+    if (quizCount >= 2) {
+      setTimeout(() => {
+        document.getElementById('debriefArea').style.display = 'none';
+        document.getElementById('finishScreen').style.display = 'block';
+        if (window.parent && window.parent.postMessage) {
+          window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 2 }, '*');
+        }
+      }, 700);
+    }
+  }
+
+  function proceedToAct3() {
+    if (window.parent && window.parent.goToActivity) {
+      window.parent.goToActivity(3);
+    }
+  }
+
+  updateMetrics();
+</script>
+
+</body>
+</html>
+

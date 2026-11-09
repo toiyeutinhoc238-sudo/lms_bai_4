@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem Trước Trọn Bộ Học Liệu Số - Bài 4 (Tin học 6)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4338ca;
+      --primary-light: #6366f1;
+      --secondary: #0ea5e9;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #eef2ff 0%, #f1f5f9 100%);
+      color: var(--text);
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #4338ca 100%);
+      color: white;
+      padding: 28px 32px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -5px rgba(67, 56, 202, 0.3);
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid var(--border);
+      color: #334155;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
+    }
+
+    .preview-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      display: none;
+    }
+
+    .preview-card.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .preview-title h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      color: #1e1b4b;
+    }
+
+    .preview-frame {
+      width: 100%;
+      height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="tag">Trình Xem Trước • E-Learning 100%</div>
+    <h1>Xem Trước Trọn Bộ Học Liệu Số: Bài 4 (Tin học 6)</h1>
+    <p>Khám phá mặt tích cực và tiêu cực của một số tính năng AI (Mức Phân tích)</p>
+  </header>
+
+  <div class="nav-tabs">
+    <button class="nav-btn active" onclick="showTab(1)">1. HĐ 1: Assignment YouTube</button>
+    <button class="nav-btn" onclick="showTab(2)">2. HĐ 2: Game Mô Phỏng Thuật Toán</button>
+    <button class="nav-btn" onclick="showTab(3)">3. HĐ 3: Kéo - Thả Phân Loại</button>
+    <button class="nav-btn" onclick="showTab(4)">4. HĐ 4: Diễn Đàn & Rubric</button>
+    <button class="nav-btn" onclick="showTab(5)">5. Sách Học Sinh Đồng Hành</button>
+  </div>
+
+  <!-- TAB 1 -->
+  <div class="preview-card active" id="tab1">
+    <div class="preview-header">
+      <div class="preview-title">
+        <h2>Học liệu 1: Bài tập nộp file (Assignment) — Khởi động</h2>
+      </div>
+      <a href="hoc_lieu_1_assignment.html" target="_blank" style="font-size: 0.85rem; color: var(--primary); font-weight: 700; text-decoration: none;">Mở toàn màn hình ↗</a>
+    </div>
+    <iframe src="hoc_lieu_1_assignment.html" class="preview-frame" title="Học liệu 1"></iframe>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="preview-card" id="tab2">
+    <div class="preview-header">
+      <div class="preview-title">
+        <h2>Học liệu 2: Trò chơi mô phỏng tương tác (SCORM / H5P) — Hình thành kiến thức</h2>
+      </div>
+      <a href="hoc_lieu_2_game_mophong.html" target="_blank" style="font-size: 0.85rem; color: var(--primary); font-weight: 700; text-decoration: none;">Mở toàn màn hình ↗</a>
+    </div>
+    <iframe src="hoc_lieu_2_game_mophong.html" class="preview-frame" title="Học liệu 2"></iframe>
+  </div>
+
+  <!-- TAB 3 -->
+  <div class="preview-card" id="tab3">
+    <div class="preview-header">
+      <div class="preview-title">
+        <h2>Học liệu 3: Bài tập trò chơi Kéo - Thả Drag & Drop — Luyện tập</h2>
+      </div>
+      <a href="hoc_lieu_3_gamification_keo_tha.html" target="_blank" style="font-size: 0.85rem; color: var(--primary); font-weight: 700; text-decoration: none;">Mở toàn màn hình ↗</a>
+    </div>
+    <iframe src="hoc_lieu_3_gamification_keo_tha.html" class="preview-frame" title="Học liệu 3"></iframe>
+  </div>
+
+  <!-- TAB 4 -->
+  <div class="preview-card" id="tab4">
+    <div class="preview-header">
+      <div class="preview-title">
+        <h2>Học liệu 4: Diễn đàn thảo luận kèm Rubric chấm điểm — Vận dụng</h2>
+      </div>
+      <a href="hoc_lieu_4_dien_dan_rubric.html" target="_blank" style="font-size: 0.85rem; color: var(--primary); font-weight: 700; text-decoration: none;">Mở toàn màn hình ↗</a>
+    </div>
+    <iframe src="hoc_lieu_4_dien_dan_rubric.html" class="preview-frame" title="Học liệu 4"></iframe>
+  </div>
+
+  <!-- TAB 5 -->
+  <div class="preview-card" id="tab5">
+    <div class="preview-header">
+      <div class="preview-title">
+        <h2>Sách học sinh & Phiếu học tập đồng hành (Khổ A4)</h2>
+      </div>
+      <a href="sach_hoc_sinh_va_phieu_hoc_tap.html" target="_blank" style="font-size: 0.85rem; color: var(--primary); font-weight: 700; text-decoration: none;">Mở toàn màn hình ↗</a>
+    </div>
+    <iframe src="sach_hoc_sinh_va_phieu_hoc_tap.html" class="preview-frame" title="Sách học sinh"></iframe>
+  </div>
+</div>
+
+<script>
+  function showTab(num) {
+    const btns = document.querySelectorAll('.nav-btn');
+    const tabs = document.querySelectorAll('.preview-card');
+
+    btns.forEach((b, i) => {
+      if (i + 1 === num) b.classList.add('active');
+      else b.classList.remove('active');
+    });
+
+    tabs.forEach((t, i) => {
+      if (i + 1 === num) t.classList.add('active');
+      else t.classList.remove('active');
+    });
+  }
+</script>
+
+</body>
+</html>
+
