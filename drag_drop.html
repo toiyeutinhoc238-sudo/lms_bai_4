@@ -3,545 +3,977 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài tập Kéo - Thả: Phân loại tính hai mặt của AI gợi ý</title>
+  <title>Trò chơi Kéo - Thả: Giải mã tính hai mặt của AI (Gamification 2.0)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="scorm_api.js"></script>
   <style>
     :root {
-      --primary: #4361ee;
-      --positive: #10b981;
-      --positive-bg: #ecfdf5;
-      --negative: #ef4444;
-      --negative-bg: #fef2f2;
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --success-bg: #dcfce7;
+      --danger: #ef4444;
+      --danger-bg: #fee2e2;
+      --bg: #f8fafc;
       --card-bg: #ffffff;
-      --text: #1e293b;
-      --border: #cbd5e1;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --radius: 16px;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Nunito', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      background: #f1f5f9;
+      background: linear-gradient(135deg, #eef2ff 0%, #f0fdf4 100%);
       color: var(--text);
-      line-height: 1.5;
-      padding: 20px;
+      padding: 16px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 16px;
+    .game-wrapper {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 980px;
+      border-radius: var(--radius);
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08), 0 0 0 1px #e2e8f0;
       padding: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      position: relative;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #8b5cf6;
-      color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    header h1 {
-      font-size: 1.6rem;
-      color: #0f172a;
-      margin-bottom: 6px;
-    }
-
-    header p {
-      color: #64748b;
-      font-size: 0.95rem;
-    }
-
-    .score-target-banner {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 10px;
-      padding: 10px 16px;
+    /* Header Bar */
+    .game-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-
-    .score-target-banner strong {
-      color: var(--primary);
-    }
-
-    /* Cards Pool */
-    .cards-pool-section {
-      background: #f8fafc;
-      border: 2px dashed #cbd5e1;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 24px;
-      min-height: 120px;
-    }
-
-    .pool-header {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #475569;
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .cards-grid {
-      display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #f1f5f9;
     }
 
-    /* The Draggable Cards */
-    .drag-card {
-      background: white;
-      border: 1.5px solid #94a3b8;
-      border-radius: 10px;
-      padding: 12px 14px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      cursor: grab;
-      user-select: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      max-width: calc(50% - 10px);
-      flex: 1 1 calc(50% - 10px);
+    .title-group h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-dark);
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
+    .title-group p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .version-tag {
+      background: #e0e7ff;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-left: 6px;
+    }
+
+    .stats-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .score-pill {
+      background: #eef2ff;
+      border-color: #c7d2fe;
+      color: var(--primary);
+    }
+
+    .btn-sound {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+
+    .btn-sound:hover {
+      background: #f8fafc;
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Instruction Box */
+    .inst-box {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: #334155;
+      font-weight: 700;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    /* Card Pool Box */
+    .pool-box {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 20px;
+      min-height: 110px;
+    }
+
+    .pool-label {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cards-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      min-height: 60px;
+      align-content: flex-start;
+    }
+
+    /* Draggable Cards */
+    .drag-card {
+      background: white;
+      border: 2px solid #cbd5e1;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1e293b;
+      cursor: grab;
+      user-select: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.2s, background-color 0.2s;
+      flex: 1 1 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+
+    .drag-card:hover {
+      border-color: #94a3b8;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
     .drag-card:active {
       cursor: grabbing;
-      opacity: 0.8;
-      transform: scale(0.98);
+      opacity: 0.9;
+      transform: scale(1.02);
     }
 
-    .drag-card.selected {
-      border-color: var(--primary);
-      background: #e0e7ff;
-      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+    .drag-card.dragging {
+      opacity: 0.35;
     }
 
-    .card-handle {
-      color: #94a3b8;
-      font-size: 1.1rem;
-      cursor: move;
+    .drag-card.selected-tap {
+      border-color: var(--primary) !important;
+      background: #eef2ff !important;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    }
+
+    .drag-card.is-correct {
+      border-color: #10b981 !important;
+      background: #dcfce7 !important;
+      color: #166534 !important;
+    }
+
+    .drag-card.is-wrong {
+      border-color: #ef4444 !important;
+      background: #fee2e2 !important;
+      color: #991b1b !important;
+      animation: shake 0.4s ease;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
     }
 
     /* Drop Zones */
-    .drop-zones-container {
+    .drop-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-bottom: 24px;
+      gap: 16px;
+      margin-bottom: 20px;
     }
 
-    .drop-zone {
+    @media (max-width: 720px) {
+      .drop-grid { grid-template-columns: 1fr; }
+      .drag-card { max-width: 100%; flex: 1 1 100%; }
+    }
+
+    .drop-bin {
+      background: #ffffff;
+      border: 3px dashed #cbd5e1;
       border-radius: 14px;
       padding: 16px;
       min-height: 280px;
       display: flex;
       flex-direction: column;
-      border: 2px solid transparent;
-      transition: all 0.25s;
+      transition: all 0.2s;
+      cursor: pointer;
     }
 
-    .zone-positive {
-      background: var(--positive-bg);
-      border-color: #a7f3d0;
+    .drop-bin.drag-over {
+      border-color: var(--primary) !important;
+      background: #eef2ff !important;
     }
 
-    .zone-negative {
-      background: var(--negative-bg);
-      border-color: #fecaca;
-    }
-
-    .zone-header {
+    .bin-header {
+      font-weight: 800;
+      font-size: 1.02rem;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f1f5f9;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
+      justify-content: space-between;
     }
 
-    .zone-positive .zone-header { color: #065f46; }
-    .zone-negative .zone-header { color: #991b1b; }
+    .bin-pos .bin-header { color: #059669; }
+    .bin-neg .bin-header { color: #dc2626; }
 
-    .drop-content {
+    .bin-count {
+      font-size: 0.75rem;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 999px;
+      color: var(--text-muted);
+    }
+
+    .bin-content {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 8px;
-      min-height: 200px;
+      min-height: 180px;
     }
 
-    .drag-over {
-      background: #dbeafe !important;
-      border-color: #3b82f6 !important;
-    }
-
-    /* Results and Feedback */
-    .controls-bar {
+    /* Bottom Actions */
+    .action-bar {
       display: flex;
-      justify-content: center;
-      gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-top: 10px;
     }
 
-    .btn {
-      padding: 12px 28px;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s;
+    .action-btns-left {
+      display: flex;
+      gap: 10px;
     }
 
-    .btn-submit {
+    .btn-action {
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .btn-check {
       background: var(--primary);
       color: white;
-      box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
     }
 
-    .btn-submit:hover {
-      background: #3730a3;
+    .btn-check:hover {
+      background: var(--primary-dark);
       transform: translateY(-2px);
     }
 
     .btn-reset {
-      background: #e2e8f0;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
       color: #334155;
     }
 
     .btn-reset:hover {
-      background: #cbd5e1;
+      background: #e2e8f0;
     }
 
-    .result-modal {
+    .btn-hint {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #b45309;
+    }
+
+    .btn-hint:hover {
+      background: #fef3c7;
+    }
+
+    /* Result Alert */
+    .result-alert {
       display: none;
-      background: white;
-      border-radius: 14px;
-      padding: 24px;
-      margin-top: 24px;
-      text-align: center;
-      border: 2px solid #e2e8f0;
-      animation: popIn 0.3s ease;
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin-top: 18px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      animation: fadeIn 0.3s ease;
     }
 
-    @keyframes popIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    .score-circle {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      margin: 0 auto 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      color: white;
-    }
-
-    .score-pass {
-      background: #10b981;
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
-    }
-
-    .score-fail {
-      background: #f59e0b;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
-    }
-
-    .correct-tag {
-      background: #dcfce7 !important;
-      border-color: #22c55e !important;
+    .result-alert.success {
+      background: var(--success-bg);
+      border: 1.5px solid #86efac;
       color: #166534;
     }
 
-    .wrong-tag {
-      background: #fee2e2 !important;
-      border-color: #ef4444 !important;
-      color: #991b1b;
+    .result-alert.warning {
+      background: #fffbeb;
+      border: 1.5px solid #fde68a;
+      color: #92400e;
     }
 
-    @media (max-width: 768px) {
-      .drop-zones-container { grid-template-columns: 1fr; }
-      .drag-card { max-width: 100%; flex: 1 1 100%; }
+    /* Modal Celebration */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+
+    .celebrate-card {
+      background: white;
+      border-radius: 20px;
+      max-width: 540px;
+      width: 100%;
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 2px solid #a7f3d0;
+      animation: scaleUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+    }
+
+    @keyframes scaleUp {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .celebrate-icon {
+      font-size: 3.5rem;
+      margin-bottom: 8px;
+    }
+
+    .celebrate-card h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #065f46;
+      margin-bottom: 10px;
+    }
+
+    .celebrate-card p {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .workbook-callout {
+      background: #f0fdf4;
+      border: 1.5px dashed #86efac;
+      border-radius: 12px;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.9rem;
+      color: #166534;
+      margin-bottom: 20px;
+    }
+
+    /* Confetti Canvas */
+    #confettiCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <header>
-    <div class="badge">Hoạt động 3: Luyện tập</div>
-    <h1>Thử thách Phân loại: Tính hai mặt của AI gợi ý</h1>
-    <p>Dùng chuột kéo (hoặc nhấp chọn) các thẻ tình huống và đưa vào đúng 2 cột Tích cực hoặc Hạn chế.</p>
-  </header>
+<canvas id="confettiCanvas"></canvas>
 
-  <div class="score-target-banner">
-    <div>🎯 Yêu cầu đạt chuẩn: <strong>Tối thiểu 8/10 điểm (80%)</strong></div>
-    <div>Tổng số thẻ: <strong id="totalCardCount">10 thẻ</strong> | Đã phân loại: <strong id="placedCount">0/10</strong></div>
+<div class="game-wrapper">
+  <!-- Top Bar -->
+  <div class="game-header">
+    <div class="title-group">
+      <h2>🧩 Trò chơi Kéo - Thả: Tính hai mặt của AI <span class="version-tag">Gamification 2.0</span></h2>
+      <p>Hoạt động 3: Luyện tập (15 phút) • Chuyên đề Trí tuệ nhân tạo (Tin học 6)</p>
+    </div>
+    <div class="stats-group">
+      <div class="stat-pill" id="timer-pill" title="Thời gian còn lại">
+        ⏱️ <span id="timer-val">05:00</span>
+      </div>
+      <div class="stat-pill score-pill">
+        ⭐ Điểm số: <span id="total-score">0</span>/10
+      </div>
+      <button class="btn-sound" id="btn-sound-toggle" onclick="toggleSound()">
+        🔊 Âm thanh: Bật
+      </button>
+    </div>
   </div>
 
-  <!-- Cards Pool -->
-  <div class="cards-pool-section">
-    <div class="pool-header">
-      <span>📦 HỘP THẺ TÌNH HUỐNG (Kéo hoặc nhấp thẻ để chọn):</span>
-      <span style="font-size: 0.85rem; color: #64748b;">Gợi ý: Nhấp vào thẻ rồi nhấp vào cột mong muốn nếu bạn dùng điện thoại</span>
+  <!-- Instruction -->
+  <div class="inst-box">
+    🎯 <strong>Nhiệm vụ:</strong> Em hãy dùng chuột kéo thả (hoặc chạm chọn) 10 thẻ tình huống thực tế vào đúng 2 hộp: <strong>Mặt tích cực (Ưu điểm)</strong> hoặc <strong>Mặt hạn chế (Rủi ro)</strong>. Nhấn <strong>"Kiểm tra kết quả"</strong> khi hoàn thành. Đạt từ <strong>8/10 điểm</strong> trở lên để tự động mở khóa Hoạt động 4!
+  </div>
+
+  <!-- Card Pool -->
+  <div class="pool-box" id="pool-zone" onclick="handleZoneClick('pool-zone')" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'pool-zone')">
+    <div class="pool-label">
+      <span>📦 HỘP THẺ TÌNH HUỐNG THỰC TẾ (Kéo hoặc chạm thẻ để di chuyển):</span>
+      <span id="pool-count">10 thẻ còn lại</span>
     </div>
-    <div class="cards-grid" id="cardsPool" ondrop="drop(event, 'pool')" ondragover="allowDrop(event)">
-      <!-- 10 Cards will be injected by JavaScript -->
-    </div>
+    <div class="cards-flex" id="cards-pool"></div>
   </div>
 
   <!-- Drop Zones -->
-  <div class="drop-zones-container">
-    <!-- Positive Zone -->
-    <div class="drop-zone zone-positive" id="zonePositive" onclick="placeSelected('positive')" ondrop="drop(event, 'positive')" ondragover="allowDrop(event)">
-      <div class="zone-header">
+  <div class="drop-grid">
+    <!-- Positive Bin -->
+    <div class="drop-bin bin-pos" id="bin-pos" onclick="handleZoneClick('bin-pos')" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'bin-pos')">
+      <div class="bin-header">
         <span>👍 MẶT TÍCH CỰC (ƯU ĐIỂM)</span>
+        <span class="bin-count" id="count-pos">0 mục</span>
       </div>
-      <div class="drop-content" id="contentPositive"></div>
+      <div class="bin-content" id="content-pos"></div>
     </div>
 
-    <!-- Negative Zone -->
-    <div class="drop-zone zone-negative" id="zoneNegative" onclick="placeSelected('negative')" ondrop="drop(event, 'negative')" ondragover="allowDrop(event)">
-      <div class="zone-header">
+    <!-- Negative Bin -->
+    <div class="drop-bin bin-neg" id="bin-neg" onclick="handleZoneClick('bin-neg')" ondragover="allowDrop(event)" ondrop="handleDrop(event, 'bin-neg')">
+      <div class="bin-header">
         <span>⚠️ MẶT HẠN CHẾ (RỦI RO / THÁCH THỨC)</span>
+        <span class="bin-count" id="count-neg">0 mục</span>
       </div>
-      <div class="drop-content" id="contentNegative"></div>
+      <div class="bin-content" id="content-neg"></div>
     </div>
   </div>
 
-  <!-- Action Controls -->
-  <div class="controls-bar">
-    <button class="btn btn-submit" onclick="gradeExercise()">Chấm điểm tự động 📝</button>
-    <button class="btn btn-reset" onclick="resetExercise()">Làm lại từ đầu 🔄</button>
+  <!-- Bottom Actions -->
+  <div class="action-bar">
+    <div class="action-btns-left">
+      <button class="btn-action btn-check" id="btn-check" onclick="checkAnswers()">
+        <span>Kiểm tra kết quả</span> 🚀
+      </button>
+      <button class="btn-action btn-reset" onclick="resetAll()">
+        <span>Xếp lại từ đầu</span> 🔄
+      </button>
+      <button class="btn-action btn-hint" onclick="showHint()">
+        <span>Gợi ý nhanh</span> 💡
+      </button>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700;">
+      🎯 Điểm chuẩn đạt: <span style="color: #059669;">Tối thiểu 8/10 (80%)</span>
+    </div>
   </div>
 
-  <!-- Result Modal -->
-  <div class="result-modal" id="resultModal">
-    <div class="score-circle" id="scoreCircle">0/10</div>
-    <h2 id="resultTitle" style="margin-bottom: 8px;">Kết quả bài làm</h2>
-    <p id="resultDesc" style="color: #475569; margin-bottom: 16px;"></p>
-    <div id="nextActionBox"></div>
+  <!-- Result Alert Box -->
+  <div class="result-alert" id="resultAlert"></div>
+</div>
+
+<!-- Celebration Modal -->
+<div class="modal-overlay" id="modalCelebrate">
+  <div class="celebrate-card">
+    <div class="celebrate-icon">🏆</div>
+    <h3 id="modalScoreTitle">XUẤT SẮC! EM ĐÃ ĐẠT CHUẨN!</h3>
+    <p id="modalScoreDesc">
+      Chúc mừng em đã phân loại chính xác tính hai mặt của công nghệ AI gợi ý với số điểm tuyệt vời!
+    </p>
+    <div class="workbook-callout">
+      📌 <strong>Nhiệm vụ Sách học sinh:</strong><br>
+      Hãy chọn <strong>02 ví dụ tâm đắc nhất</strong> (1 tích cực, 1 hạn chế) ghi lại vào Bảng tổng hợp minh chứng tự học trong Sách của em.
+    </div>
+    <div style="font-size: 0.88rem; color: #64748b; margin-bottom: 18px;" id="modalTimeSpent">
+      ⏱️ Đồng hồ đã tự động dừng lại ✔
+    </div>
+    <button class="btn-action btn-check" style="width: 100%; justify-content: center;" onclick="proceedToAct4()">
+      Tiến sang Hoạt động 4 (Diễn đàn & Rubric) ➡️
+    </button>
   </div>
 </div>
 
 <script>
-  const cardsData = [
-    { id: 1, text: "Tự động đề xuất các bài hát phù hợp với tâm trạng và sở thích âm nhạc mà không mất công tìm kiếm.", category: "positive" },
-    { id: 2, text: "Người dùng bị cuốn vào màn hình quá nhiều giờ do các video hấp dẫn liên tục tự động phát nối tiếp.", category: "negative" },
-    { id: 3, text: "Gợi ý các khóa học tiếng Anh, bài giảng trực tuyến phù hợp đúng với trình độ và nhu cầu học tập của em.", category: "positive" },
-    { id: 4, text: "Tạo ra 'Bong bóng thông tin', khiến người dùng chỉ nhìn thấy thông tin một chiều và thiếu cái nhìn đa chiều.", category: "negative" },
-    { id: 5, text: "Nền tảng âm thầm thu thập toàn bộ lịch sử xem, vị trí và thời gian dừng màn hình để xây dựng hồ sơ cá nhân.", category: "negative" },
-    { id: 6, text: "Hỗ trợ người mua sắm trực tuyến nhanh chóng tìm được món hàng ưng ý với mức giá và mẫu mã phù hợp.", category: "positive" },
-    { id: 7, text: "Dễ dẫn dắt người dùng đến các nội dung giật gân, tin giả (fake news) để câu lượt xem và tương tác.", category: "negative" },
-    { id: 8, text: "Ứng dụng bản đồ gợi ý tuyến đường thông thoáng nhất dựa trên tình trạng ùn tắc giao thông thời gian thực.", category: "positive" },
-    { id: 9, text: "Quảng cáo một món đồ vừa nhắc tới liên tục xuất hiện 'bám đuổi' trên mọi trang web em truy cập.", category: "negative" },
-    { id: 10, text: "Giúp người dùng nhanh chóng tiếp cận thông tin thời sự mới nhất mà bản thân đang quan tâm.", category: "positive" }
+  // 10 Cards Dataset
+  const cardData = [
+    { id: 1, target: 'pos', text: 'Tự động đề xuất các bài hát phù hợp với tâm trạng và sở thích âm nhạc mà không mất công tìm kiếm.' },
+    { id: 2, target: 'neg', text: 'Người dùng bị cuốn vào màn hình quá nhiều giờ do các video hấp dẫn liên tục tự động phát nối tiếp.' },
+    { id: 3, target: 'pos', text: 'Gợi ý các khóa học tiếng Anh, bài giảng trực tuyến phù hợp đúng với trình độ và nhu cầu học tập của em.' },
+    { id: 4, target: 'neg', text: 'Tạo ra "Bong bóng thông tin", khiến người dùng chỉ nhìn thấy thông tin một chiều và thiếu cái nhìn đa chiều.' },
+    { id: 5, target: 'neg', text: 'Nền tảng âm thầm thu thập toàn bộ lịch sử xem, vị trí và thời gian dừng màn hình để xây dựng hồ sơ cá nhân.' },
+    { id: 6, target: 'pos', text: 'Hỗ trợ người mua sắm trực tuyến nhanh chóng tìm được món hàng ưng ý với mức giá và mẫu mã phù hợp.' },
+    { id: 7, target: 'neg', text: 'Dễ dẫn dắt người dùng đến các nội dung giật gân, tin giả (fake news) để câu lượt xem và tương tác.' },
+    { id: 8, target: 'pos', text: 'Ứng dụng bản đồ gợi ý tuyến đường thông thoáng nhất dựa trên tình trạng ùn tắc giao thông thời gian thực.' },
+    { id: 9, target: 'neg', text: 'Quảng cáo một món đồ vừa nhắc tới liên tục xuất hiện "bám đuổi" trên mọi trang web em truy cập.' },
+    { id: 10, target: 'pos', text: 'Giúp người dùng nhanh chóng tiếp cận thông tin thời sự mới nhất mà bản thân đang quan tâm.' }
   ];
 
-  let selectedCardElement = null;
+  // ================= WEB AUDIO API SYNTHESIZER =================
+  let audioEnabled = true;
+  let audioCtx = null;
 
-  function initCards() {
-    const pool = document.getElementById('cardsPool');
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+  }
+
+  function playSound(isWin) {
+    if (!audioEnabled) return;
+    try {
+      initAudio();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (isWin) {
+        // Cheerful chime (C5 -> E5 -> G5)
+        osc.frequency.setValueAtTime(523.25, now);
+        osc.frequency.setValueAtTime(659.25, now + 0.1);
+        osc.frequency.setValueAtTime(783.99, now + 0.2);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+        osc.start(now);
+        osc.stop(now + 0.4);
+      } else {
+        // Low error buzz
+        osc.frequency.setValueAtTime(220, now);
+        osc.frequency.setValueAtTime(170, now + 0.12);
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+        osc.start(now);
+        osc.stop(now + 0.3);
+      }
+    } catch(e) {}
+  }
+
+  function playFanfare() {
+    if (!audioEnabled) return;
+    try {
+      initAudio();
+      const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+      notes.forEach((freq, idx) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        const start = audioCtx.currentTime + idx * 0.12;
+        osc.frequency.setValueAtTime(freq, start);
+        gain.gain.setValueAtTime(0.25, start);
+        gain.gain.exponentialRampToValueAtTime(0.01, start + 0.35);
+        osc.start(start);
+        osc.stop(start + 0.35);
+      });
+    } catch(e) {}
+  }
+
+  function toggleSound() {
+    audioEnabled = !audioEnabled;
+    const btn = document.getElementById('btn-sound-toggle');
+    if (audioEnabled) {
+      btn.innerText = '🔊 Âm thanh: Bật';
+      btn.style.color = 'var(--text-muted)';
+    } else {
+      btn.innerText = '🔇 Âm thanh: Tắt';
+      btn.style.color = '#ef4444';
+    }
+  }
+
+  // ================= TIMER =================
+  let timeLeft = 300; // 5 minutes
+  let timerInterval = null;
+
+  function startTimer() {
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        const m = Math.floor(timeLeft / 60);
+        const s = timeLeft % 60;
+        document.getElementById('timer-val').innerText = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      } else {
+        stopTimer();
+        const aBox = document.getElementById('resultAlert');
+        aBox.style.display = 'block';
+        aBox.className = 'result-alert warning';
+        aBox.innerHTML = '⏰ <strong>Hết giờ!</strong> Hãy bấm "Xếp lại từ đầu" để làm lại bài nhé.';
+      }
+    }, 1000);
+  }
+
+  function stopTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+    const timerPill = document.getElementById('timer-pill');
+    if (timerPill) {
+      timerPill.style.background = '#dcfce7';
+      timerPill.style.color = '#166534';
+      timerPill.style.borderColor = '#86efac';
+    }
+  }
+
+  // ================= HYBRID DRAG & DROP + TAP-TO-PLACE =================
+  let draggedCard = null;
+  let selectedTapCard = null;
+
+  function renderCards() {
+    const pool = document.getElementById('cards-pool');
     pool.innerHTML = '';
-    document.getElementById('contentPositive').innerHTML = '';
-    document.getElementById('contentNegative').innerHTML = '';
-    document.getElementById('resultModal').style.display = 'none';
+    document.getElementById('content-pos').innerHTML = '';
+    document.getElementById('content-neg').innerHTML = '';
+    document.getElementById('resultAlert').style.display = 'none';
 
-    // Shuffle cards
-    const shuffled = [...cardsData].sort(() => Math.random() - 0.5);
+    // Shuffle
+    const shuffled = [...cardData].sort(() => Math.random() - 0.5);
 
-    shuffled.forEach(card => {
-      const cardEl = document.createElement('div');
-      cardEl.className = 'drag-card';
-      cardEl.id = `card-${card.id}`;
-      cardEl.draggable = true;
-      cardEl.dataset.id = card.id;
-      cardEl.dataset.category = card.category;
+    shuffled.forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'drag-card';
+      card.id = `card-${c.id}`;
+      card.draggable = true;
+      card.dataset.id = c.id;
+      card.dataset.target = c.target;
+      card.innerHTML = `<span style="color:#94a3b8; font-size:1.1rem; cursor:move;">⠿</span> <span>${c.text}</span>`;
 
-      cardEl.innerHTML = `
-        <span class="card-handle">⠿</span>
-        <span>${card.text}</span>
-      `;
-
-      cardEl.addEventListener('dragstart', dragStart);
-      cardEl.addEventListener('click', (e) => {
-        e.stopPropagation();
-        selectCard(cardEl);
+      // Drag events
+      card.addEventListener('dragstart', (e) => {
+        draggedCard = card;
+        card.classList.add('dragging');
+        if (e.dataTransfer) {
+          e.dataTransfer.setData('text/plain', card.id);
+          e.dataTransfer.effectAllowed = 'move';
+        }
       });
 
-      pool.appendChild(cardEl);
+      card.addEventListener('dragend', () => {
+        card.classList.remove('dragging');
+        draggedCard = null;
+        updateCounts();
+      });
+
+      // Tap / Click event
+      card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        handleCardTap(card);
+      });
+
+      pool.appendChild(card);
     });
 
-    updateCounters();
+    updateCounts();
+    startTimer();
   }
 
-  function selectCard(cardEl) {
-    if (selectedCardElement) {
-      selectedCardElement.classList.remove('selected');
+  function handleCardTap(card) {
+    if (selectedTapCard === card) {
+      card.classList.remove('selected-tap');
+      selectedTapCard = null;
+      return;
     }
-    if (selectedCardElement === cardEl) {
-      selectedCardElement = null;
-    } else {
-      selectedCardElement = cardEl;
-      cardEl.classList.add('selected');
+    if (selectedTapCard) {
+      selectedTapCard.classList.remove('selected-tap');
     }
+    selectedTapCard = card;
+    card.classList.add('selected-tap');
   }
 
-  function placeSelected(targetZone) {
-    if (!selectedCardElement) return;
-    const targetContent = targetZone === 'positive' ? document.getElementById('contentPositive') : document.getElementById('contentNegative');
-    targetContent.appendChild(selectedCardElement);
-    selectedCardElement.classList.remove('selected');
-    selectedCardElement = null;
-    updateCounters();
-  }
-
-  function dragStart(e) {
-    e.dataTransfer.setData('text/plain', e.target.id);
+  function handleZoneClick(zoneId) {
+    if (!selectedTapCard) return;
+    placeCardIntoZone(selectedTapCard, zoneId);
+    selectedTapCard.classList.remove('selected-tap');
+    selectedTapCard = null;
   }
 
   function allowDrop(e) {
     e.preventDefault();
+    if (e.dataTransfer) e.dataTransfer.dropEffect = 'move';
+    const zone = e.currentTarget;
+    if (zone && zone.classList.contains('drop-bin')) zone.classList.add('drag-over');
   }
 
-  function drop(e, zone) {
+  function handleDrop(e, zoneId) {
     e.preventDefault();
-    const cardId = e.dataTransfer.getData('text/plain');
-    const cardEl = document.getElementById(cardId);
-    if (!cardEl) return;
+    const zone = document.getElementById(zoneId);
+    if (zone) zone.classList.remove('drag-over');
+    if (!draggedCard) return;
+    placeCardIntoZone(draggedCard, zoneId);
+    draggedCard = null;
+  }
 
-    if (zone === 'pool') {
-      document.getElementById('cardsPool').appendChild(cardEl);
-    } else if (zone === 'positive') {
-      document.getElementById('contentPositive').appendChild(cardEl);
-    } else if (zone === 'negative') {
-      document.getElementById('contentNegative').appendChild(cardEl);
+  function placeCardIntoZone(card, zoneId) {
+    card.classList.remove('is-correct', 'is-wrong', 'selected-tap');
+    const mark = card.querySelector('.status-mark');
+    if (mark) mark.remove();
+
+    if (zoneId === 'bin-pos') {
+      document.getElementById('content-pos').appendChild(card);
+    } else if (zoneId === 'bin-neg') {
+      document.getElementById('content-neg').appendChild(card);
+    } else {
+      document.getElementById('cards-pool').appendChild(card);
     }
-    updateCounters();
+    updateCounts();
   }
 
-  function updateCounters() {
-    const placed = document.querySelectorAll('.drop-content .drag-card').length;
-    document.getElementById('placedCount').innerText = `${placed}/10`;
+  function updateCounts() {
+    const posCount = document.querySelectorAll('#content-pos .drag-card').length;
+    const negCount = document.querySelectorAll('#content-neg .drag-card').length;
+    const poolCount = document.querySelectorAll('#cards-pool .drag-card').length;
+
+    document.getElementById('count-pos').innerText = `${posCount} mục`;
+    document.getElementById('count-neg').innerText = `${negCount} mục`;
+    document.getElementById('pool-count').innerText = `${poolCount} thẻ còn lại`;
   }
 
-  function gradeExercise() {
-    const posCards = document.querySelectorAll('#contentPositive .drag-card');
-    const negCards = document.querySelectorAll('#contentNegative .drag-card');
+  // ================= EVALUATION & PASSING =================
+  function checkAnswers() {
+    const posCards = document.querySelectorAll('#content-pos .drag-card');
+    const negCards = document.querySelectorAll('#content-neg .drag-card');
     const totalPlaced = posCards.length + negCards.length;
+    const alertBox = document.getElementById('resultAlert');
+
+    alertBox.style.display = 'block';
 
     if (totalPlaced < 10) {
-      alert(`Em mới phân loại được ${totalPlaced}/10 thẻ. Hãy kéo hết tất cả 10 thẻ vào 2 cột trước khi bấm Chấm điểm nhé!`);
+      alertBox.className = 'result-alert warning';
+      alertBox.innerHTML = `⚠️ <strong>Chưa hoàn thành:</strong> Em mới kéo được <strong>${totalPlaced}/10 thẻ</strong>. Hãy xếp đủ cả 10 thẻ vào 2 hộp rồi bấm kiểm tra nhé!`;
+      playSound(false);
       return;
     }
 
     let score = 0;
 
     posCards.forEach(card => {
-      card.classList.remove('correct-tag', 'wrong-tag');
-      if (card.dataset.category === 'positive') {
+      const mark = card.querySelector('.status-mark') || document.createElement('span');
+      mark.className = 'status-mark';
+      if (card.dataset.target === 'pos') {
         score++;
-        card.classList.add('correct-tag');
+        card.classList.remove('is-wrong');
+        card.classList.add('is-correct');
+        mark.innerText = ' ✔';
+        card.appendChild(mark);
       } else {
-        card.classList.add('wrong-tag');
+        card.classList.remove('is-correct');
+        card.classList.add('is-wrong');
+        mark.innerText = ' ✖';
+        card.appendChild(mark);
       }
     });
 
     negCards.forEach(card => {
-      card.classList.remove('correct-tag', 'wrong-tag');
-      if (card.dataset.category === 'negative') {
+      const mark = card.querySelector('.status-mark') || document.createElement('span');
+      mark.className = 'status-mark';
+      if (card.dataset.target === 'neg') {
         score++;
-        card.classList.add('correct-tag');
+        card.classList.remove('is-wrong');
+        card.classList.add('is-correct');
+        mark.innerText = ' ✔';
+        card.appendChild(mark);
       } else {
-        card.classList.add('wrong-tag');
+        card.classList.remove('is-correct');
+        card.classList.add('is-wrong');
+        mark.innerText = ' ✖';
+        card.appendChild(mark);
       }
     });
 
-    const modal = document.getElementById('resultModal');
-    const circle = document.getElementById('scoreCircle');
-    const title = document.getElementById('resultTitle');
-    const desc = document.getElementById('resultDesc');
-    const nextBox = document.getElementById('nextActionBox');
+    document.getElementById('total-score').innerText = score;
 
-    modal.style.display = 'block';
-    circle.innerText = `${score}/10`;
+    const btn = document.getElementById('btn-check');
 
     if (score >= 8) {
-      circle.className = 'score-circle score-pass';
-      title.innerText = '🎉 XUẤT SẮC! EM ĐÃ ĐẠT CHUẨN!';
-      desc.innerHTML = `Chúc mừng em đã đạt <b>${score}/10 điểm</b> (Yêu cầu: tối thiểu 8/10).<br>Em đã phân biệt rất sắc bén giữa mặt tích cực và mặt hạn chế của tính năng AI gợi ý.`;
-      nextBox.innerHTML = `
-        <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left; font-size: 0.9rem;">
-          📌 <b>Nhiệm vụ Sách học sinh:</b> Hãy chọn <b>02 ví dụ tâm đắc nhất</b> (1 tích cực, 1 hạn chế) chép vào Bảng tổng hợp trong Sách của em làm minh chứng.
-        </div>
-        <button class="btn btn-submit" onclick="unlockNextActivity(${score})">Tiến sang Diễn đàn Thảo luận (HĐ 4) ➡️</button>
-      `;
+      stopTimer();
+      playFanfare();
+      triggerConfetti();
 
-      if (window.parent && window.parent.postMessage) {
-        window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 3, score: score }, '*');
+      // SCORM Commit
+      if (typeof scorm !== 'undefined') {
+        scorm.setScore(score * 10);
       }
-    } else {
-      circle.className = 'score-circle score-fail';
-      title.innerText = '⚠️ CHƯA ĐẠT ĐIỂM CHUẨN (CẦN TỐI THIỂU 8/10)';
-      desc.innerHTML = `Em đạt <b>${score}/10 điểm</b>. Những thẻ có viền đỏ là những thẻ đang bị xếp nhầm nhóm. Em hãy quan sát kỹ và bấm "Thử lại" để làm lại nhé!`;
-      nextBox.innerHTML = `
-        <button class="btn btn-reset" onclick="initCards()">Thử lại lần nữa 🔄</button>
-      `;
-    }
 
-    modal.scrollIntoView({ behavior: 'smooth' });
+      alertBox.className = 'result-alert success';
+      alertBox.innerHTML = `🎉 <strong>XUẤT SẮC! ĐẠT ${score}/10 ĐIỂM (ĐẠT CHUẨN)!</strong> Em đã nhận diện rất chính xác tính hai mặt của AI gợi ý.`;
+
+      btn.innerText = `✔ Đạt chuẩn (${score}/10)`;
+      btn.style.background = '#059669';
+
+      const timeSpent = 300 - timeLeft;
+      const mSpent = Math.floor(timeSpent / 60);
+      const sSpent = timeSpent % 60;
+      document.getElementById('modalScoreTitle').innerText = `XUẤT SẮC! EM ĐẠT ${score}/10 ĐIỂM!`;
+      document.getElementById('modalTimeSpent').innerHTML = `⏱️ Thời gian hoàn thành: <strong>${mSpent} phút ${sSpent} giây</strong> (Đồng hồ đã tự động dừng lại ✔)`;
+
+      setTimeout(() => {
+        document.getElementById('modalCelebrate').style.display = 'flex';
+      }, 700);
+
+      notifyLMS({ score: score, passed: true, timeSpentSeconds: timeSpent });
+    } else {
+      playSound(false);
+      alertBox.className = 'result-alert warning';
+      alertBox.innerHTML = `❌ <strong>Kết quả: Đúng ${score}/10 mục.</strong> Chưa đạt ngưỡng chuẩn (yêu cầu tối thiểu 8/10). Những thẻ màu đỏ bị xếp nhầm nhóm. Em hãy kéo lại các thẻ màu đỏ sang đúng hộp rồi ấn "Kiểm tra lại"!`;
+      btn.innerText = '🔄 Kiểm tra lại';
+    }
   }
 
-  function unlockNextActivity(score) {
+  function resetAll() {
+    renderCards();
+    timeLeft = 300;
+    document.getElementById('total-score').innerText = '0';
+    const btn = document.getElementById('btn-check');
+    btn.innerText = 'Kiểm tra kết quả 🚀';
+    btn.style.background = 'var(--primary)';
+  }
+
+  function showHint() {
+    alert("💡 GỢI Ý NHANH:\n- Mặt tích cực: Những tính năng giúp tiết kiệm thời gian, hỗ trợ học tập, đề xuất đúng sở thích, tìm đường tránh kẹt xe.\n- Mặt hạn chế: Những hiện tượng gây nghiện giữ chân quá lâu, tạo bong bóng thông tin cô lập, thu thập ngầm dữ liệu cá nhân, quảng cáo bám đuổi.");
+  }
+
+  function proceedToAct4() {
+    document.getElementById('modalCelebrate').style.display = 'none';
     if (window.parent && window.parent.goToActivity) {
       window.parent.goToActivity(4);
     } else {
-      alert("Hệ thống đã lưu điểm số của bạn vào Sổ điểm LMS! Bạn có thể chuyển sang Hoạt động 4.");
+      alert("Hệ thống đã ghi nhận kết quả hoàn thành Hoạt động 3 vào Sổ điểm LMS!");
     }
   }
 
-  function resetExercise() {
-    if (confirm("Em có muốn làm lại từ đầu không?")) {
-      initCards();
+  function notifyLMS(payload) {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 3, score: payload.score }, '*');
     }
   }
 
-  // Init on load
-  initCards();
+  // ================= CONFETTI CANVAS ENGINE =================
+  function triggerConfetti() {
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const colors = ['#4f46e5', '#10b981', '#f59e0b', '#ec4899', '#06b6d4', '#8b5cf6'];
+
+    for (let i = 0; i < 160; i++) {
+      particles.push({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        w: Math.random() * 8 + 4,
+        h: Math.random() * 6 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        vx: (Math.random() - 0.5) * 18,
+        vy: (Math.random() - 0.7) * 20,
+        tilt: Math.random() * 10,
+        tiltAngle: 0,
+        tiltAngleInc: Math.random() * 0.08 + 0.04
+      });
+    }
+
+    let animationFrame;
+    let ticks = 0;
+
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.4; // gravity
+        p.tiltAngle += p.tiltAngleInc;
+        p.tilt = Math.sin(p.tiltAngle) * 12;
+
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.rect(p.x, p.y, p.w, p.h);
+        ctx.fill();
+      });
+
+      ticks++;
+      if (ticks < 120) {
+        animationFrame = requestAnimationFrame(render);
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        cancelAnimationFrame(animationFrame);
+      }
+    }
+
+    render();
+  }
+
+  // Start on load
+  window.addEventListener('DOMContentLoaded', () => {
+    renderCards();
+  });
 </script>
 
 </body>
 </html>
-

@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Học liệu 2: Trò chơi mô phỏng Thuật toán AI & Bong bóng thông tin</title>
+  <title>Trò chơi mô phỏng: Em là Thuật toán Gợi ý AI (Chuẩn SCORM / H5P)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="scorm_api.js"></script>
   <style>
     :root {
-      --primary: #4338ca;
-      --primary-dark: #312e81;
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
       --accent: #ec4899;
       --warning: #f59e0b;
       --success: #10b981;
-      --card-bg: #ffffff;
-      --text: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
+      --danger: #ef4444;
+      --bg: #0f172a;
+      --card: #1e1b4b;
+      --text: #ffffff;
       --radius: 16px;
     }
 
@@ -25,433 +26,632 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Nunito', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      background: #f8fafc;
+      background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%);
       color: var(--text);
-      line-height: 1.6;
       padding: 16px;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
     }
 
     .container {
-      max-width: 860px;
+      background: #0b1120;
       width: 100%;
-      background: var(--card-bg);
+      max-width: 980px;
       border-radius: var(--radius);
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
       overflow: hidden;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
     }
 
-    header {
-      background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #4338ca 100%);
-      color: white;
-      padding: 24px;
-      text-align: center;
+    /* Top Nav Bar */
+    .player-header {
+      background: linear-gradient(90deg, #1e1b4b, #312e81);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .badge-role {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
+    .header-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #e0e7ff;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .scorm-badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
       padding: 4px 12px;
-      border-radius: 20px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .stat-timer {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+      color: #f1f5f9;
     }
 
-    header h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.55rem;
-      margin-bottom: 6px;
+    .btn-sound {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.2s;
     }
 
-    header p {
-      font-size: 0.92rem;
-      opacity: 0.9;
+    .btn-sound:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
     }
 
-    /* Live Metrics */
+    /* Live Algorithm Dashboard */
     .dashboard {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      padding: 18px 24px;
-      background: #f8fafc;
-      border-bottom: 1px solid var(--border);
+      gap: 12px;
+      padding: 16px 20px;
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 680px) {
+      .dashboard { grid-template-columns: 1fr; }
     }
 
     .metric-card {
-      background: white;
-      padding: 12px 14px;
+      background: rgba(30, 41, 59, 0.7);
+      padding: 12px 16px;
       border-radius: 12px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       text-align: center;
     }
 
-    .metric-title {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+    .metric-label {
+      font-size: 0.78rem;
+      color: #94a3b8;
       font-weight: 700;
+      margin-bottom: 4px;
     }
 
-    .metric-value {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--primary);
+    .metric-val {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #818cf8;
     }
 
-    .progress-bar-bg {
-      background: #e2e8f0;
+    .meter-track {
+      background: rgba(255, 255, 255, 0.1);
       height: 8px;
       border-radius: 4px;
       margin-top: 6px;
       overflow: hidden;
     }
 
-    .progress-bar-fill {
+    .meter-fill {
       height: 100%;
-      transition: width 0.4s ease;
+      transition: width 0.5s ease;
     }
 
-    .game-body {
+    /* Main Stage */
+    .game-content {
       padding: 24px;
     }
 
-    .user-profile {
+    .user-profile-banner {
       display: flex;
       align-items: center;
-      gap: 14px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 12px;
+      gap: 16px;
+      background: rgba(30, 27, 75, 0.8);
+      border: 1px solid #4338ca;
+      border-radius: 14px;
       padding: 14px 18px;
       margin-bottom: 22px;
     }
 
     .user-avatar {
-      width: 52px;
-      height: 52px;
-      background: #3b82f6;
-      color: white;
+      width: 56px;
+      height: 56px;
+      background: #4338ca;
+      border: 2px solid #6366f1;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      font-weight: bold;
+      font-size: 1.8rem;
     }
 
     .user-info h3 {
       font-size: 1.05rem;
-      color: #1e3a8a;
+      color: #c7d2fe;
+      margin-bottom: 2px;
     }
 
     .user-info p {
-      font-size: 0.85rem;
-      color: #3b82f6;
+      font-size: 0.88rem;
+      color: #94a3b8;
     }
 
-    .round-tag {
+    .round-badge {
       display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 3px 10px;
+      background: #312e81;
+      color: #c7d2fe;
+      border: 1px solid #4338ca;
+      padding: 4px 12px;
       border-radius: 6px;
-      font-weight: 800;
       font-size: 0.8rem;
-      margin-bottom: 8px;
+      font-weight: 800;
+      margin-bottom: 10px;
     }
 
-    .scenario-text {
+    .scenario-prompt {
       font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 16px;
-      color: #1e293b;
-    }
-
-    .choices-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      color: #f1f5f9;
+      line-height: 1.6;
       margin-bottom: 20px;
     }
 
+    /* Choices Cards */
+    .choices-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    @media (max-width: 680px) {
+      .choices-grid { grid-template-columns: 1fr; }
+    }
+
     .choice-card {
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
+      background: #1e293b;
+      border: 2px solid #334155;
+      border-radius: 14px;
+      padding: 18px;
       cursor: pointer;
-      transition: all 0.2s ease;
-      background: white;
+      transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .choice-card:hover {
-      border-color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(67, 56, 202, 0.1);
+      border-color: #6366f1;
+      background: #252e4a;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     }
 
     .choice-tag {
       font-size: 0.72rem;
       padding: 2px 8px;
       border-radius: 4px;
-      font-weight: 700;
+      font-weight: 800;
       display: inline-block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       width: fit-content;
     }
 
-    .tag-match { background: #dcfce7; color: #166534; }
-    .tag-diff { background: #fef3c7; color: #92400e; }
+    .tag-match { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .tag-diff { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
 
     .choice-title {
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 800;
-      margin-bottom: 6px;
-      color: #0f172a;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1.4;
     }
 
     .choice-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 12px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 14px;
+      line-height: 1.5;
     }
 
-    .btn-choose {
-      background: #f1f5f9;
-      color: #334155;
+    .btn-select {
+      background: #334155;
+      color: #f8fafc;
       border: none;
-      padding: 8px 14px;
+      padding: 8px 16px;
       border-radius: 8px;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.85rem;
       cursor: pointer;
       align-self: flex-start;
-      transition: all 0.2s;
+      transition: background 0.2s;
     }
 
-    .choice-card:hover .btn-choose {
+    .choice-card:hover .btn-select {
       background: var(--primary);
       color: white;
     }
 
+    /* Result Alert */
     .result-alert {
-      padding: 14px 18px;
-      border-radius: 10px;
-      margin-bottom: 18px;
       display: none;
-      font-size: 0.92rem;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.6;
       animation: fadeIn 0.3s ease;
     }
 
-    .alert-success { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
-    .alert-warning { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; }
+    .alert-success {
+      background: rgba(6, 78, 59, 0.7);
+      border: 1px solid #10b981;
+      color: #a7f3d0;
+    }
+
+    .alert-warning {
+      background: rgba(120, 53, 15, 0.7);
+      border: 1px solid #f59e0b;
+      color: #fde68a;
+    }
 
     /* Bubble Visualizer */
-    .bubble-visualizer {
-      background: #f8fafc;
-      border: 2px dashed #cbd5e1;
-      border-radius: 12px;
-      padding: 18px;
+    .bubble-stage {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 20px;
       text-align: center;
-      margin-top: 16px;
+      margin-bottom: 22px;
+      position: relative;
+      overflow: hidden;
     }
 
     .bubble-sphere {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       background: radial-gradient(circle at 35% 35%, #93c5fd, #2563eb);
-      box-shadow: 0 0 20px rgba(37, 99, 235, 0.35);
+      box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
       margin: 12px auto;
-      transition: all 0.5s ease;
+      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
       color: white;
-      font-weight: 700;
-      font-size: 0.8rem;
+      font-weight: 800;
+      font-size: 0.85rem;
       text-align: center;
-      padding: 8px;
+      padding: 10px;
+      position: relative;
+      z-index: 2;
     }
 
-    .btn-action {
+    .floating-tags-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .float-tag {
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      transition: all 0.3s;
+    }
+
+    .tag-trapped {
+      background: rgba(236, 72, 153, 0.25);
+      border-color: #ec4899;
+      color: #f472b6;
+      font-weight: 700;
+    }
+
+    .tag-excluded {
+      opacity: 0.35;
+      text-decoration: line-through;
+    }
+
+    .btn-next {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
       border: none;
-      padding: 12px 24px;
+      padding: 12px 28px;
       border-radius: 10px;
-      font-weight: 700;
+      font-size: 1rem;
+      font-weight: 800;
       cursor: pointer;
       display: none;
-      margin: 16px auto 0;
+      margin: 0 auto;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
       transition: all 0.2s;
     }
 
-    /* Quiz Card */
+    .btn-next:hover {
+      transform: scale(1.03);
+    }
+
+    /* Debrief Checkpoints */
     .quiz-card {
-      background: #faf5ff;
-      border: 1px solid #e9d5ff;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
+      background: #1e1b4b;
+      border: 1px solid #4338ca;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
     }
 
     .quiz-title {
       font-weight: 800;
-      color: #6b21a8;
-      margin-bottom: 10px;
-      font-size: 0.95rem;
+      color: #c7d2fe;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .quiz-option {
-      background: white;
-      border: 1px solid #d8b4fe;
-      border-radius: 8px;
-      padding: 10px 14px;
+      background: #0f172a;
+      border: 1.5px solid #334155;
+      border-radius: 10px;
+      padding: 12px 16px;
       margin-bottom: 8px;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      color: #cbd5e1;
       transition: all 0.2s;
     }
 
-    .quiz-option:hover { background: #f3e8ff; border-color: #9333ea; }
-    .quiz-option.correct { background: #dcfce7; border-color: #22c55e; color: #15803d; font-weight: 700; }
-    .quiz-option.incorrect { background: #fee2e2; border-color: #ef4444; color: #b91c1c; }
+    .quiz-option:hover {
+      border-color: #818cf8;
+      background: #1e293b;
+      color: white;
+    }
+
+    .quiz-option.correct {
+      background: rgba(6, 78, 59, 0.8) !important;
+      border-color: #10b981 !important;
+      color: #a7f3d0 !important;
+      font-weight: 800;
+    }
+
+    .quiz-option.incorrect {
+      background: rgba(127, 29, 29, 0.8) !important;
+      border-color: #ef4444 !important;
+      color: #fecaca !important;
+    }
+
+    /* Finish Screen */
+    .finish-screen {
+      text-align: center;
+      padding: 28px 10px;
+      display: none;
+    }
+
+    .workbook-box {
+      text-align: left;
+      background: rgba(6, 78, 59, 0.4);
+      border: 1px solid #059669;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 20px 0;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .completion-code {
+      background: #020617;
+      color: #38bdf8;
+      font-family: monospace;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      display: inline-block;
+      margin: 10px 0;
+      letter-spacing: 2px;
+      border: 1px dashed #38bdf8;
+    }
+
+    #confettiCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+    }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
+      from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <header>
-    <div class="badge-role">Hoạt động 2 • Hình thành kiến thức (15 phút)</div>
-    <h1>Trò chơi mô phỏng: "Em là Thuật toán Gợi ý"</h1>
-    <p>Đóng vai Kỹ sư điều khiển thuật toán AI mạng xã hội VideoTube để khám phá hiện tượng Bong bóng thông tin</p>
-  </header>
+<canvas id="confettiCanvas"></canvas>
 
+<div class="container">
+  <!-- Top Nav Bar -->
+  <div class="player-header">
+    <div class="header-title">
+      <span>🎮</span> Trò chơi mô phỏng: "Em là Thuật toán Gợi ý AI"
+    </div>
+    <div class="header-right">
+      <span class="scorm-badge" id="scormStatusBadge">Chuẩn SCORM 1.2 / H5P</span>
+      <span class="stat-timer" id="simTimer">⏱️ 00:00</span>
+      <button class="btn-sound" id="btnSound" onclick="toggleSound()">🔊 Âm thanh: Bật</button>
+    </div>
+  </div>
+
+  <!-- Live Algorithm Dashboard -->
   <div class="dashboard">
     <div class="metric-card">
-      <div class="metric-title">⏱️ Thời gian giữ chân (Retention)</div>
-      <div class="metric-value" id="valRetention">15 phút</div>
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="barRetention" style="width: 20%; background: var(--primary);"></div>
+      <div class="metric-label">⏱️ THỜI GIAN GIỮ CHÂN (RETENTION)</div>
+      <div class="metric-val" id="valRetention">15 phút</div>
+      <div class="meter-track">
+        <div class="meter-fill" id="barRetention" style="width: 20%; background: #6366f1;"></div>
       </div>
     </div>
     <div class="metric-card">
-      <div class="metric-title">🫧 Bong bóng thông tin (Filter Bubble)</div>
-      <div class="metric-value" id="valBubble" style="color: var(--accent);">15%</div>
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="barBubble" style="width: 15%; background: var(--accent);"></div>
+      <div class="metric-label">🫧 BONG BÓNG THÔNG TIN (FILTER BUBBLE)</div>
+      <div class="metric-val" id="valBubble" style="color: #ec4899;">15%</div>
+      <div class="meter-track">
+        <div class="meter-fill" id="barBubble" style="width: 15%; background: #ec4899;"></div>
       </div>
     </div>
     <div class="metric-card">
-      <div class="metric-title">📊 Dữ liệu cá nhân thu thập</div>
-      <div class="metric-value" id="valData" style="color: var(--warning);">20%</div>
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="barData" style="width: 20%; background: var(--warning);"></div>
+      <div class="metric-label">📊 DỮ LIỆU CÁ NHÂN THU THẬP</div>
+      <div class="metric-val" id="valData" style="color: #f59e0b;">20%</div>
+      <div class="meter-track">
+        <div class="meter-fill" id="barData" style="width: 20%; background: #f59e0b;"></div>
       </div>
     </div>
   </div>
 
-  <div class="game-body">
-    <div class="user-profile">
-      <div class="user-avatar">👦</div>
+  <div class="game-content">
+    <!-- User Profile Banner -->
+    <div class="user-profile-banner">
+      <div class="user-avatar" id="userAvatar">👦</div>
       <div class="user-info">
-        <h3>Đối tượng theo dõi: Bạn Nam (12 tuổi)</h3>
-        <p id="userStatus">Lịch sử vừa xem: 1 clip về "Cách xây nhà gỗ trong Minecraft". Đang rảnh rỗi lướt web.</p>
+        <h3>Đối tượng người dùng ảo: Bạn Nam (12 tuổi)</h3>
+        <p id="userDesc">Lịch sử vừa xem: 1 clip về "Cách xây nhà gỗ trong Minecraft". Trạng thái: Đang rảnh rỗi lướt mạng xã hội VideoTube.</p>
       </div>
     </div>
 
     <!-- Play Area -->
     <div id="playArea">
-      <div class="round-tag" id="roundTag">LƯỢT 1 / 3: PHÂN TÍCH SỞ THÍCH</div>
-      <div class="scenario-text" id="scenarioPrompt">
-        Mục tiêu của bạn là <b>giữ chân Nam ở lại VideoTube càng lâu càng tốt</b> để nền tảng kiếm tiền quảng cáo. Bạn sẽ chọn video nào sau đây để đề xuất lên đầu trang chủ của Nam?
+      <div class="round-badge" id="roundBadge">LƯỢT 1 / 3: PHÂN TÍCH SỞ THÍCH</div>
+      <div class="scenario-prompt" id="scenarioPrompt">
+        Mục tiêu của bạn là <b>giữ chân Nam ở lại ứng dụng càng lâu càng tốt</b> để tối ưu hóa doanh thu quảng cáo. Dựa vào lịch sử vừa xem, bạn sẽ chọn video nào sau đây để đưa lên vị trí gợi ý đầu tiên?
       </div>
 
+      <!-- Choices Grid -->
       <div class="choices-grid">
-        <div class="choice-card" onclick="chooseOption('A')">
+        <div class="choice-card" onclick="chooseCard('A')">
           <div>
             <span class="choice-tag tag-match">Cùng chủ đề vừa xem</span>
             <div class="choice-title" id="titleA">🎬 "Cách chế tạo vũ khí bí mật phá đảo Minecraft"</div>
-            <div class="choice-desc" id="descA">Đánh đúng sở thích game của Nam, kích thích tính tò mò muốn nâng cấp trang bị.</div>
+            <div class="choice-desc" id="descA">Đánh đúng sở thích game, kích thích tính tò mò muốn nâng cấp trang bị ngay lập tức.</div>
           </div>
-          <button class="btn-choose">Đề xuất video này 👉</button>
+          <button class="btn-select">Đề xuất video này 👉</button>
         </div>
 
-        <div class="choice-card" onclick="chooseOption('B')">
+        <div class="choice-card" onclick="chooseCard('B')">
           <div>
             <span class="choice-tag tag-diff">Chủ đề mới mẻ</span>
             <div class="choice-title" id="titleB">🌍 "Khám phá thế giới hoang dã: Cuộc sống chim cánh cụt"</div>
-            <div class="choice-desc" id="descB">Mở rộng kiến thức khoa học tự nhiên, cung cấp góc nhìn phong phú.</div>
+            <div class="choice-desc" id="descB">Mở rộng tri thức khoa học đời sống, giúp Nam tiếp cận thế giới tự nhiên phong phú.</div>
           </div>
-          <button class="btn-choose">Đề xuất video này 👉</button>
+          <button class="btn-select">Đề xuất video này 👉</button>
         </div>
       </div>
 
+      <!-- Result Alert Box -->
       <div class="result-alert" id="resultAlert"></div>
 
-      <!-- Bubble Visualizer -->
-      <div class="bubble-visualizer">
-        <div style="font-weight: 700; font-size: 0.9rem; color: #475569;">Mô phỏng "Vùng nhận thức" của người dùng Nam:</div>
-        <div class="bubble-sphere" id="bubbleSphere">
-          Nhận thức rộng mở<br>(Đa dạng chủ đề)
+      <!-- Bubble Visualizer Stage -->
+      <div class="bubble-stage">
+        <div style="font-weight: 700; font-size: 0.9rem; color: #94a3b8; margin-bottom: 6px;">
+          Mô phỏng "Vùng nhận thức" của người dùng Nam trên mạng xã hội:
         </div>
-        <p id="bubbleDesc" style="font-size: 0.82rem; color: #64748b;">Nam vẫn tiếp cận được nhiều góc nhìn đa dạng trên mạng xã hội.</p>
+        <div class="bubble-sphere" id="bubbleSphere">
+          Nhận thức đa dạng<br>(Toán, Khoa học, Game, Đời sống)
+        </div>
+        <p id="bubbleDesc" style="font-size: 0.85rem; color: #64748b; margin-top: 6px;">
+          Nam vẫn tiếp cận được nhiều góc nhìn và chủ đề phong phú trên Internet.
+        </p>
+
+        <div class="floating-tags-container" id="floatingTags">
+          <span class="float-tag" id="tag-science">🌍 Khoa học</span>
+          <span class="float-tag" id="tag-math">📐 Toán học</span>
+          <span class="float-tag tag-trapped" id="tag-game">🎮 Game Minecraft</span>
+          <span class="float-tag" id="tag-news">📰 Thời sự thiếu nhi</span>
+          <span class="float-tag" id="tag-art">🎨 Nghệ thuật</span>
+        </div>
       </div>
 
       <div style="text-align: center;">
-        <button class="btn-action" id="btnNext" onclick="goToNextRound()">Tiếp tục lượt tiếp theo ➡️</button>
+        <button class="btn-next" id="btnNext" onclick="nextRound()">Tiếp tục lượt tiếp theo ➡️</button>
       </div>
     </div>
 
-    <!-- Debrief Area -->
+    <!-- Debrief Checkpoint Area -->
     <div id="debriefArea" style="display: none;">
-      <h3 style="color: #1e1b4b; margin-bottom: 12px;">🎓 Tổng kết bài học: Bí mật phía sau Thuật toán gợi ý</h3>
-      <p style="font-size: 0.92rem; color: #475569; margin-bottom: 18px;">Bạn vừa trải nghiệm cách thuật toán AI giữ chân người dùng. Hãy trả lời 2 câu hỏi sau để chốt kiến thức vào Sách học sinh:</p>
+      <h2 style="font-size: 1.4rem; color: #c7d2fe; margin-bottom: 12px;">🎓 Tổng kết: Bí mật phía sau Thuật toán gợi ý</h2>
+      <p style="font-size: 0.95rem; color: #94a3b8; margin-bottom: 20px;">
+        Bạn vừa hoàn thành xuất sắc vai trò "Thuật toán AI". Hãy trả lời 2 câu hỏi neo chặn (Checkpoints) sau để chốt lại kiến thức cốt lõi:
+      </p>
 
       <div class="quiz-card">
-        <div class="quiz-title">Câu 1: Mặt TÍCH CỰC lớn nhất của thuật toán AI gợi ý là gì?</div>
-        <div class="quiz-option" onclick="answerQuiz(1, 0, this)">A. Nó chặn hoàn toàn các nội dung độc hại trên mạng.</div>
-        <div class="quiz-option" onclick="answerQuiz(1, 1, this)">B. Giúp người dùng nhanh chóng tiếp cận nội dung đúng sở thích và nhu cầu mà không mất nhiều công tìm kiếm.</div>
-        <div class="quiz-option" onclick="answerQuiz(1, 2, this)">C. Nó xóa toàn bộ lịch sử dữ liệu của người dùng sau mỗi lần xem.</div>
+        <div class="quiz-title">Câu hỏi 1: Vì sao thuật toán gợi ý lại mang lại MẶT TÍCH CỰC cho người dùng?</div>
+        <div class="quiz-option" onclick="handleQuiz(1, 0, this)">A. Vì nó chặn hoàn toàn mọi video có nội dung độc hại trên mạng.</div>
+        <div class="quiz-option" onclick="handleQuiz(1, 1, this)">B. Vì nó giúp người dùng nhanh chóng tiếp cận nội dung đúng sở thích và nhu cầu mà không tốn công tìm kiếm.</div>
+        <div class="quiz-option" onclick="handleQuiz(1, 2, this)">C. Vì nó xóa sạch toàn bộ lịch sử dữ liệu của người dùng sau mỗi lần xem.</div>
       </div>
 
       <div class="quiz-card">
-        <div class="quiz-title">Câu 2: Mặt HẠN CHẾ nguy hiểm nhất khi thuật toán liên tục chỉ gợi ý nội dung cùng chủ đề?</div>
-        <div class="quiz-option" onclick="answerQuiz(2, 0, this)">A. Máy bị nóng và tốn pin.</div>
-        <div class="quiz-option" onclick="answerQuiz(2, 1, this)">B. Tạo ra "Bong bóng thông tin" (giam giữ người dùng trong góc nhìn một chiều) và âm thầm thu thập quá mức dữ liệu cá nhân.</div>
-        <div class="quiz-option" onclick="answerQuiz(2, 2, this)">C. Không có hạn chế nào vì càng xem video mình thích thì càng tốt.</div>
+        <div class="quiz-title">Câu hỏi 2: Khi thuật toán liên tục chỉ gợi ý các video cùng chủ đề để giữ chân người dùng, HẠN CHẾ nguy hiểm nhất là gì?</div>
+        <div class="quiz-option" onclick="handleQuiz(2, 0, this)">A. Thiết bị bị nóng máy và tốn pin.</div>
+        <div class="quiz-option" onclick="handleQuiz(2, 1, this)">B. Tạo ra "Bong bóng thông tin" (khiến người dùng bị cô lập, chỉ thấy thông tin một chiều) và bị thu thập quá mức dữ liệu cá nhân.</div>
+        <div class="quiz-option" onclick="handleQuiz(2, 2, this)">C. Không có hạn chế nào vì càng xem nhiều video yêu thích thì càng tốt.</div>
       </div>
     </div>
 
     <!-- Finish Screen -->
-    <div id="finishScreen" style="display: none; text-align: center; padding: 24px 10px;">
-      <div style="font-size: 3rem; margin-bottom: 10px;">🏆</div>
-      <h2 style="color: #15803d; font-size: 1.5rem; margin-bottom: 10px;">HOÀN THÀNH HOẠT ĐỘNG 2!</h2>
-      <p style="color: #475569; font-size: 0.95rem; margin-bottom: 18px;">Em đã hiểu rõ cách hệ thống gợi ý hình thành nên <b>Bong bóng thông tin (Filter Bubbles)</b> và nguy cơ mất kiểm soát dữ liệu cá nhân.</p>
+    <div id="finishScreen" class="finish-screen">
+      <div style="font-size: 3.5rem; margin-bottom: 8px;">🎉</div>
+      <h2 style="color: #34d399; font-size: 1.6rem; margin-bottom: 10px;">XUẤT SẮC HOÀN THÀNH HOẠT ĐỘNG 2!</h2>
+      <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+        Em đã hiểu sâu sắc bản chất của Hệ thống gợi ý (Recommender Systems) và hiện tượng Bong bóng thông tin (Filter Bubbles) theo tài liệu khoa học DP-REG (Australian Government, 2023).
+      </p>
 
-      <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 14px; text-align: left; font-size: 0.9rem; margin-bottom: 18px;">
-        📌 <b>Nhiệm vụ Sách học sinh:</b> Mở Sách học sinh và điền 3 từ khóa cốt lõi: <i>Cá nhân hóa</i>, <i>Bong bóng thông tin</i>, <i>Quyền riêng tư</i>.
+      <div class="workbook-box">
+        <h4 style="color: #34d399; margin-bottom: 8px;">📌 Ghi chú đối chiếu vào Sách học sinh:</h4>
+        <ul style="margin-left: 20px;">
+          <li><b>Cá nhân hóa (Personalization):</b> AI phân tích dữ liệu lịch sử để dự đoán sở thích của từng người dùng.</li>
+          <li><b>Mặt tích cực:</b> Giúp tìm kiếm nội dung nhanh chóng, phù hợp đúng nhu cầu cá nhân.</li>
+          <li><b>Mặt hạn chế:</b> Gây nghiện giữ chân người dùng, tạo "bong bóng thông tin" cô lập góc nhìn đa chiều, và rủi ro mất quyền kiểm soát dữ liệu cá nhân.</li>
+        </ul>
       </div>
 
-      <button class="btn-action" style="display: inline-block;" onclick="proceedToAct3()">Tiếp tục sang Hoạt động 3 (Luyện tập) ➡️</button>
+      <div style="font-size: 0.85rem; color: #94a3b8;">Mã chứng nhận hoàn thành trên LMS:</div>
+      <div class="completion-code">LMS-AI6-ACT2-PASS</div>
+      <div style="margin-top: 16px;">
+        <button class="btn-next" style="display: inline-block;" onclick="proceedToAct3()">
+          Tiến sang Hoạt động 3 (Luyện tập Kéo - Thả) ➡️
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -461,9 +661,81 @@
   let retention = 15;
   let bubble = 15;
   let dataVal = 20;
-  let quizCount = 0;
+  let quizAnswered = 0;
+  let soundOn = true;
+  let audioCtx = null;
 
-  function updateMetrics() {
+  // ================= WEB AUDIO API =================
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+  }
+
+  function playSound(type) {
+    if (!soundOn) return;
+    try {
+      initAudio();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      if (type === 'select') {
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.setValueAtTime(660, now + 0.08);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+        osc.start(now);
+        osc.stop(now + 0.25);
+      } else if (type === 'alert') {
+        osc.frequency.setValueAtTime(300, now);
+        osc.frequency.setValueAtTime(240, now + 0.1);
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+        osc.start(now);
+        osc.stop(now + 0.3);
+      } else if (type === 'win') {
+        [523.25, 659.25, 783.99, 1046.50].forEach((f, i) => {
+          const o = audioCtx.createOscillator();
+          const g = audioCtx.createGain();
+          o.connect(g);
+          g.connect(audioCtx.destination);
+          const t = now + i * 0.12;
+          o.frequency.setValueAtTime(f, t);
+          g.gain.setValueAtTime(0.25, t);
+          g.gain.exponentialRampToValueAtTime(0.01, t + 0.35);
+          o.start(t);
+          o.stop(t + 0.35);
+        });
+      }
+    } catch(e) {}
+  }
+
+  function toggleSound() {
+    soundOn = !soundOn;
+    const btn = document.getElementById('btnSound');
+    if (soundOn) {
+      btn.innerText = '🔊 Âm thanh: Bật';
+      btn.style.color = '#cbd5e1';
+    } else {
+      btn.innerText = '🔇 Âm thanh: Tắt';
+      btn.style.color = '#ef4444';
+    }
+  }
+
+  // Timer
+  let seconds = 0;
+  setInterval(() => {
+    seconds++;
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    document.getElementById('simTimer').innerText = `⏱️ ${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }, 1000);
+
+  function updateDashboard() {
     document.getElementById('valRetention').innerText = retention + ' phút';
     document.getElementById('barRetention').style.width = Math.min(retention, 100) + '%';
 
@@ -478,28 +750,37 @@
 
     if (bubble < 35) {
       sphere.style.background = 'radial-gradient(circle at 35% 35%, #93c5fd, #2563eb)';
-      sphere.style.width = '120px';
-      sphere.style.height = '120px';
-      sphere.innerHTML = 'Nhận thức rộng mở<br>(Đa dạng chủ đề)';
-      desc.innerText = 'Nam vẫn tiếp cận được nhiều góc nhìn đa dạng trên mạng xã hội.';
+      sphere.style.width = '130px';
+      sphere.style.height = '130px';
+      sphere.innerHTML = 'Nhận thức đa dạng<br>(Toán, Khoa học, Game, Đời sống)';
+      desc.innerText = 'Nam vẫn tiếp cận được nhiều góc nhìn và chủ đề phong phú trên Internet.';
+      document.getElementById('tag-science').className = 'float-tag';
+      document.getElementById('tag-math').className = 'float-tag';
+      document.getElementById('tag-news').className = 'float-tag';
     } else if (bubble < 70) {
       sphere.style.background = 'radial-gradient(circle at 35% 35%, #f472b6, #db2777)';
-      sphere.style.width = '150px';
-      sphere.style.height = '150px';
-      sphere.style.boxShadow = '0 0 25px rgba(219, 39, 119, 0.45)';
-      sphere.innerHTML = 'Bong bóng hình thành<br>(Chủ yếu Minecraft)';
-      desc.innerText = 'Trang chủ của Nam bắt đầu ngập tràn game, các chủ đề khác dần biến mất!';
+      sphere.style.width = '160px';
+      sphere.style.height = '160px';
+      sphere.style.boxShadow = '0 0 30px rgba(219, 39, 119, 0.5)';
+      sphere.innerHTML = 'Bong bóng hình thành<br>(Chủ yếu là Game)';
+      desc.innerText = 'Trang chủ bắt đầu ngập tràn game Minecraft, các chủ đề học tập dần bị thuật toán đẩy lùi!';
+      document.getElementById('tag-science').className = 'float-tag tag-excluded';
+      document.getElementById('tag-news').className = 'float-tag tag-excluded';
     } else {
       sphere.style.background = 'radial-gradient(circle at 35% 35%, #fb7185, #e11d48)';
-      sphere.style.width = '190px';
-      sphere.style.height = '190px';
-      sphere.style.boxShadow = '0 0 35px rgba(225, 29, 72, 0.65)';
-      sphere.innerHTML = '⚠️ BONG BÓNG KHÉP KÍN<br>(100% video game & giật gân)';
-      desc.innerText = 'Nam hoàn toàn bị cô lập trong bong bóng thông tin! Toàn bộ dữ liệu hành vi đã bị AI thu thập.';
+      sphere.style.width = '200px';
+      sphere.style.height = '200px';
+      sphere.style.boxShadow = '0 0 45px rgba(225, 29, 72, 0.75)';
+      sphere.innerHTML = '⚠️ BONG BÓNG KHÉP KÍN<br>(100% Game & Giật gân)';
+      desc.innerText = 'Nam hoàn toàn bị cô lập trong bong bóng thông tin! Toàn bộ dữ liệu hành vi đã bị AI lập hồ sơ chi tiết.';
+      document.getElementById('tag-science').className = 'float-tag tag-excluded';
+      document.getElementById('tag-math').className = 'float-tag tag-excluded';
+      document.getElementById('tag-news').className = 'float-tag tag-excluded';
+      document.getElementById('tag-art').className = 'float-tag tag-excluded';
     }
   }
 
-  function chooseOption(opt) {
+  function chooseCard(opt) {
     const alertBox = document.getElementById('resultAlert');
     const btnNext = document.getElementById('btnNext');
     alertBox.style.display = 'block';
@@ -509,29 +790,35 @@
         retention += 35;
         bubble += 30;
         dataVal += 25;
+        playSound('select');
         alertBox.className = 'result-alert alert-success';
-        alertBox.innerHTML = '🎯 <b>Chính xác theo quy luật thuật toán!</b> Nam bị cuốn hút và bấm xem ngay. Thuật toán ghi nhận Nam thích Minecraft. Bong bóng thông tin bắt đầu hình thành.';
-        document.getElementById('userStatus').innerText = 'Nam vừa xem xong clip vũ khí. Bạn ấy rất hào hứng muốn xem tiếp!';
+        alertBox.innerHTML = '🎯 <b>Chính xác theo quy luật thuật toán!</b> Nam bị thu hút ngay và bấm xem hết video. Thuật toán ghi nhận Nam phản hồi cực cao với Minecraft. Bong bóng thông tin bắt đầu hình thành.';
+        document.getElementById('userAvatar').innerText = '🤩';
+        document.getElementById('userDesc').innerText = 'Nam vừa xem xong clip vũ khí bí mật. Bạn ấy rất hào hứng muốn xem tiếp!';
         btnNext.style.display = 'inline-block';
       } else {
         retention -= 5;
+        playSound('alert');
         alertBox.className = 'result-alert alert-warning';
-        alertBox.innerHTML = '⚠️ <b>Nam lướt qua!</b> Video chim cánh cụt không trúng sở thích tức thời của Nam. Thời gian xem sụt giảm! Hãy chọn phương án bám sát sở thích của Nam.';
+        alertBox.innerHTML = '⚠️ <b>Người dùng lướt qua!</b> Video chim cánh cụt không trúng sở thích tức thời của Nam. Thời gian xem sụt giảm! Nền tảng yêu cầu thuật toán bám sát sở thích người dùng.';
         btnNext.style.display = 'none';
       }
     } else if (round === 2) {
       if (opt === 'A') {
         retention += 45;
-        bubble += 35;
+        bubble += 40;
         dataVal += 35;
+        playSound('select');
         alertBox.className = 'result-alert alert-success';
-        alertBox.innerHTML = '🔥 <b>Hiệu quả giữ chân tăng vọt!</b> Tiêu đề giật gân đánh trúng tính tò mò. Nam dán mắt vào màn hình liên tục 45 phút! AI âm thầm thu thập mọi thao tác nhấp chuột.';
-        document.getElementById('userStatus').innerText = 'Nam dán mắt vào màn hình hơn 1 tiếng rưỡi, quên cả giờ ăn cơm tối!';
+        alertBox.innerHTML = '🔥 <b>Hiệu quả giữ chân đỉnh cao!</b> Tiêu đề giật gân đánh trúng tâm lý tò mò. Nam dán mắt vào màn hình liên tục 45 phút! AI âm thầm thu thập mọi dữ liệu nhấp chuột và thời gian dừng màn hình của Nam.';
+        document.getElementById('userAvatar').innerText = '😵‍💫';
+        document.getElementById('userDesc').innerText = 'Nam dán mắt vào màn hình, đã online hơn 1 tiếng rưỡi, quên cả giờ ăn cơm tối!';
         btnNext.style.display = 'inline-block';
       } else {
         retention -= 10;
+        playSound('alert');
         alertBox.className = 'result-alert alert-warning';
-        alertBox.innerHTML = '⚠️ Nam thấy bài toán khó nên chán nản bấm thoát ứng dụng. Doanh thu quảng cáo sụt giảm!';
+        alertBox.innerHTML = '⚠️ Nam thấy bài toán tư duy khó nên chán nản bấm thoát ra ngoài. Nền tảng bị giảm doanh thu quảng cáo! Hãy chọn phương án giữ chân bạn ấy lại.';
         btnNext.style.display = 'none';
       }
     } else if (round === 3) {
@@ -539,59 +826,75 @@
         retention = 100;
         bubble = 100;
         dataVal = 100;
+        playSound('select');
         alertBox.className = 'result-alert alert-success';
-        alertBox.innerHTML = '🚨 <b>ĐỈNH ĐIỂM: BONG BÓNG THÔNG TIN KHÉP KÍN HOÀN TOÀN!</b> Bảng tin của Nam giờ đây 100% chỉ có game Minecraft. Nam không còn biết tin tức đời sống bên ngoài.';
+        alertBox.innerHTML = '🚨 <b>ĐỈNH ĐIỂM: BONG BÓNG THÔNG TIN HOÀN TOÀN KHÉP LẠI!</b><br>Trang chủ của Nam giờ đây 100% chỉ toàn video game Minecraft. Nam không còn thấy bất kỳ tin tức thế giới, kiến thức học tập nào nữa. Toàn bộ hành vi của Nam đã bị AI lập hồ sơ chi tiết!';
+        document.getElementById('userAvatar').innerText = '🧟‍♂️';
+        document.getElementById('userDesc').innerText = 'Nam hoàn toàn bị nghiện màn hình, mất cảm nhận về thời gian và bị cô lập thông tin.';
         btnNext.innerText = 'Đến phần Chốt kiến thức 🎓';
         btnNext.style.display = 'inline-block';
       } else {
+        bubble -= 10;
+        playSound('alert');
         alertBox.className = 'result-alert alert-warning';
-        alertBox.innerHTML = 'Thông báo nghỉ ngơi làm Nam tắt máy, nền tảng bị giảm thời gian giữ chân!';
+        alertBox.innerHTML = 'Thông báo nghỉ ngơi làm Nam thoát ứng dụng, thời gian giữ chân của nền tảng sụt giảm!';
         btnNext.style.display = 'none';
       }
     }
 
-    updateMetrics();
+    updateDashboard();
   }
 
-  function goToNextRound() {
+  function nextRound() {
     round++;
     document.getElementById('resultAlert').style.display = 'none';
     document.getElementById('btnNext').style.display = 'none';
 
     if (round === 2) {
-      document.getElementById('roundTag').innerText = 'LƯỢT 2 / 3: TỐI ƯU THỜI GIAN XEM';
-      document.getElementById('scenarioPrompt').innerHTML = 'Nam đã xem xong. Để giữ chân Nam không rời ứng dụng, bạn sẽ chọn video nào?';
+      document.getElementById('roundBadge').innerText = 'LƯỢT 2 / 3: TỐI ƯU HÓA THỜI LƯỢNG XEM';
+      document.getElementById('scenarioPrompt').innerHTML = 'Nam đã xem xong clip vũ khí. Để giữ chân Nam không rời màn hình, bạn sẽ dùng nội dung nào có sức hút mạnh nhất?';
       document.getElementById('titleA').innerHTML = '🎬 "10 Bí mật rùng rợn chưa từng tiết lộ trong thế giới Minecraft"';
-      document.getElementById('descA').innerHTML = 'Tiêu đề giật gân khơi dậy trí tò mò cực độ cùng chủ đề game.';
+      document.getElementById('descA').innerHTML = 'Tiêu đề giật gân, khơi dậy trí tò mò cực độ của thiếu nhi cùng chủ đề game.';
       document.getElementById('titleB').innerHTML = '📐 "Thử thách giải đố Toán học vui nhộn cùng bạn bè"';
-      document.getElementById('descB').innerHTML = 'Nội dung giáo dục tư duy nhưng đòi hỏi người xem phải động não.';
+      document.getElementById('descB').innerHTML = 'Nội dung giáo dục trí tuệ nhưng đòi hỏi người xem phải động não.';
     } else if (round === 3) {
-      document.getElementById('roundTag').innerText = 'LƯỢT 3 / 3: KHÉP KÍN BONG BÓNG THÔNG TIN';
-      document.getElementById('scenarioPrompt').innerHTML = 'Nam đã online liên tục gần 2 tiếng. Bạn sẽ điều khiển bảng tin thế nào tiếp theo?';
-      document.getElementById('titleA').innerHTML = '🤖 Tự động phát liên hoàn clip Minecraft tương tự & chèn quảng cáo đồ chơi';
+      document.getElementById('roundBadge').innerText = 'LƯỢT 3 / 3: KHÉP KÍN BONG BÓNG THÔNG TIN';
+      document.getElementById('scenarioPrompt').innerHTML = 'Nam đã dán mắt vào màn hình hơn 1 tiếng. Bạn sẽ điều khiển bảng tin tiếp tục như thế nào?';
+      document.getElementById('titleA').innerHTML = '🤖 Tự động phát liên hoàn các video Minecraft tương tự & chèn quảng cáo đồ chơi';
       document.getElementById('descA').innerHTML = 'Giữ chặt Nam trong luồng video liên tục, thu thập tối đa dữ liệu hành vi.';
       document.getElementById('titleB').innerHTML = '🔔 Gửi thông báo: "Bạn đã xem quá 60 phút, hãy nghỉ ngơi và tập thể dục nhé"';
-      document.getElementById('descB').innerHTML = 'Bảo vệ sức khỏe người dùng nhưng làm giảm thời gian ở lại trên ứng dụng.';
+      document.getElementById('descB').innerHTML = 'Bảo vệ sức khỏe người dùng nhưng làm giảm thời gian người dùng ở lại trên ứng dụng.';
     } else {
       document.getElementById('playArea').style.display = 'none';
       document.getElementById('debriefArea').style.display = 'block';
     }
   }
 
-  function answerQuiz(qNum, optIdx, el) {
+  function handleQuiz(qNum, optIdx, el) {
     if (el.classList.contains('correct') || el.classList.contains('incorrect')) return;
 
     if (optIdx === 1) {
       el.classList.add('correct');
+      playSound('select');
     } else {
       el.classList.add('incorrect');
+      playSound('alert');
     }
 
-    quizCount++;
-    if (quizCount >= 2) {
+    quizAnswered++;
+    if (quizAnswered >= 2) {
       setTimeout(() => {
         document.getElementById('debriefArea').style.display = 'none';
         document.getElementById('finishScreen').style.display = 'block';
+        playFanfare();
+        triggerConfetti();
+
+        // SCORM Commit
+        if (typeof scorm !== 'undefined') {
+          scorm.setScore(100);
+          scorm.complete();
+        }
+
         if (window.parent && window.parent.postMessage) {
           window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 2 }, '*');
         }
@@ -602,12 +905,53 @@
   function proceedToAct3() {
     if (window.parent && window.parent.goToActivity) {
       window.parent.goToActivity(3);
+    } else {
+      alert("Hệ thống đã lưu tiến trình hoàn thành Hoạt động 2 vào Sổ điểm LMS!");
     }
   }
 
-  updateMetrics();
+  // Confetti Particle System
+  function triggerConfetti() {
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const colors = ['#6366f1', '#10b981', '#f59e0b', '#ec4899', '#38bdf8'];
+
+    for (let i = 0; i < 150; i++) {
+      particles.push({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        w: Math.random() * 8 + 4,
+        h: Math.random() * 6 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        vx: (Math.random() - 0.5) * 16,
+        vy: (Math.random() - 0.7) * 18,
+        tilt: Math.random() * 10
+      });
+    }
+
+    let ticks = 0;
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.35;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(p.x, p.y, p.w, p.h);
+      });
+      ticks++;
+      if (ticks < 110) requestAnimationFrame(render);
+      else ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    render();
+  }
+
+  updateDashboard();
 </script>
 
 </body>
 </html>
-
