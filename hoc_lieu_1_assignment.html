@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Học liệu 1: Bài tập nộp file - YouTube cá nhân</title>
+  <title>Học liệu 1: Trải nghiệm "Trang chủ YouTube của em"</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -15,8 +15,6 @@
       --success: #10b981;
       --success-light: #ecfdf5;
       --warning: #f59e0b;
-      --danger: #ef4444;
-      --drive-blue: #0284c7;
       --card-bg: #ffffff;
       --text: #0f172a;
       --text-muted: #64748b;
@@ -34,7 +32,7 @@
     body {
       background: #f8fafc;
       color: var(--text);
-      padding: 16px;
+      padding: 20px 16px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -44,10 +42,10 @@
     .embed-card {
       background: var(--card-bg);
       width: 100%;
-      max-width: 820px;
+      max-width: 800px;
       border-radius: var(--radius);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      padding: 28px;
+      padding: 32px;
       border: 1px solid var(--border);
     }
 
@@ -61,13 +59,13 @@
       border-radius: 999px;
       font-size: 0.82rem;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       border: 1px solid #c7d2fe;
     }
 
     h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       color: #1e1b4b;
       margin-bottom: 8px;
       line-height: 1.3;
@@ -75,8 +73,9 @@
 
     .subtitle {
       color: var(--text-muted);
-      font-size: 0.92rem;
-      margin-bottom: 18px;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.5;
     }
 
     /* Instruction Box */
@@ -84,19 +83,19 @@
       background: #eff6ff;
       border-left: 4px solid var(--primary);
       border-radius: 0 12px 12px 0;
-      padding: 16px 20px;
-      font-size: 0.93rem;
-      margin-bottom: 22px;
+      padding: 18px 22px;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
       line-height: 1.65;
     }
 
     .instruction-box ol {
       margin-left: 20px;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
     .instruction-box li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     /* Google Drive Submission Card */
@@ -104,11 +103,11 @@
       background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
       border: 1.5px solid #bae6fd;
       border-radius: 14px;
-      padding: 18px 20px;
-      margin-bottom: 22px;
+      padding: 22px;
+      margin-bottom: 26px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
 
     .drive-submit-header {
@@ -116,29 +115,29 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
     }
 
     .drive-title-wrap {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .drive-icon {
-      width: 34px;
-      height: 34px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
 
     .drive-title {
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: #0369a1;
     }
 
@@ -147,121 +146,62 @@
       color: white;
       text-decoration: none;
       font-weight: 800;
-      font-size: 0.9rem;
-      padding: 10px 18px;
+      font-size: 0.95rem;
+      padding: 12px 22px;
       border-radius: 10px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       transition: all 0.2s;
-      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.25);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
     }
 
     .drive-btn:hover {
       background: #0369a1;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
     }
 
-    .check-drive-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid #bae6fd;
+    .drive-note {
+      font-size: 0.88rem;
+      color: #0369a1;
+      line-height: 1.5;
+      background: rgba(255, 255, 255, 0.8);
       padding: 10px 14px;
       border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #0369a1;
-      cursor: pointer;
-      user-select: none;
+      border: 1px solid #bae6fd;
     }
 
-    .check-drive-wrap input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      accent-color: #0284c7;
-      cursor: pointer;
-    }
-
-    /* Form Fields */
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 7px;
-      color: #334155;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 11px 14px;
-      border-radius: 10px;
-      border: 1.5px solid #cbd5e1;
-      font-size: 0.95rem;
-      transition: all 0.2s;
-      background: #ffffff;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15);
-    }
-
-    /* Range slider synced with counter */
-    .range-wrap {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 8px;
-    }
-
-    .range-slider {
-      flex: 1;
-      accent-color: var(--primary);
-      height: 6px;
-      cursor: pointer;
-    }
-
-    .range-badge {
-      background: #eef2ff;
-      color: var(--primary);
-      font-weight: 800;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      border: 1px solid #c7d2fe;
-      min-width: 120px;
+    /* Completion Box */
+    .completion-box {
+      background: #f8fafc;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 14px;
+      padding: 24px;
       text-align: center;
     }
 
-    /* Submit Button */
-    .btn-submit {
+    .btn-complete-act {
       background: var(--primary);
       color: white;
       border: none;
-      padding: 14px 28px;
+      padding: 14px 32px;
       border-radius: 12px;
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 1.02rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      width: 100%;
       transition: all 0.2s;
       box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);
     }
 
-    .btn-submit:hover {
+    .btn-complete-act:hover {
       background: var(--primary-hover);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(67, 56, 202, 0.4);
     }
 
     /* Modal Overlay & Card */
@@ -280,9 +220,9 @@
     .modal-content {
       background: white;
       border-radius: 20px;
-      max-width: 560px;
+      max-width: 540px;
       width: 100%;
-      padding: 30px;
+      padding: 32px;
       text-align: center;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
       animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -293,73 +233,25 @@
       to { transform: scale(1); opacity: 1; }
     }
 
-    .receipt-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin: 16px 0;
-      text-align: left;
-      font-size: 0.88rem;
-      line-height: 1.6;
-    }
-
-    .receipt-row {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dashed #cbd5e1;
-      padding: 6px 0;
-    }
-
-    .receipt-row:last-child {
-      border-bottom: none;
-    }
-
-    .modal-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
     .btn-next-act {
       background: var(--primary);
       color: white;
       border: none;
-      padding: 12px 20px;
+      padding: 13px 24px;
       border-radius: 10px;
       font-weight: 800;
       cursor: pointer;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       transition: all 0.2s;
+      margin-top: 18px;
     }
 
     .btn-next-act:hover {
       background: var(--primary-hover);
-    }
-
-    .btn-view-drive {
-      background: #f0f9ff;
-      border: 1.5px solid #0284c7;
-      color: #0284c7;
-      text-decoration: none;
-      padding: 11px 20px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s;
-    }
-
-    .btn-view-drive:hover {
-      background: #e0f2fe;
     }
 
     #confettiCanvas {
@@ -379,7 +271,7 @@
 
 <div class="embed-card">
   <div class="top-badge">Hoạt động 1 • Khởi động (10 phút) • E-learning 100%</div>
-  <h2>Bài tập nộp file: Trải nghiệm "Trang chủ YouTube của em"</h2>
+  <h2>Bài tập: Trải nghiệm "Trang chủ YouTube của em"</h2>
   <p class="subtitle">Khám phá mức độ cá nhân hóa và khả năng "đọc vị sở thích" của thuật toán gợi ý video YouTube.</p>
 
   <!-- Hướng dẫn nhiệm vụ học sinh -->
@@ -388,9 +280,10 @@
     <ol>
       <li>Mở ứng dụng hoặc trang web <b>YouTube</b> trên máy tính hoặc điện thoại của em (tài khoản cá nhân em thường dùng).</li>
       <li>Quan sát kỹ <b>10 video đầu tiên</b> xuất hiện trên trang chủ.</li>
-      <li>Đếm xem có bao nhiêu video trùng khớp hoặc có liên quan đến các chủ đề em vừa xem/tìm kiếm gần đây và ghi chú vào <b>Sách học sinh (Mục I - Khởi động)</b>.</li>
-      <li><b>Chụp ảnh màn hình</b> và tải lên Thư mục Google Drive tiếp nhận của lớp theo liên kết bên dưới.</li>
-      <li>Điền số lượng video trùng khớp và cảm nghĩ ngắn vào ô bên dưới.</li>
+      <li>Đếm xem có bao nhiêu video trùng khớp hoặc có liên quan đến các chủ đề em vừa xem/tìm kiếm gần đây.</li>
+      <li>Ghi chép số liệu thống kê và cảm nghĩ vào <b>Sách học sinh (Mục I - Khởi động)</b>.</li>
+      <li><b>Chụp ảnh màn hình</b> trang chủ YouTube thể hiện các video được gợi ý đó.</li>
+      <li>Bấm vào nút bên dưới để tải ảnh chụp màn hình lên <b>Thư mục Google Drive tiếp nhận của lớp</b>.</li>
     </ol>
   </div>
 
@@ -399,7 +292,7 @@
     <div class="drive-submit-header">
       <div class="drive-title-wrap">
         <div class="drive-icon">
-          <svg width="22" height="22" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+          <svg width="24" height="24" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
             <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
             <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#00ac47"/>
             <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.5l5.85 10.15z" fill="#ea4335"/>
@@ -410,7 +303,7 @@
         </div>
         <div>
           <div class="drive-title">Thư mục Google Drive tiếp nhận bài nộp của lớp</div>
-          <div style="font-size: 0.8rem; color: #0284c7;">Nơi lưu trữ ảnh chụp màn hình 10 video YouTube của em</div>
+          <div style="font-size: 0.82rem; color: #0284c7; margin-top: 2px;">Nơi tiếp nhận và lưu trữ ảnh chụp màn hình YouTube của em</div>
         </div>
       </div>
       <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="drive-btn">
@@ -418,62 +311,37 @@
       </a>
     </div>
 
-    <label class="check-drive-wrap">
-      <input type="checkbox" id="chkDriveDone" checked>
-      <span>✅ Em đã mở Thư mục Drive và tải ảnh chụp màn hình YouTube lên lớp</span>
-    </label>
-  </div>
-
-  <!-- Câu hỏi 1: Số lượng video trùng khớp -->
-  <div class="form-group">
-    <label for="inpCount">1. Số video trùng khớp chủ đề em vừa xem gần đây (trên 10 video đầu tiên): <span style="color: var(--danger)">*</span></label>
-    <div class="range-wrap">
-      <input type="range" id="rangeSlider" class="range-slider" min="0" max="10" value="8" oninput="syncRangeToInput(this.value)">
-      <input type="number" id="inpCount" class="form-control" style="width: 80px; text-align: center; font-weight: 800; font-size: 1.1rem;" min="0" max="10" value="8" oninput="syncInputToRange(this.value)">
-      <div class="range-badge" id="badgeMatch">8/10 video (80%)</div>
+    <div class="drive-note">
+      💡 <b>Quy ước đặt tên file minh chứng:</b> <code>HoTen_Lop_Bai4_YouTube.png</code> (Ví dụ: <code>NguyenVanAn_6A1_Bai4_YouTube.png</code>).
     </div>
   </div>
 
-  <!-- Câu hỏi 2: Cảm nghĩ ngắn -->
-  <div class="form-group">
-    <label for="inpThoughts">2. Cảm nghĩ ngắn của em khi thấy các video YouTube đề xuất: <span style="color: var(--danger)">*</span></label>
-    <textarea id="inpThoughts" class="form-control" rows="3" placeholder="Nhập cảm nghĩ của em (Ví dụ: Em rất ngạc nhiên vì YouTube đề xuất đúng các video ôn tập Tin học và Minecraft em vừa tìm tối qua. Thuật toán nắm bắt sở thích người dùng cực kỳ nhanh...)">Em thấy 8/10 video trên trang chủ YouTube của em đều đúng các kênh khoa học, game và bài hát em mới tìm hôm qua. Em thấy thuật toán ghi nhớ rất nhanh và chính xác!</textarea>
-    <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
-      💡 Gợi ý: Em cảm thấy tiện lợi hay có một chút lo lắng khi thuật toán biết rõ mọi sở thích của mình?
+  <!-- Hộp xác nhận hoàn thành & chuyển tiếp sang Hoạt động 2 -->
+  <div class="completion-box">
+    <div style="font-size: 1.05rem; font-weight: 800; color: #1e1b4b; margin-bottom: 6px;">
+      ✅ Em đã nộp ảnh vào Thư mục Drive và ghi chép vào Sách học sinh?
     </div>
+    <p style="font-size: 0.9rem; color: #475569; margin-bottom: 18px; line-height: 1.5;">
+      Sau khi đã tải ảnh lên Drive của lớp, em hãy bấm nút bên dưới để hoàn tất Hoạt động 1 và mở khóa Hoạt động 2.
+    </p>
+    <button class="btn-complete-act" onclick="completeActivity1()">
+      <span>Hoàn thành Khởi động — Tiến vào Hoạt động 2</span> 🚀
+    </button>
   </div>
-
-  <button class="btn-submit" onclick="submitWork()">
-    <span>Nộp bài tập lên LMS</span> 🚀
-  </button>
 </div>
 
-<!-- Modal Nộp bài thành công -->
+<!-- Modal Chúc mừng & Mở khóa Hoạt động 2 -->
 <div class="modal-overlay" id="modalFeedback">
   <div class="modal-content">
     <div style="font-size: 3.2rem; margin-bottom: 8px;">🎉</div>
-    <h3 style="color: #1e1b4b; font-size: 1.35rem; margin-bottom: 8px;">Nộp bài tập Khởi động thành công!</h3>
-    <p style="color: #475569; font-size: 0.92rem; line-height: 1.5;">
-      Bài tập của em đã được ghi nhận thành công trên hệ thống LMS.
-    </p>
-
-    <div class="receipt-box" id="receiptSummary">
-      <!-- Sẽ điền tự động bằng Javascript -->
+    <h3 style="color: #1e1b4b; font-size: 1.35rem; margin-bottom: 10px;">Hoàn thành Hoạt động 1: Khởi động!</h3>
+    <div style="background: #eef2ff; border-radius: 12px; padding: 16px; margin: 16px 0; font-size: 0.92rem; color: #1e1b4b; line-height: 1.6; text-align: left;">
+      💡 <b>Bài học rút ra:</b> YouTube không tự nhiên biết em thích gì — đó chính là hoạt động của <b>Thuật toán gợi ý (Recommender System)</b> liên tục ghi lại lịch sử xem. Tuy tiện lợi, nhưng liệu thuật toán này có tạo ra <b>"Bong bóng thông tin"</b> giữ chân em không?<br><br>
+      👉 <b>Hoạt động 2 đã được mở khóa!</b> Hãy tham gia trò chơi mô phỏng thuật toán AI ngay bây giờ nhé!
     </div>
-
-    <div style="background: #eef2ff; border-radius: 10px; padding: 12px; margin-bottom: 16px; font-size: 0.88rem; color: #1e1b4b; line-height: 1.5; text-align: left;">
-      💡 <b>Bài học rút ra:</b> YouTube không tự nhiên biết em thích gì — đó chính là hoạt động của <b>Thuật toán gợi ý (Recommender System)</b> liên tục ghi lại lịch sử xem. Tuy tiện lợi, nhưng liệu thuật toán này có tạo ra <b>"Bong bóng thông tin"</b> giữ chân em không?<br>
-      👉 <b>Hoạt động 2 đã được mở khóa!</b> Hãy tham gia trò chơi mô phỏng ngay!
-    </div>
-
-    <div class="modal-buttons">
-      <button class="btn-next-act" onclick="proceedToActivity2()">
-        <span>Tiến vào Hoạt động 2: Trò chơi mô phỏng thuật toán AI</span> ➡️
-      </button>
-      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-view-drive">
-        <span>📁 Xem lại Thư mục Google Drive bài nộp</span> ↗
-      </a>
-    </div>
+    <button class="btn-next-act" onclick="proceedToActivity2()">
+      <span>Tiến vào Hoạt động 2: Trò chơi mô phỏng SCORM</span> ➡️
+    </button>
   </div>
 </div>
 
@@ -488,7 +356,7 @@
     }
   }
 
-  function playSound(type) {
+  function playSuccessSound() {
     try {
       initAudio();
       if (!audioCtx) return;
@@ -497,85 +365,22 @@
       osc.connect(gain);
       gain.connect(audioCtx.destination);
 
-      if (type === 'success') {
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
-        osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.15); // G5
-        osc.frequency.exponentialRampToValueAtTime(1046.50, audioCtx.currentTime + 0.3); // C6
-        gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 0.45);
-      } else if (type === 'error') {
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(220, audioCtx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(140, audioCtx.currentTime + 0.2);
-        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 0.25);
-      }
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+      osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.15); // G5
+      osc.frequency.exponentialRampToValueAtTime(1046.50, audioCtx.currentTime + 0.3); // C6
+      gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.45);
     } catch (e) {
       console.log('Audio not supported or blocked', e);
     }
   }
 
-  // Range Slider synchronization
-  function syncRangeToInput(val) {
-    document.getElementById('inpCount').value = val;
-    updateBadge(val);
-  }
-
-  function syncInputToRange(val) {
-    let num = parseInt(val) || 0;
-    if (num < 0) num = 0;
-    if (num > 10) num = 10;
-    document.getElementById('rangeSlider').value = num;
-    updateBadge(num);
-  }
-
-  function updateBadge(val) {
-    const pct = val * 10;
-    document.getElementById('badgeMatch').innerText = `${val}/10 video (${pct}%)`;
-  }
-
-  // Submit Handler
-  function submitWork() {
-    const count = document.getElementById('inpCount').value;
-    const thoughts = document.getElementById('inpThoughts').value.trim();
-    const isDriveChecked = document.getElementById('chkDriveDone').checked;
-
-    if (!isDriveChecked) {
-      playSound('error');
-      alert("Em hãy mở Thư mục Google Drive để nộp ảnh minh chứng, sau đó tích chọn xác nhận nhé!");
-      return;
-    }
-
-    if (count === "" || isNaN(count)) {
-      playSound('error');
-      alert("Em hãy chọn số video trùng khớp (0 - 10) nhé!");
-      return;
-    }
-
-    if (thoughts.length < 5) {
-      playSound('error');
-      alert("Em hãy viết vài câu cảm nghĩ ngắn nhé!");
-      document.getElementById('inpThoughts').focus();
-      return;
-    }
-
-    // Success
-    playSound('success');
+  function completeActivity1() {
+    playSuccessSound();
     triggerConfetti();
-
-    // Build Receipt
-    const receiptHtml = `
-      <div class="receipt-row"><span>📁 Nơi nộp minh chứng:</span> <strong>Thư mục Google Drive của lớp</strong></div>
-      <div class="receipt-row"><span>🎯 Tỉ lệ trùng khớp:</span> <strong>${count}/10 video (${count * 10}%)</strong></div>
-      <div class="receipt-row"><span>📝 Ghi chú Sách học sinh:</span> <strong>Đã hoàn thành Mục I</strong></div>
-      <div style="margin-top: 10px; font-style: italic; color: #475569; font-size: 0.86rem;">💬 Cảm nghĩ: "${escapeHtml(thoughts)}"</div>
-    `;
-    document.getElementById('receiptSummary').innerHTML = receiptHtml;
 
     document.getElementById('modalFeedback').style.display = 'flex';
 
@@ -584,8 +389,6 @@
       window.parent.postMessage({
         type: 'ACTIVITY_COMPLETED',
         activityId: 1,
-        matchedCount: count,
-        thoughts: thoughts,
         submissionMode: 'GoogleDrive'
       }, '*');
     }
@@ -598,13 +401,6 @@
     } else {
       window.location.href = "hoc_lieu_2_game_mophong.html";
     }
-  }
-
-  function escapeHtml(text) {
-    if (!text) return '';
-    return text.replace(/[&<>"']/g, function(m) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
-    });
   }
 
   // ================= CONFETTI CANVAS ENGINE =================
