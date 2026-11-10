@@ -97,12 +97,16 @@
       A. Tự động phát liên hoàn livestream Minecraft và quảng cáo đồ chơi game.
       B. Hiển thị thông báo nhắc nhở Nam nghỉ ngơi và đi ngủ sau 60 phút.
   + *Nhiệm vụ 3 (Trả lời câu hỏi trắc nghiệm củng cố):* Trả lời 2 câu hỏi trắc nghiệm neo chặn xuất hiện sau Lượt 1 và Lượt 2 để củng cố lý thuyết:
-    * Câu 1 (Sau Lượt 1): "Tại sao thuật toán mạng xã hội luôn cố gắng gợi ý những nội dung bám sát sở thích của người dùng?"
-      A. Để giúp người dùng tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian ở lại trên ứng dụng.
-      B. Để giúp người dùng mở rộng hiểu biết về nhiều lĩnh vực khác nhau.
-    * Câu 2 (Sau Lượt 2): "Hạn chế và rủi ro lớn nhất khi người dùng liên tục chỉ xem các video do thuật toán gợi ý theo sở thích là gì?"
-      A. Thiết bị bị tốn pin và nóng máy.
-      B. Người dùng rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, mất kiểm soát thời gian sử dụng và đối mặt nguy cơ mất quyền riêng tư.
+    * Câu 1 (Sau Vòng 1): "Vì sao thuật toán mạng xã hội thường ưu tiên gợi ý các video có nội dung tương tự video học sinh vừa xem gần đây?"
+      A. Để giúp học sinh tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian học sinh ở lại trên ứng dụng.
+      B. Vì thuật toán bị giới hạn, không có khả năng tìm kiếm video thuộc chủ đề khác.
+      C. Để bảo vệ mắt học sinh không phải xem quá nhiều màu sắc khác nhau.
+      D. Do người tải video lên đã trả tiền mua chuộc trực tiếp các lập trình viên.
+    * Câu 2 (Sau Vòng 2): "Điều gì sẽ xảy ra khi thuật toán chỉ liên tục đề xuất các video giật gân, cùng một quan điểm hoặc cùng một sở thích hẹp?"
+      A. Giúp học sinh trở thành chuyên gia toàn diện về mọi lĩnh vực trong cuộc sống.
+      B. Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị.
+      C. Thiết bị máy tính của học sinh sẽ chạy nhanh hơn và tiết kiệm pin hơn.
+      D. Thuật toán sẽ tự động xóa tài khoản của người dùng sau 2 giờ sử dụng.
   + *Nhiệm vụ 4 (Chốt kiến thức vào Sách học sinh):* Sau khi hoàn thành trò chơi (đạt 100 điểm SCORM), mở Sách học sinh (Mục II) dùng bút điền các từ khóa còn thiếu vào 4 nội dung lý thuyết: Cá nhân hóa, Mặt tích cực, Bong bóng thông tin, Quyền riêng tư.
 
 **Dự kiến câu trả lời:**
@@ -116,8 +120,8 @@
   + Lượt 2: Học sinh chọn phương án **A** (Video giật gân, bí mật) $\rightarrow$ Nam tò mò xem tiếp thêm 75 phút, Bong bóng thông tin tăng lên 75%.
   + Lượt 3: Học sinh chọn phương án **A** (Tự động phát liên hoàn livestream) $\rightarrow$ Thời gian giữ chân đạt đỉnh 210 phút (Nam thức khuya xem quên giờ giấc), Bong bóng thông tin đạt 98%, Dữ liệu cá nhân bị thu thập 99%.
 - *Kết quả câu hỏi trắc nghiệm neo chặn:*
-  + Câu 1: 100% học sinh chọn đúng phương án **A** (*Để giúp người dùng tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian ở lại trên ứng dụng*).
-  + Câu 2: 100% học sinh chọn đúng phương án **B** (*Người dùng rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, mất kiểm soát thời gian sử dụng và đối mặt nguy cơ mất quyền riêng tư*).
+  + Câu 1 (Sau Vòng 1): 100% học sinh chọn đúng phương án **A** (*Để giúp học sinh tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian học sinh ở lại trên ứng dụng*). Giải thích: Thuật toán khai thác dữ liệu hành vi quá khứ để dự đoán nội dung giữ chân người dùng lâu nhất, phục vụ mục tiêu doanh thu quảng cáo.
+  + Câu 2 (Sau Vòng 2): 100% học sinh chọn đúng phương án **B** (*Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị*). Giải thích: Việc đề xuất nội dung một chiều nhằm giữ chân người dùng là nguyên nhân chính dẫn đến hiện tượng 'Bong bóng thông tin' và 'Phòng tiếng vang'.
 - *Nội dung điền khuyết trong Sách học sinh (Mục II):*
   + 1. Cá nhân hóa: ... *dự đoán sở thích* ...
   + 2. Mặt tích cực của tính năng gợi ý AI: ... *tiếp cận thông tin nhanh chóng* và *tiết kiệm thời gian tìm kiếm* ...
@@ -261,3 +265,4 @@
 - GV nhận xét tổng kết buổi học trực tuyến: Biểu dương tinh thần tự học, thái độ thảo luận nghiêm túc và các giải pháp thực tế, sáng tạo của học sinh.
 - GV tiến hành chấm điểm bài đăng và phản hồi của học sinh trực tiếp trên LMS theo thang Rubric 10 điểm (Tính khả thi giải pháp: 6 điểm; Hiểu bản chất thuật toán: 2 điểm; Tương tác và văn hóa mạng: 2 điểm).
 - Hệ thống LMS tổng hợp điểm số toàn bộ bài học và thông báo hoàn thành chuyên đề học tập.
+

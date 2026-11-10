@@ -179,21 +179,25 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
 
 ## 3. BỘ CÂU HỎI NEO CHẶN CHỐT KIẾN THỨC (DEBRIEFING CHECKPOINTS)
 
-### CÂU HỎI 1: MẶT TÍCH CỰC CỦA THUẬT TOÁN GỢI Ý
-* **Nội dung:** *"Vì sao thuật toán gợi ý của AI lại đem lại MẶT TÍCH CỰC cho người dùng?"*
-* **Phương án:**
-  - A. Vì nó ngăn chặn 100% các nội dung độc hại trên Internet.
-  - B. Vì nó giúp người dùng nhanh chóng tiếp cận nội dung đúng sở thích và nhu cầu mà không mất nhiều công tìm kiếm. **(ĐÁP ÁN ĐÚNG)**
-  - C. Vì nó xóa sạch toàn bộ lịch sử dữ liệu của người dùng sau mỗi lần xem.
-* **Phản hồi:** "Chính xác! Mặt tích cực lớn nhất của AI gợi ý là cá nhân hóa trải nghiệm và tiết kiệm thời gian tra cứu cho người dùng."
+### CÂU HỎI 1: CƠ CHẾ VÀ MẶT TÍCH CỰC CỦA THUẬT TOÁN GỢI Ý
+* **Thời điểm xuất hiện:** Xuất hiện ngay sau khi học sinh hoàn thành Vòng 1 của trò chơi mô phỏng.
+* **Nội dung:** *"Vì sao thuật toán mạng xã hội thường ưu tiên gợi ý các video có nội dung tương tự video học sinh vừa xem gần đây?"*
+* **Các phương án:**
+  - **A. Để giúp học sinh tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian học sinh ở lại trên ứng dụng.** *(ĐÁP ÁN ĐÚNG)*
+  - B. Vì thuật toán bị giới hạn, không có khả năng tìm kiếm video thuộc chủ đề khác.
+  - C. Để bảo vệ mắt học sinh không phải xem quá nhiều màu sắc khác nhau.
+  - D. Do người tải video lên đã trả tiền mua chuộc trực tiếp các lập trình viên.
+* **Giải thích sư phạm & Phản hồi:** "Chính xác! Thuật toán khai thác dữ liệu hành vi quá khứ để dự đoán nội dung giữ chân người dùng lâu nhất, phục vụ mục tiêu doanh thu quảng cáo, đồng thời giúp người dùng tiết kiệm thời gian tìm kiếm."
 
-### CÂU HỎI 2: MẶT HẠN CHẾ VÀ RỦI RO CỦA THUẬT TOÁN GỢI Ý
-* **Nội dung:** *"Khi thuật toán liên tục chỉ gợi ý các video cùng chủ đề để giữ chân người dùng, HẠN CHẾ nguy hiểm nhất là gì?"*
-* **Phương án:**
-  - A. Thiết bị bị tốn pin và nóng máy.
-  - B. Tạo ra 'Bong bóng thông tin' (Filter Bubbles) giam giữ góc nhìn người dùng và âm thầm thu thập quá mức dữ liệu cá nhân. **(ĐÁP ÁN ĐÚNG)**
-  - C. Không có hạn chế nào vì càng xem nhiều video đúng sở thích thì càng tốt.
-* **Phản hồi:** "Rất chuẩn xác! Bong bóng thông tin khiến người dùng bị hạn chế góc nhìn đa chiều, củng cố định kiến một chiều và đối mặt rủi ro mất an toàn thông tin cá nhân."
+### CÂU HỎI 2: MẶT HẠN CHẾ VÀ HIỆN TƯỢNG BONG BÓNG THÔNG TIN
+* **Thời điểm xuất hiện:** Xuất hiện ngay sau khi học sinh hoàn thành Vòng 2 của trò chơi mô phỏng.
+* **Nội dung:** *"Điều gì sẽ xảy ra khi thuật toán chỉ liên tục đề xuất các video giật gân, cùng một quan điểm hoặc cùng một sở thích hẹp?"*
+* **Các phương án:**
+  - A. Giúp học sinh trở thành chuyên gia toàn diện về mọi lĩnh vực trong cuộc sống.
+  - **B. Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị.** *(ĐÁP ÁN ĐÚNG)*
+  - C. Thiết bị máy tính của học sinh sẽ chạy nhanh hơn và tiết kiệm pin hơn.
+  - D. Thuật toán sẽ tự động xóa tài khoản của người dùng sau 2 giờ sử dụng.
+* **Giải thích sư phạm & Phản hồi:** "Rất chuẩn xác! Việc đề xuất nội dung một chiều nhằm giữ chân người dùng là nguyên nhân chính dẫn đến hiện tượng 'Bong bóng thông tin' và 'Phòng tiếng vang', khiến góc nhìn bị bó hẹp và tăng nguy cơ mất kiểm soát thời gian cũng như dữ liệu cá nhân."
 
 ---
 
