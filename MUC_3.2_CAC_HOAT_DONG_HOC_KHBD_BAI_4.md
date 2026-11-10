@@ -107,7 +107,7 @@
       B. Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị.
       C. Thiết bị máy tính của học sinh sẽ chạy nhanh hơn và tiết kiệm pin hơn.
       D. Thuật toán sẽ tự động xóa tài khoản của người dùng sau 2 giờ sử dụng.
-  + *Nhiệm vụ 4 (Chốt kiến thức vào Sách học sinh):* Sau khi hoàn thành trò chơi (đạt 100 điểm SCORM), mở Sách học sinh (Mục II) dùng bút điền các từ khóa còn thiếu vào 4 nội dung lý thuyết: Cá nhân hóa, Mặt tích cực, Bong bóng thông tin, Quyền riêng tư.
+  + *Nhiệm vụ 4 (Chốt kiến thức vào Sách học sinh):* Sau khi hoàn thành trò chơi (đạt 100 điểm SCORM), mở Sách học sinh (Mục II) dùng bút điền 3 từ khóa còn thiếu (*cá nhân hóa*, *bong bóng thông tin*, *quyền riêng tư*) vào câu tóm tắt và ghi nhớ Hộp kiến thức về tính hai mặt của AI gợi ý.
 
 **Dự kiến câu trả lời:**
 
@@ -120,13 +120,13 @@
   + Lượt 2: Học sinh chọn phương án **A** (Video giật gân, bí mật) $\rightarrow$ Nam tò mò xem tiếp thêm 75 phút, Bong bóng thông tin tăng lên 75%.
   + Lượt 3: Học sinh chọn phương án **A** (Tự động phát liên hoàn livestream) $\rightarrow$ Thời gian giữ chân đạt đỉnh 210 phút (Nam thức khuya xem quên giờ giấc), Bong bóng thông tin đạt 98%, Dữ liệu cá nhân bị thu thập 99%.
 - *Kết quả câu hỏi trắc nghiệm neo chặn:*
-  + Câu 1 (Sau Vòng 1): 100% học sinh chọn đúng phương án **A** (*Để giúp học sinh tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian học sinh ở lại trên ứng dụng*). Giải thích: Thuật toán khai thác dữ liệu hành vi quá khứ để dự đoán nội dung giữ chân người dùng lâu nhất, phục vụ mục tiêu doanh thu quảng cáo.
-  + Câu 2 (Sau Vòng 2): 100% học sinh chọn đúng phương án **B** (*Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị*). Giải thích: Việc đề xuất nội dung một chiều nhằm giữ chân người dùng là nguyên nhân chính dẫn đến hiện tượng 'Bong bóng thông tin' và 'Phòng tiếng vang'.
-- *Nội dung điền khuyết trong Sách học sinh (Mục II):*
-  + 1. Cá nhân hóa: ... *dự đoán sở thích* ...
-  + 2. Mặt tích cực của tính năng gợi ý AI: ... *tiếp cận thông tin nhanh chóng* và *tiết kiệm thời gian tìm kiếm* ...
-  + 3. Hiện tượng "Bong bóng thông tin": ... *cùng sở thích* ..., khiến họ bị cô lập khỏi các *góc nhìn đa chiều* ...
-  + 4. Rủi ro về Quyền riêng tư: ... *dữ liệu cá nhân* ..., làm tăng nguy cơ người dùng *mất kiểm soát dữ liệu cá nhân / bị lộ lọt thông tin riêng tư* ...
+  + Câu 1 (Sau Vòng 1): 100% học sinh chọn đúng phương án **A** (*Để giúp học sinh tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian học sinh ở lại trên ứng dụng*).
+  + Câu 2 (Sau Vòng 2): 100% học sinh chọn đúng phương án **B** (*Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị*).
+- *Nội dung ghi chép hoàn chỉnh trong Sách học sinh (Mục II):*
+  + **Ghi chú tóm tắt sau trò chơi (Điền đúng 3 từ khóa in đậm):** *"Để giữ chân người dùng, thuật toán AI sẽ liên tục ghi nhận thói quen và **cá nhân hóa** nội dung sao cho đúng với sở thích của họ. Việc này tạo ra một hiện tượng gọi là '**bong bóng thông tin**' và làm tăng nguy cơ mất **quyền riêng tư** của người dùng."*
+  + **Hộp kiến thức (Tính hai mặt của thuật toán AI gợi ý):**
+    * *Mặt tích cực:* Cá nhân hóa trải nghiệm. Người dùng nhanh chóng tìm được nội dung đúng sở thích mà không mất thời gian tìm kiếm.
+    * *Mặt hạn chế:* Người dùng bị giới hạn thông tin, góc nhìn bị thu hẹp. Hơn nữa, việc hệ thống liên tục thu thập lịch sử hoạt động gây ra rủi ro mất quyền riêng tư.
 
 **Bước 2: Thực hiện nhiệm vụ:**
 - HS tập trung theo dõi video hoạt hình từ đầu đến hết (hệ thống khóa tua nhanh để đảm bảo tiếp thu trọn vẹn).
