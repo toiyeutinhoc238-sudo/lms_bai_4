@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trò chơi mô phỏng: Em là Kỹ sư Thuật toán Gợi ý AI (Chuẩn SCORM / H5P)</title>
+  <title>Trò chơi mô phỏng: Em là Kỹ sư Thuật toán Gợi ý AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
@@ -473,6 +473,7 @@
       margin-bottom: 8px;
       width: fit-content;
       font-family: 'Space Grotesk', sans-serif;
+      white-space: nowrap;
     }
 
     .tag-hook {
@@ -493,6 +494,7 @@
       color: #ffffff;
       margin-bottom: 6px;
       line-height: 1.4;
+      text-wrap: pretty;
     }
 
     .video-channel {
@@ -601,12 +603,12 @@
     }
 
     .bubble-sphere {
-      width: 180px;
-      height: 180px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       background: radial-gradient(circle at 35% 35%, #818cf8, #3730a3, #1e1b4b);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 35px rgba(99, 102, 241, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.3);
+      border: 2.5px solid rgba(255, 255, 255, 0.45);
+      box-shadow: 0 0 35px rgba(99, 102, 241, 0.6), inset 0 0 25px rgba(255, 255, 255, 0.35);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -614,22 +616,62 @@
       transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
       position: relative;
       z-index: 2;
-      padding: 12px;
+      padding: 10px;
       text-align: center;
+      overflow: hidden;
     }
 
     .sphere-icon {
-      font-size: 2.2rem;
-      margin-bottom: 4px;
+      font-size: 2.3rem;
+      margin-bottom: 2px;
       filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+      line-height: 1;
     }
 
-    .sphere-text {
+    .sphere-pct {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.85rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: #ffffff;
-      line-height: 1.2;
+      line-height: 1.1;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .sphere-status-pill {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #f8fafc;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 3px 10px;
+      border-radius: 999px;
+      white-space: nowrap; /* Tuyệt đối không rớt chữ */
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      letter-spacing: 0.2px;
+    }
+
+    .sphere-caption-box {
+      text-align: center;
+      max-width: 480px;
+      margin: 4px auto 14px;
+      padding: 0 10px;
+    }
+
+    .caption-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #e0e7ff;
+      margin-bottom: 3px;
+      white-space: nowrap;
+    }
+
+    .caption-desc {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      line-height: 1.45;
+      text-wrap: balance;
     }
 
     /* Floating Content Tags */
@@ -643,12 +685,13 @@
 
     .topic-tag {
       font-size: 0.8rem;
-      padding: 5px 12px;
+      padding: 5px 14px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #cbd5e1;
       font-weight: 700;
+      white-space: nowrap;
       transition: all 0.4s;
     }
 
@@ -1481,7 +1524,7 @@
       <div class="focus-card">
         <div class="focus-icon">🔮</div>
         <h4>3. Hệ quả là gì?</h4>
-        <p>Tạo ra "Bong bóng thông tin" (Filter Bubbles) khiến người dùng bị cô lập trong thế giới nội dung một chiều và mất góc nhìn đa chiều.</p>
+        <p>Tạo ra "Bong bóng thông tin" khiến người dùng bị cô lập trong thế giới nội dung một chiều và mất góc nhìn đa chiều.</p>
       </div>
     </div>
   </section>
@@ -1597,14 +1640,20 @@
 
     <!-- 3D-styled Filter Bubble Visualizer Arena -->
     <div class="bubble-arena">
-      <div class="arena-title">Trực quan hóa sự co hẹp của "Bong bóng thông tin" (DP-REG 2023)</div>
+      <div class="arena-title">Trực quan hóa sự co hẹp của "Bong bóng thông tin"</div>
       
       <div class="bubble-sphere-container">
         <div class="bubble-outer-glow" id="bubbleGlow"></div>
         <div class="bubble-sphere" id="bubbleSphere">
           <div class="sphere-icon" id="bubbleSphereIcon">🌐</div>
-          <div class="sphere-text" id="bubbleSphereText">Thế giới mở<br>(Góc nhìn phong phú)</div>
+          <div class="sphere-pct" id="bubbleSpherePct">15%</div>
+          <div class="sphere-status-pill" id="bubbleSpherePill">Thế giới mở</div>
         </div>
+      </div>
+
+      <div class="sphere-caption-box">
+        <div class="caption-title" id="sphereCaptionTitle">Góc nhìn thông tin mở rộng</div>
+        <div class="caption-desc" id="sphereCaptionDesc">Người dùng tiếp cận phong phú các chủ đề: Khoa học, Âm nhạc, Đời sống và Tin tức.</div>
       </div>
 
       <div class="bubble-tags-shelf" id="bubbleTagsShelf">
@@ -1650,7 +1699,7 @@
       </div>
       <div class="sum-stat-card">
         <div class="sum-num" style="color: #f472b6;" id="finalBubble">98%</div>
-        <div class="sum-lbl">Bong bóng thông tin (Cô lập cực độ)</div>
+        <div class="sum-lbl">Bong bóng thông tin cô lập</div>
       </div>
       <div class="sum-stat-card">
         <div class="sum-num" style="color: #fbbf24;" id="finalData">99%</div>
@@ -1661,19 +1710,19 @@
     <!-- Takeaways for Student Workbook -->
     <div class="takeaways-card">
       <div class="takeaway-header">
-        <span>📝</span> 3 TỪ KHÓA CỐT LÕI CẦN GHI VÀO SÁCH HỌC SINH (MỤC II - HÌNH THÀNH KIẾN THỨC)
+        <span>📝</span> 3 TỪ KHÓA CỐT LÕI CẦN GHI VÀO SÁCH HỌC SINH
       </div>
       <div class="takeaway-item">
         <div class="takeaway-bullet">1</div>
-        <div><strong>Cá nhân hóa (Personalization):</strong> Thuật toán theo dõi lịch sử xem, thời gian dừng và lượt click của người dùng để liên tục đề xuất các video cùng sở thích nhằm tối đa hóa thời gian ở lại ứng dụng.</div>
+        <div><strong>Cá nhân hóa:</strong> Thuật toán theo dõi lịch sử xem, thời gian dừng và tương tác của người dùng để liên tục đề xuất các video cùng sở thích nhằm tối đa hóa thời gian ở lại ứng dụng.</div>
       </div>
       <div class="takeaway-item">
         <div class="takeaway-bullet">2</div>
-        <div><strong>Bong bóng thông tin (Filter Bubble):</strong> Hiện tượng người dùng bị cô lập trong "chiếc lồng nhận thức" chỉ chứa nội dung mà thuật toán nghĩ là họ thích, ngăn chặn các quan điểm mới và thông tin đa chiều.</div>
+        <div><strong>Bong bóng thông tin:</strong> Hiện tượng người dùng bị cô lập trong "chiếc lồng nhận thức" chỉ chứa nội dung mà thuật toán nghĩ là họ thích, ngăn chặn các quan điểm mới và thông tin đa chiều.</div>
       </div>
       <div class="takeaway-item">
         <div class="takeaway-bullet">3</div>
-        <div><strong>Quyền riêng tư & Thu thập dữ liệu (Data Privacy):</strong> Để gợi ý ngày càng chính xác, thuật toán âm thầm thu thập toàn diện hành vi số của người dùng, tạo nên rủi ro lộ lọt dữ liệu cá nhân (DP-REG 2023).</div>
+        <div><strong>Quyền riêng tư & Thu thập dữ liệu:</strong> Để gợi ý ngày càng chính xác, thuật toán âm thầm thu thập toàn diện hành vi số của người dùng, làm gia tăng nguy cơ lộ lọt dữ liệu cá nhân.</div>
       </div>
     </div>
 
@@ -1780,12 +1829,12 @@
           { text: "C. Để bảo vệ mắt học sinh không phải xem quá nhiều màu sắc khác nhau.", correct: false },
           { text: "D. Do người tải video lên đã trả tiền mua chuộc trực tiếp các lập trình viên.", correct: false }
         ],
-        explanation: "Thuật toán khai thác triệt để dữ liệu hành vi quá khứ để dự đoán nội dung giữ chân người dùng lâu nhất, phục vụ mục tiêu doanh thu quảng cáo (Clark & Mayer, 2011; DP-REG, 2023)."
+        explanation: "Thuật toán khai thác dữ liệu hành vi quá khứ để dự đoán nội dung giữ chân người dùng lâu nhất, phục vụ mục tiêu doanh thu quảng cáo."
       }
     },
     {
       roundNum: 2,
-      tag: "VÒNG 2/3 • HIỆN TƯỢNG 'THỎ CHUI HANG' (RABBIT HOLE)",
+      tag: "VÒNG 2/3 • HIỆN TƯỢNG 'THỎ CHUI HANG'",
       userMood: "Đã xem liên tục hơn 1 giờ. Bắt đầu có dấu hiệu mỏi mắt, cần nội dung kịch tính hơn để không rời màn hình.",
       userEmoji: "😲",
       level: "Chiến lược gia Giữ chân",
@@ -1797,18 +1846,18 @@
           channel: "⚡ CreepyGamers • 2.5M view",
           duration: "24:15",
           tagType: "hook",
-          tagText: "🔥 GIẬT GÂN / CLICKBAIT • GIỮ CHÂN CỰC ĐẠI",
+          tagText: "🔥 NỘI DUNG GIẬT GÂN • GIỮ CHÂN TỐI ĐA",
           thumbBg: "linear-gradient(135deg, #831843, #500724)",
           thumbEmoji: "😱",
           retentionDelta: 75,
           bubbleDelta: 35,
           dataDelta: 30,
           isAlgorithmIdeal: true,
-          consequence: "✅ <strong>Kích hoạt hiệu ứng Thỏ chui hang (Rabbit Hole)!</strong> Tiêu đề giật gân, nhạc kịch tính đánh trúng tâm lý tò mò lứa tuổi 12. Nam quên mất thời gian, ngồi xem tiếp thêm <strong>75 phút</strong>. Toàn bộ các kênh khoa học, giáo dục đã bị loại bỏ hoàn toàn khỏi trang chủ của Nam!",
+          consequence: "✅ <strong>Kích hoạt hiệu ứng Thỏ chui hang!</strong> Tiêu đề giật gân, nhạc kịch tính đánh trúng tâm lý tò mò lứa tuổi 12. Nam quên mất thời gian, ngồi xem tiếp thêm <strong>75 phút</strong>. Toàn bộ các kênh khoa học, giáo dục đã bị loại bỏ hoàn toàn khỏi trang chủ của Nam!",
           nextTags: [
             { text: "Minecraft Kinh dị", status: "trapped" },
             { text: "Thuyết Âm mưu Game", status: "trapped" },
-            { text: "Giật gân Clickbait", status: "trapped" },
+            { text: "Nội dung giật gân", status: "trapped" },
             { text: "Học tập Tin học", status: "blocked" },
             { text: "Ngoại ngữ - Thể thao", status: "blocked" }
           ]
@@ -1842,13 +1891,13 @@
           { text: "C. Thiết bị máy tính của học sinh sẽ chạy nhanh hơn và tiết kiệm pin hơn.", correct: false },
           { text: "D. Thuật toán sẽ tự động xóa tài khoản của người dùng sau 2 giờ sử dụng.", correct: false }
         ],
-        explanation: "Theo báo cáo DP-REG (2023), việc đề xuất cực đoan hóa nhằm giữ chân người dùng là nguyên nhân chính dẫn đến hiện tượng 'Bong bóng thông tin' và 'Phòng tiếng vang' (Echo Chambers)."
+        explanation: "Việc đề xuất nội dung một chiều nhằm giữ chân người dùng là nguyên nhân chính dẫn đến hiện tượng 'Bong bóng thông tin' và 'Phòng tiếng vang'."
       }
     },
     {
       roundNum: 3,
-      tag: "VÒNG 3/3 • BONG BÓNG THÔNG TIN HOÀN CHỈNH (FILTER BUBBLE LOCK)",
-      userMood: "Đã quá 23h đêm. Mắt dại đi vì ánh sáng xanh, tay vô thức lướt không ngừng (Doomscrolling).",
+      tag: "VÒNG 3/3 • BONG BÓNG THÔNG TIN KHÉP KÍN",
+      userMood: "Đã quá 23h đêm. Mắt dại đi vì ánh sáng xanh, tay vô thức lướt liên tục không ngừng.",
       userEmoji: "😵‍💫",
       level: "Bậc thầy Thao túng Thuật toán",
       prompt: "Bong bóng thông tin quanh Nam đã hình thành 80%. Để khóa chặt người dùng vào 'vùng an toàn nhận thức' tuyệt đối, thuật toán AI sẽ làm gì?",
@@ -2112,14 +2161,21 @@
   function updateBubbleStage(rIndex) {
     const sphere = document.getElementById('bubbleSphere');
     const sphereIcon = document.getElementById('bubbleSphereIcon');
-    const sphereText = document.getElementById('bubbleSphereText');
+    const spherePct = document.getElementById('bubbleSpherePct');
+    const spherePill = document.getElementById('bubbleSpherePill');
+    const capTitle = document.getElementById('sphereCaptionTitle');
+    const capDesc = document.getElementById('sphereCaptionDesc');
 
     if (rIndex === 1) {
-      sphere.style.width = "180px";
-      sphere.style.height = "180px";
+      sphere.style.width = "170px";
+      sphere.style.height = "170px";
       sphere.style.background = "radial-gradient(circle at 35% 35%, #818cf8, #3730a3, #1e1b4b)";
       sphereIcon.innerText = "🌐";
-      sphereText.innerHTML = "Thế giới mở<br>(Góc nhìn đa chiều)";
+      if (spherePct) spherePct.innerText = "15%";
+      if (spherePill) spherePill.innerText = "Thế giới mở";
+      if (capTitle) capTitle.innerText = "Góc nhìn thông tin mở rộng";
+      if (capDesc) capDesc.innerText = "Người dùng tiếp cận phong phú các chủ đề: Khoa học, Âm nhạc, Đời sống và Tin tức.";
+
       renderBubbleTags([
         { text: "Khoa học Vũ trụ", status: "normal" },
         { text: "Game Minecraft", status: "normal" },
@@ -2128,17 +2184,23 @@
         { text: "Lịch sử Thế giới", status: "normal" }
       ]);
     } else if (rIndex === 2) {
-      sphere.style.width = "130px";
-      sphere.style.height = "130px";
+      sphere.style.width = "140px";
+      sphere.style.height = "140px";
       sphere.style.background = "radial-gradient(circle at 35% 35%, #f472b6, #db2777, #831843)";
       sphereIcon.innerText = "🔮";
-      sphereText.innerHTML = "Bong bóng co hẹp<br>(Chỉ toàn Game)";
+      if (spherePct) spherePct.innerText = "75%";
+      if (spherePill) spherePill.innerText = "Bong bóng co hẹp";
+      if (capTitle) capTitle.innerText = "Bong bóng bắt đầu bao vây";
+      if (capDesc) capDesc.innerText = "Thuật toán ưu tiên video giật gân cùng chủ đề để câu giờ, loại bỏ dần các nội dung kiến thức đa dạng.";
     } else if (rIndex === 3) {
-      sphere.style.width = "90px";
-      sphere.style.height = "90px";
+      sphere.style.width = "115px";
+      sphere.style.height = "115px";
       sphere.style.background = "radial-gradient(circle at 35% 35%, #ec4899, #be185d, #500724)";
       sphereIcon.innerText = "🔒";
-      sphereText.innerHTML = "Bong bóng 98%<br>(Bị cô lập)";
+      if (spherePct) spherePct.innerText = "98%";
+      if (spherePill) spherePill.innerText = "Cô lập hoàn toàn";
+      if (capTitle) capTitle.innerText = "Giam giữ trong bong bóng";
+      if (capDesc) capDesc.innerText = "Người dùng bị cô lập hoàn toàn trong thế giới nội dung một chiều, mất kết nối với các góc nhìn bên ngoài.";
     }
   }
 

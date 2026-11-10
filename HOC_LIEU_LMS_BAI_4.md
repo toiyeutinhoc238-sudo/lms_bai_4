@@ -105,12 +105,12 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
 
 ## 2. KỊCH BẢN PHÂN CẢNH VÀ LOGIC RẼ NHÁNH (STORYBOARD)
 
-| Lượt (Round) | Bối cảnh người dùng ảo | Lựa chọn của Thuật toán (Học sinh đóng vai) | Kết quả hành vi & Chỉ số hệ thống | Kết luận sư phạm |
+| Lượt chơi | Bối cảnh người dùng ảo | Lựa chọn của Thuật toán (Học sinh đóng vai) | Kết quả hành vi & Chỉ số hệ thống | Kết luận sư phạm |
 | :--- | :--- | :--- | :--- | :--- |
-| **Bắt đầu** | Bạn **Nam (12 tuổi)** vừa xem 1 clip về: *"Mẹo xây nhà gỗ đẹp trong Minecraft"*. Nam đang rảnh rỗi lướt web. | Hệ thống giao nhiệm vụ cho AI: **Tối đa hóa thời gian giữ chân (Watch time / Retention)** của Nam để tăng doanh thu quảng cáo. | - Điểm giữ chân ban đầu: 15 phút.<br>- Bong bóng thông tin: 15%.<br>- Dữ liệu thu thập: 20%. | Đặt học sinh vào góc nhìn của người thiết kế thuật toán. |
+| **Bắt đầu** | Bạn **Nam (12 tuổi)** vừa xem 1 clip về: *"Mẹo xây nhà gỗ đẹp trong Minecraft"*. Nam đang rảnh rỗi lướt web. | Hệ thống giao nhiệm vụ cho AI: **Tối đa hóa thời gian giữ chân** của Nam để tăng doanh thu quảng cáo. | - Điểm giữ chân ban đầu: 15 phút.<br>- Bong bóng thông tin: 15%.<br>- Dữ liệu thu thập: 20%. | Đặt học sinh vào góc nhìn của người thiết kế thuật toán. |
 | **Lượt 1 (Phân tích sở thích)** | Nam vừa xem xong clip xây nhà. | **Lựa chọn 1A (Cùng chủ đề):** Đề xuất video *"Cách chế tạo vũ khí bí mật phá đảo Minecraft"*.<br><br>**Lựa chọn 1B (Chủ đề mới):** Đề xuất video *"Thế giới hoang dã: Cuộc sống chim cánh cụt"*. | **Nếu chọn 1A:** Nam bấm xem ngay! Giữ chân $+30$ phút. Thuật toán ghi nhận Nam cực thích game. Bong bóng tăng lên 45%.<br>**Nếu chọn 1B:** Nam lướt qua không xem. Giữ chân $-5$ phút. Hệ thống cảnh báo giảm gắn kết. | Nhận biết cơ chế cá nhân hóa dựa trên lịch sử tương tác. |
-| **Lượt 2 (Tối ưu giữ chân)** | Nam đang rất hứng thú với game Minecraft. | **Lựa chọn 2A (Giật gân cùng chủ đề):** Gợi ý video *"10 Bí mật rùng rợn chưa từng tiết lộ trong thế giới Minecraft"* (Clickbait).<br><br>**Lựa chọn 2B (Mở rộng trí tuệ):** Gợi ý video *"Thử thách giải đố Toán học vui nhộn cùng bạn bè"*. | **Nếu chọn 2A:** Nam tò mò xem liên tục thêm 45 phút! Giữ chân tăng vọt lên 90 phút. Bong bóng đạt 75%. Trang chủ Nam ngập tràn game.<br>**Nếu chọn 2B:** Nam thấy khó nên xem 2 phút rồi thoát ứng dụng. Doanh thu sụt giảm. | Thấy rõ động cơ của thuật toán: ưu tiên giữ chân hơn là nội dung cân bằng. |
-| **Lượt 3 (Đỉnh điểm Bong bóng)** | Nam đã dán mắt vào màn hình hơn 1 tiếng rưỡi, quên cả giờ ăn cơm tối. | **Lựa chọn 3A:** Tự động phát liên hoàn video Minecraft và chèn quảng cáo đồ chơi game.<br><br>**Lựa chọn 3B:** Bật thông báo nhắc nhở nghỉ ngơi sau 60 phút. | **Nếu chọn 3A:** Đỉnh điểm Bong bóng thông tin (100%)! Toàn bộ bảng tin của Nam bị cô lập. Nam tin rằng cả thế giới ai cũng chỉ chơi game. Dữ liệu nhấp chuột bị thu thập 100%. | Nhận thức trực quan sự hình thành của Filter Bubble và rủi ro quyền riêng tư. |
+| **Lượt 2 (Tối ưu giữ chân)** | Nam đang rất hứng thú với game Minecraft. | **Lựa chọn 2A (Giật gân cùng chủ đề):** Gợi ý video *"10 Bí mật rùng rợn chưa từng tiết lộ trong thế giới Minecraft"*.<br><br>**Lựa chọn 2B (Mở rộng trí tuệ):** Gợi ý video *"Thử thách giải đố Toán học vui nhộn cùng bạn bè"*. | **Nếu chọn 2A:** Nam tò mò xem liên tục thêm 45 phút! Giữ chân tăng vọt lên 90 phút. Bong bóng đạt 75%. Trang chủ Nam ngập tràn game.<br>**Nếu chọn 2B:** Nam thấy khó nên xem 2 phút rồi thoát ứng dụng. Doanh thu sụt giảm. | Thấy rõ động cơ của thuật toán: ưu tiên giữ chân hơn là nội dung cân bằng. |
+| **Lượt 3 (Đỉnh điểm Bong bóng)** | Nam đã dán mắt vào màn hình hơn 1 tiếng rưỡi, quên cả giờ ăn cơm tối. | **Lựa chọn 3A:** Tự động phát liên hoàn video Minecraft và chèn quảng cáo đồ chơi game.<br><br>**Lựa chọn 3B:** Bật thông báo nhắc nhở nghỉ ngơi sau 60 phút. | **Nếu chọn 3A:** Đỉnh điểm Bong bóng thông tin (100%)! Toàn bộ bảng tin của Nam bị cô lập. Nam tin rằng cả thế giới ai cũng chỉ chơi game. Dữ liệu nhấp chuột bị thu thập 100%. | Nhận thức trực quan sự hình thành của Bong bóng thông tin và rủi ro quyền riêng tư. |
 
 ---
 
@@ -187,7 +187,7 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
 > ### 💬 CHỦ ĐỀ: "LÀM SAO ĐỂ THOÁT KHỎI BONG BÓNG THÔNG TIN?"
 > 
 > Chào các em học sinh lớp 6,  
-> Qua trò chơi mô phỏng ở Hoạt động 2 và bài tập phân loại ở Hoạt động 3, chúng ta đều nhận thấy thuật toán gợi ý AI rất tiện lợi nhưng cũng có thể "nhốt" chúng ta vào **bong bóng thông tin (filter bubbles)** và âm thầm **thu thập dữ liệu cá nhân**.
+> Qua trò chơi mô phỏng ở Hoạt động 2 và bài tập phân loại ở Hoạt động 3, chúng ta đều nhận thấy thuật toán gợi ý AI rất tiện lợi nhưng cũng có thể "nhốt" chúng ta vào **bong bóng thông tin** và âm thầm **thu thập dữ liệu cá nhân**.
 > 
 > 🎯 **Nhiệm vụ của em trên Diễn đàn:**
 > 1. **Đăng bài viết mới:** Đề xuất **ít nhất 02 biện pháp thực tế** (thao tác kỹ thuật hoặc thói quen lành mạnh) mà em có thể làm để phá vỡ bong bóng thông tin và bảo vệ quyền riêng tư của mình.
