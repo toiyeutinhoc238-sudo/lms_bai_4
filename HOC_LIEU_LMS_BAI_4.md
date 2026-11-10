@@ -276,30 +276,28 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
 > 🎯 **Nhiệm vụ của em trên bảng tường Padlet:**
 > 1. **Viết nháp vào Sách học sinh (Mục IV):** Đề xuất **ít nhất 02 thao tác kỹ thuật thực tế** và giải thích cơ sở khoa học (Vì sao cách đó giúp hạn chế sự thao túng của thuật toán?).
 > 2. **Đăng bài mới trên Padlet:** Bấm biểu tượng dấu cộng (`+`), đặt tiêu đề: `[Họ tên - Lớp]`, gõ nội dung giải pháp hoàn chỉnh. Khuyến khích bấm 📷 tải ảnh chụp dàn ý trong sách hoặc ảnh chụp màn hình thao tác kỹ thuật để đính kèm.
-> 3. **Tương tác đa chiều:** Đọc các bài viết trên tường lớp, bấm **Thả tim (❤️)** và **viết ít nhất 01 bình luận góp ý mang tính xây dựng** dưới bài của bạn; đồng thời ghi lại nhật ký tương tác vào Sách học sinh.
+> 3. **Tự đối chiếu Rubric:** Đối chiếu bài viết với Bảng kiểm Rubric 10 điểm (chấm theo chất lượng nội dung) được ghim ở đầu trang trước khi bấm Xuất bản.
 
 ---
 
-### 3. MA TRẬN RUBRIC CHẤM ĐIỂM ĐỊNH LƯỢNG (WHOLE FORUM / PADLET RUBRIC)
+### 3. MA TRẬN RUBRIC CHẤM ĐIỂM ĐỊNH LƯỢNG NỘI DUNG (PADLET CONTENT RUBRIC)
 
 | Tiêu chí đánh giá | Mức Tốt (Mức cao) | Mức Đạt (Mức TB) | Mức Cần cố gắng (Mức thấp) |
 |:---|:---|:---|:---|
-| **Tiêu chí 1: Tính khả thi của giải pháp**<br>*(Trọng số: 6.0 điểm)* | **(5.0 – 6.0 điểm)**<br>Đề xuất được **từ 2 thao tác kỹ thuật hợp lý trở lên**, dễ thực hiện trong thực tế.<br>*Ví dụ:* Xóa lịch sử duyệt web/xem video định kỳ; dùng chế độ duyệt web ẩn danh; chủ động tìm kiếm từ khóa trái chiều; tắt autoplay/hẹn giờ nghỉ ngơi; tắt cá nhân hóa quảng cáo. | **(3.0 – 4.5 điểm)**<br>Chỉ nêu được **1 thao tác kỹ thuật**, hoặc các giải pháp còn chung chung, mang tính khẩu hiệu cảm tính.<br>*Ví dụ:* "Ít dùng điện thoại lại", "Chuyển sang xem kênh khác", "Không xem linh tinh". | **(0 – 2.5 điểm)**<br>Đề xuất sai phương pháp, mang tính tiêu cực hoặc giải pháp không liên quan gì đến việc tác động vào dữ liệu của thuật toán gợi ý. |
-| **Tiêu chí 2: Hiểu bản chất thuật toán**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>Giải thích được **cơ sở khoa học** của giải pháp dựa trên cách thuật toán hoạt động.<br>*Ví dụ:* Xóa lịch sử là xóa nguồn dữ liệu đầu vào mà AI dùng để dự đoán; tìm từ khóa mới sẽ "huấn luyện lại" AI để thuật toán đa dạng hóa nội dung gợi ý. | **(1.0 điểm)**<br>Nêu được giải pháp đúng nhưng **chưa giải thích được hoặc giải thích lúng túng** vì sao cách làm đó lại hạn chế được sự thao túng của thuật toán. | **(0 điểm)**<br>Không giải thích hoặc hoàn toàn không thể hiện được sự hiểu biết về cách thuật toán AI thu thập và xử lý dữ liệu người dùng. |
-| **Tiêu chí 3: Trình bày và Tương tác**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đặt đúng cú pháp tiêu đề `[Họ tên - Lớp]`, đăng bài đúng hạn.<br>- Trình bày rõ ràng, câu cú gãy gọn, không viết tắt, không sai chính tả.<br>- **Có thả tim và phản hồi bình luận mang tính xây dựng, lịch sự với bài của ít nhất 01 bạn khác**. | **(1.0 điểm)**<br>- Đăng bài đúng hạn, câu cú rõ ràng.<br>- Tuy nhiên **chưa có tương tác** phản hồi bình luận bài viết của bạn bè trên Padlet. | **(0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, sai nhiều lỗi chính tả hoặc dùng ngôn từ thiếu văn hóa, không tương tác với ai. |
+| **Tiêu chí 1: Tính đúng đắn và khả thi của thao tác kỹ thuật**<br>*(Trọng số: 5.0 điểm)* | **(4.5 – 5.0 điểm)**<br>Đề xuất được **từ 2 thao tác kỹ thuật hợp lý trở lên**, chính xác, dễ thực hiện trong thực tế.<br>*Ví dụ:* Xóa lịch sử duyệt web/xem video định kỳ; dùng chế độ duyệt web ẩn danh; chủ động tìm kiếm từ khóa trái chiều; tắt autoplay/hẹn giờ nghỉ ngơi sau 45 phút; tắt cá nhân hóa quảng cáo. | **(2.5 – 4.0 điểm)**<br>Chỉ nêu được **1 thao tác kỹ thuật**, hoặc các giải pháp còn chung chung, mang tính khẩu hiệu cảm tính.<br>*Ví dụ:* "Ít dùng điện thoại lại", "Chuyển sang xem kênh khác", "Không xem linh tinh". | **(0 – 2.0 điểm)**<br>Đề xuất sai phương pháp, mang tính tiêu cực hoặc giải pháp không liên quan gì đến việc tác động vào dữ liệu của thuật toán gợi ý và bảo vệ quyền riêng tư. |
+| **Tiêu chí 2: Giải thích cơ sở khoa học theo bản chất thuật toán AI**<br>*(Trọng số: 3.0 điểm)* | **(2.5 – 3.0 điểm)**<br>Giải thích được **cơ sở khoa học** của từng giải pháp dựa trên cách thuật toán hoạt động.<br>*Ví dụ:* Xóa lịch sử là xóa nguồn dữ liệu đầu vào mà AI dùng để dự đoán; tìm từ khóa mới sẽ "huấn luyện lại" AI để thuật toán đa dạng hóa nội dung gợi ý; duyệt ẩn danh ngăn thuật toán liên kết với hồ sơ cá nhân. | **(1.5 – 2.0 điểm)**<br>Nêu được giải pháp đúng nhưng **chưa giải thích được hoặc giải thích lúng túng** vì sao cách làm đó lại hạn chế được sự thao túng của thuật toán. | **(0 – 1.0 điểm)**<br>Không giải thích hoặc hoàn toàn không thể hiện được sự hiểu biết về cách thuật toán AI thu thập và xử lý dữ liệu người dùng. |
+| **Tiêu chí 3: Tính hoàn thiện, logic và độ thuyết phục của nội dung**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đặt đúng cú pháp tiêu đề `[Họ tên - Lớp]`, nộp bài đúng hạn.<br>- Bố cục rõ ràng, lập luận mạch lạc, câu cú gãy gọn, không viết tắt, không sai chính tả.<br>- Trình bày đầy đủ cả 2 phần: Thao tác kỹ thuật và Cơ sở khoa học. | **(1.0 điểm)**<br>- Đăng bài đúng hạn, câu cú cơ bản rõ ràng.<br>- Tuy nhiên cách diễn đạt còn sơ sài, câu từ chưa gãy gọn hoặc còn một số lỗi chính tả, lập luận chưa thật chặt chẽ. | **(0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, cụt lủn, chắp vá, sai nhiều lỗi chính tả hoặc thiếu hẳn một trong các phần nội dung bắt buộc. |
 
 ---
 
-### 4. BÀI ĐĂNG MẪU VÀ BÌNH LUẬN TƯƠNG TÁC ĐỊNH HƯỚNG TRÊN PADLET
+### 4. BÀI ĐĂNG MẪU ĐỊNH HƯỚNG TRÊN PADLET (ĐẠT 10/10 ĐIỂM)
 * **Thẻ bài đăng mẫu của học sinh trên Padlet:**
   > **Tiêu đề (Subject):** `Nguyễn Văn Nam - Lớp 6A1: 2 giải pháp công nghệ làm chủ thuật toán YouTube`  
-  > *"Chào cô và các bạn, để không bị cuốn vào bong bóng thông tin của YouTube, mình đã áp dụng 2 thao tác sau:*  
+  > *"Chào cô và các bạn, để không bị cuốn vào bong bóng thông tin của YouTube, mình đã áp dụng 2 thao tác kỹ thuật thực tế sau:*  
   > *1. **Định kỳ xóa lịch sử xem và tìm kiếm (Clear Watch History):** Thuật toán AI phân tích lịch sử để đoán sở thích của mình. Khi xóa dữ liệu cũ, AI sẽ không còn căn cứ để nhồi nhét mãi các video cùng chủ đề nữa.*  
   > *2. **Bật chế độ Ẩn danh (Incognito Mode) khi tra cứu chủ đề mới hoặc tìm bài tập:** Chế độ này không lưu lại cookie và lịch sử, giúp thuật toán không gắn nhãn sở thích và không gửi quảng cáo bám đuổi.*  
-  > *Rất mong nhận được thêm ý kiến đóng góp của các bạn!"*  
+  > *Rất mong nhận được ý kiến đóng góp của cô và các bạn!"*  
   > *(Đính kèm: Ảnh chụp trang Sách học sinh Mục IV đã viết dàn ý)*
-* **Bình luận tương tác mẫu của bạn học dưới thẻ Padlet:**
-  > *"Cảm ơn bài viết rất chi tiết của bạn! Mình thấy cách mở tab ẩn danh rất tiện lợi. Cho mình hỏi thêm là nếu xóa lịch sử thì các kênh mình đã bấm Đăng ký (Subscribe) có bị mất không?"*
 
 ---
 

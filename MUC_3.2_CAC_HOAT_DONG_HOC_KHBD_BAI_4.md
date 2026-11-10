@@ -210,8 +210,8 @@
 **a. Mục tiêu:**
 - *(1) Năng lực tin học / YCCĐ (6.B1.1):* Vận dụng kiến thức về tính hai mặt của AI để chủ động đề xuất và áp dụng các thao tác kỹ thuật nhằm kiểm soát thuật toán gợi ý, phá vỡ "Bong bóng thông tin" và bảo vệ quyền riêng tư cá nhân.
 - *(2) Năng lực tự chủ, tự học:* Tự giác nghiên cứu chủ đề, độc lập lập dàn ý giải pháp vào Sách học sinh và chủ động đăng bài chia sẻ lên bảng tường Padlet của lớp đúng thời hạn.
-- *(4) Năng lực giao tiếp và hợp tác:* Trình bày ý kiến rõ ràng, mạch lạc; tích cực đọc, thả tim và viết bình luận phản hồi mang tính xây dựng cho bài viết của bạn học trên không gian số Padlet.
-- *(5) Phẩm chất Trách nhiệm & Đạo đức số:* Nâng cao ý thức tự bảo vệ dữ liệu cá nhân, thể hiện văn hóa ứng xử văn minh, lịch sự và trách nhiệm khi tham gia tương tác trên diễn đàn công khai.
+- *(4) Năng lực giao tiếp và hợp tác:* Trình bày ý kiến, lập luận rõ ràng, mạch lạc; diễn đạt thuyết phục các giải pháp công nghệ trên không gian số Padlet.
+- *(5) Phẩm chất Trách nhiệm & Đạo đức số:* Nâng cao ý thức tự bảo vệ dữ liệu cá nhân, thể hiện tinh thần trách nhiệm khi tham gia không gian mạng.
 
 **b. Nội dung:**
 - Đề xuất cách giải quyết thực tế để bảo vệ quyền riêng tư và thoát khỏi bong bóng thông tin trên Diễn đàn bảng tường ảo Padlet (được giáo viên nhúng hoặc cung cấp liên kết trên hệ thống LMS). Học sinh lập dàn ý trong Sách học sinh trước khi tạo bài đăng trên Padlet.
@@ -219,8 +219,7 @@
 **c. Sản phẩm:**
 - Dàn ý giải pháp hoàn chỉnh trong Sách học sinh (Mục IV – Vận dụng).
 - Thẻ bài đăng (Post) của học sinh trên bảng Padlet của lớp (gồm: Tiêu đề là `[Họ tên HS - Lớp]`, nội dung trình bày ít nhất 02 thao tác kỹ thuật thực tế kèm giải thích cơ sở khoa học; khuyến khích đính kèm ảnh chụp dàn ý trong sách hoặc ảnh chụp màn hình thao tác).
-- Tương tác đa chiều trên Padlet: Thả tim (❤️) và ít nhất 01 bình luận (Comment) phản hồi mang tính xây dựng dưới bài viết của bạn học.
-- Điểm đánh giá định lượng và lời nhận xét của GV theo Bảng kiểm Rubric 3 tiêu chí (thang điểm 10/10) trên bảng Padlet / hệ thống LMS.
+- Điểm đánh giá định lượng tập trung vào chất lượng nội dung và lời nhận xét của GV theo Bảng kiểm Rubric 3 tiêu chí nội dung (thang điểm 10/10) trên bảng Padlet / hệ thống LMS.
 
 **d. Tổ chức thực hiện:**
 
@@ -230,13 +229,11 @@
   + GV khởi tạo bảng tường ảo Padlet (định dạng Tường – *Wall* hoặc Giá sách – *Shelf*) với chủ đề thảo luận: *"Làm sao để thoát khỏi bong bóng thông tin?"*.
   + Cấu hình thiết lập trên Padlet:
     * *Quyền đăng bài:* Cho phép học sinh thêm bài viết mới (biểu tượng dấu `+`).
-    * *Bình luận (Comments):* Bật tính năng cho phép học sinh viết bình luận dưới bài của nhau (`Comments: ON`).
-    * *Bày tỏ cảm xúc (Reactions):* Bật chế độ Thả tim / Thích (`❤️ Like / Heart`).
-    * *Kiểm duyệt an toàn:* Bật bộ lọc ngôn từ phản cảm (*Filter profanity*) và bật chế độ duyệt bài (*Require approval*) để đảm bảo môi trường học tập văn minh.
-  + GV tạo một bài ghim đầu trang (*Pinned Post*) trên Padlet công khai **Bảng kiểm Rubric 3 tiêu chí (thang điểm 10/10)** và hướng dẫn quy chuẩn đặt tên bài đăng:
-    * *Tiêu chí 1:* Tính khả thi của giải pháp kỹ thuật (Tối đa 6.0 điểm: Mức Tốt 5–6đ; Mức Đạt 3–4.5đ; Cần cố gắng 0–2.5đ).
-    * *Tiêu chí 2:* Hiểu bản chất cách thuật toán thu thập và khai thác dữ liệu (Tối đa 2.0 điểm: Mức Tốt 2đ; Mức Đạt 1đ; Cần cố gắng 0đ).
-    * *Tiêu chí 3:* Trình bày mạch lạc và tương tác tích cực với bạn học (Tối đa 2.0 điểm: Mức Tốt 2đ; Mức Đạt 1đ; Cần cố gắng 0đ).
+    * *Kiểm duyệt an toàn:* Bật bộ lọc ngôn từ phản cảm (*Filter profanity*) và duyệt bài (*Require approval*) để đảm bảo môi trường học tập văn minh.
+  + GV tạo một bài ghim đầu trang (*Pinned Post*) trên Padlet công khai **Bảng kiểm Rubric đánh giá nội dung (thang điểm 10/10)**:
+    * *Tiêu chí 1: Tính đúng đắn và khả thi của thao tác kỹ thuật đề xuất* (Tối đa 5.0 điểm: Mức Tốt 4.5–5.0đ; Mức Đạt 2.5–4.0đ; Cần cố gắng 0–2.0đ).
+    * *Tiêu chí 2: Giải thích cơ sở khoa học dựa trên bản chất thuật toán AI* (Tối đa 3.0 điểm: Mức Tốt 2.5–3.0đ; Mức Đạt 1.5–2.0đ; Cần cố gắng 0–1.0đ).
+    * *Tiêu chí 3: Tính hoàn thiện, logic và độ thuyết phục của nội dung* (Tối đa 2.0 điểm: Mức Tốt 2.0đ; Mức Đạt 1.0đ; Cần cố gắng 0đ).
   + GV nhúng bảng Padlet trực tiếp vào Hoạt động 4 trên khóa học LMS (qua mã nhúng iframe) hoặc gắn link / mã QR kèm điều kiện tiên quyết (hoàn thành Hoạt động 3 với điểm số $\ge 8/10$).
   + GV gửi thông báo nhắc học sinh chuẩn bị bút viết và mở sẵn Sách học sinh (Mục IV – Vận dụng).
 
@@ -245,9 +242,9 @@
   + *Yêu cầu 2 (Đăng bài lên bảng tường Padlet):* Truy cập bảng Padlet của lớp (qua khung nhúng LMS hoặc đường link GV cung cấp), bấm vào biểu tượng dấu cộng (`+`) hoặc nhấp đúp để tạo thẻ bài viết mới:
     * *Tiêu đề (Subject):* Nhập đúng cú pháp `[Họ và tên học sinh - Lớp]` (Ví dụ: `Nguyễn Văn Nam - Lớp 6A1`).
     * *Nội dung bài viết:* Trình bày rõ ràng 2 thao tác kỹ thuật và giải thích cơ sở khoa học tương ứng.
-    * *Đính kèm minh chứng (Tùy chọn khuyến khích):* Bấm biểu tượng 📷 Tải tệp lên để chụp/đính kèm ảnh trang Sách học sinh đã ghi dàn ý hoặc ảnh chụp màn hình thao tác kỹ thuật trên thiết bị.
-  + *Yêu cầu 3 (Tự đối chiếu Rubric đánh giá):* Đọc bài ghim Rubric 10 điểm của GV ở đầu bảng Padlet để tự rà soát độ chuẩn xác của bài viết trước khi bấm nút *"Xuất bản" (Publish)*.
-  + *Yêu cầu 4 (Đọc và tương tác trên Padlet):* Lướt xem các thẻ bài đăng của các bạn trên bảng tường Padlet, bấm Thả tim (❤️) cho các bài viết hay, chọn ít nhất 01 bài của bạn học để viết bình luận (Comment) góp ý mang tính xây dựng, lịch sự; đồng thời ghi lại tên bạn và nội dung phản hồi vào Sách học sinh (Mục IV – Phần 2).
+    * *Đính kèm minh chứng (Khuyến khích):* Bấm biểu tượng 📷 Tải tệp lên để chụp/đính kèm ảnh trang Sách học sinh đã ghi dàn ý hoặc ảnh chụp màn hình thao tác kỹ thuật trên thiết bị.
+  + *Yêu cầu 3 (Tự đối chiếu Rubric nội dung):* Đọc kỹ bài ghim Rubric 10 điểm của GV ở đầu bảng Padlet để tự rà soát độ chuẩn xác và hoàn thiện của bài viết trước khi bấm nút *"Xuất bản" (Publish)*.
+  + *Yêu cầu 4 (Đọc tham khảo bài học):* Đọc tham khảo các bài giải pháp hay của bạn bè trên bảng tường Padlet để tích lũy thêm các mẹo công nghệ hữu ích cho bản thân.
 
 - **Dự kiến câu trả lời / Sản phẩm của học sinh:**
   + *Dự kiến 5 thao tác kỹ thuật thực tế học sinh đề xuất:*
@@ -268,9 +265,7 @@
       > 1. Định kỳ mỗi cuối tuần, mình vào Cài đặt tài khoản chọn 'Xóa toàn bộ lịch sử xem và tìm kiếm'. Cơ sở khoa học: Dữ liệu lịch sử là nguồn huấn luyện chính để thuật toán AI phân tích sở thích. Khi ta xóa lịch sử, hệ thống mất đi 'dấu vết hành vi' để bám đuổi, buộc trang chủ phải gợi ý các nội dung phong phú và mới mẻ hơn.  
       > 2. Mình luôn tắt tính năng Tự động phát video (Autoplay) và cài đặt thông báo 'Nhắc tôi nghỉ ngơi' sau mỗi 45 phút. Cơ sở khoa học: Cách này giúp mình chủ động kiểm soát thời gian sử dụng thiết bị, ngăn chặn bẫy cuốn xem liên tục của thuật toán như bạn Nam trong bài học."*
     * **Tệp đính kèm:** Ảnh chụp trang Mục IV Sách học sinh đã điền nháp dàn ý.
-  + *Dự kiến bình luận phản hồi bạn học trên Padlet (Đạt chuẩn giao tiếp mạng tích cực):*
-    > *"Chào bạn Minh Thư, mình rất đồng ý với giải pháp bật Chế độ Ẩn danh khi tra cứu chủ đề lạ của bạn. Mình xin bổ sung thêm một mẹo nhỏ là sau khi xem xong trên tab ẩn danh, ta nên đóng hẳn cửa sổ để trình duyệt xóa sạch bộ nhớ tạm. Cảm ơn chia sẻ rất thực tế và hữu ích của bạn!"*
-  + *Dự kiến nội dung ghi chép trong Sách học sinh (Mục IV):* Học sinh hoàn thành dàn ý 2 thao tác kỹ thuật, lý do giải thích và ghi lại nhật ký tương tác Padlet (tên bạn và ý kiến phản hồi) đầy đủ, sạch đẹp.
+  + *Dự kiến nội dung ghi chép trong Sách học sinh (Mục IV):* Học sinh hoàn thành dàn ý 2 thao tác kỹ thuật và lý do giải thích đầy đủ, sạch đẹp.
 
 **Bước 2: Thực hiện nhiệm vụ:**
 
@@ -278,26 +273,24 @@
   + HS mở Sách học sinh (Mục IV – Vận dụng), suy nghĩ và dùng bút viết nháp dàn ý 2 thao tác kỹ thuật cùng cơ sở giải thích vào khung tương ứng.
   + HS truy cập bảng Padlet của lớp (qua khung nhúng LMS hoặc liên kết), bấm biểu tượng dấu cộng (`+`), nhập Tiêu đề `[Họ tên - Lớp]`, gõ nội dung bài viết và có thể bấm đính kèm ảnh chụp dàn ý trong sách.
   + HS đối chiếu bài viết với bài ghim Rubric ở đầu bảng Padlet, sau đó bấm *"Xuất bản" (Publish)* để hiển thị bài lên bảng tường.
-  + HS lướt xem các bài viết của bạn bè trên bảng tường Padlet (hiển thị trực quan theo thời gian thực), bấm Thả tim (❤️) và chọn ít nhất 1 bài để viết bình luận (Comment) phản hồi mang tính xây dựng.
-  + HS ghi chép tên bạn và nội dung ý kiến phản hồi vào phần Nhật ký tương tác trong Sách học sinh (Mục IV).
+  + HS lướt đọc các bài viết của bạn bè trên bảng tường Padlet để học hỏi thêm các ý tưởng giải pháp hay.
 - **Hoạt động hỗ trợ của Giáo viên:**
-  + GV mở bảng Padlet, theo dõi luồng bài đăng và bình luận xuất hiện theo thời gian thực (real-time stream).
-  + GV nhắc nhở các học sinh chưa ghi đúng cú pháp tên hoặc quên phần giải thích cơ sở khoa học có thể bấm biểu tượng ba chấm `(...)` $\rightarrow$ chọn *"Chỉnh sửa bài đăng"* (Edit post) để bổ sung kịp thời.
-  + GV duyệt bài (nếu bật chế độ kiểm duyệt) và duy trì văn hóa giao tiếp mạng tích cực, lịch sự trên bảng tường của lớp.
+  + GV mở bảng Padlet, theo dõi luồng bài đăng xuất hiện theo thời gian thực (*real-time stream*).
+  + GV nhắc nhở các học sinh chưa ghi đúng cú pháp tên hoặc quên phần giải thích cơ sở khoa học có thể bấm biểu tượng ba chấm `(...)` $\rightarrow$ chọn *"Chỉnh sửa bài đăng"* (*Edit post*) để bổ sung kịp thời.
+  + GV duyệt bài (nếu bật chế độ kiểm duyệt) và duy trì sự nghiêm túc, tập trung vào chất lượng nội dung.
 
 **Bước 3: Báo cáo, thảo luận:**
 
-- Toàn bộ kết quả học tập của lớp được hiển thị trực quan, sinh động trên bảng tường Padlet dưới dạng các thẻ ghi chú đa phương tiện (có chữ, hình ảnh chụp sách, số lượt thả tim và các nhánh bình luận).
-- Học sinh đọc bài của nhau, trao đổi sôi nổi dưới phần bình luận của từng bài viết, so sánh các cách giải quyết khác nhau và học hỏi thêm nhiều mẹo công nghệ hữu ích từ bạn bè.
-- Một số học sinh chia sẻ thêm các mẹo sáng tạo (như tạo nhiều tài khoản cho các mục đích học tập/giải trí riêng biệt, cài tiện ích trình duyệt chặn bám đuổi quảng cáo...).
+- Toàn bộ kết quả học tập của lớp được hiển thị trực quan, sinh động trên bảng tường Padlet dưới dạng các thẻ bài đăng đa phương tiện (có tiêu đề, chữ viết, hình ảnh minh họa thao tác).
+- Học sinh quan sát, so sánh các cách giải quyết khác nhau và học hỏi thêm nhiều thao tác kỹ thuật hữu ích từ bạn bè.
 
 **Bước 4: Kết luận, nhận định:**
 
 - **Đánh giá trên Padlet & LMS:**
-  + GV duyệt, nhận xét và chấm điểm bài đăng cùng bình luận phản hồi của học sinh trực tiếp trên Padlet theo Bảng kiểm Rubric 3 tiêu chí (Tổng điểm 10: Tính khả thi 6đ; Bản chất thuật toán 2đ; Trình bày và tương tác 2đ) bằng tính năng chấm điểm/nhận xét của GV (hoặc tổng hợp điểm số vào Sổ điểm Gradebook trên LMS).
-  + GV thả tim (❤️) hoặc gắn sao/khen ngợi các bài viết có ý tưởng độc đáo, giải thích sâu sắc và có ảnh minh họa trực quan.
+  + GV duyệt, nhận xét và chấm điểm bài đăng của học sinh trực tiếp theo **Bảng kiểm Rubric 3 tiêu chí nội dung (Tổng điểm 10: Tính đúng đắn & khả thi 5đ; Cơ sở khoa học bản chất thuật toán 3đ; Tính hoàn thiện & logic 2đ)**. Điểm số được ghi nhận vào Padlet hoặc nhập vào Sổ điểm Gradebook trên LMS.
+  + GV gắn sao/khen ngợi các bài viết có giải pháp xuất sắc, giải thích sâu sắc và có ảnh minh họa trực quan.
 - **Nhận định sư phạm của Giáo viên:**
-  + GV nhận xét tổng kết buổi thảo luận trên Padlet: Biểu dương tinh thần tự giác, năng lực công nghệ và thái độ thảo luận nghiêm túc, văn minh của cả lớp.
+  + GV nhận xét tổng kết buổi thảo luận trên Padlet: Biểu dương tinh thần tự giác, hiểu biết công nghệ và tư duy phản biện của học sinh trước tác động của thuật toán AI.
   + GV chốt thông điệp giáo dục: *"Trí tuệ nhân tạo và các thuật toán gợi ý sinh ra nhằm phục vụ con người, mang lại trải nghiệm cá nhân hóa vô cùng tiện lợi. Tuy nhiên, nếu không hiểu bản chất của chúng, chúng ta rất dễ bị thao túng, đánh mất thời gian và rơi vào chiếc lồng 'Bong bóng thông tin'. Hãy luôn là những người dùng công nghệ thông thái, biết chủ động làm chủ thiết bị và bảo vệ dữ liệu cá nhân của mình trên không gian số!"*.
   + GV dặn dò học sinh lưu lại link Padlet để tham khảo và hoàn thiện các phần ghi chú trong Sách học sinh để mang đến lớp trong buổi học trực tiếp tiếp theo cho giáo viên kiểm tra và ký xác nhận.
 
