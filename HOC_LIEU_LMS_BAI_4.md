@@ -240,49 +240,65 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
 
 ---
 
-# PHẦN 4: DIỄN ĐÀN THẢO LUẬN (FORUM) KÈM RUBRIC — HOẠT ĐỘNG 4 (VẬN DỤNG - 20 PHÚT)
+# PHẦN 4: DIỄN ĐÀN THẢO LUẬN TRÊN BẢNG TƯỜNG ẢO PADLET KÈM RUBRIC — HOẠT ĐỘNG 4 (VẬN DỤNG - 20 PHÚT)
 
-* **Tên hoạt động trên LMS:** `[HĐ 4 - Vận dụng] Diễn đàn: "Làm sao để thoát khỏi bong bóng thông tin?"`
-* **Loại hoạt động:** Standard forum for general use (Diễn đàn chuẩn có chấm điểm Whole Forum Grading bằng Rubric).
+* **Tên hoạt động trên LMS:** `[HĐ 4 - Vận dụng] Bảng thảo luận Padlet: "Làm sao để thoát khỏi bong bóng thông tin?"`
+* **Loại công cụ:** Bảng tường ảo đa phương tiện Padlet (Wall/Shelf) được nhúng trực tiếp qua mã iframe hoặc liên kết URL trên khóa học LMS.
 * **Thời gian thực hiện:** 20 phút.
-* **Thang điểm:** 10 điểm (Chấm theo Rubric định lượng).
-* **Điều kiện tiên quyết mở khóa:** Đã đạt từ 8/10 điểm trở lên ở Hoạt động 3.
+* **Thang điểm:** 10 điểm (Giáo viên đánh giá theo Rubric 3 tiêu chí trực tiếp trên Padlet hoặc nhập điểm vào LMS).
+* **Điều kiện tiên quyết mở khóa trên LMS:** Đã đạt từ 8/10 điểm trở lên ở Hoạt động 3.
 
 ---
 
-### 1. NỘI DUNG CHỦ ĐỀ THẢO LUẬN (TOPIC PROMPT)
-> ### 💬 CHỦ ĐỀ: "LÀM SAO ĐỂ THOÁT KHỎI BONG BÓNG THÔNG TIN?"
+### 1. HƯỚNG DẪN GIÁO VIÊN THIẾT LẬP BẢNG PADLET
+1. **Khởi tạo bảng Padlet:**
+   - Chọn định dạng: **Tường (Wall)** hoặc **Giá sách (Shelf)**.
+   - Đặt tiêu đề: `CHỦ ĐỀ: "LÀM SAO ĐỂ THOÁT KHỎI BONG BÓNG THÔNG TIN?"`.
+   - Mô tả bảng: Nêu rõ nhiệm vụ đăng bài, quy chuẩn tiêu đề `[Họ tên - Lớp]`, yêu cầu lập dàn ý vào Sách học sinh trước khi viết và quy định tương tác (Thả tim + Bình luận bạn học).
+2. **Cấu hình tương tác & an toàn mạng:**
+   - **Tương tác (Reactions):** Bật chức năng *Thích/Thả tim* (`❤️ Like / Heart`).
+   - **Bình luận (Comments):** Bật công tắc cho phép bình luận (`Allow comments: ON`).
+   - **Bảo vệ môi trường số:** Bật *Bộ lọc ngôn từ xấu (Filter profanity: ON)* và bật duyệt bài (*Require approval: ON*) nếu cần kiểm soát luồng bài trước khi công khai.
+3. **Ghim bài Rubric 10 điểm (Pinned Post):**
+   - GV tạo một thẻ bài đầu tiên, chọn tính năng *Ghim bài (Pin post)* để học sinh luôn nhìn thấy tiêu chuẩn chấm điểm và bài mẫu hướng dẫn.
+4. **Nhúng vào LMS:**
+   - Lấy mã nhúng Padlet (Share $\rightarrow$ Embed in your blog or website $\rightarrow$ Copy embed code).
+   - Trên khóa học LMS (Moodle/vnEdu/K12Online), tạo một hoạt động *Page* hoặc *URL*, dán mã nhúng iframe để học sinh làm bài ngay trên giao diện LMS mà không cần chuyển hướng.
+
+---
+
+### 2. NỘI DUNG CHỦ ĐỀ VÀ BÀI GHIM TRÊN PADLET
+> ### 💬 CHỦ ĐỀ THẢO LUẬN: "LÀM SAO ĐỂ THOÁT KHỎI BONG BÓNG THÔNG TIN?"
 > 
 > Chào các em học sinh lớp 6,  
 > Qua trò chơi mô phỏng ở Hoạt động 2 và bài tập phân loại ở Hoạt động 3, chúng ta đều nhận thấy thuật toán gợi ý AI rất tiện lợi nhưng cũng có thể "nhốt" chúng ta vào **bong bóng thông tin** và âm thầm **thu thập dữ liệu cá nhân**.
 > 
-> 🎯 **Nhiệm vụ của em trên Diễn đàn:**
-> 1. **Đăng bài viết mới:** Đề xuất **ít nhất 02 biện pháp thực tế** (thao tác kỹ thuật hoặc thói quen lành mạnh) mà em có thể làm để phá vỡ bong bóng thông tin và bảo vệ quyền riêng tư của mình.
-> 2. **Giải thích ngắn gọn:** Vì sao biện pháp kỹ thuật đó lại hiệu quả dựa trên bản chất cách thuật toán thu thập dữ liệu?
-> 3. **Tương tác:** Đọc bài viết của các bạn trong lớp và **gửi ít nhất 01 phản hồi mang tính xây dựng** (đồng tình, bổ sung kinh nghiệm, hoặc đặt câu hỏi).
-> 
-> ⏱️ *Lưu ý: Hãy viết nháp dàn ý vào Sách học sinh trước khi gõ đăng bài trên LMS. Bài viết sẽ được chấm điểm theo Rubric 10 điểm bên dưới.*
+> 🎯 **Nhiệm vụ của em trên bảng tường Padlet:**
+> 1. **Viết nháp vào Sách học sinh (Mục IV):** Đề xuất **ít nhất 02 thao tác kỹ thuật thực tế** và giải thích cơ sở khoa học (Vì sao cách đó giúp hạn chế sự thao túng của thuật toán?).
+> 2. **Đăng bài mới trên Padlet:** Bấm biểu tượng dấu cộng (`+`), đặt tiêu đề: `[Họ tên - Lớp]`, gõ nội dung giải pháp hoàn chỉnh. Khuyến khích bấm 📷 tải ảnh chụp dàn ý trong sách hoặc ảnh chụp màn hình thao tác kỹ thuật để đính kèm.
+> 3. **Tương tác đa chiều:** Đọc các bài viết trên tường lớp, bấm **Thả tim (❤️)** và **viết ít nhất 01 bình luận góp ý mang tính xây dựng** dưới bài của bạn; đồng thời ghi lại nhật ký tương tác vào Sách học sinh.
 
 ---
 
-### 2. MA TRẬN RUBRIC CHẤM ĐIỂM ĐỊNH LƯỢNG (WHOLE FORUM GRADING RUBRIC)
+### 3. MA TRẬN RUBRIC CHẤM ĐIỂM ĐỊNH LƯỢNG (WHOLE FORUM / PADLET RUBRIC)
 
 | Tiêu chí đánh giá | Mức Tốt (Mức cao) | Mức Đạt (Mức TB) | Mức Cần cố gắng (Mức thấp) |
 |:---|:---|:---|:---|
-| **Tiêu chí 1: Tính khả thi của giải pháp**<br>*(Trọng số: 6.0 điểm)* | **(5.0 – 6.0 điểm)**<br>Đề xuất được **từ 2 thao tác kỹ thuật hợp lý trở lên**, dễ thực hiện trong thực tế.<br>*Ví dụ:* Xóa lịch sử duyệt web/xem video định kỳ; dùng chế độ duyệt web ẩn danh; chủ động tìm kiếm từ khóa trái chiều; tắt tính năng lưu vị trí/cá nhân hóa quảng cáo. | **(3.0 – 4.5 điểm)**<br>Chỉ nêu được **1 thao tác kỹ thuật**, hoặc các giải pháp còn chung chung, mang tính khẩu hiệu cảm tính.<br>*Ví dụ:* "Ít dùng điện thoại lại", "Chuyển sang xem kênh khác", "Không xem linh tinh". | **(0 – 2.5 điểm)**<br>Đề xuất sai phương pháp, mang tính tiêu cực hoặc giải pháp không liên quan gì đến việc tác động vào dữ liệu của thuật toán gợi ý. |
+| **Tiêu chí 1: Tính khả thi của giải pháp**<br>*(Trọng số: 6.0 điểm)* | **(5.0 – 6.0 điểm)**<br>Đề xuất được **từ 2 thao tác kỹ thuật hợp lý trở lên**, dễ thực hiện trong thực tế.<br>*Ví dụ:* Xóa lịch sử duyệt web/xem video định kỳ; dùng chế độ duyệt web ẩn danh; chủ động tìm kiếm từ khóa trái chiều; tắt autoplay/hẹn giờ nghỉ ngơi; tắt cá nhân hóa quảng cáo. | **(3.0 – 4.5 điểm)**<br>Chỉ nêu được **1 thao tác kỹ thuật**, hoặc các giải pháp còn chung chung, mang tính khẩu hiệu cảm tính.<br>*Ví dụ:* "Ít dùng điện thoại lại", "Chuyển sang xem kênh khác", "Không xem linh tinh". | **(0 – 2.5 điểm)**<br>Đề xuất sai phương pháp, mang tính tiêu cực hoặc giải pháp không liên quan gì đến việc tác động vào dữ liệu của thuật toán gợi ý. |
 | **Tiêu chí 2: Hiểu bản chất thuật toán**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>Giải thích được **cơ sở khoa học** của giải pháp dựa trên cách thuật toán hoạt động.<br>*Ví dụ:* Xóa lịch sử là xóa nguồn dữ liệu đầu vào mà AI dùng để dự đoán; tìm từ khóa mới sẽ "huấn luyện lại" AI để thuật toán đa dạng hóa nội dung gợi ý. | **(1.0 điểm)**<br>Nêu được giải pháp đúng nhưng **chưa giải thích được hoặc giải thích lúng túng** vì sao cách làm đó lại hạn chế được sự thao túng của thuật toán. | **(0 điểm)**<br>Không giải thích hoặc hoàn toàn không thể hiện được sự hiểu biết về cách thuật toán AI thu thập và xử lý dữ liệu người dùng. |
-| **Tiêu chí 3: Trình bày và Tương tác**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đăng bài đúng thời hạn.<br>- Trình bày rõ ràng, câu cú gãy gọn, không viết tắt, không sai chính tả.<br>- **Có phản hồi mang tính xây dựng, lịch sự với bài của ít nhất 01 bạn khác**. | **(1.0 điểm)**<br>- Đăng bài đúng thời hạn, câu cú rõ ràng.<br>- Tuy nhiên **chưa có tương tác** phản hồi bài viết của bạn bè trong lớp. | **(0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, sai nhiều lỗi chính tả hoặc dùng ngôn từ thiếu văn hóa, không tương tác với ai. |
+| **Tiêu chí 3: Trình bày và Tương tác**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đặt đúng cú pháp tiêu đề `[Họ tên - Lớp]`, đăng bài đúng hạn.<br>- Trình bày rõ ràng, câu cú gãy gọn, không viết tắt, không sai chính tả.<br>- **Có thả tim và phản hồi bình luận mang tính xây dựng, lịch sự với bài của ít nhất 01 bạn khác**. | **(1.0 điểm)**<br>- Đăng bài đúng hạn, câu cú rõ ràng.<br>- Tuy nhiên **chưa có tương tác** phản hồi bình luận bài viết của bạn bè trên Padlet. | **(0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, sai nhiều lỗi chính tả hoặc dùng ngôn từ thiếu văn hóa, không tương tác với ai. |
 
 ---
 
-### 3. BÀI ĐĂNG MẪU VÀ BÌNH LUẬN TƯƠNG TÁC ĐỊNH HƯỚNG
-* **Bài đăng mẫu của học sinh:**
-  > **Tiêu đề:** *Hai biện pháp kỹ thuật giúp mình làm chủ thuật toán YouTube và bảo vệ quyền riêng tư*  
-  > *"Chào thầy cô và các bạn, để không bị cuốn vào bong bóng thông tin của YouTube, mình đã áp dụng 2 thao tác sau:*  
+### 4. BÀI ĐĂNG MẪU VÀ BÌNH LUẬN TƯƠNG TÁC ĐỊNH HƯỚNG TRÊN PADLET
+* **Thẻ bài đăng mẫu của học sinh trên Padlet:**
+  > **Tiêu đề (Subject):** `Nguyễn Văn Nam - Lớp 6A1: 2 giải pháp công nghệ làm chủ thuật toán YouTube`  
+  > *"Chào cô và các bạn, để không bị cuốn vào bong bóng thông tin của YouTube, mình đã áp dụng 2 thao tác sau:*  
   > *1. **Định kỳ xóa lịch sử xem và tìm kiếm (Clear Watch History):** Thuật toán AI phân tích lịch sử để đoán sở thích của mình. Khi xóa dữ liệu cũ, AI sẽ không còn căn cứ để nhồi nhét mãi các video cùng chủ đề nữa.*  
   > *2. **Bật chế độ Ẩn danh (Incognito Mode) khi tra cứu chủ đề mới hoặc tìm bài tập:** Chế độ này không lưu lại cookie và lịch sử, giúp thuật toán không gắn nhãn sở thích và không gửi quảng cáo bám đuổi.*  
-  > *Rất mong nhận được thêm ý kiến đóng góp của các bạn!"*
-* **Bình luận tương tác mẫu của bạn học:**
+  > *Rất mong nhận được thêm ý kiến đóng góp của các bạn!"*  
+  > *(Đính kèm: Ảnh chụp trang Sách học sinh Mục IV đã viết dàn ý)*
+* **Bình luận tương tác mẫu của bạn học dưới thẻ Padlet:**
   > *"Cảm ơn bài viết rất chi tiết của bạn! Mình thấy cách mở tab ẩn danh rất tiện lợi. Cho mình hỏi thêm là nếu xóa lịch sử thì các kênh mình đã bấm Đăng ký (Subscribe) có bị mất không?"*
 
 ---
@@ -296,7 +312,7 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
    - **Học liệu 1 (Assignment):** Không hạn chế. Trong mục *Activity completion*, chọn: *Student must submit to this activity to complete it*.
    - **Học liệu 2 (SCORM/H5P):** Trong mục *Restrict access*, thêm điều kiện: *Activity completion of HĐ 1 must be marked complete*. Trong mục *Activity completion*, chọn: *Require minimum score or passed status*.
    - **Học liệu 3 (Drag & Drop):** Thêm điều kiện Restrict access: *Activity completion of HĐ 2 must be marked complete*. Cài đặt Grade: *Grade to pass = 8.0/10*.
-   - **Học liệu 4 (Forum):** Thêm điều kiện Restrict access: *Activity completion of HĐ 3 must be complete with grade $\ge 8.0$*. Cài đặt Whole forum grading: Chọn *Grading method: Rubric* và nhập biểu mẫu ma trận Rubric 3 tiêu chí.
+   - **Học liệu 4 (Padlet nhúng / Forum):** Thêm điều kiện Restrict access: *Activity completion of HĐ 3 must be complete with grade $\ge 8.0$*. Nhúng mã iframe Padlet hoặc đặt liên kết chuyển tiếp tới bảng Padlet của lớp. GV ghi nhận điểm Rubric của học sinh vào Sổ điểm Gradebook.
 
 ### 2. Đóng gói SCORM 1.2
 - Giáo viên có thể nén các file tương tác `hoc_lieu_2_game_mophong.html` hoặc `hoc_lieu_3_gamification_keo_tha.html` cùng tệp `imsmanifest.xml` để tạo thành gói `.zip` SCORM chuẩn, tải trực tiếp lên mục Thêm hoạt động SCORM Package của LMS để tự động ghi nhận điểm vào Gradebook.
