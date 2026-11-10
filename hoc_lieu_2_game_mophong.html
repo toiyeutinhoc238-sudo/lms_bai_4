@@ -1191,21 +1191,69 @@
       color: #cbd5e1;
     }
 
-    .btn-skip-video {
-      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
-      color: white;
-      border: 1px solid #818cf8;
-      font-family: 'Space Grotesk', sans-serif;
+    .video-lock-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
       font-weight: 800;
-      font-size: 0.92rem;
-      padding: 10px 20px;
+      letter-spacing: 0.4px;
+    }
+
+    .video-lock-badge.unlocked {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #34d399;
+    }
+
+    .btn-locked-sim {
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 18px;
       border-radius: 10px;
-      cursor: pointer;
+      cursor: not-allowed;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      opacity: 0.75;
       transition: all 0.2s;
-      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+    }
+
+    .cyber-toast {
+      position: fixed;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1.5px solid #f59e0b;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 158, 11, 0.35);
+      color: #fef3c7;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 10000;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cyber-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
     }
 
     .btn-skip-video:hover {
@@ -1349,7 +1397,7 @@
       </div>
     </div>
     <div class="step-divider">➔</div>
-    <div class="step-item" id="stepIndicatorSim" onclick="switchToSimulation()">
+    <div class="step-item" id="stepIndicatorSim" onclick="handleStepSimClick()">
       <div class="step-num">2</div>
       <div class="step-info">
         <div class="step-title">Trò chơi mô phỏng AI</div>
@@ -1372,13 +1420,13 @@
       <span class="video-badge-pill">BƯỚC 1: XEM PHIM HOẠT HÌNH KHÁM PHÁ KIẾN THỨC (~3 PHÚT)</span>
       <h2 class="video-heading">Thuật toán mạng xã hội là gì và nó hoạt động thế nào?</h2>
       <p class="video-subheading">
-        Hãy tập trung theo dõi đoạn phim hoạt hình ngắn dưới đây (~3 phút) để hiểu nguyên lý thuật toán phân tích hành vi và bí quyết các nền tảng mạng xã hội giữ chân người dùng. Thử thách mô phỏng rẽ nhánh sẽ tự động mở ra ngay khi video kết thúc!
+        Hãy tập trung theo dõi đoạn phim hoạt hình ngắn dưới đây (~3 phút) để hiểu nguyên lý thuật toán phân tích hành vi và bí quyết các nền tảng mạng xã hội giữ chân người dùng. Hệ thống đã khóa tính năng tua nhanh để đảm bảo các em tiếp thu trọn vẹn kiến thức; trò chơi mô phỏng sẽ tự động mở ra ngay khi video kết thúc!
       </p>
     </div>
 
     <!-- Cyber Video Player Box -->
     <div class="cyber-video-wrapper">
-      <video id="interactiveVideo" class="cyber-video-player" controls playsinline preload="auto">
+      <video id="interactiveVideo" class="cyber-video-player" controls controlsList="nodownload noplaybackrate" playsinline preload="auto">
         <source src="thuat_toan_mxh.mp4" type="video/mp4">
         <source src="Thuật toán mạng xã hội là gì và nó hoạt động thế nào-.mp4" type="video/mp4">
         Trình duyệt của em không hỗ trợ phát thẻ video HTML5.
@@ -1389,24 +1437,33 @@
         <div class="overlay-modal">
           <div class="modal-icon">🎉</div>
           <h3>Em đã hoàn thành phần Video lý thuyết!</h3>
-          <p>Kiến thức nền tảng đã sẵn sàng. Hãy bấm nút bên dưới để trực tiếp đóng vai Hệ thống AI điều khiển thuật toán gợi ý giữ chân người dùng ảo.</p>
+          <p>Kiến thức nền tảng đã sẵn sàng. Hệ thống sẽ tự động chuyển vào Trò chơi mô phỏng sau <span id="autoRedirectCountdown" style="color: var(--neon-cyan); font-weight: 800;">3</span> giây...</p>
           <button class="btn-proceed-modal" onclick="switchToSimulation()">
-            <span>BẮT ĐẦU THỬ THÁCH MÔ PHỎNG AI</span> 🚀
+            <span>VÀO THỬ THÁCH MÔ PHỎNG AI NGAY</span> 🚀
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Video Action & Status Bar -->
+    <!-- Video Action & Lock Status Bar -->
     <div class="video-action-bar">
-      <div class="video-status-text">
-        <span>⏱️ Tiến trình xem:</span>
-        <strong id="videoWatchProgress" style="color: var(--neon-cyan);">0%</strong>
-        <span style="color: var(--text-muted); font-size: 0.8rem;">(Tự động mở trò chơi khi video chạy hết)</span>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <span class="video-lock-badge" id="videoLockBadge">🔒 KHÓA TUA NHANH</span>
+          <span class="video-status-text">
+            ⏱️ Đã xem: <strong id="timeCurrent" style="color: var(--neon-cyan);">00:00</strong> / <span id="timeDuration">02:50</span> (<strong id="videoWatchProgress" style="color: var(--neon-cyan);">0%</strong>)
+          </span>
+        </div>
+        <div style="font-size: 0.8rem; color: #94a3b8;">
+          ⏳ Thời gian còn lại: <strong id="timeRemaining" style="color: #cbd5e1;">--:--</strong> • Video đang phát tuần tự, hệ thống sẽ tự động mở trò chơi khi xem hết.
+        </div>
       </div>
-      <button class="btn-skip-video" onclick="switchToSimulation()">
-        <span>Tôi đã xem xong • Bắt đầu Mô phỏng ngay</span> ➡️
-      </button>
+
+      <div id="videoActionBtnContainer">
+        <button id="btnLockSim" class="btn-locked-sim" disabled title="Em cần theo dõi hết video để mở khóa">
+          <span>🔒 Đang khóa • Hãy xem hết video</span>
+        </button>
+      </div>
     </div>
 
     <!-- 3 Focus Questions for Active Learning -->
@@ -2154,10 +2211,118 @@
     }
   }
 
+  // ================= VIDEO SEQUENTIAL LOCK STATE =================
+  let maxWatchedTime = 0;
+  let videoCompleted = false;
+  let redirectTimer = null;
+  let toastTimer = null;
+
+  function showNoticeToast(msg, isSuccess = false) {
+    let toast = document.getElementById('cyberToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'cyberToast';
+      toast.className = 'cyber-toast';
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = (isSuccess ? '🎉 ' : '🔒 ') + msg;
+    toast.style.borderColor = isSuccess ? '#10b981' : '#f59e0b';
+    toast.style.color = isSuccess ? '#d1fae5' : '#fef3c7';
+    toast.classList.add('show');
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2800);
+  }
+
+  function formatTime(seconds) {
+    if (isNaN(seconds) || seconds < 0) return '00:00';
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+  }
+
+  function handleStepSimClick() {
+    if (!videoCompleted) {
+      initAudio();
+      playSound('buzz');
+      showNoticeToast("Video đã khóa tính năng tua nhanh. Em cần theo dõi từ đầu đến hết video để mở khóa trò chơi mô phỏng nhé!");
+      return;
+    }
+    switchToSimulation();
+  }
+
+  function handleVideoFinished() {
+    if (videoCompleted) return;
+    videoCompleted = true;
+    initAudio();
+    playSound('success');
+
+    // Update Video Action Bar
+    const badge = document.getElementById('videoLockBadge');
+    if (badge) {
+      badge.className = 'video-lock-badge unlocked';
+      badge.innerHTML = '✅ ĐÃ HOÀN THÀNH VIDEO';
+    }
+
+    const btnContainer = document.getElementById('videoActionBtnContainer');
+    if (btnContainer) {
+      btnContainer.innerHTML = `
+        <button class="btn-proceed-modal" onclick="switchToSimulation()" style="padding: 10px 22px; font-size: 0.92rem; margin: 0;">
+          <span>BẮT ĐẦU MÔ PHỎNG AI</span> 🚀
+        </button>
+      `;
+    }
+
+    // Show Overlay with 3s auto countdown
+    const overlay = document.getElementById('videoEndOverlay');
+    if (overlay) {
+      overlay.style.display = 'flex';
+      let countdown = 3;
+      const countElem = document.getElementById('autoRedirectCountdown');
+      if (countElem) countElem.innerText = countdown;
+
+      clearInterval(redirectTimer);
+      redirectTimer = setInterval(() => {
+        countdown--;
+        if (countElem) countElem.innerText = countdown;
+        if (countdown <= 0) {
+          clearInterval(redirectTimer);
+          switchToSimulation();
+        }
+      }, 1000);
+    }
+  }
+
+  function updateVideoProgressUI() {
+    const vid = document.getElementById('interactiveVideo');
+    if (!vid) return;
+
+    const cur = vid.currentTime;
+    const dur = vid.duration || 170; // ~2m50s fallback
+    const remaining = Math.max(0, dur - cur);
+
+    const timeCurElem = document.getElementById('timeCurrent');
+    const timeDurElem = document.getElementById('timeDuration');
+    const timeRemElem = document.getElementById('timeRemaining');
+    const progElem = document.getElementById('videoWatchProgress');
+
+    if (timeCurElem) timeCurElem.innerText = formatTime(cur);
+    if (timeDurElem && vid.duration) timeDurElem.innerText = formatTime(dur);
+    if (timeRemElem) timeRemElem.innerText = formatTime(remaining);
+
+    if (progElem && vid.duration) {
+      const pct = Math.min(100, Math.round((cur / dur) * 100));
+      progElem.innerText = pct + '%';
+    }
+  }
+
   // ================= STAGE SWITCHING & STEPPER =================
   function switchToSimulation() {
     const video = document.getElementById('interactiveVideo');
     if (video) video.pause();
+    clearInterval(redirectTimer);
     initAudio();
     playSound('click');
 
@@ -2329,22 +2494,51 @@
     renderRound(1);
     updateGauges();
 
-    // Attach Video Listeners
+    // Attach Video Listeners with anti-cheat / sequential viewing
     const vid = document.getElementById('interactiveVideo');
     if (vid) {
-      vid.addEventListener('ended', () => {
-        initAudio();
-        playSound('success');
-        const overlay = document.getElementById('videoEndOverlay');
-        if (overlay) overlay.style.display = 'flex';
+      vid.addEventListener('loadedmetadata', () => {
+        const timeDurElem = document.getElementById('timeDuration');
+        if (timeDurElem && vid.duration) timeDurElem.innerText = formatTime(vid.duration);
+        updateVideoProgressUI();
       });
 
-      vid.addEventListener('timeupdate', () => {
-        if (vid.duration) {
-          const pct = Math.round((vid.currentTime / vid.duration) * 100);
-          const prog = document.getElementById('videoWatchProgress');
-          if (prog) prog.innerText = pct + '%';
+      // Prevent fast-forwarding / seeking ahead beyond watched time
+      vid.addEventListener('seeking', () => {
+        if (!videoCompleted && vid.currentTime > maxWatchedTime + 1.2) {
+          vid.currentTime = maxWatchedTime;
+          initAudio();
+          playSound('buzz');
+          showNoticeToast("Video đã khóa tua nhanh. Em vui lòng theo dõi tuần tự từ đầu đến hết nhé!");
         }
+      });
+
+      // Track watched progress
+      vid.addEventListener('timeupdate', () => {
+        if (!vid.seeking) {
+          if (vid.currentTime > maxWatchedTime) {
+            maxWatchedTime = vid.currentTime;
+          }
+        }
+        updateVideoProgressUI();
+
+        // Check if finished (within 0.6s of end)
+        if (!videoCompleted && vid.duration && vid.currentTime >= vid.duration - 0.6) {
+          handleVideoFinished();
+        }
+      });
+
+      // Lock playback rate to 1.0x
+      vid.addEventListener('ratechange', () => {
+        if (!videoCompleted && vid.playbackRate > 1.0) {
+          vid.playbackRate = 1.0;
+          showNoticeToast("Tốc độ phát được cố định chuẩn 1.0x để đảm bảo học tập hiệu quả");
+        }
+      });
+
+      // Handle video end
+      vid.addEventListener('ended', () => {
+        handleVideoFinished();
       });
     }
   });
