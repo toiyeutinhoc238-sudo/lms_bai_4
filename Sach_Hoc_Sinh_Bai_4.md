@@ -44,7 +44,7 @@
 > 💡 **Gợi ý từ khóa:** *cá nhân hóa*, *bong bóng thông tin*, *quyền riêng tư*
 
 1. **Ghi chú tóm tắt sau trò chơi:**  
-   "Để giữ chân người dùng, thuật toán AI sẽ liên tục ghi nhận thói quen và .................................................... nội dung sao cho đúng với sở thích của họ. Việc này tạo ra một hiện tượng gọi là '....................................................'."
+   "Để giữ chân người dùng, thuật toán AI sẽ liên tục ghi nhận thói quen và .................................................... nội dung sao cho đúng với sở thích của họ. Việc này tạo ra một hiện tượng gọi là '....................................................' và làm tăng nguy cơ mất .................................................... của người dùng."
 
 2. **📌 Hộp kiến thức: Tính hai mặt của thuật toán AI gợi ý:**  
    * **Mặt tích cực:** Cá nhân hóa trải nghiệm. Người dùng nhanh chóng tìm được nội dung đúng sở thích mà không mất thời gian tìm kiếm.  
