@@ -41,17 +41,17 @@
 
 Sau khi trải nghiệm đóng vai thuật toán AI trên LMS, em hãy điền các từ khóa thích hợp vào chỗ trống để chốt lại kiến thức cốt lõi:
 
-1. **Khái niệm Cá nhân hóa (Personalization):**  
+1. **Khái niệm Cá nhân hóa:**  
    Hệ thống gợi ý hoạt động bằng cách thu thập và phân tích dữ liệu lịch sử tương tác của người dùng để .................................................... và đề xuất những nội dung phù hợp nhất với sở thích cá nhân.
 
 2. **Mặt tích cực của tính năng gợi ý AI:**  
    Giúp người dùng ...........................................................................................................................................................  
    và tiết kiệm thời gian tìm kiếm thông tin, giải trí hoặc học tập.
 
-3. **Hiện tượng "Bong bóng thông tin" (Filter Bubbles):**  
+3. **Hiện tượng "Bong bóng thông tin":**  
    Khi thuật toán liên tục ưu tiên những nội dung người dùng thích để giữ chân họ trên mạng xã hội, người dùng sẽ rơi vào một "chiếc bong bóng" chỉ toàn những thông tin ..........................................................................................., khiến họ bị cô lập khỏi các ....................................................................................................................................................
 
-4. **Rủi ro về Quyền riêng tư (Privacy):**  
+4. **Rủi ro về Quyền riêng tư:**  
    Để đưa ra gợi ý ngày càng chính xác, các nền tảng công nghệ âm thầm thu thập lượng lớn ................................................................... (vị trí, thao tác nhấp chuột, thời gian dừng màn hình...), khiến người dùng có nguy cơ ..........................................................................................................................................................
 
 * **Mã xác nhận hoàn thành Hoạt động 2 trên LMS của em:** `[............................................................]`
