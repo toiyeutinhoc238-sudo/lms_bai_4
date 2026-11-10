@@ -63,13 +63,16 @@ flowchart TD
   - Học sinh đếm 10 video đầu tiên $\rightarrow$ Chụp ảnh màn hình $\rightarrow$ Nộp file lên hệ thống LMS và nhập số lượng, cảm nghĩ.
   - *Phản hồi tự động:* Hệ thống lập tức gửi tin nhắn động viên, gợi mở bí mật phía sau thuật toán gợi ý và tự động mở khóa Hoạt động 2.
 
-### THẺ HỌC LIỆU 2: TRÒ CHƠI MÔ PHỎNG TƯƠNG TÁC (SCORM / H5P BRANCHING SCENARIO)
-* **WHAT (Học liệu là gì?):** Phần mềm mô phỏng tương tác đóng vai "Kỹ sư điều khiển thuật toán AI VideoTube" với mục tiêu tối đa hóa thời gian giữ chân bạn Nam (12 tuổi).
-* **WHY (Tại sao sử dụng?):** Giúp học sinh hiểu được động cơ kinh tế (tối đa hóa thời gian xem để kiếm tiền quảng cáo) của các nền tảng mạng xã hội và thấy được cơ chế hình thành **Bong bóng thông tin (Filter Bubbles)** cùng rủi ro **Mất kiểm soát dữ liệu cá nhân** theo trích dẫn khoa học tài liệu *Australian Government (2023) - DP-REG Literature Summary* (Mục 2.B trang 16, Mục 2.B.1.2 trang 18, Mục 2.B.2.3 trang 21).
+### THẺ HỌC LIỆU 2: VIDEO TƯƠNG TÁC & TRÒ CHƠI MÔ PHỎNG (SCORM / H5P BRANCHING SCENARIO)
+* **WHAT (Học liệu là gì?):** Học liệu Video tương tác 2 phần: xem video hoạt hình giải thích thuật toán mạng xã hội (~3 phút), sau đó trực tiếp tham gia trò chơi rẽ nhánh đóng vai "Kỹ sư điều khiển thuật toán AI VideoTube" để tối đa hóa thời gian giữ chân bạn Nam (12 tuổi).
+* **WHY (Tại sao sử dụng?):**
+  - Giúp học sinh nắm vững kiến thức nền tảng trước khi bước vào thực hành mô phỏng, tránh việc người học bị quá tải nhận thức hoặc bỡ ngỡ.
+  - Vận dụng chuẩn H5P Interactive Video, kết hợp minh chứng khoa học *Australian Government (2023) - DP-REG Literature Summary* để làm rõ cơ chế **Bong bóng thông tin (Filter Bubbles)** và rủi ro **Mất kiểm soát dữ liệu cá nhân**.
 * **HOW (Tổ chức thực hiện & Phản hồi):**
-  - Học sinh trải qua 3 lượt lựa chọn video (Lượt 1: Cùng sở thích; Lượt 2: Video giật gân clickbait; Lượt 3: Tự động phát khép kín bong bóng).
-  - Trực quan hóa qua "Quả cầu nhận thức" và các thanh chỉ số đo lường.
-  - Trả lời 2 câu hỏi neo chặn $\rightarrow$ Điền 3 từ khóa vào Sách học sinh $\rightarrow$ LMS tự động ghi nhận hoàn thành và mở khóa Hoạt động 3.
+  - *Bước 1:* GV chuyển giao nhiệm vụ xem video hoạt hình và vượt qua thử thách mô phỏng cuối video.
+  - *Bước 2:* HS xem video (~3 phút) $\rightarrow$ Tự động chuyển tiếp vào trò chơi mô phỏng 3 lượt lựa chọn video để giữ chân Nam.
+  - *Bước 3:* Trực quan hóa qua "Quả cầu nhận thức" co hẹp và 3 đồng hồ đo chỉ số $\rightarrow$ Điền 4 từ khóa vào Sách học sinh.
+  - *Bước 4:* LMS tự động ghi nhận điểm số SCORM 100/100 (Passed) và mở khóa Hoạt động 3.
 
 ### THẺ HỌC LIỆU 3: BÀI TẬP KÉO - THẢ (DRAG & DROP)
 * **WHAT (Học liệu là gì?):** Trò chơi kéo thả phân loại 10 thẻ tình huống thực tế vào 2 cột: **Mặt tích cực (Ưu điểm)** và **Mặt hạn chế (Rủi ro)**, hỗ trợ cả chuột máy tính và chạm cảm ứng điện thoại.

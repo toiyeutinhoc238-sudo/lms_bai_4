@@ -63,13 +63,29 @@
 
 ---
 
-# PHẦN 2: TRÒ CHƠI MÔ PHỎNG TƯƠNG TÁC (SCORM / H5P BRANCHING SCENARIO) — HOẠT ĐỘNG 2 (HÌNH THÀNH KIẾN THỨC - 15 PHÚT)
+# PHẦN 2: VIDEO TƯƠNG TÁC & TRÒ CHƠI MÔ PHỎNG (H5P / SCORM BRANCHING SCENARIO) — HOẠT ĐỘNG 2 (HÌNH THÀNH KIẾN THỨC - 15 PHÚT)
 
-* **Tên hoạt động trên LMS:** `[HĐ 2 - Khám phá] Trò chơi mô phỏng: "Em là Thuật toán Gợi ý"`
-* **Chuẩn công nghệ:** Gói SCORM 1.2 / H5P Branching Scenario (hoặc nhúng ứng dụng tương tác HTML5).
-* **Thời lượng trải nghiệm:** 15 phút.
-* **Tiêu chí hoàn thành (Completion Rule):** Học sinh trải nghiệm hết 3 lượt kịch bản mô phỏng và trả lời đúng các câu hỏi chốt kiến thức (Passed / Completed status).
+* **Tên hoạt động trên LMS:** `[HĐ 2 - Khám phá] Video tương tác & Trò chơi mô phỏng: "Thuật toán mạng xã hội và Bong bóng thông tin"`
+* **Chuẩn công nghệ:** Video tương tác H5P / Gói SCORM 1.2 Branching Scenario (hoặc ứng dụng Web tương tác HTML5 tự chứa).
+* **Thời lượng trải nghiệm:** 15 phút (Xem video: 3 phút; Thao tác mô phỏng: 8 phút; Chốt kiến thức vào Sách học sinh: 4 phút).
+* **Mục tiêu sư phạm:** Đạt YCCĐ (6.B1.1), Năng lực tự chủ tự học (2), và Năng lực giải quyết vấn đề (3).
+* **Tiêu chí hoàn thành (Completion Rule):** Học sinh theo dõi xong video hoạt hình, hoàn thành 3 vòng mô phỏng đạt 100/100 điểm SCORM và trả lời đúng các câu hỏi neo chặn (Passed / Completed status).
 * **Điều kiện tiên quyết mở khóa (Restrict Access):** Đã nộp bài tập Hoạt động 1.
+
+---
+
+## 1. TIẾN TRÌNH TỔ CHỨC DẠY HỌC CHUẨN KHBD (4 BƯỚC E-LEARNING)
+
+* **Bước 1: Chuyển giao nhiệm vụ:** GV cấu hình học liệu Video tương tác trên LMS. Yêu cầu HS truy cập hệ thống, tập trung theo dõi video hoạt hình *"Thuật toán mạng xã hội là gì và nó hoạt động thế nào?"* (~3 phút) và sẵn sàng vượt qua thử thách trò chơi mô phỏng xuất hiện ngay cuối video.
+* **Bước 2: Thực hiện nhiệm vụ:** 
+  - HS theo dõi video (~3 phút) để hiểu nguyên lý thuật toán phân tích hành vi và mục tiêu giữ chân người dùng.
+  - Khi video kết thúc, hệ thống tự động hiển thị trò chơi rẽ nhánh (Branching Scenario), HS thao tác chọn các phương án *"Đóng vai hệ thống AI"* để liên tục gợi ý video nhằm giữ chân bạn Nam (12 tuổi) ảo.
+* **Bước 3: Báo cáo, thảo luận:** Ngay khi hoàn thành trò chơi trên LMS, HS mở Sách học sinh (Mục II - Hình thành kiến thức), sử dụng kiến thức vừa học để điền các từ khóa (*cá nhân hóa, mặt tích cực, bong bóng thông tin, quyền riêng tư*) vào phần Ghi chú lý thuyết.
+* **Bước 4: Kết luận, nhận định:** Hệ thống LMS tự động ghi nhận kết quả tương tác, lưu tiến trình hoàn thành (Passed / 100 điểm) và cấp quyền truy cập sang Hoạt động 3 (Luyện tập).
+
+### 💡 Lợi ích sư phạm của việc tích hợp Video trước Trò chơi mô phỏng:
+1. **Rõ ràng hóa nhiệm vụ (Bước 1 & 2):** Học sinh không bị "ném" thẳng vào một trò chơi mô phỏng phức tạp khi chưa có kiến thức nền. Các em được xem video giải thích trực quan ~3 phút trước, sau đó mới đóng vai áp dụng vào trò chơi để kiểm chứng thực tế.
+2. **Cập nhật đúng tính năng công cụ (H5P Interactive Video):** Công cụ H5P trên các hệ thống LMS chuẩn quốc tế (Moodle, Cohota, Canvas) cho phép nhúng video và cài đặt các mốc tương tác, tự động bật bài tập/mô phỏng rẽ nhánh ở cuối video. Điều này thể hiện người thiết kế làm chủ công nghệ và xây dựng kịch bản E-learning bài bản.
 
 ---
 

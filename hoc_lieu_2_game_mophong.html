@@ -942,6 +942,381 @@
       from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Flow Stepper */
+    .flow-stepper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.75);
+      border-bottom: 1px solid rgba(99, 102, 241, 0.25);
+      padding: 12px 20px;
+      flex-wrap: wrap;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      opacity: 0.65;
+      transition: all 0.25s ease;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid transparent;
+    }
+
+    .step-item:hover {
+      opacity: 0.9;
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    .step-item.active {
+      opacity: 1;
+      background: rgba(99, 102, 241, 0.2);
+      border-color: rgba(99, 102, 241, 0.5);
+      box-shadow: 0 0 16px rgba(99, 102, 241, 0.25);
+    }
+
+    .step-item.completed {
+      opacity: 1;
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      transition: all 0.2s;
+    }
+
+    .step-item.active .step-num {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(99, 102, 241, 0.7);
+    }
+
+    .step-item.completed .step-num {
+      background: var(--neon-emerald);
+      color: #064e3b;
+    }
+
+    .step-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: #f1f5f9;
+    }
+
+    .step-desc {
+      font-size: 0.74rem;
+      color: #94a3b8;
+    }
+
+    .step-divider {
+      color: #475569;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .flow-stepper { justify-content: center; }
+      .step-desc { display: none; }
+      .step-divider { display: none; }
+    }
+
+    /* Video Stage Section */
+    .video-stage-section {
+      padding: 24px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .video-intro-box {
+      margin-bottom: 20px;
+    }
+
+    .video-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .video-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .video-subheading {
+      font-size: 0.92rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      max-width: 820px;
+    }
+
+    .cyber-video-wrapper {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1.5px solid rgba(99, 102, 241, 0.45);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(99, 102, 241, 0.25);
+      background: #000000;
+      margin-bottom: 18px;
+    }
+
+    .cyber-video-player {
+      width: 100%;
+      max-height: 500px;
+      display: block;
+      object-fit: contain;
+      background: #000000;
+      outline: none;
+    }
+
+    .video-end-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(7, 9, 19, 0.92);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      padding: 24px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .overlay-modal {
+      text-align: center;
+      max-width: 520px;
+      background: rgba(30, 27, 75, 0.95);
+      border: 1.5px solid #6366f1;
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.85), 0 0 35px rgba(99, 102, 241, 0.4);
+    }
+
+    .modal-icon {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-8px); }
+    }
+
+    .overlay-modal h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .overlay-modal p {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .btn-proceed-modal {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      border: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-proceed-modal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+    }
+
+    .video-action-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+    }
+
+    .video-status-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .btn-skip-video {
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+      color: white;
+      border: 1px solid #818cf8;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35);
+    }
+
+    .btn-skip-video:hover {
+      transform: translateY(-2px);
+      background: #4338ca;
+      box-shadow: 0 6px 18px rgba(79, 70, 229, 0.5);
+    }
+
+    .video-focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .video-focus-grid { grid-template-columns: 1fr; }
+    }
+
+    .focus-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 14px;
+      padding: 18px;
+      transition: all 0.2s;
+    }
+
+    .focus-card:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .focus-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .focus-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #e0e7ff;
+      margin-bottom: 6px;
+    }
+
+    .focus-card p {
+      font-size: 0.84rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Mini nav in simulation stage */
+    .sim-top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 16px 24px 0 24px;
+    }
+
+    .btn-review-video {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-review-video:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .sim-phase-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #a5b4fc;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+
+    .workbook-prompt-box {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1.5px solid #10b981;
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .workbook-header {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #34d399;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
   </style>
 </head>
 <body>
@@ -954,7 +1329,7 @@
     <div class="hud-title-wrap">
       <div class="pulse-dot"></div>
       <div class="hud-title">
-        <span>🎮 HỌC LIỆU 2 • TRÒ CHƠI MÔ PHỎNG THUẬT TOÁN AI</span>
+        <span>🎬 HỌC LIỆU 2 • VIDEO TƯƠNG TÁC & MÔ PHỎNG THUẬT TOÁN AI</span>
       </div>
     </div>
     <div class="hud-controls">
@@ -964,8 +1339,107 @@
     </div>
   </header>
 
-  <!-- Live Algorithm Dashboard -->
-  <section class="dashboard-grid">
+  <!-- Flow Stepper Navigation -->
+  <nav class="flow-stepper">
+    <div class="step-item active" id="stepIndicatorVideo" onclick="switchToVideo()">
+      <div class="step-num">1</div>
+      <div class="step-info">
+        <div class="step-title">Xem Video hoạt hình</div>
+        <div class="step-desc">Thuật toán MXH là gì? (~3 phút)</div>
+      </div>
+    </div>
+    <div class="step-divider">➔</div>
+    <div class="step-item" id="stepIndicatorSim" onclick="switchToSimulation()">
+      <div class="step-num">2</div>
+      <div class="step-info">
+        <div class="step-title">Trò chơi mô phỏng AI</div>
+        <div class="step-desc">Đóng vai AI giữ chân bạn Nam</div>
+      </div>
+    </div>
+    <div class="step-divider">➔</div>
+    <div class="step-item" id="stepIndicatorFinish">
+      <div class="step-num">3</div>
+      <div class="step-info">
+        <div class="step-title">Ghi Sách học sinh</div>
+        <div class="step-desc">Chốt lý thuyết & Hoàn tất</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- GIAI ĐOẠN 1: VIDEO TƯƠNG TÁC H5P -->
+  <section id="stageVideo" class="video-stage-section">
+    <div class="video-intro-box">
+      <span class="video-badge-pill">BƯỚC 1: XEM PHIM HOẠT HÌNH KHÁM PHÁ KIẾN THỨC (~3 PHÚT)</span>
+      <h2 class="video-heading">Thuật toán mạng xã hội là gì và nó hoạt động thế nào?</h2>
+      <p class="video-subheading">
+        Hãy tập trung theo dõi đoạn phim hoạt hình ngắn dưới đây (~3 phút) để hiểu nguyên lý thuật toán phân tích hành vi và bí quyết các nền tảng mạng xã hội giữ chân người dùng. Thử thách mô phỏng rẽ nhánh sẽ tự động mở ra ngay khi video kết thúc!
+      </p>
+    </div>
+
+    <!-- Cyber Video Player Box -->
+    <div class="cyber-video-wrapper">
+      <video id="interactiveVideo" class="cyber-video-player" controls playsinline preload="auto">
+        <source src="thuat_toan_mxh.mp4" type="video/mp4">
+        <source src="Thuật toán mạng xã hội là gì và nó hoạt động thế nào-.mp4" type="video/mp4">
+        Trình duyệt của em không hỗ trợ phát thẻ video HTML5.
+      </video>
+
+      <!-- Video End Overlay -->
+      <div id="videoEndOverlay" class="video-end-overlay" style="display: none;">
+        <div class="overlay-modal">
+          <div class="modal-icon">🎉</div>
+          <h3>Em đã hoàn thành phần Video lý thuyết!</h3>
+          <p>Kiến thức nền tảng đã sẵn sàng. Hãy bấm nút bên dưới để trực tiếp đóng vai Hệ thống AI điều khiển thuật toán gợi ý giữ chân người dùng ảo.</p>
+          <button class="btn-proceed-modal" onclick="switchToSimulation()">
+            <span>BẮT ĐẦU THỬ THÁCH MÔ PHỎNG AI</span> 🚀
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Action & Status Bar -->
+    <div class="video-action-bar">
+      <div class="video-status-text">
+        <span>⏱️ Tiến trình xem:</span>
+        <strong id="videoWatchProgress" style="color: var(--neon-cyan);">0%</strong>
+        <span style="color: var(--text-muted); font-size: 0.8rem;">(Tự động mở trò chơi khi video chạy hết)</span>
+      </div>
+      <button class="btn-skip-video" onclick="switchToSimulation()">
+        <span>Tôi đã xem xong • Bắt đầu Mô phỏng ngay</span> ➡️
+      </button>
+    </div>
+
+    <!-- 3 Focus Questions for Active Learning -->
+    <div class="video-focus-grid">
+      <div class="focus-card">
+        <div class="focus-icon">🔍</div>
+        <h4>1. Thuật toán thu thập gì?</h4>
+        <p>Mọi hành vi: thời gian dừng màn hình, lượt nhấp, lượt xem lại, thích, bình luận, vị trí và lịch sử tìm kiếm cá nhân.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">🎯</div>
+        <h4>2. Mục tiêu lớn nhất là gì?</h4>
+        <p>Tối đa hóa thời gian giữ chân người dùng ở lại ứng dụng càng lâu càng tốt để thu lại doanh thu quảng cáo khổng lồ.</p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">🔮</div>
+        <h4>3. Hệ quả là gì?</h4>
+        <p>Tạo ra "Bong bóng thông tin" (Filter Bubbles) khiến người dùng bị cô lập trong thế giới nội dung một chiều và mất góc nhìn đa chiều.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIAI ĐOẠN 2: TRÒ CHƠI MÔ PHỎNG TƯƠNG TÁC -->
+  <div id="stageSimulation" style="display: none;">
+    <div class="sim-top-nav">
+      <button class="btn-review-video" onclick="switchToVideo()">
+        <span>🎬 Xem lại Video lý thuyết (~3 phút)</span>
+      </button>
+      <div class="sim-phase-tag">BƯỚC 2: THỬ THÁCH MÔ PHỎNG "ĐÓNG VAI AI"</div>
+    </div>
+
+    <!-- Live Algorithm Dashboard -->
+    <section class="dashboard-grid">
     <!-- Metric 1: Retention -->
     <div class="gauge-card retention">
       <div class="gauge-header">
@@ -1146,6 +1620,22 @@
       </div>
     </div>
 
+    <!-- Workbook Guidance Box (Step 3) -->
+    <div class="workbook-prompt-box">
+      <div class="workbook-header">
+        <span>📖</span> BƯỚC 3: MỞ SÁCH HỌC SINH ĐỂ HOÀN THÀNH ĐIỀN KHUYẾT (MỤC II)
+      </div>
+      <p style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 10px; line-height: 1.5;">
+        Em hãy mở <strong>Sách học sinh (Mục II - Hình thành kiến thức)</strong>, sử dụng kiến thức từ video và trải nghiệm vừa rồi để hoàn thành 4 mục từ khóa điền khuyết:
+      </p>
+      <ol style="margin-left: 20px; line-height: 1.65; font-size: 0.88rem; color: #e2e8f0;">
+        <li><strong>Cá nhân hóa:</strong> Phân tích lịch sử xem để <em>dự đoán sở thích</em> và tối đa hóa thời gian ở lại.</li>
+        <li><strong>Mặt tích cực:</strong> Giúp <em>tiết kiệm thời gian tìm kiếm</em> và gợi ý nội dung hữu ích.</li>
+        <li><strong>Bong bóng thông tin:</strong> Chỉ gợi ý nội dung cùng gu, <em>cô lập người dùng khỏi các góc nhìn đa chiều</em>.</li>
+        <li><strong>Quyền riêng tư:</strong> Âm thầm thu thập hành vi số, làm tăng nguy cơ <em>mất an toàn thông tin cá nhân</em>.</li>
+      </ol>
+    </div>
+
     <div class="finish-actions">
       <button class="btn-finish-next" onclick="proceedToActivity3()">
         <span>Tiến vào Hoạt động 3: Kéo - Thả Gamification 2.0</span> 🚀
@@ -1155,7 +1645,8 @@
       </button>
     </div>
   </section>
-</div>
+  </div> <!-- end stageSimulation -->
+</div> <!-- end game-container -->
 
 <script>
   // ================= GAME DATA & STATE =================
@@ -1663,6 +2154,57 @@
     }
   }
 
+  // ================= STAGE SWITCHING & STEPPER =================
+  function switchToSimulation() {
+    const video = document.getElementById('interactiveVideo');
+    if (video) video.pause();
+    initAudio();
+    playSound('click');
+
+    document.getElementById('stageVideo').style.display = 'none';
+    document.getElementById('stageSimulation').style.display = 'block';
+
+    const step1 = document.getElementById('stepIndicatorVideo');
+    const step2 = document.getElementById('stepIndicatorSim');
+    const step3 = document.getElementById('stepIndicatorFinish');
+
+    if (step1) {
+      step1.classList.remove('active');
+      step1.classList.add('completed');
+    }
+    if (step2) {
+      step2.classList.remove('completed');
+      step2.classList.add('active');
+    }
+    if (step3) {
+      step3.classList.remove('active');
+    }
+
+    if (!timerInterval) {
+      startTimer();
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function switchToVideo() {
+    initAudio();
+    playSound('click');
+
+    document.getElementById('stageSimulation').style.display = 'none';
+    document.getElementById('stageVideo').style.display = 'block';
+
+    const step1 = document.getElementById('stepIndicatorVideo');
+    const step2 = document.getElementById('stepIndicatorSim');
+
+    if (step1) {
+      step1.classList.add('active');
+    }
+    if (step2) {
+      step2.classList.remove('active');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   // ================= FINISH SCREEN =================
   function showFinishScreen() {
     playSound('fanfare');
@@ -1671,6 +2213,16 @@
     document.getElementById('simStage').style.display = 'none';
     document.getElementById('checkpointStage').style.display = 'none';
     document.getElementById('finishStage').style.display = 'block';
+
+    const step2 = document.getElementById('stepIndicatorSim');
+    const step3 = document.getElementById('stepIndicatorFinish');
+    if (step2) {
+      step2.classList.remove('active');
+      step2.classList.add('completed');
+    }
+    if (step3) {
+      step3.classList.add('active');
+    }
 
     document.getElementById('finalRetention').innerText = state.retention + ' phút';
     document.getElementById('finalBubble').innerText = state.bubble + '%';
@@ -1774,9 +2326,27 @@
 
   // Initialize on load
   window.addEventListener('DOMContentLoaded', () => {
-    startTimer();
     renderRound(1);
     updateGauges();
+
+    // Attach Video Listeners
+    const vid = document.getElementById('interactiveVideo');
+    if (vid) {
+      vid.addEventListener('ended', () => {
+        initAudio();
+        playSound('success');
+        const overlay = document.getElementById('videoEndOverlay');
+        if (overlay) overlay.style.display = 'flex';
+      });
+
+      vid.addEventListener('timeupdate', () => {
+        if (vid.duration) {
+          const pct = Math.round((vid.currentTime / vid.duration) * 100);
+          const prog = document.getElementById('videoWatchProgress');
+          if (prog) prog.innerText = pct + '%';
+        }
+      });
+    }
   });
 </script>
 

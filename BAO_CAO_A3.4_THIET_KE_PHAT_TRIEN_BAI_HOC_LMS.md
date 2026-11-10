@@ -151,10 +151,12 @@ Tiết học được cấu hình thành **Chuỗi học tập tuần tự có �
 * **WHY (Tại sao dùng học liệu này?):** Để học sinh tự mình "chứng thực" việc thuật toán theo dõi và cá nhân hóa trang chủ của chính mình, thay vì chỉ nghe giáo viên nói lý thuyết suông; biến trải nghiệm hàng ngày thành ngữ liệu bài học.
 * **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh tải ảnh lên LMS $\rightarrow$ Bấm Nộp bài $\rightarrow$ LMS tự động gửi phản hồi sư phạm chúc mừng, gợi mở bí mật thuật toán và tự động mở khóa Hoạt động 2.
 
-### THẺ HỌC LIỆU 2: TRÒ CHƠI MÔ PHỎNG (SCORM / H5P BRANCHING SCENARIO)
-* **WHAT (Học liệu là gì?):** Là phần mềm mô phỏng tương tác đóng vai Kỹ sư AI điều khiển thuật toán mạng xã hội VideoTube để giữ chân người dùng ảo (bạn Nam 12 tuổi), trực quan hóa sự hình thành của "Bong bóng thông tin" (Filter Bubbles).
-* **WHY (Tại sao dùng học liệu này?):** Hiện tượng "Bong bóng thông tin" và "Thu thập dữ liệu cá nhân" là những khái niệm trừu tượng. Việc đóng vai người tạo ra thuật toán giúp học sinh thấu hiểu động cơ kinh tế (doanh thu quảng cáo, tối đa thời gian xem) của các nền tảng số theo đúng trích dẫn khoa học tài liệu DP-REG Úc (2023).
-* **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh trải qua 3 lượt chọn video $\rightarrow$ Quan sát thanh đo giữ chân và quả cầu nhận thức bị bóp nghẹt $\rightarrow$ Trả lời 2 câu hỏi neo chặn chốt kiến thức $\rightarrow$ Điền 3 từ khóa vào Sách học sinh $\rightarrow$ LMS tự động ghi nhận hoàn thành và mở khóa Hoạt động 3.
+### THẺ HỌC LIỆU 2: VIDEO TƯƠNG TÁC & TRÒ CHƠI MÔ PHỎNG (H5P / SCORM BRANCHING SCENARIO)
+* **WHAT (Học liệu là gì?):** Là học liệu số tích hợp 2 giai đoạn: (1) Xem đoạn video hoạt hình ngắn *"Thuật toán mạng xã hội là gì và nó hoạt động thế nào?"* (~3 phút); (2) Thử thách trò chơi mô phỏng rẽ nhánh (Branching Scenario) đóng vai Kỹ sư AI điều khiển thuật toán gợi ý giữ chân người dùng ảo (bạn Nam 12 tuổi), trực quan hóa sự hình thành của "Bong bóng thông tin" (Filter Bubbles).
+* **WHY (Tại sao dùng học liệu này?):**
+  - *Rõ ràng hóa nhiệm vụ:* Học sinh không bị "ném" thẳng vào trò chơi khi chưa có nền tảng. Các em được xem video giải thích 3 phút trước để tiếp thu kiến thức nền, sau đó mới áp dụng vào trò chơi mô phỏng để tự kiểm chứng cơ chế "Bong bóng thông tin" và rủi ro quyền riêng tư.
+  - *Cập nhật đúng tính năng H5P:* Tận dụng chuẩn H5P Interactive Video phổ biến trên Cohota/Moodle, cho phép nhúng video và kích hoạt bài tập mô phỏng rẽ nhánh ở cuối video, thể hiện năng lực làm chủ công nghệ E-learning.
+* **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh xem video 3 phút $\rightarrow$ Hệ thống tự động mở trò chơi mô phỏng 3 lượt chọn video $\rightarrow$ Trả lời câu hỏi neo chặn $\rightarrow$ Điền 4 từ khóa vào Sách học sinh $\rightarrow$ LMS tự động ghi nhận điểm SCORM 100/100 (Passed) và mở khóa Hoạt động 3.
 
 ### THẺ HỌC LIỆU 3: BÀI TẬP KÉO - THẢ (DRAG & DROP)
 * **WHAT (Học liệu là gì?):** Là bài tập trò chơi hóa Kéo - Thả 10 thẻ tình huống thực tế vào 2 cột: "Mặt tích cực" và "Mặt hạn chế". Hệ thống tự động chấm điểm theo thời gian thực.
