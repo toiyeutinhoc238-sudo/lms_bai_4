@@ -208,61 +208,85 @@
 ### Hoạt động 4. Vận dụng (Trực tuyến - 20 phút)
 
 **a. Mục tiêu:**
-- Vận dụng kiến thức đã học để đề xuất các giải pháp kỹ thuật cụ thể nhằm chủ động kiểm soát thuật toán, phá vỡ bong bóng thông tin và bảo vệ quyền riêng tư số.
-- Phát triển năng lực giao tiếp, hợp tác và năng lực giải quyết vấn đề (3); rèn luyện phẩm chất Trách nhiệm và đạo đức số khi tham gia không gian mạng.
+- *(1) Năng lực tin học / YCCĐ (6.B1.1):* Vận dụng kiến thức về tính hai mặt của AI để chủ động đề xuất và áp dụng các thao tác kỹ thuật nhằm kiểm soát thuật toán gợi ý, phá vỡ "Bong bóng thông tin" và bảo vệ quyền riêng tư cá nhân.
+- *(2) Năng lực tự chủ, tự học:* Tự giác nghiên cứu chủ đề, độc lập lập dàn ý giải pháp vào Sách học sinh và hoàn thành bài thảo luận trên hệ thống LMS đúng thời hạn.
+- *(4) Năng lực giao tiếp và hợp tác:* Trình bày ý kiến rõ ràng, mạch lạc; tích cực đọc, lắng nghe và phản hồi góp ý mang tính xây dựng cho bạn học trên Diễn đàn trực tuyến.
+- *(5) Phẩm chất Trách nhiệm & Đạo đức số:* Nâng cao ý thức tự bảo vệ dữ liệu cá nhân, thể hiện văn hóa ứng xử văn minh và trách nhiệm khi tham gia không gian mạng.
 
 **b. Nội dung:**
-- HS lập dàn ý giải pháp vào Sách học sinh (Mục IV) gồm ít nhất 2 thao tác kỹ thuật thực tế.
-- HS đăng bài thảo luận hoàn chỉnh lên Diễn đàn trực tuyến của LMS với chủ đề: *"Làm sao để thoát khỏi bong bóng thông tin?"*.
-- HS đọc bài viết của bạn học và gửi ít nhất 1 phản hồi mang tính xây dựng.
+- Đề xuất cách giải quyết thực tế để bảo vệ quyền riêng tư và thoát khỏi bong bóng thông tin trên Diễn đàn (Forum). HS lập dàn ý trong Sách học sinh trước khi gõ câu trả lời lên mạng.
 
 **c. Sản phẩm:**
-- Bài đăng giải pháp và bình luận tương tác của học sinh trên Diễn đàn LMS.
-- Phiếu dàn ý giải pháp trong Sách học sinh (Mục IV - Vận dụng).
-- Điểm đánh giá của GV trên hệ thống LMS dựa theo Rubric 3 tiêu chí (10 điểm).
+- Dàn ý giải pháp hoàn chỉnh trong Sách học sinh (Mục IV - Vận dụng).
+- Bình luận thực tế của HS đăng tải trên Diễn đàn LMS (gồm tiêu đề, 2 thao tác kỹ thuật và giải thích cơ sở khoa học).
+- Ít nhất 01 phản hồi góp ý lịch sự, tích cực cho bài viết của bạn học trong lớp.
+- Điểm đánh giá định lượng của GV dựa trên Bảng kiểm Rubric 3 tiêu chí (thang điểm 10/10) trên hệ thống LMS.
 
 **d. Tổ chức thực hiện:**
 
 **Bước 1: Chuyển giao nhiệm vụ:**
 
-- GV thiết lập chủ đề Diễn đàn trên hệ thống LMS kèm bảng Rubric chấm điểm định lượng (10 điểm).
-- GV thông báo qua nhóm lớp yêu cầu HS tham gia thảo luận:
+- **GV thiết lập trên hệ thống LMS:**
+  + GV cấu hình hoạt động Diễn đàn thảo luận (Forum) trên LMS với chủ đề: *"Làm sao để thoát khỏi bong bóng thông tin?"*.
+  + GV thiết lập điều kiện tiên quyết (Restrict Access): Học sinh phải hoàn thành Hoạt động 3 (đạt điểm bài tập Kéo - Thả $\ge 8/10$) mới được mở khóa tham gia Diễn đàn.
+  + GV công khai Bảng kiểm Rubric 3 tiêu chí (tổng điểm 10) ngay đầu chủ đề diễn đàn để học sinh nắm rõ tiêu chuẩn đánh giá:
+    * *Tiêu chí 1:* Tính khả thi của giải pháp kỹ thuật (Tối đa 6.0 điểm: Mức Tốt 5-6đ; Mức Đạt 3-4.5đ; Cần cố gắng 0-2.5đ).
+    * *Tiêu chí 2:* Hiểu bản chất cách thuật toán thu thập và khai thác dữ liệu (Tối đa 2.0 điểm: Mức Tốt 2đ; Mức Đạt 1đ; Cần cố gắng 0đ).
+    * *Tiêu chí 3:* Trình bày mạch lạc và tương tác tích cực với bạn học (Tối đa 2.0 điểm: Mức Tốt 2đ; Mức Đạt 1đ; Cần cố gắng 0đ).
+  + GV gửi thông báo qua nhóm lớp, nhắc nhở học sinh chuẩn bị bút viết và mở sẵn Sách học sinh (Mục IV - Vận dụng).
 
-**Nhiệm vụ: Thảo luận "Làm sao để thoát khỏi bong bóng thông tin?"**
+- **Nhiệm vụ: Thảo luận "Làm sao để thoát khỏi bong bóng thông tin?"**
+  + *Yêu cầu 1 (Lập dàn ý vào Sách học sinh):* Đọc kỹ chủ đề thảo luận; suy nghĩ và đề xuất ít nhất **02 thao tác kỹ thuật thực tế** có thể thực hiện ngay trên máy tính hoặc điện thoại để hạn chế sự thao túng của thuật toán và bảo vệ quyền riêng tư. Dùng bút ghi nháp dàn ý vào Sách học sinh (Mục IV) gồm 2 phần: (1) Tên thao tác kỹ thuật; (2) Giải thích cơ sở khoa học (Vì sao thao tác này lại hiệu quả dựa trên bản chất thuật toán?).
+  + *Yêu cầu 2 (Soạn thảo và đăng bài lên Diễn đàn LMS):* Truy cập Diễn đàn Hoạt động 4 trên LMS, học sinh có thể tham khảo 5 thẻ giải pháp công nghệ nhanh trong *Ngân hàng ý tưởng* (`🧹 Xóa lịch sử`, `🕶️ Chế độ Ẩn danh`, `⏳ Tắt Autoplay & Hẹn giờ 45p`, `🔍 Tìm kiếm từ khóa đa chiều`, `🛡️ Tắt cá nhân hóa quảng cáo`) hoặc bấm *"Xem bài mẫu đạt 10/10"*. Nhập Tiêu đề và Nội dung bài viết hoàn chỉnh.
+  + *Yêu cầu 3 (Tự đối chiếu Rubric & Kiểm tra tiêu chuẩn):* Quan sát bộ kiểm tra tiêu chuẩn tự động (Checklist validator: đủ 2 giải pháp, có giải thích cơ sở, độ dài $\ge 30$ từ) và đối chiếu bảng Rubric trước khi bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
+  + *Yêu cầu 4 (Đọc và phản hồi bạn học):* Đọc các bài chia sẻ của các bạn trong lớp trên Diễn đàn, chọn ít nhất 01 bài để bấm *"💬 Phản hồi"*, viết ý kiến góp ý lịch sự, tích cực; đồng thời ghi lại tên bạn và ý kiến phản hồi vào Sách học sinh (Mục IV - Phần 2).
 
-- GV yêu cầu HS thực hiện:
-  + *Yêu cầu 1:* Đề xuất ít nhất **02 thao tác kỹ thuật thực tế** mà bản thân hoặc người thân có thể áp dụng ngay trên thiết bị để hạn chế sự thao túng của thuật toán và bảo vệ dữ liệu cá nhân. Giải thích rõ vì sao thao tác đó lại có hiệu quả.
-  + *Yêu cầu 2:* Viết nháp dàn ý giải pháp vào Sách học sinh (Mục IV) trước khi đăng lên diễn đàn.
-  + *Yêu cầu 3:* Đăng bài viết hoàn chỉnh lên Diễn đàn LMS theo đúng chủ đề.
-  + *Yêu cầu 4:* Đọc bài của các bạn cùng lớp và gửi ít nhất 01 bình luận phản hồi, góp ý lịch sự, mang tính xây dựng.
-
-**Dự kiến câu trả lời:**
-
-- *Dự kiến các thao tác kỹ thuật học sinh đề xuất trong bài viết:*
-  + **Thao tác 1 (Xóa lịch sử):** Thường xuyên xóa lịch sử xem và tìm kiếm trên YouTube hoặc trình duyệt web (Giải thích: Giúp xóa bớt dữ liệu hành vi đã lưu, thuật toán không thể tiếp tục bám đuổi để gợi ý nội dung cũ).
-  + **Thao tác 2 (Chế độ ẩn danh):** Sử dụng chế độ Ẩn danh (Incognito) hoặc không đăng nhập tài khoản khi muốn tìm hiểu các chủ đề mới lạ (Giải thích: Tránh để thuật toán ghi nhận thói quen tìm kiếm vào hồ sơ cá nhân).
-  + **Thao tác 3 (Tắt tự động phát):** Tắt tính năng tự động phát video kế tiếp (Autoplay) và cài đặt thông báo nhắc nhở nghỉ ngơi sau mỗi 45 - 60 phút xem (Giải thích: Giúp kiểm soát thời gian sử dụng thiết bị, không bị cuốn sâu vào bẫy chú ý của thuật toán).
-  + **Thao tác 4 (Tìm kiếm đa chiều):** Chủ động gõ tìm kiếm các từ khóa trái ngược hoặc xem các kênh có quan điểm đa dạng (Giải thích: Giúp mở rộng phạm vi dữ liệu, làm vỡ bong bóng thông tin một chiều).
-  + **Thao tác 5 (Quản lý quyền riêng tư):** Tắt tính năng cá nhân hóa quảng cáo và tắt quyền truy cập vị trí không cần thiết trong phần Cài đặt ứng dụng.
-- *Dự kiến bài đăng mẫu của học sinh trên diễn đàn:*
-  > *"Chào thầy cô và các bạn, để không bị kẹt trong bong bóng thông tin của YouTube, em xin đề xuất 2 cách thực hiện:  
-  > 1. Mỗi tuần một lần, em vào Cài đặt tài khoản để Xóa lịch sử xem và tìm kiếm. Cách này giúp YouTube không thể tiếp tục bám theo các video cũ của em để đề xuất nữa.  
-  > 2. Em luôn tắt tính năng Tự động phát video tiếp theo và đặt đồng hồ hẹn giờ 45 phút. Nhờ vậy em không bị cuốn vào màn hình liên tục như bạn Nam trong trò chơi mô phỏng."*
-- *Dự kiến nội dung bình luận phản hồi bạn học:*
-  > *"Mình rất đồng ý với giải pháp tắt tính năng Tự động phát của bạn An. Mình cũng sẽ áp dụng ngay cách xóa lịch sử hàng tuần để trang chủ có thêm nhiều chủ đề mới lạ hơn. Cảm ơn bạn đã chia sẻ!"*
+- **Dự kiến câu trả lời / Sản phẩm của học sinh:**
+  + *Dự kiến các thao tác kỹ thuật học sinh đề xuất:*
+    * **Thao tác 1 (Xóa lịch sử xem & tìm kiếm định kỳ):** Vào Cài đặt tài khoản YouTube/Trình duyệt $\rightarrow$ Chọn *Xóa toàn bộ lịch sử xem và tìm kiếm*.  
+      *Giải thích cơ sở:* Lịch sử xem là dữ liệu huấn luyện chủ đạo để AI phán đoán sở thích. Xóa dữ liệu cũ sẽ làm mất "dấu vết hành vi", thuật toán không còn căn cứ để tiếp tục bám đuổi nhồi nhét video cũ, buộc trang chủ phải gợi ý nội dung phong phú và mới mẻ hơn.
+    * **Thao tác 2 (Duyệt web ở Chế độ Ẩn danh - Incognito Mode):** Bật tab Ẩn danh (`Ctrl + Shift + N`) hoặc kích hoạt Chế độ ẩn danh trong ứng dụng YouTube khi tìm kiếm các chủ đề lạ.  
+      *Giải thích cơ sở:* Ngăn không cho trình duyệt và thuật toán liên kết các tìm kiếm nhất thời vào hồ sơ tài khoản cá nhân, tránh bị quảng cáo bám đuổi và giữ kín thông tin riêng tư.
+    * **Thao tác 3 (Tắt tính năng Autoplay & Đặt thông báo nghỉ ngơi):** Tắt công tắc *Tự động phát video tiếp theo* và cài đặt mục *Nhắc tôi nghỉ ngơi* sau mỗi 45 phút trong ứng dụng.  
+      *Giải thích cơ sở:* Phá vỡ bẫy chuỗi gợi ý liên hoàn của thuật toán AI, giúp người dùng chủ động kiểm soát thời lượng sử dụng thiết bị, không bị cuốn sâu vào trạng thái xem vô thức như bạn Nam trong trò chơi mô phỏng.
+    * **Thao tác 4 (Chủ động tìm kiếm từ khóa đối lập, đa chiều):** Gõ tìm kiếm các chủ đề khoa học, văn hóa, thể thao khác nhau và xem các kênh có quan điểm đa dạng.  
+      *Giải thích cơ sở:* Cung cấp nguồn dữ liệu đa dạng để "huấn luyện ngược" lại AI, phá vỡ hiện tượng Bong bóng thông tin một chiều và mở rộng nhận thức.
+    * **Thao tác 5 (Tắt cá nhân hóa quảng cáo và quyền riêng tư):** Vào Cài đặt Google Account $\rightarrow$ Chuyển mục *Cá nhân hóa quảng cáo* sang trạng thái Tắt (Off).  
+      *Giải thích cơ sở:* Hạn chế tối đa việc nền tảng thu thập và bán hồ sơ hành vi chi tiết cho bên thứ ba, bảo vệ quyền riêng tư số.
+  + *Dự kiến bài đăng hoàn chỉnh mẫu của học sinh trên Diễn đàn (Đạt 10/10 điểm Rubric):*
+    > *"Chào thầy cô và các bạn, để không bị kẹt trong 'Bong bóng thông tin' và bảo vệ quyền riêng tư trên YouTube, mình xin chia sẻ 2 thao tác kỹ thuật thực tế mà mình thường áp dụng:  
+    > 1. Định kỳ mỗi cuối tuần, mình vào Cài đặt tài khoản chọn 'Xóa toàn bộ lịch sử xem và tìm kiếm'. Cơ sở khoa học: Dữ liệu lịch sử là nguồn huấn luyện chính để thuật toán AI phân tích sở thích. Khi ta xóa lịch sử, hệ thống mất đi 'dấu vết hành vi' để bám đuổi, buộc trang chủ phải gợi ý các nội dung phong phú và mới mẻ hơn.  
+    > 2. Mình luôn tắt tính năng Tự động phát video (Autoplay) và cài đặt thông báo 'Nhắc tôi nghỉ ngơi' sau mỗi 45 phút. Cơ sở khoa học: Cách này giúp mình chủ động kiểm soát thời gian sử dụng thiết bị, ngăn chặn bẫy cuốn xem liên tục của thuật toán như bạn Nam trong bài học."*
+  + *Dự kiến bình luận phản hồi bạn học (Đạt chuẩn giao tiếp mạng tích cực):*
+    > *"Chào bạn Minh Thư, mình rất đồng ý với giải pháp bật Chế độ Ẩn danh khi tra cứu chủ đề lạ của bạn. Mình xin bổ sung thêm một mẹo là sau khi xem xong trên tab ẩn danh, ta nên đóng hẳn cửa sổ để trình duyệt xóa sạch bộ nhớ tạm. Cảm ơn chia sẻ rất thực tế và hữu ích của bạn!"*
+  + *Dự kiến nội dung ghi chép trong Sách học sinh (Mục IV):* Học sinh hoàn thành dàn ý 2 thao tác kỹ thuật, lý do giải thích và ghi lại nhật ký phản hồi bạn học (tên bạn và ý kiến phản hồi) đầy đủ, sạch đẹp.
 
 **Bước 2: Thực hiện nhiệm vụ:**
-- HS viết nháp dàn ý 2 thao tác kỹ thuật vào Sách học sinh (Mục IV).
-- HS truy cập Diễn đàn LMS, bấm "Thêm chủ đề thảo luận mới", nhập tiêu đề và nội dung bài viết rồi bấm "Đăng bài".
-- HS lướt đọc bài của các bạn trong lớp, chọn ít nhất 1 bài để viết phản hồi góp ý.
-- GV tham gia điều phối diễn đàn, nhắc nhở văn hóa giao tiếp mạng và giải đáp thắc mắc.
+
+- **Hoạt động của Học sinh:**
+  + HS mở Sách học sinh (Mục IV - Vận dụng), suy nghĩ và dùng bút viết nháp dàn ý 2 thao tác kỹ thuật cùng cơ sở giải thích vào khung tương ứng.
+  + HS truy cập Diễn đàn LMS Hoạt động 4, lựa chọn chế độ soạn thảo (theo dàn ý Sách học sinh hoặc viết tự do), có thể bấm chọn gợi ý trong *Ngân hàng ý tưởng* để lấy cảm hứng.
+  + HS đối chiếu bài viết với bảng Rubric và kiểm tra các dấu tích xanh trên bộ kiểm tra tiêu chuẩn tự động (Checklist validator). Khi các điều kiện đã thỏa mãn, HS bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
+  + HS lướt xem các bài viết của bạn học trên diễn đàn, chọn ít nhất 1 bài để bấm *"💬 Phản hồi"*, nhập nhận xét mang tính xây dựng, lịch sự và gửi đi.
+  + HS ghi chép tên bạn và nội dung ý kiến phản hồi vào phần Nhật ký tương tác trong Sách học sinh (Mục IV).
+- **Hoạt động hỗ trợ của Giáo viên:**
+  + GV theo dõi luồng bài đăng và bình luận thời gian thực trên hệ thống LMS.
+  + GV kịp thời hướng dẫn, nhắc nhở các học sinh còn lúng túng hoặc chưa nêu rõ cơ sở khoa học của giải pháp.
+  + GV khích lệ không khí thảo luận sôi nổi, đồng thời uốn nắn, duy trì văn hóa giao tiếp mạng tích cực, văn minh.
 
 **Bước 3: Báo cáo, thảo luận:**
-- Toàn bộ bài đăng và bình luận của học sinh được hiển thị công khai trên Diễn đàn của lớp trên LMS.
-- Học sinh đọc các ý tưởng hay của nhau, bấm thích và thảo luận sôi nổi về các mẹo công nghệ hữu ích.
+
+- Toàn bộ bài đăng và bình luận của học sinh được hiển thị công khai, trực quan trên giao diện Diễn đàn của lớp trên LMS.
+- Học sinh đọc các bài viết hay của nhau, bấm thả tim / hữu ích (❤️), trao đổi sôi nổi về các tình huống thuật toán thực tế mà các em từng trải nghiệm trên YouTube, TikTok, Facebook.
+- Một số học sinh chia sẻ thêm các giải pháp sáng tạo (như tạo nhiều tài khoản cho các mục đích học tập/giải trí riêng biệt, cài tiện ích trình duyệt chặn bám đuổi quảng cáo...).
 
 **Bước 4: Kết luận, nhận định:**
-- GV nhận xét tổng kết buổi học trực tuyến: Biểu dương tinh thần tự học, thái độ thảo luận nghiêm túc và các giải pháp thực tế, sáng tạo của học sinh.
-- GV tiến hành chấm điểm bài đăng và phản hồi của học sinh trực tiếp trên LMS theo thang Rubric 10 điểm (Tính khả thi giải pháp: 6 điểm; Hiểu bản chất thuật toán: 2 điểm; Tương tác và văn hóa mạng: 2 điểm).
-- Hệ thống LMS tổng hợp điểm số toàn bộ bài học và thông báo hoàn thành chuyên đề học tập.
+
+- **Đánh giá trên hệ thống LMS:**
+  + GV duyệt và chấm điểm bài đăng cùng bình luận phản hồi của học sinh trực tiếp trên LMS theo Bảng kiểm Rubric 3 tiêu chí (Tổng điểm 10: Tính khả thi 6đ; Bản chất thuật toán 2đ; Trình bày và tương tác 2đ).
+  + Hệ thống LMS tự động ghi nhận điểm số chính thức vào Sổ điểm (Gradebook) và cấp chứng chỉ / huy hiệu hoàn thành bài học cho học sinh.
+- **Nhận định sư phạm của Giáo viên:**
+  + GV nhận xét tổng kết buổi học trực tuyến: Biểu dương tinh thần tự học, kỹ năng công nghệ và thái độ thảo luận nghiêm túc, văn minh của cả lớp.
+  + GV chốt thông điệp giáo dục: *"Trí tuệ nhân tạo và các thuật toán gợi ý sinh ra nhằm phục vụ con người, mang lại trải nghiệm cá nhân hóa vô cùng tiện lợi. Tuy nhiên, nếu không hiểu bản chất của chúng, chúng ta rất dễ bị thao túng, đánh mất thời gian và rơi vào chiếc lồng 'Bong bóng thông tin'. Hãy luôn là những người dùng công nghệ thông thái, biết chủ động làm chủ thiết bị và bảo vệ dữ liệu cá nhân của mình trên không gian số!"*.
+  + GV dặn dò học sinh hoàn thiện các phần ghi chú trong Sách học sinh để mang đến lớp trong buổi học trực tiếp tiếp theo cho giáo viên kiểm tra và ký xác nhận.
 
