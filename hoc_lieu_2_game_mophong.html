@@ -105,57 +105,7 @@
       gap: 8px;
     }
 
-    .hud-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
 
-    .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .badge-scorm {
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.35);
-    }
-
-    .badge-timer {
-      background: rgba(255, 255, 255, 0.08);
-      color: #e2e8f0;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .btn-sound-toggle {
-      background: rgba(99, 102, 241, 0.15);
-      border: 1px solid rgba(99, 102, 241, 0.35);
-      color: #c7d2fe;
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.2s;
-    }
-
-    .btn-sound-toggle:hover {
-      background: rgba(99, 102, 241, 0.3);
-      color: white;
-    }
 
     /* Live Algorithm Dashboard */
     .dashboard-grid {
@@ -1213,63 +1163,7 @@
       box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
     }
 
-    .video-action-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 14px;
-      padding: 14px 20px;
-      margin-bottom: 24px;
-    }
 
-    .video-status-text {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
-
-    .video-lock-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      color: #fbbf24;
-      padding: 4px 12px;
-      border-radius: 8px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.4px;
-    }
-
-    .video-lock-badge.unlocked {
-      background: rgba(16, 185, 129, 0.15);
-      border-color: rgba(16, 185, 129, 0.4);
-      color: #34d399;
-    }
-
-    .btn-locked-sim {
-      background: rgba(255, 255, 255, 0.05);
-      color: #94a3b8;
-      border: 1px dashed rgba(255, 255, 255, 0.2);
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 0.88rem;
-      padding: 10px 18px;
-      border-radius: 10px;
-      cursor: not-allowed;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      opacity: 0.75;
-      transition: all 0.2s;
-    }
 
     .cyber-toast {
       position: fixed;
@@ -2283,22 +2177,6 @@
     initAudio();
     playSound('success');
 
-    // Update Video Action Bar
-    const badge = document.getElementById('videoLockBadge');
-    if (badge) {
-      badge.className = 'video-lock-badge unlocked';
-      badge.innerHTML = '✅ ĐÃ HOÀN THÀNH VIDEO';
-    }
-
-    const btnContainer = document.getElementById('videoActionBtnContainer');
-    if (btnContainer) {
-      btnContainer.innerHTML = `
-        <button class="btn-proceed-modal" onclick="switchToSimulation()" style="padding: 10px 22px; font-size: 0.92rem; margin: 0;">
-          <span>BẮT ĐẦU MÔ PHỎNG AI</span> 🚀
-        </button>
-      `;
-    }
-
     // Show Overlay with 3s auto countdown
     const overlay = document.getElementById('videoEndOverlay');
     if (overlay) {
@@ -2316,29 +2194,6 @@
           switchToSimulation();
         }
       }, 1000);
-    }
-  }
-
-  function updateVideoProgressUI() {
-    const vid = document.getElementById('interactiveVideo');
-    if (!vid) return;
-
-    const cur = vid.currentTime;
-    const dur = vid.duration || 170; // ~2m50s fallback
-    const remaining = Math.max(0, dur - cur);
-
-    const timeCurElem = document.getElementById('timeCurrent');
-    const timeDurElem = document.getElementById('timeDuration');
-    const timeRemElem = document.getElementById('timeRemaining');
-    const progElem = document.getElementById('videoWatchProgress');
-
-    if (timeCurElem) timeCurElem.innerText = formatTime(cur);
-    if (timeDurElem && vid.duration) timeDurElem.innerText = formatTime(dur);
-    if (timeRemElem) timeRemElem.innerText = formatTime(remaining);
-
-    if (progElem && vid.duration) {
-      const pct = Math.min(100, Math.round((cur / dur) * 100));
-      progElem.innerText = pct + '%';
     }
   }
 
@@ -2522,9 +2377,7 @@
     const vid = document.getElementById('interactiveVideo');
     if (vid) {
       vid.addEventListener('loadedmetadata', () => {
-        const timeDurElem = document.getElementById('timeDuration');
-        if (timeDurElem && vid.duration) timeDurElem.innerText = formatTime(vid.duration);
-        updateVideoProgressUI();
+        // metadata loaded
       });
 
       // Prevent fast-forwarding / seeking ahead beyond watched time
@@ -2544,7 +2397,6 @@
             maxWatchedTime = vid.currentTime;
           }
         }
-        updateVideoProgressUI();
 
         // Check if finished (within 0.6s of end)
         if (!videoCompleted && vid.duration && vid.currentTime >= vid.duration - 0.6) {
