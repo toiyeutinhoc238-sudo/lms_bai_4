@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Học liệu 4: Diễn đàn thảo luận kèm Rubric chấm điểm</title>
+  <title>Học liệu 4: Diễn đàn thảo luận kèm Rubric chấm điểm (Vận dụng 3.0 Pro)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #4338ca;
-      --primary-hover: #3730a3;
-      --warning: #f59e0b;
+      --primary-light: #6366f1;
+      --primary-dark: #312e81;
+      --secondary: #0ea5e9;
+      --accent: #f59e0b;
       --success: #10b981;
-      --text: #0f172a;
-      --text-muted: #64748b;
-      --border: #cbd5e1;
-      --bg: #f8fafc;
+      --danger: #ef4444;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-card: rgba(30, 41, 59, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(99, 102, 241, 0.35);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
       --radius: 16px;
     }
 
@@ -28,135 +34,425 @@
     }
 
     body {
-      background: var(--bg);
+      background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f172a 70%, #020617 100%);
       color: var(--text);
-      padding: 16px;
+      min-height: 100vh;
+      padding: 24px 16px;
       line-height: 1.6;
       display: flex;
       justify-content: center;
     }
 
     .container {
-      max-width: 920px;
+      max-width: 960px;
       width: 100%;
-      background: white;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
       border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.06);
-      border: 1px solid #e2e8f0;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border);
     }
 
+    /* HEADER */
     header {
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 14px;
-      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 22px;
+      margin-bottom: 24px;
+      position: relative;
     }
 
-    .badge {
-      display: inline-block;
-      background: var(--warning);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.8rem;
+    .header-tag-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
       font-weight: 800;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .badge-accent {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .badge-rubric {
+      background: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
     }
 
     h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.55rem;
-      color: #1e1b4b;
-      margin-bottom: 4px;
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
 
+    .subtitle {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .stat-icon {
+      font-size: 1.6rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .stat-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* GUIDANCE BANNER */
     .guidance-box {
-      background: #eff6ff;
-      border-left: 4px solid var(--primary);
-      padding: 14px 18px;
-      border-radius: 0 10px 10px 0;
-      margin-bottom: 22px;
-      font-size: 0.92rem;
+      background: linear-gradient(135deg, rgba(67, 56, 202, 0.15), rgba(14, 165, 233, 0.1));
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-left: 5px solid #6366f1;
+      padding: 18px 22px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .guidance-box h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #e0e7ff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .guidance-box ol {
       margin-left: 20px;
-      margin-top: 6px;
+      color: #cbd5e1;
+      font-size: 0.92rem;
     }
 
-    /* Rubric Table */
+    .guidance-box li {
+      margin-bottom: 6px;
+    }
+
+    /* QUICK IDEA BANK */
+    .idea-bank-box {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+
+    .idea-bank-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .idea-pills-wrap {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .idea-pill {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e2e8f0;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+    }
+
+    .idea-pill:hover {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: #818cf8;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+
+    /* INTERACTIVE RUBRIC */
     .rubric-box {
-      background: #fdfefe;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 22px;
+      background: rgba(30, 41, 59, 0.65);
+      border: 1px solid var(--border-glow);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 26px;
     }
 
     .rubric-title {
-      font-weight: 800;
-      color: #1e1b4b;
-      font-size: 1rem;
-      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
-    table {
+    .rubric-title h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rubric-mode-switch {
+      display: flex;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 4px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .rubric-mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .rubric-mode-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(67, 56, 202, 0.4);
+    }
+
+    .rubric-table-responsive {
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    table.rubric-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.86rem;
-      margin-bottom: 12px;
+      font-size: 0.85rem;
+      background: rgba(15, 23, 42, 0.7);
     }
 
-    th, td {
-      border: 1px solid #cbd5e1;
-      padding: 10px 12px;
+    table.rubric-table th, table.rubric-table td {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 14px;
+      vertical-align: top;
       text-align: left;
     }
 
-    th {
-      background: #f1f5f9;
-      color: #1e293b;
+    table.rubric-table th {
+      background: rgba(30, 41, 59, 0.95);
+      color: #e2e8f0;
+      font-weight: 800;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .criterion-meta {
+      font-weight: 800;
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .criterion-max {
+      display: block;
+      font-size: 0.78rem;
+      color: #818cf8;
+      font-weight: 700;
+      margin-top: 2px;
     }
 
     .rubric-cell-interactive {
       cursor: pointer;
       transition: all 0.2s;
+      border-radius: 6px;
+      position: relative;
     }
 
     .rubric-cell-interactive:hover {
-      background: #e0f2fe;
+      background: rgba(99, 102, 241, 0.15);
     }
 
     .rubric-cell-interactive.active {
-      background: #dbeafe;
-      border: 2px solid var(--primary);
-      font-weight: 600;
+      background: rgba(99, 102, 241, 0.28);
+      outline: 2px solid #818cf8;
+      outline-offset: -2px;
     }
 
     .chip {
       display: inline-block;
       font-size: 0.72rem;
       font-weight: 800;
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-bottom: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      font-family: 'Space Grotesk', monospace;
     }
 
-    .chip-high { background: #dcfce7; color: #166534; }
-    .chip-mid { background: #fef3c7; color: #92400e; }
-    .chip-low { background: #fee2e2; color: #991b1b; }
+    .chip-high { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); }
+    .chip-mid { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.35); }
+    .chip-low { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.35); }
 
-    /* Form Card */
+    .rubric-score-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rubric-score-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    /* FORM POST CONTAINER */
     .form-box {
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
-      border-radius: 12px;
-      padding: 18px;
-      margin-bottom: 22px;
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--border-glow);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 26px;
+    }
+
+    .form-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .form-header-row h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .input-mode-tabs {
+      display: flex;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .input-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .input-tab-btn.active {
+      background: #4338ca;
+      color: #ffffff;
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
 
     .form-group {
@@ -166,284 +462,1322 @@
     .form-group label {
       display: block;
       font-weight: 700;
+      font-size: 0.88rem;
+      color: #e2e8f0;
       margin-bottom: 6px;
-      font-size: 0.9rem;
-      color: #334155;
     }
 
     .form-control {
       width: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
       padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid #cbd5e1;
-      font-size: 0.95rem;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      transition: all 0.2s;
     }
 
     .form-control:focus {
       outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15);
+      border-color: #818cf8;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    }
+
+    .guided-section {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+
+    .guided-section-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #818cf8;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* CHECKLIST VALIDATOR */
+    .checklist-box {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+    }
+
+    .checklist-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .checklist-items {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+
+    .chk-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .chk-item.valid {
+      color: #34d399;
+    }
+
+    .chk-icon {
+      font-size: 0.9rem;
+    }
+
+    .form-action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .btn-submit {
-      background: var(--primary);
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
       color: white;
       border: none;
-      padding: 10px 22px;
-      border-radius: 8px;
-      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 10px;
+      font-weight: 800;
       font-size: 0.95rem;
+      font-family: 'Space Grotesk', sans-serif;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: all 0.2s;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
     }
 
     .btn-submit:hover {
-      background: var(--primary-hover);
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
     }
 
-    /* Post Card */
-    .post-item {
-      border: 1px solid #e2e8f0;
+    .btn-outline-aux {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #cbd5e1;
+      padding: 10px 18px;
       border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 14px;
-      background: white;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
     }
 
-    .post-header {
+    .btn-outline-aux:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* FEED SECTION */
+    .feed-section {
+      margin-top: 30px;
+    }
+
+    .feed-header-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
     }
 
-    .author-info {
+    .feed-header-row h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
       display: flex;
       align-items: center;
+      gap: 8px;
+    }
+
+    .feed-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: #818cf8;
+      color: #ffffff;
+    }
+
+    /* POST CARD */
+    .post-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 18px;
+      transition: border-color 0.2s;
+    }
+
+    .post-card:hover {
+      border-color: rgba(99, 102, 241, 0.35);
+    }
+
+    .post-card.mine {
+      border: 1.5px solid rgba(16, 185, 129, 0.5);
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    .post-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
       gap: 10px;
     }
 
+    .author-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .author-avatar {
-      width: 34px;
-      height: 34px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: #3b82f6;
+      background: linear-gradient(135deg, #4f46e5, #0ea5e9);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
+      font-family: 'Space Grotesk', sans-serif;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      flex-shrink: 0;
     }
 
-    .reply-box {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px dashed #e2e8f0;
-      padding-left: 18px;
-      font-size: 0.88rem;
+    .author-details {
+      display: flex;
+      flex-direction: column;
     }
+
+    .author-name {
+      font-weight: 800;
+      color: #ffffff;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .author-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .post-rubric-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    .badge-score-10 {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .badge-score-pending {
+      background: rgba(14, 165, 233, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.35);
+    }
+
+    .post-title-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .post-body-text {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      white-space: pre-line;
+    }
+
+    .post-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-action:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
+    .btn-action.liked {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #f87171;
+    }
+
+    /* REPLIES CONTAINER */
+    .replies-wrap {
+      margin-top: 14px;
+      padding-left: 20px;
+      border-left: 2px solid rgba(99, 102, 241, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .reply-item {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.86rem;
+    }
+
+    .reply-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 0.78rem;
+    }
+
+    .reply-author {
+      font-weight: 800;
+      color: #93c5fd;
+    }
+
+    .reply-input-box {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px dashed rgba(99, 102, 241, 0.4);
+      border-radius: 10px;
+    }
+
+    .reply-input-box.open {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .reply-textarea {
+      width: 100%;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+      resize: vertical;
+    }
+
+    .reply-textarea:focus {
+      outline: none;
+      border-color: #818cf8;
+    }
+
+    .reply-btn-submit {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .reply-btn-submit:hover {
+      background: #6366f1;
+    }
+
+    /* CONFETTI CANVAS */
+    #confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 99999;
+    }
+
+    /* TOAST */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1.5px solid #10b981;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 10000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000;
+      padding: 20px;
+    }
+
+    .modal-box {
+      background: #1e293b;
+      border: 1px solid var(--border-glow);
+      border-radius: 16px;
+      max-width: 650px;
+      width: 100%;
+      padding: 26px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      animation: zoomIn 0.25s ease;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes zoomIn { from { transform: scale(0.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   </style>
 </head>
 <body>
 
+<canvas id="confettiCanvas"></canvas>
+<div id="toastMessage" class="toast-msg"></div>
+
 <div class="container">
+  <!-- HEADER -->
   <header>
-    <div class="badge">Hoạt động 4: Vận dụng (20 phút)</div>
+    <div class="header-tag-row">
+      <span class="badge-pill badge-accent">🚀 HOẠT ĐỘNG 4 • VẬN DỤNG (20 PHÚT)</span>
+      <span class="badge-pill badge-rubric">📋 RUBRIC ĐỊNH LƯỢNG 10/10 ĐIỂM</span>
+    </div>
     <h1>Diễn đàn: "Làm sao để thoát khỏi bong bóng thông tin?"</h1>
-    <p style="color: #64748b; font-size: 0.92rem;">Đề xuất biện pháp thực tế bảo vệ quyền riêng tư và hạn chế sự thao túng của thuật toán</p>
+    <p class="subtitle">
+      Đề xuất ít nhất 02 thao tác kỹ thuật thực tế giúp kiểm soát thuật toán gợi ý, bảo vệ quyền riêng tư số và tương tác góp ý mang tính xây dựng cùng bạn học.
+    </p>
   </header>
 
+  <!-- LIVE STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-icon">💬</div>
+      <div class="stat-meta">
+        <span class="stat-val" id="totalPostsVal">19</span>
+        <span class="stat-lbl">Bài thảo luận lớp</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-meta">
+        <span class="stat-val" id="totalRepliesVal">38</span>
+        <span class="stat-lbl">Lượt phản hồi chéo</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🎯</div>
+      <div class="stat-meta">
+        <span class="stat-val" id="userScoreDisplay">10 / 10</span>
+        <span class="stat-lbl">Điểm Rubric chuẩn</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🏆</div>
+      <div class="stat-meta">
+        <span class="stat-val" style="color: #34d399;" id="completionStatusText">Đang thực hiện</span>
+        <span class="stat-lbl">Trạng thái HĐ 4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GUIDANCE BOX -->
   <div class="guidance-box">
-    <h4 style="margin-bottom: 4px; color: #1e1b4b;">🎯 Nhiệm vụ thảo luận:</h4>
+    <h4><span>🎯</span> 3 Yêu Cầu Cốt Lõi Khi Tham Gia Thảo Luận:</h4>
     <ol>
-      <li><b>Đề xuất từ 02 thao tác kỹ thuật thực tế</b> mà em có thể áp dụng ngay để hạn chế bị thuật toán AI thao túng.</li>
-      <li><b>Giải thích cơ sở khoa học:</b> Vì sao cách làm đó lại hiệu quả dựa trên bản chất cách thuật toán thu thập dữ liệu?</li>
-      <li><b>Tương tác:</b> Đọc và viết ít nhất 01 phản hồi mang tính xây dựng cho bạn học trong lớp.</li>
+      <li><b>Đề xuất từ 02 thao tác kỹ thuật thực tế</b> (Ví dụ: Xóa lịch sử, dùng tab ẩn danh, tắt Autoplay/đặt giờ xem, tắt cá nhân hóa quảng cáo).</li>
+      <li><b>Giải thích cơ sở khoa học:</b> Vì sao thao tác đó lại có hiệu quả dựa trên bản chất cách thuật toán thu thập và khai thác dữ liệu hành vi?</li>
+      <li><b>Tương tác tích cực:</b> Đọc và viết ít nhất <b>01 phản hồi có tính xây dựng</b> cho bài viết của một bạn khác trong lớp.</li>
     </ol>
   </div>
 
-  <!-- Rubric Box -->
+  <!-- QUICK IDEA BANK -->
+  <div class="idea-bank-box">
+    <div class="idea-bank-title">
+      <span>💡</span> Ngân hàng giải pháp kỹ thuật gợi ý (Nhấp để chèn nhanh vào bài viết):
+    </div>
+    <div class="idea-pills-wrap">
+      <button type="button" class="idea-pill" onclick="insertIdea(1)">
+        🧹 1. Xóa lịch sử xem & tìm kiếm
+      </button>
+      <button type="button" class="idea-pill" onclick="insertIdea(2)">
+        🕶️ 2. Chế độ Ẩn danh (Incognito)
+      </button>
+      <button type="button" class="idea-pill" onclick="insertIdea(3)">
+        ⏳ 3. Tắt Autoplay & Đặt hẹn giờ 45p
+      </button>
+      <button type="button" class="idea-pill" onclick="insertIdea(4)">
+        🔍 4. Chủ động tìm từ khóa đa chiều
+      </button>
+      <button type="button" class="idea-pill" onclick="insertIdea(5)">
+        🛡️ 5. Tắt cá nhân hóa quảng cáo
+      </button>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE RUBRIC STUDIO -->
   <div class="rubric-box">
     <div class="rubric-title">
-      <span>📋 Rubric chấm điểm Forum (Tổng: 10 điểm)</span>
-      <span style="font-size: 0.82rem; color: var(--primary);">Nhấp vào từng ô để xem mức điểm</span>
+      <h3><span>📋</span> Bảng Kiểm Rubric Đánh Giá Diễn Đàn (Thang điểm 10)</h3>
+      <div class="rubric-mode-switch">
+        <button class="rubric-mode-btn active" id="btnRubricSelf" onclick="setRubricMode('self')">Tự đối chiếu</button>
+        <button class="rubric-mode-btn" id="btnRubricTeacher" onclick="setRubricMode('teacher')">Tiêu chuẩn GV</button>
+      </div>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th style="width: 25%;">Tiêu chí</th>
-          <th style="width: 30%;">Tốt (Mức cao)</th>
-          <th style="width: 25%;">Đạt (Mức TB)</th>
-          <th style="width: 20%;">Cần cố gắng</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <b>1. Tính khả thi của giải pháp</b><br>
-            <small style="color: var(--primary);">(Tối đa 6.0 điểm)</small>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 1, 6)">
-            <span class="chip chip-high">5.0 - 6.0 điểm</span>
-            <div>Đề xuất từ <b>2 thao tác kỹ thuật hợp lý trở lên</b> (Xóa lịch sử, dùng tab ẩn danh, tìm từ khóa mới, tắt cá nhân hóa quảng cáo).</div>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 1, 4)">
-            <span class="chip chip-mid">3.0 - 4.5 điểm</span>
-            <div>Chỉ nêu <b>1 thao tác kỹ thuật</b> hoặc giải pháp chung chung cảm tính ("ít dùng máy lại").</div>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 1, 1)">
-            <span class="chip chip-low">0 - 2.5 điểm</span>
-            <div>Đề xuất sai phương pháp hoặc không liên quan đến thuật toán.</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <b>2. Hiểu bản chất thuật toán</b><br>
-            <small style="color: var(--primary);">(Tối đa 2.0 điểm)</small>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 2, 2)">
-            <span class="chip chip-high">2.0 điểm</span>
-            <div>Giải thích rõ cơ sở: Xóa lịch sử là xóa dữ liệu huấn luyện của AI; tìm từ khóa mới để AI mở rộng nguồn dữ liệu.</div>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 2, 1)">
-            <span class="chip chip-mid">1.0 điểm</span>
-            <div>Nêu được giải pháp nhưng chưa giải thích được lý do vì sao hiệu quả.</div>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 2, 0)">
-            <span class="chip chip-low">0 điểm</span>
-            <div>Không thể hiện được sự hiểu biết về cách thuật toán sử dụng dữ liệu.</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <b>3. Trình bày & Tương tác</b><br>
-            <small style="color: var(--primary);">(Tối đa 2.0 điểm)</small>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 3, 2)">
-            <span class="chip chip-high">2.0 điểm</span>
-            <div>Đúng hạn, câu cú rõ ràng, chuẩn chính tả; <b>có phản hồi tích cực với ít nhất 1 bạn</b>.</div>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 3, 1)">
-            <span class="chip chip-mid">1.0 điểm</span>
-            <div>Đúng hạn, câu cú rõ ràng nhưng thiếu tương tác với bạn bè.</div>
-          </td>
-          <td class="rubric-cell-interactive" onclick="pickRubric(this, 3, 0)">
-            <span class="chip chip-low">0 điểm</span>
-            <div>Quá hạn hoặc cẩu thả, sai chính tả nghiêm trọng.</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div style="background: #f1f5f9; padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; display: flex; justify-content: space-between;">
-      <span>Điểm ước tính theo Rubric: <strong id="rubricScoreText" style="color: var(--primary);">10 / 10 điểm</strong></span>
-      <span style="color: #64748b;">(Giáo viên căn cứ chấm điểm chính thức)</span>
+
+    <div class="rubric-table-responsive">
+      <table class="rubric-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Tiêu chí đánh giá</th>
+            <th style="width: 32%;">Mức Tốt (Điểm tối đa)</th>
+            <th style="width: 25%;">Mức Đạt (Trung bình)</th>
+            <th style="width: 18%;">Cần cố gắng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="criterion-meta">1. Tính khả thi của giải pháp</div>
+              <span class="criterion-max">Tối đa: 6.0 điểm</span>
+            </td>
+            <td class="rubric-cell-interactive active" onclick="selectRubric(1, 6, this)">
+              <span class="chip chip-high">5.0 - 6.0 điểm</span>
+              <div>Nêu từ <b>2 thao tác kỹ thuật hợp lý trở lên</b>, có thể thực hiện ngay trên thiết bị thực tế.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(1, 4, this)">
+              <span class="chip chip-mid">3.0 - 4.5 điểm</span>
+              <div>Chỉ nêu <b>1 thao tác</b> hoặc giải pháp chung chung cảm tính ("ít dùng máy lại").</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(1, 1.5, this)">
+              <span class="chip chip-low">0 - 2.5 điểm</span>
+              <div>Đề xuất sai phương pháp hoặc không liên quan đến thuật toán.</div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="criterion-meta">2. Hiểu bản chất thuật toán</div>
+              <span class="criterion-max">Tối đa: 2.0 điểm</span>
+            </td>
+            <td class="rubric-cell-interactive active" onclick="selectRubric(2, 2, this)">
+              <span class="chip chip-high">2.0 điểm</span>
+              <div>Giải thích rõ cơ sở: Xóa lịch sử là xóa dữ liệu huấn luyện của AI; tìm kiếm mới giúp AI mở rộng nguồn gợi ý.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(2, 1, this)">
+              <span class="chip chip-mid">1.0 điểm</span>
+              <div>Nêu được thao tác nhưng giải thích sơ sài, chưa gắn với cách AI thu thập dữ liệu.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(2, 0, this)">
+              <span class="chip chip-low">0 điểm</span>
+              <div>Không giải thích hoặc giải thích sai hoàn toàn nguyên lý thuật toán.</div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="criterion-meta">3. Trình bày & Tương tác</div>
+              <span class="criterion-max">Tối đa: 2.0 điểm</span>
+            </td>
+            <td class="rubric-cell-interactive active" onclick="selectRubric(3, 2, this)">
+              <span class="chip chip-high">2.0 điểm</span>
+              <div>Đúng hạn, câu cú mạch lạc, chuẩn chính tả; <b>có phản hồi tích cực cho ít nhất 1 bạn học</b>.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(3, 1, this)">
+              <span class="chip chip-mid">1.0 điểm</span>
+              <div>Bài viết rõ ràng nhưng <b>chưa thực hiện phản hồi</b> cho bạn học nào trong lớp.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(3, 0, this)">
+              <span class="chip chip-low">0 điểm</span>
+              <div>Nộp quá hạn hoặc cẩu thả, ngôn từ thiếu văn hóa giao tiếp mạng.</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rubric-score-bar">
+      <span>Điểm ước tính theo Rubric hiện tại: <strong class="rubric-score-val" id="rubricScoreCalc">10 / 10 điểm</strong></span>
+      <span style="font-size: 0.82rem; color: #94a3b8;">(Thang điểm định lượng hỗ trợ GV chấm chính thức trên LMS)</span>
     </div>
   </div>
 
-  <!-- Form Post -->
-  <div class="form-box">
-    <h3 style="margin-bottom: 12px; font-size: 1.05rem;">✍️ Viết bài chia sẻ lên Diễn đàn</h3>
+  <!-- POST FORM -->
+  <div class="form-box" id="postFormContainer">
+    <div class="form-header-row">
+      <h3><span>✍️</span> Soạn Thảo Bài Thảo Luận Mới</h3>
+      <div class="input-mode-tabs">
+        <button class="input-tab-btn active" id="btnTabGuided" onclick="setInputMode('guided')">Theo dàn ý Sách học sinh</button>
+        <button class="input-tab-btn" id="btnTabFree" onclick="setInputMode('free')">Viết tự do</button>
+      </div>
+    </div>
+
+    <div class="form-grid-2">
+      <div class="form-group">
+        <label>Họ và tên học sinh:</label>
+        <input type="text" id="authorNameInput" class="form-control" value="Nguyễn Văn An" placeholder="Nhập họ và tên...">
+      </div>
+      <div class="form-group">
+        <label>Lớp / Trường:</label>
+        <input type="text" id="authorClassInput" class="form-control" value="Lớp 6A" placeholder="Nhập lớp học...">
+      </div>
+    </div>
+
     <div class="form-group">
       <label>Tiêu đề bài viết:</label>
-      <input type="text" id="postTitle" class="form-control" placeholder="Ví dụ: Hai thao tác kỹ thuật giúp mình làm chủ thuật toán YouTube">
+      <input type="text" id="postTitleInput" class="form-control" placeholder="Ví dụ: Hai thao tác kỹ thuật giúp mình làm chủ thuật toán YouTube">
     </div>
-    <div class="form-group">
-      <label>Nội dung trình bày (nêu rõ 2 giải pháp và giải thích lý do):</label>
-      <textarea id="postContent" class="form-control" rows="4" placeholder="Nhập nội dung chia sẻ của em tại đây..."></textarea>
+
+    <!-- GUIDED INPUT MODE -->
+    <div id="guidedInputArea">
+      <div class="guided-section">
+        <div class="guided-section-title">
+          <span>1️⃣</span> Thao tác kỹ thuật 1 & Cơ sở giải thích:
+        </div>
+        <div class="form-group">
+          <input type="text" id="op1Name" class="form-control" placeholder="Tên thao tác 1: (Ví dụ: Thường xuyên xóa lịch sử xem và tìm kiếm trên YouTube)">
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <textarea id="op1Why" class="form-control" rows="2" placeholder="Giải thích cơ sở: (Ví dụ: Giúp xóa bớt dữ liệu hành vi đã lưu, thuật toán không thể tiếp tục bám đuổi để gợi ý nội dung cũ)"></textarea>
+        </div>
+      </div>
+
+      <div class="guided-section">
+        <div class="guided-section-title">
+          <span>2️⃣</span> Thao tác kỹ thuật 2 & Cơ sở giải thích:
+        </div>
+        <div class="form-group">
+          <input type="text" id="op2Name" class="form-control" placeholder="Tên thao tác 2: (Ví dụ: Bật chế độ Ẩn danh và tắt tính năng tự động phát video)">
+        </div>
+        <div class="form-group" style="margin-bottom: 0;">
+          <textarea id="op2Why" class="form-control" rows="2" placeholder="Giải thích cơ sở: (Ví dụ: Không để AI ghi nhận hồ sơ cá nhân và tránh bị rơi vào bẫy cuốn xem liên tục)"></textarea>
+        </div>
+      </div>
     </div>
-    <button class="btn-submit" onclick="submitPost()">Đăng bài lên Diễn đàn 📤</button>
+
+    <!-- FREE INPUT MODE -->
+    <div id="freeInputArea" style="display: none;">
+      <div class="form-group">
+        <label>Nội dung bài viết hoàn chỉnh (Nêu rõ 2 giải pháp và giải thích):</label>
+        <textarea id="postContentFree" class="form-control" rows="6" placeholder="Trình bày lời chào, 2 thao tác kỹ thuật và giải thích lý do..."></textarea>
+      </div>
+    </div>
+
+    <!-- CHECKLIST VALIDATOR -->
+    <div class="checklist-box">
+      <div class="checklist-title">Kiểm tra tiêu chí tự động trước khi đăng:</div>
+      <div class="checklist-items">
+        <span class="chk-item" id="chkSolCount"><span class="chk-icon">⚪</span> Đủ 2 giải pháp kỹ thuật</span>
+        <span class="chk-item" id="chkExplanation"><span class="chk-icon">⚪</span> Có giải thích cơ sở thuật toán</span>
+        <span class="chk-item" id="chkLength"><span class="chk-icon">⚪</span> Độ dài đạt chuẩn (≥ 40 từ)</span>
+        <span class="chk-item" id="chkInteraction"><span class="chk-icon">⚪</span> Phản hồi tương tác bạn học</span>
+      </div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="form-action-row">
+      <button class="btn-outline-aux" type="button" onclick="showExemplarModal()">
+        <span>👁️ Xem bài viết mẫu đạt 10/10</span>
+      </button>
+
+      <div style="display: flex; gap: 10px;">
+        <button class="btn-outline-aux" type="button" onclick="copyDraftToWorkbook()">
+          <span>📋 Chép vào Sách học sinh</span>
+        </button>
+        <button class="btn-submit" type="button" onclick="handlePostSubmit()">
+          <span>ĐĂNG BÀI LÊN DIỄN ĐÀN</span> 📤
+        </button>
+      </div>
+    </div>
   </div>
 
-  <!-- Feed -->
-  <div id="threadList">
-    <h3 style="margin-bottom: 14px; font-size: 1.05rem;">💬 Các cuộc thảo luận trong lớp</h3>
+  <!-- CLASS FEED -->
+  <section class="feed-section">
+    <div class="feed-header-row">
+      <h3><span>💬</span> Dòng Thảo Luận Trực Tuyến Của Lớp</h3>
+      <div class="feed-filters">
+        <button class="filter-btn active" onclick="filterPosts('all', this)">Tất cả (19)</button>
+        <button class="filter-btn" onclick="filterPosts('top', this)">🌟 Điểm 10 mẫu</button>
+        <button class="filter-btn" onclick="filterPosts('mine', this)">👤 Bài của em</button>
+      </div>
+    </div>
 
-    <div class="post-item">
-      <div class="post-header">
-        <div class="author-info">
-          <div class="author-avatar">MT</div>
-          <div>
-            <strong>Trần Minh Thư (Lớp 6A)</strong>
-            <div style="font-size: 0.75rem; color: #94a3b8;">15 phút trước</div>
+    <div id="feedContainer">
+      <!-- MẪU 1: TRẦN MINH THƯ -->
+      <div class="post-card" data-category="top">
+        <div class="post-top-row">
+          <div class="author-wrap">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">MT</div>
+            <div class="author-details">
+              <span class="author-name">Trần Minh Thư (Lớp 6A) 🌟</span>
+              <span class="author-time">15 phút trước • Tiêu biểu</span>
+            </div>
+          </div>
+          <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10/10 ⭐</span>
+        </div>
+        <div class="post-title-text">Cách kiểm soát gợi ý trên YouTube cá nhân của mình</div>
+        <div class="post-body-text">Chào thầy cô và các bạn, để không bị cuốn vào "Bong bóng thông tin", mình áp dụng 2 cách:
+1. Cứ mỗi cuối tuần, mình vào Cài đặt tài khoản chọn "Xóa toàn bộ lịch sử xem và tìm kiếm". Lý do: Xóa dữ liệu cũ thì thuật toán AI không còn cơ sở để nhồi nhét video cùng một chủ đề nữa.
+2. Bật tab Ẩn danh (Incognito) khi muốn tra cứu các chủ đề lạ. Lý do: Giúp ngăn YouTube ghi nhận các tò mò nhất thời vào hồ sơ sở thích cá nhân, tránh bị quảng cáo bám đuổi!</div>
+
+        <div class="post-actions-row">
+          <button class="btn-action" onclick="toggleLike(this, 12)"><span>❤️ Thích</span> <strong>12</strong></button>
+          <button class="btn-action" onclick="toggleReplyBox('replyBox1')"><span>💬 Phản hồi</span> <strong>2</strong></button>
+          <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">Đã duyệt bởi GV</span>
+        </div>
+
+        <div class="replies-wrap" id="repliesWrap1">
+          <div class="reply-item">
+            <div class="reply-header">
+              <span class="reply-author">Hoàng Tuấn:</span>
+              <span style="color: #64748b;">10 phút trước</span>
+            </div>
+            <div>Mình cũng áp dụng cách dùng tab ẩn danh giống bạn Thư và thấy trang chủ bớt bị lặp lại video cũ hẳn! Cảm ơn chia sẻ rất thực tế của bạn.</div>
           </div>
         </div>
-        <span style="background: #dcfce7; color: #166534; font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">Điểm Rubric: 10/10</span>
+
+        <div class="reply-input-box" id="replyBox1">
+          <textarea class="reply-textarea" rows="2" placeholder="Nhập ý kiến góp ý mang tính xây dựng của em cho bạn Minh Thư..."></textarea>
+          <button class="reply-btn-submit" onclick="submitReply('replyBox1', 'repliesWrap1', 'Trần Minh Thư')">Gửi phản hồi 🚀</button>
+        </div>
       </div>
-      <p style="font-size: 0.9rem;">
-        <b>Tiêu đề: Cách kiểm soát gợi ý trên YouTube cá nhân của mình</b><br>
-        Chào thầy cô và các bạn, mình áp dụng 2 cách: (1) Cứ mỗi cuối tuần mình vào Cài đặt chọn "Xóa toàn bộ lịch sử xem và tìm kiếm". Lý do: xóa dữ liệu cũ thì thuật toán AI không còn căn cứ để nhồi nhét video cùng chủ đề nữa. (2) Bật tab Ẩn danh khi tra cứu các chủ đề lạ để không bị quảng cáo bám đuổi!
-      </p>
-      <div class="reply-box">
-        <b>Hoàng Tuấn:</b> Mình cũng rất thích cách dùng tab ẩn danh! Rất cảm ơn chia sẻ bổ ích của Thư.
+
+      <!-- MẪU 2: LÊ QUỐC BẢO -->
+      <div class="post-card" data-category="top">
+        <div class="post-top-row">
+          <div class="author-wrap">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #0ea5e9);">QB</div>
+            <div class="author-details">
+              <span class="author-name">Lê Quốc Bảo (Lớp 6A)</span>
+              <span class="author-time">30 phút trước</span>
+            </div>
+          </div>
+          <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10/10 ⭐</span>
+        </div>
+        <div class="post-title-text">Kết hợp tắt Tự động phát và cài đặt giới hạn thời gian</div>
+        <div class="post-body-text">Sau khi chơi trò chơi mô phỏng AI ở Hoạt động 2, em nhận thấy nguy hiểm nhất là bị thuật toán giữ chân liên tục qua tính năng phát liên hoàn. Do đó em đề xuất:
+1. Tắt công tắc "Tự động phát video tiếp theo" (Autoplay) trên màn hình YouTube. Cơ sở: Chặn đứng bẫy chuỗi gợi ý video của AI, buộc bản thân phải chủ động dừng lại suy nghĩ trước khi xem clip mới.
+2. Cài đặt tính năng "Nhắc tôi nghỉ ngơi" sau mỗi 45 phút trong Cài đặt chung của ứng dụng. Cơ sở: Giúp học sinh kiểm soát thời lượng sử dụng thiết bị, không bị rơi vào trạng thái xem vô thức như bạn Nam trong bài học.</div>
+
+        <div class="post-actions-row">
+          <button class="btn-action" onclick="toggleLike(this, 9)"><span>❤️ Thích</span> <strong>9</strong></button>
+          <button class="btn-action" onclick="toggleReplyBox('replyBox2')"><span>💬 Phản hồi</span> <strong>1</strong></button>
+          <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">Đã duyệt bởi GV</span>
+        </div>
+
+        <div class="replies-wrap" id="repliesWrap2">
+          <div class="reply-item">
+            <div class="reply-header">
+              <span class="reply-author">Vũ Mai Anh:</span>
+              <span style="color: #64748b;">18 phút trước</span>
+            </div>
+            <div>Ý kiến đặt giới hạn 45 phút rất chuẩn luôn bạn ơi, nhiều hôm mình xem Minecraft quên cả giờ làm bài tập!</div>
+          </div>
+        </div>
+
+        <div class="reply-input-box" id="replyBox2">
+          <textarea class="reply-textarea" rows="2" placeholder="Nhập ý kiến góp ý của em cho bạn Quốc Bảo..."></textarea>
+          <button class="reply-btn-submit" onclick="submitReply('replyBox2', 'repliesWrap2', 'Lê Quốc Bảo')">Gửi phản hồi 🚀</button>
+        </div>
       </div>
+    </div>
+  </section>
+</div>
+
+<!-- EXEMPLAR MODAL -->
+<div class="modal-overlay" id="exemplarModal" onclick="closeExemplarModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; color: #ffffff;">🌟 Mẫu Bài Viết Đạt Chuẩn 10/10 Rubric</h3>
+      <button style="background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer;" onclick="closeExemplarModal()">&times;</button>
+    </div>
+    <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: 10px; font-size: 0.9rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 16px;">
+      <p><strong style="color: #38bdf8;">Tiêu đề:</strong> Hai giải pháp chủ động phá vỡ bong bóng thông tin trên YouTube</p><br>
+      <p><b>Chào thầy cô và các bạn,</b></p>
+      <p>Để không bị kẹt trong "Bong bóng thông tin" và giữ quyền riêng tư cá nhân, em đề xuất 2 thao tác kỹ thuật:</p><br>
+      <p><b>1. Định kỳ xóa Lịch sử xem và tìm kiếm (Weekly Clear):</b><br>
+      <i>Cơ sở khoa học:</i> Dữ liệu lịch sử là nguồn huấn luyện chính để thuật toán AI phân tích sở thích. Khi ta xóa lịch sử, hệ thống mất đi "dấu vết hành vi" để bám đuổi, buộc trang chủ phải gợi ý các nội dung phong phú và mới mẻ hơn.</p><br>
+      <p><b>2. Chủ động gõ tìm kiếm các từ khóa đa dạng, trái ngược:</b><br>
+      <i>Cơ sở khoa học:</i> Thay vì chỉ nhấp vào video đề xuất sẵn, em chủ động tìm kiếm các kênh khoa học, nghệ thuật và quan điểm khác nhau để "huấn luyện ngược" lại thuật toán, giúp quả cầu thông tin không bị co hẹp một chiều.</p>
+    </div>
+    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+      <button class="btn-outline-aux" onclick="copyExemplarText()">📋 Sao chép mẫu này</button>
+      <button class="btn-submit" style="padding: 8px 18px;" onclick="closeExemplarModal()">Đã hiểu 👍</button>
     </div>
   </div>
 </div>
 
 <script>
-  let scores = { c1: 6, c2: 2, c3: 2 };
+  // ================= WEB AUDIO SYNTHESIZER =================
+  let audioCtx = null;
+  function initAudio() {
+    if (!audioCtx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) audioCtx = new AudioContext();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
 
-  function pickRubric(cell, criterion, val) {
+  function playSound(type) {
+    initAudio();
+    if (!audioCtx) return;
+    try {
+      const t = audioCtx.currentTime;
+      if (type === 'click') {
+        const o = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        o.type = 'sine';
+        o.frequency.setValueAtTime(600, t);
+        o.frequency.exponentialRampToValueAtTime(850, t + 0.05);
+        g.gain.setValueAtTime(0.15, t);
+        g.gain.exponentialRampToValueAtTime(0.01, t + 0.05);
+        o.connect(g); g.connect(audioCtx.destination);
+        o.start(t); o.stop(t + 0.05);
+      } else if (type === 'post') {
+        [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) => {
+          const o = audioCtx.createOscillator();
+          const g = audioCtx.createGain();
+          o.type = 'triangle';
+          o.frequency.setValueAtTime(freq, t + i * 0.08);
+          g.gain.setValueAtTime(0.2, t + i * 0.08);
+          g.gain.exponentialRampToValueAtTime(0.01, t + i * 0.08 + 0.3);
+          o.connect(g); g.connect(audioCtx.destination);
+          o.start(t + i * 0.08); o.stop(t + i * 0.08 + 0.3);
+        });
+      } else if (type === 'like') {
+        const o = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        o.type = 'sine';
+        o.frequency.setValueAtTime(700, t);
+        o.frequency.exponentialRampToValueAtTime(950, t + 0.08);
+        g.gain.setValueAtTime(0.18, t);
+        g.gain.exponentialRampToValueAtTime(0.01, t + 0.08);
+        o.connect(g); g.connect(audioCtx.destination);
+        o.start(t); o.stop(t + 0.08);
+      }
+    } catch(e) {}
+  }
+
+  // ================= TOAST NOTIFICATION =================
+  function showToast(msg) {
+    const toast = document.getElementById('toastMessage');
+    toast.innerHTML = msg;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3200);
+  }
+
+  // ================= IDEA BANK INSERTION =================
+  const ideas = {
+    1: {
+      title: "Xóa toàn bộ lịch sử xem và tìm kiếm định kỳ trên YouTube",
+      op: "Mỗi tuần một lần, truy cập Cài đặt tài khoản Google/YouTube và chọn 'Xóa toàn bộ lịch sử xem và tìm kiếm'.",
+      why: "Xóa dữ liệu cũ làm mất đi nguồn dữ liệu huấn luyện của AI, thuật toán không còn căn cứ để liên tục gợi ý các video cùng chủ đề cũ."
+    },
+    2: {
+      title: "Sử dụng chế độ Ẩn danh (Incognito Mode) khi tra cứu nội dung lạ",
+      op: "Bật tab Ẩn danh (Ctrl+Shift+N) trên trình duyệt hoặc bật Chế độ ẩn danh trong ứng dụng YouTube khi xem chủ đề mới lạ.",
+      why: "Giúp ngăn trình duyệt và thuật toán lưu vết lịch sử tìm kiếm vào hồ sơ tài khoản cá nhân, tránh bị bám đuổi quảng cáo."
+    },
+    3: {
+      title: "Tắt tính năng Autoplay và đặt thông báo nhắc nhở nghỉ ngơi",
+      op: "Tắt công tắc Tự động phát video tiếp theo và cài đặt mục 'Nhắc tôi nghỉ ngơi' sau mỗi 45 phút trong ứng dụng.",
+      why: "Chặn bẫy giữ chân liên hoàn của thuật toán AI, giúp bản thân làm chủ thời gian và tránh bị cuốn vào màn hình liên tục."
+    },
+    4: {
+      title: "Chủ động tìm kiếm các từ khóa đối lập và chủ đề đa dạng",
+      op: "Gõ tìm kiếm các chủ đề khoa học, xã hội, thể thao khác nhau và xem các kênh có góc nhìn đa chiều.",
+      why: "Cung cấp nguồn dữ liệu đa dạng để 'huấn luyện ngược' lại AI, phá vỡ hiện tượng Bong bóng thông tin một chiều."
+    },
+    5: {
+      title: "Tắt tính năng cá nhân hóa quảng cáo và quyền truy cập vị trí",
+      op: "Vào Cài đặt quyền riêng tư tài khoản Google, chuyển mục 'Cá nhân hóa quảng cáo' sang trạng thái Tắt (Off).",
+      why: "Hạn chế việc nền tảng thu thập và bán hồ sơ hành vi chi tiết của bản thân cho các nhà quảng cáo trực tuyến."
+    }
+  };
+
+  function insertIdea(num) {
+    playSound('click');
+    const item = ideas[num];
+    if (!item) return;
+
+    if (currentInputMode === 'guided') {
+      const op1Name = document.getElementById('op1Name');
+      const op1Why = document.getElementById('op1Why');
+      const op2Name = document.getElementById('op2Name');
+      const op2Why = document.getElementById('op2Why');
+
+      if (!op1Name.value.trim()) {
+        op1Name.value = item.op;
+        op1Why.value = item.why;
+        document.getElementById('postTitleInput').value = "Hai thao tác kỹ thuật giúp mình làm chủ thuật toán gợi ý";
+        showToast(`💡 Đã điền ý tưởng vào <b>Thao tác 1</b>! Hãy chọn thêm 1 thao tác nữa nhé.`);
+      } else if (!op2Name.value.trim()) {
+        op2Name.value = item.op;
+        op2Why.value = item.why;
+        showToast(`💡 Đã điền ý tưởng vào <b>Thao tác 2</b>! Em đã đủ 2 giải pháp rồi đấy.`);
+      } else {
+        op2Name.value = item.op;
+        op2Why.value = item.why;
+        showToast(`💡 Đã cập nhật lại <b>Thao tác 2</b>!`);
+      }
+    } else {
+      const freeTxt = document.getElementById('postContentFree');
+      const textToAppend = `\n- Giải pháp: ${item.op}\n- Cơ sở: ${item.why}\n`;
+      freeTxt.value += textToAppend;
+      showToast(`💡 Đã chèn gợi ý vào khung soạn thảo tự do!`);
+    }
+
+    validateChecklist();
+  }
+
+  // ================= INPUT MODE SWITCHING =================
+  let currentInputMode = 'guided';
+  function setInputMode(mode) {
+    playSound('click');
+    currentInputMode = mode;
+    document.getElementById('btnTabGuided').classList.toggle('active', mode === 'guided');
+    document.getElementById('btnTabFree').classList.toggle('active', mode === 'free');
+
+    document.getElementById('guidedInputArea').style.display = mode === 'guided' ? 'block' : 'none';
+    document.getElementById('freeInputArea').style.display = mode === 'free' ? 'block' : 'none';
+
+    // sync content if switching to free
+    if (mode === 'free') {
+      const op1 = document.getElementById('op1Name').value.trim();
+      const why1 = document.getElementById('op1Why').value.trim();
+      const op2 = document.getElementById('op2Name').value.trim();
+      const why2 = document.getElementById('op2Why').value.trim();
+
+      if (op1 || op2) {
+        let assembled = `Chào thầy cô và các bạn, để thoát khỏi bong bóng thông tin, mình đề xuất 2 giải pháp:\n\n`;
+        if (op1) assembled += `1. ${op1}\nCơ sở khoa học: ${why1}\n\n`;
+        if (op2) assembled += `2. ${op2}\nCơ sở khoa học: ${why2}\n`;
+        document.getElementById('postContentFree').value = assembled;
+      }
+    }
+    validateChecklist();
+  }
+
+  // ================= CHECKLIST VALIDATOR =================
+  let hasRepliedToPeer = false;
+
+  function validateChecklist() {
+    let solCount = 0;
+    let hasWhy = false;
+    let wordCount = 0;
+
+    if (currentInputMode === 'guided') {
+      const op1 = document.getElementById('op1Name').value.trim();
+      const why1 = document.getElementById('op1Why').value.trim();
+      const op2 = document.getElementById('op2Name').value.trim();
+      const why2 = document.getElementById('op2Why').value.trim();
+
+      if (op1) solCount++;
+      if (op2) solCount++;
+      if (why1.length > 10 || why2.length > 10) hasWhy = true;
+
+      const fullText = `${op1} ${why1} ${op2} ${why2}`;
+      wordCount = fullText ? fullText.split(/\s+/).filter(Boolean).length : 0;
+    } else {
+      const text = document.getElementById('postContentFree').value.trim();
+      wordCount = text ? text.split(/\s+/).filter(Boolean).length : 0;
+      if (text.includes('1.') && text.includes('2.')) solCount = 2;
+      else if (text.length > 30) solCount = 1;
+      if (text.toLowerCase().includes('lý do') || text.toLowerCase().includes('cơ sở') || text.toLowerCase().includes('vì')) hasWhy = true;
+    }
+
+    updateChk('chkSolCount', solCount >= 2, `Đủ 2 giải pháp (${solCount}/2)`);
+    updateChk('chkExplanation', hasWhy, `Có giải thích cơ sở`);
+    updateChk('chkLength', wordCount >= 30, `Độ dài đạt chuẩn (${wordCount} từ)`);
+    updateChk('chkInteraction', hasRepliedToPeer, `Phản hồi bạn học (${hasRepliedToPeer ? '1' : '0'}/1)`);
+
+    return (solCount >= 2 && hasWhy && wordCount >= 25);
+  }
+
+  function updateChk(id, valid, text) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.toggle('valid', valid);
+    el.innerHTML = `<span class="chk-icon">${valid ? '✅' : '⚪'}</span> ${text}`;
+  }
+
+  // Attach live listeners
+  ['op1Name', 'op1Why', 'op2Name', 'op2Why', 'postContentFree', 'postTitleInput'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', validateChecklist);
+  });
+
+  // ================= RUBRIC LOGIC =================
+  let rubricScores = { c1: 6, c2: 2, c3: 2 };
+
+  function selectRubric(criterion, val, cell) {
+    playSound('click');
     const row = cell.parentElement;
     row.querySelectorAll('.rubric-cell-interactive').forEach(c => c.classList.remove('active'));
     cell.classList.add('active');
 
-    if (criterion === 1) scores.c1 = val;
-    if (criterion === 2) scores.c2 = val;
-    if (criterion === 3) scores.c3 = val;
+    if (criterion === 1) rubricScores.c1 = val;
+    if (criterion === 2) rubricScores.c2 = val;
+    if (criterion === 3) rubricScores.c3 = val;
 
-    const total = scores.c1 + scores.c2 + scores.c3;
-    document.getElementById('rubricScoreText').innerText = `${total} / 10 điểm`;
+    const total = rubricScores.c1 + rubricScores.c2 + rubricScores.c3;
+    document.getElementById('rubricScoreCalc').innerText = `${total} / 10 điểm`;
   }
 
-  function submitPost() {
-    const title = document.getElementById('postTitle').value.trim();
-    const content = document.getElementById('postContent').value.trim();
+  function setRubricMode(mode) {
+    playSound('click');
+    document.getElementById('btnRubricSelf').classList.toggle('active', mode === 'self');
+    document.getElementById('btnRubricTeacher').classList.toggle('active', mode === 'teacher');
 
-    if (!title || !content) {
-      alert("Vui lòng nhập đầy đủ Tiêu đề và Nội dung bài chia sẻ!");
+    if (mode === 'teacher') {
+      showToast("📋 Đang hiển thị Bảng kiểm tiêu chuẩn của Giáo viên (Thang điểm 10/10)");
+    } else {
+      showToast("✍️ Chế độ Tự đối chiếu: Em có thể tự nhấp vào từng ô để tính điểm bài làm của mình");
+    }
+  }
+
+  // ================= REPLIES & INTERACTIONS =================
+  function toggleLike(btn, baseCount) {
+    playSound('like');
+    const isLiked = btn.classList.toggle('liked');
+    const countEl = btn.querySelector('strong');
+    let count = parseInt(countEl.innerText) || baseCount;
+    count = isLiked ? count + 1 : count - 1;
+    countEl.innerText = count;
+  }
+
+  function toggleReplyBox(boxId) {
+    playSound('click');
+    const box = document.getElementById(boxId);
+    if (box) box.classList.toggle('open');
+  }
+
+  function submitReply(boxId, wrapId, targetAuthor) {
+    const box = document.getElementById(boxId);
+    const textarea = box.querySelector('.reply-textarea');
+    const replyText = textarea.value.trim();
+
+    if (!replyText) {
+      alert("Em vui lòng nhập nội dung góp ý trước khi gửi nhé!");
       return;
     }
 
-    const list = document.getElementById('threadList');
-    const newEl = document.createElement('div');
-    newEl.className = 'post-item';
-    newEl.innerHTML = `
-      <div class="post-header">
-        <div class="author-info">
-          <div class="author-avatar" style="background: #10b981;">VA</div>
-          <div>
-            <strong>Nguyễn Văn An (Em)</strong>
-            <div style="font-size: 0.75rem; color: #94a3b8;">Vừa xong • Trạng thái: Chờ GV duyệt Rubric</div>
+    playSound('post');
+    const wrap = document.getElementById(wrapId);
+    const newReply = document.createElement('div');
+    newReply.className = 'reply-item';
+    newReply.innerHTML = `
+      <div class="reply-header">
+        <span class="reply-author" style="color: #34d399;">Nguyễn Văn An (Em):</span>
+        <span style="color: #64748b;">Vừa xong</span>
+      </div>
+      <div>${replyText.replace(/\n/g, '<br>')}</div>
+    `;
+    wrap.appendChild(newReply);
+    textarea.value = '';
+    box.classList.remove('open');
+
+    hasRepliedToPeer = true;
+    validateChecklist();
+
+    // Increment replies counter
+    const repVal = document.getElementById('totalRepliesVal');
+    if (repVal) repVal.innerText = (parseInt(repVal.innerText) || 38) + 1;
+
+    showToast(`🎉 Em đã gửi phản hồi thành công cho bạn <b>${targetAuthor}</b>! Tiêu chí tương tác đã hoàn thành.`);
+  }
+
+  // ================= POST SUBMIT =================
+  let hasSubmittedPost = false;
+
+  function handlePostSubmit() {
+    const title = document.getElementById('postTitleInput').value.trim() || "Hai thao tác kỹ thuật giúp mình làm chủ thuật toán gợi ý";
+    const authorName = document.getElementById('authorNameInput').value.trim() || "Nguyễn Văn An";
+    const authorClass = document.getElementById('authorClassInput').value.trim() || "Lớp 6A";
+
+    let bodyText = "";
+    if (currentInputMode === 'guided') {
+      const op1 = document.getElementById('op1Name').value.trim();
+      const why1 = document.getElementById('op1Why').value.trim();
+      const op2 = document.getElementById('op2Name').value.trim();
+      const why2 = document.getElementById('op2Why').value.trim();
+
+      if (!op1 || !op2) {
+        alert("Em cần nhập đủ ít nhất 2 thao tác kỹ thuật (hoặc nhấp chọn các gợi ý trong Ngân hàng giải pháp ở trên) trước khi đăng nhé!");
+        return;
+      }
+      bodyText = `Chào thầy cô và các bạn, để thoát khỏi bong bóng thông tin, mình xin đề xuất 2 thao tác kỹ thuật:\n\n1. ${op1}\nCơ sở khoa học: ${why1 || 'Giúp xóa dấu vết hành vi cũ để AI không thể bám đuổi gợi ý lặp lại.'}\n\n2. ${op2}\nCơ sở khoa học: ${why2 || 'Hạn chế việc hệ thống ghi nhận hồ sơ cá nhân và mở rộng góc nhìn nội dung.'}`;
+    } else {
+      bodyText = document.getElementById('postContentFree').value.trim();
+      if (bodyText.length < 20) {
+        alert("Em vui lòng nhập nội dung bài viết chi tiết hơn nhé!");
+        return;
+      }
+    }
+
+    playSound('post');
+    triggerConfetti();
+
+    hasSubmittedPost = true;
+    document.getElementById('completionStatusText').innerText = "✅ Hoàn tất HĐ 4";
+
+    // Add to Feed
+    const feed = document.getElementById('feedContainer');
+    const newPost = document.createElement('div');
+    newPost.className = 'post-card mine';
+    newPost.setAttribute('data-category', 'mine');
+    newPost.innerHTML = `
+      <div class="post-top-row">
+        <div class="author-wrap">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">VA</div>
+          <div class="author-details">
+            <span class="author-name">${authorName} (${authorClass}) • Bài của em ⭐</span>
+            <span class="author-time">Vừa xong • Trạng thái: Đã lưu LMS</span>
           </div>
         </div>
-        <span style="background: #e0f2fe; color: #0284c7; font-size: 0.72rem; padding: 2px 8px; border-radius: 6px; font-weight: 700;">Đã nộp</span>
+        <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10/10 ⭐</span>
       </div>
-      <p style="font-size: 0.9rem;">
-        <b>Tiêu đề: ${title}</b><br>
-        ${content.replace(/\n/g, '<br>')}
-      </p>
-      <div class="reply-box" style="color: #15803d; font-weight: 600;">
-        ✅ Đã đăng bài thành công! Đừng quên đọc và phản hồi bài của bạn Minh Thư ở trên nhé.
+      <div class="post-title-text">${title}</div>
+      <div class="post-body-text">${bodyText.replace(/\n/g, '<br>')}</div>
+      <div class="post-actions-row">
+        <button class="btn-action liked" onclick="toggleLike(this, 1)"><span>❤️ Thích</span> <strong>1</strong></button>
+        <span style="font-size: 0.78rem; color: #34d399; margin-left: auto;">✅ Đã gửi tín hiệu hoàn thành lên LMS</span>
       </div>
     `;
 
-    list.insertBefore(newEl, list.children[1]);
-    document.getElementById('postTitle').value = '';
-    document.getElementById('postContent').value = '';
+    feed.insertBefore(newPost, feed.firstChild);
 
+    // Update stats
+    const totalEl = document.getElementById('totalPostsVal');
+    if (totalEl) totalEl.innerText = (parseInt(totalEl.innerText) || 19) + 1;
+
+    // Notify LMS
     if (window.parent && window.parent.postMessage) {
-      window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 4 }, '*');
+      window.parent.postMessage({ type: 'ACTIVITY_COMPLETED', activityId: 4, score: 10 }, '*');
     }
 
-    alert("Bài thảo luận của em đã được đăng lên hệ thống LMS!");
+    showToast("🎉 Chúc mừng! Bài viết của em đã được đăng lên Diễn đàn LMS và đạt chuẩn Rubric 10/10.");
+    newPost.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
+
+  // ================= FEED FILTERING =================
+  function filterPosts(cat, btn) {
+    playSound('click');
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.post-card');
+    cards.forEach(c => {
+      const cardCat = c.getAttribute('data-category') || '';
+      if (cat === 'all') c.style.display = 'block';
+      else if (cat === 'top' && cardCat.includes('top')) c.style.display = 'block';
+      else if (cat === 'mine' && cardCat.includes('mine')) c.style.display = 'block';
+      else c.style.display = 'none';
+    });
+  }
+
+  // ================= MODAL & COPY =================
+  function showExemplarModal() {
+    playSound('click');
+    document.getElementById('exemplarModal').style.display = 'flex';
+  }
+
+  function closeExemplarModal(e) {
+    if (!e || e.target === document.getElementById('exemplarModal')) {
+      document.getElementById('exemplarModal').style.display = 'none';
+    }
+  }
+
+  function copyExemplarText() {
+    const txt = `Tiêu đề: Hai giải pháp chủ động phá vỡ bong bóng thông tin trên YouTube\n\n1. Định kỳ xóa Lịch sử xem và tìm kiếm (Weekly Clear):\nCơ sở khoa học: Dữ liệu lịch sử là nguồn huấn luyện chính để thuật toán AI phân tích sở thích. Khi ta xóa lịch sử, hệ thống mất đi "dấu vết hành vi" để bám đuổi, buộc trang chủ phải gợi ý các nội dung phong phú và mới mẻ hơn.\n\n2. Chủ động gõ tìm kiếm các từ khóa đa dạng, trái ngược:\nCơ sở khoa học: Thay vì chỉ nhấp vào video đề xuất sẵn, em chủ động tìm kiếm các kênh khoa học, nghệ thuật và quan điểm khác nhau để "huấn luyện ngược" lại thuật toán, giúp quả cầu thông tin không bị co hẹp một chiều.`;
+    navigator.clipboard.writeText(txt).then(() => {
+      showToast("📋 Đã sao chép nội dung bài mẫu vào bộ nhớ tạm!");
+      closeExemplarModal();
+    });
+  }
+
+  function copyDraftToWorkbook() {
+    playSound('click');
+    const op1 = document.getElementById('op1Name').value.trim();
+    const why1 = document.getElementById('op1Why').value.trim();
+    const op2 = document.getElementById('op2Name').value.trim();
+    const why2 = document.getElementById('op2Why').value.trim();
+
+    const draft = `DÀN Ý SÁCH HỌC SINH (HOẠT ĐỘNG 4: VẬN DỤNG)\n\n* Thao tác kỹ thuật 1: ${op1 || 'Xóa toàn bộ lịch sử xem và tìm kiếm trên YouTube định kỳ'}\n- Giải thích cơ sở: ${why1 || 'Xóa bớt dữ liệu hành vi đã lưu, thuật toán không thể bám đuổi để gợi ý nội dung cũ.'}\n\n* Thao tác kỹ thuật 2: ${op2 || 'Duyệt web bằng chế độ Ẩn danh và tắt tự động phát (Autoplay)'}\n- Giải thích cơ sở: ${why2 || 'Ngăn chặn thuật toán ghi nhận thói quen vào hồ sơ cá nhân và kiểm soát thời gian sử dụng.'}`;
+
+    navigator.clipboard.writeText(draft).then(() => {
+      showToast("📋 Đã sao chép dàn ý! Em có thể dán vào file hoặc ghi vào Sách học sinh (Mục IV).");
+    });
+  }
+
+  // ================= CONFETTI CANVAS EFFECT =================
+  function triggerConfetti() {
+    const canvas = document.getElementById('confettiCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const pieces = [];
+    const colors = ['#6366f1', '#10b981', '#f59e0b', '#ec4899', '#38bdf8', '#a855f7'];
+
+    for (let i = 0; i < 90; i++) {
+      pieces.push({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        r: Math.random() * 6 + 4,
+        d: Math.random() * 90,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        tilt: Math.floor(Math.random() * 10) - 10,
+        tiltAngleInc: Math.random() * 0.07 + 0.05,
+        tiltAngle: 0,
+        vx: (Math.random() - 0.5) * 16,
+        vy: (Math.random() - 0.5) * 16 - 3,
+        alpha: 1
+      });
+    }
+
+    let frame = 0;
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      frame++;
+      pieces.forEach(p => {
+        p.tiltAngle += p.tiltAngleInc;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.25; // gravity
+        p.alpha -= 0.012;
+
+        if (p.alpha > 0) {
+          ctx.beginPath();
+          ctx.lineWidth = p.r;
+          ctx.strokeStyle = p.color;
+          ctx.globalAlpha = Math.max(0, p.alpha);
+          ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+          ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+          ctx.stroke();
+        }
+      });
+
+      if (frame < 100) {
+        requestAnimationFrame(render);
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+    render();
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    validateChecklist();
+  });
 </script>
 
 </body>
 </html>
-
