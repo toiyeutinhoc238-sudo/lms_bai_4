@@ -12,9 +12,7 @@
       --primary: #4338ca;
       --primary-hover: #3730a3;
       --primary-light: #eef2ff;
-      --success: #10b981;
-      --success-light: #ecfdf5;
-      --warning: #f59e0b;
+      --drive-blue: #0284c7;
       --card-bg: #ffffff;
       --text: #0f172a;
       --text-muted: #64748b;
@@ -32,7 +30,7 @@
     body {
       background: #f8fafc;
       color: var(--text);
-      padding: 20px 16px;
+      padding: 24px 16px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -42,7 +40,7 @@
     .embed-card {
       background: var(--card-bg);
       width: 100%;
-      max-width: 800px;
+      max-width: 820px;
       border-radius: var(--radius);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
       padding: 32px;
@@ -103,11 +101,10 @@
       background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
       border: 1.5px solid #bae6fd;
       border-radius: 14px;
-      padding: 22px;
-      margin-bottom: 26px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
     .drive-submit-header {
@@ -115,18 +112,18 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 16px;
     }
 
     .drive-title-wrap {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .drive-icon {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -137,7 +134,7 @@
 
     .drive-title {
       font-weight: 800;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       color: #0369a1;
     }
 
@@ -147,7 +144,7 @@
       text-decoration: none;
       font-weight: 800;
       font-size: 0.95rem;
-      padding: 12px 22px;
+      padding: 12px 24px;
       border-radius: 10px;
       display: inline-flex;
       align-items: center;
@@ -159,122 +156,28 @@
     .drive-btn:hover {
       background: #0369a1;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
     }
 
     .drive-note {
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: #0369a1;
       line-height: 1.5;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 12px 16px;
       border-radius: 8px;
       border: 1px solid #bae6fd;
-    }
-
-    /* Completion Box */
-    .completion-box {
-      background: #f8fafc;
-      border: 1.5px dashed #cbd5e1;
-      border-radius: 14px;
-      padding: 24px;
-      text-align: center;
-    }
-
-    .btn-complete-act {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 12px;
-      font-weight: 800;
-      font-size: 1.02rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.2s;
-      box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);
-    }
-
-    .btn-complete-act:hover {
-      background: var(--primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(67, 56, 202, 0.4);
-    }
-
-    /* Modal Overlay & Card */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.65);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 100;
-      padding: 20px;
-      backdrop-filter: blur(4px);
-    }
-
-    .modal-content {
-      background: white;
-      border-radius: 20px;
-      max-width: 540px;
-      width: 100%;
-      padding: 32px;
-      text-align: center;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-      animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes popIn {
-      from { transform: scale(0.92); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    .btn-next-act {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 13px 24px;
-      border-radius: 10px;
-      font-weight: 800;
-      cursor: pointer;
-      font-size: 0.98rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s;
-      margin-top: 18px;
-    }
-
-    .btn-next-act:hover {
-      background: var(--primary-hover);
-    }
-
-    #confettiCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 99;
     }
   </style>
 </head>
 <body>
-
-<canvas id="confettiCanvas"></canvas>
 
 <div class="embed-card">
   <div class="top-badge">Hoạt động 1 • Khởi động (10 phút) • E-learning 100%</div>
   <h2>Bài tập: Trải nghiệm "Trang chủ YouTube của em"</h2>
   <p class="subtitle">Khám phá mức độ cá nhân hóa và khả năng "đọc vị sở thích" của thuật toán gợi ý video YouTube.</p>
 
-  <!-- Hướng dẫn nhiệm vụ học sinh -->
+  <!-- Hướng dẫn nhiệm vụ học sinh chuẩn KHBD -->
   <div class="instruction-box">
     <strong>📋 Hướng dẫn nhiệm vụ học sinh:</strong>
     <ol>
@@ -292,7 +195,7 @@
     <div class="drive-submit-header">
       <div class="drive-title-wrap">
         <div class="drive-icon">
-          <svg width="24" height="24" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+          <svg width="26" height="26" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
             <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
             <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#00ac47"/>
             <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.5l5.85 10.15z" fill="#ea4335"/>
@@ -303,10 +206,10 @@
         </div>
         <div>
           <div class="drive-title">Thư mục Google Drive tiếp nhận bài nộp của lớp</div>
-          <div style="font-size: 0.82rem; color: #0284c7; margin-top: 2px;">Nơi tiếp nhận và lưu trữ ảnh chụp màn hình YouTube của em</div>
+          <div style="font-size: 0.84rem; color: #0284c7; margin-top: 2px;">Nơi tiếp nhận và lưu trữ ảnh chụp màn hình YouTube của em</div>
         </div>
       </div>
-      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="drive-btn">
+      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="drive-btn" onclick="notifyDriveOpened()">
         <span>📂 Mở Thư mục Google Drive nộp ảnh</span> ↗
       </a>
     </div>
@@ -315,76 +218,10 @@
       💡 <b>Quy ước đặt tên file minh chứng:</b> <code>HoTen_Lop_Bai4_YouTube.png</code> (Ví dụ: <code>NguyenVanAn_6A1_Bai4_YouTube.png</code>).
     </div>
   </div>
-
-  <!-- Hộp xác nhận hoàn thành & chuyển tiếp sang Hoạt động 2 -->
-  <div class="completion-box">
-    <div style="font-size: 1.05rem; font-weight: 800; color: #1e1b4b; margin-bottom: 6px;">
-      ✅ Em đã nộp ảnh vào Thư mục Drive và ghi chép vào Sách học sinh?
-    </div>
-    <p style="font-size: 0.9rem; color: #475569; margin-bottom: 18px; line-height: 1.5;">
-      Sau khi đã tải ảnh lên Drive của lớp, em hãy bấm nút bên dưới để hoàn tất Hoạt động 1 và mở khóa Hoạt động 2.
-    </p>
-    <button class="btn-complete-act" onclick="completeActivity1()">
-      <span>Hoàn thành Khởi động — Tiến vào Hoạt động 2</span> 🚀
-    </button>
-  </div>
-</div>
-
-<!-- Modal Chúc mừng & Mở khóa Hoạt động 2 -->
-<div class="modal-overlay" id="modalFeedback">
-  <div class="modal-content">
-    <div style="font-size: 3.2rem; margin-bottom: 8px;">🎉</div>
-    <h3 style="color: #1e1b4b; font-size: 1.35rem; margin-bottom: 10px;">Hoàn thành Hoạt động 1: Khởi động!</h3>
-    <div style="background: #eef2ff; border-radius: 12px; padding: 16px; margin: 16px 0; font-size: 0.92rem; color: #1e1b4b; line-height: 1.6; text-align: left;">
-      💡 <b>Bài học rút ra:</b> YouTube không tự nhiên biết em thích gì — đó chính là hoạt động của <b>Thuật toán gợi ý (Recommender System)</b> liên tục ghi lại lịch sử xem. Tuy tiện lợi, nhưng liệu thuật toán này có tạo ra <b>"Bong bóng thông tin"</b> giữ chân em không?<br><br>
-      👉 <b>Hoạt động 2 đã được mở khóa!</b> Hãy tham gia trò chơi mô phỏng thuật toán AI ngay bây giờ nhé!
-    </div>
-    <button class="btn-next-act" onclick="proceedToActivity2()">
-      <span>Tiến vào Hoạt động 2: Trò chơi mô phỏng SCORM</span> ➡️
-    </button>
-  </div>
 </div>
 
 <script>
-  // Web Audio Synthesizer
-  const AudioCtx = window.AudioContext || window.webkitAudioContext;
-  let audioCtx = null;
-
-  function initAudio() {
-    if (!audioCtx) {
-      audioCtx = new AudioCtx();
-    }
-  }
-
-  function playSuccessSound() {
-    try {
-      initAudio();
-      if (!audioCtx) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
-      osc.frequency.exponentialRampToValueAtTime(783.99, audioCtx.currentTime + 0.15); // G5
-      osc.frequency.exponentialRampToValueAtTime(1046.50, audioCtx.currentTime + 0.3); // C6
-      gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.45);
-    } catch (e) {
-      console.log('Audio not supported or blocked', e);
-    }
-  }
-
-  function completeActivity1() {
-    playSuccessSound();
-    triggerConfetti();
-
-    document.getElementById('modalFeedback').style.display = 'flex';
-
-    // Notify LMS Parent
+  function notifyDriveOpened() {
     if (window.parent && window.parent.postMessage) {
       window.parent.postMessage({
         type: 'ACTIVITY_COMPLETED',
@@ -394,70 +231,15 @@
     }
   }
 
-  function proceedToActivity2() {
-    document.getElementById('modalFeedback').style.display = 'none';
-    if (window.parent && window.parent.goToActivity) {
-      window.parent.goToActivity(2);
-    } else {
-      window.location.href = "hoc_lieu_2_game_mophong.html";
+  // Tự động mở khóa Hoạt động 2 trên giao diện trung tâm
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.parent && window.parent.postMessage) {
+      window.parent.postMessage({
+        type: 'ACTIVITY_ACCESSED',
+        activityId: 1
+      }, '*');
     }
-  }
-
-  // ================= CONFETTI CANVAS ENGINE =================
-  function triggerConfetti() {
-    const canvas = document.getElementById('confettiCanvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const particles = [];
-    const colors = ['#4338ca', '#10b981', '#f59e0b', '#ec4899', '#0284c7', '#8b5cf6'];
-
-    for (let i = 0; i < 140; i++) {
-      particles.push({
-        x: canvas.width / 2,
-        y: canvas.height / 2,
-        w: Math.random() * 8 + 4,
-        h: Math.random() * 6 + 4,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        vx: (Math.random() - 0.5) * 16,
-        vy: (Math.random() - 0.7) * 18,
-        tilt: Math.random() * 10,
-        tiltAngle: 0,
-        tiltAngleInc: Math.random() * 0.08 + 0.04
-      });
-    }
-
-    let animationFrame;
-    let ticks = 0;
-
-    function render() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.x += p.vx;
-        p.y += p.vy;
-        p.vy += 0.4;
-        p.tiltAngle += p.tiltAngleInc;
-        p.tilt = Math.sin(p.tiltAngle) * 12;
-
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.rect(p.x, p.y, p.w, p.h);
-        ctx.fill();
-      });
-
-      ticks++;
-      if (ticks < 100) {
-        animationFrame = requestAnimationFrame(render);
-      } else {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        cancelAnimationFrame(animationFrame);
-      }
-    }
-
-    render();
-  }
+  });
 </script>
 
 </body>
