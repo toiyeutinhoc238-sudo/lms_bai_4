@@ -94,7 +94,7 @@ Tiết học được cấu hình thành **Chuỗi học tập tuần tự có �
 1. **Khởi động (HĐ 1 - Assignment):** Kích hoạt động cơ $\rightarrow$ Học sinh nộp ảnh trang chủ YouTube $\rightarrow$ Hệ thống gửi tin nhắn phản hồi tự động $\rightarrow$ Tự động mở khóa HĐ 2.
 2. **Hình thành kiến thức (HĐ 2 - Mô phỏng SCORM):** Khám phá bản chất $\rightarrow$ Đóng vai thuật toán $\rightarrow$ Quan sát trực quan Bong bóng thông tin $\rightarrow$ Trả lời 2 câu hỏi neo chặn $\rightarrow$ Tự động mở khóa HĐ 3.
 3. **Luyện tập (HĐ 3 - Kéo thả Gamification):** Rèn luyện phân tích $\rightarrow$ Kéo thả 10 thẻ tình huống $\rightarrow$ Hệ thống tự động chấm điểm $\rightarrow$ Nếu đạt $\ge 8/10$ điểm sẽ tự động mở khóa HĐ 4 (nếu chưa đạt được làm lại không giới hạn).
-4. **Vận dụng (HĐ 4 - Diễn đàn & Rubric):** Chuyển giao tri thức $\rightarrow$ Đề xuất 2 giải pháp kỹ thuật $\rightarrow$ Tương tác phản biện với bạn bè $\rightarrow$ Giáo viên duyệt và chấm điểm theo Rubric 3 tiêu chí.
+4. **Vận dụng (HĐ 4 - Diễn đàn & Rubric):** Chuyển giao tri thức $\rightarrow$ Đề xuất 2 giải pháp kỹ thuật và cơ sở khoa học $\rightarrow$ Đăng bài hoàn chỉnh lên Diễn đàn LMS $\rightarrow$ Giáo viên duyệt và chấm điểm chất lượng nội dung theo Rubric 3 tiêu chí (10.0 điểm).
 
 ---
 
@@ -164,9 +164,9 @@ Tiết học được cấu hình thành **Chuỗi học tập tuần tự có �
 * **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh kéo thả 10 thẻ $\rightarrow$ Bấm Chấm điểm $\rightarrow$ Nếu đạt $\ge 8/10$ điểm: Chúc mừng, yêu cầu chọn 2 ví dụ tâm đắc ghi vào Sách học sinh và mở khóa Hoạt động 4 $\rightarrow$ Nếu $< 8/10$ điểm: Báo lỗi viền đỏ và cho phép làm lại không giới hạn.
 
 ### THẺ HỌC LIỆU 4: DIỄN ĐÀN THẢO LUẬN (FORUM) KÈM RUBRIC CHẤM ĐIỂM
-* **WHAT (Học liệu là gì?):** Là diễn đàn trực tuyến chủ đề *"Làm sao để thoát khỏi bong bóng thông tin?"* tích hợp sẵn biểu mẫu Rubric định lượng 3 tiêu chí (Tính khả thi giải pháp: 6đ; Hiểu bản chất thuật toán: 2đ; Trình bày/Tương tác: 2đ).
-* **WHY (Tại sao dùng học liệu này?):** Môi trường E-learning rất dễ thiếu tương tác xã hội. Diễn đàn là nơi học sinh thể hiện năng lực sáng tạo giải pháp công nghệ, rèn luyện kỹ năng giao tiếp lịch sự trên không gian mạng và phát triển trách nhiệm đạo đức số.
-* **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh viết nháp dàn ý vào Sách học sinh $\rightarrow$ Đăng bài hoàn chỉnh lên Diễn đàn $\rightarrow$ Đọc và bình luận phản hồi ít nhất 1 bạn học $\rightarrow$ Giáo viên chấm điểm theo Rubric định lượng 10 điểm minh bạch trên LMS.
+* **WHAT (Học liệu là gì?):** Là diễn đàn trực tuyến chủ đề *"Làm sao để thoát khỏi bong bóng thông tin và bảo vệ quyền riêng tư số?"* tích hợp sẵn biểu mẫu Rubric định lượng 3 tiêu chí chấm chất lượng nội dung (Tính đúng đắn & khả thi kỹ thuật: 5.0đ; Cơ sở khoa học bản chất thuật toán AI: 3.0đ; Tính hoàn thiện logic & thuyết phục: 2.0đ).
+* **WHY (Tại sao dùng học liệu này?):** Diễn đàn là không gian học sinh thể hiện năng lực giải quyết vấn đề, vận dụng tri thức công nghệ để đề xuất giải pháp kỹ thuật thực tế và phát triển phẩm chất trách nhiệm bảo vệ dữ liệu cá nhân.
+* **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh viết nháp dàn ý vào Sách học sinh $\rightarrow$ Tự đối chiếu tiêu chuẩn $\rightarrow$ Đăng bài hoàn chỉnh lên Diễn đàn LMS với tiêu đề `[Họ tên - Lớp]` $\rightarrow$ Giáo viên chấm điểm trực tiếp theo Rubric 3 tiêu chí (tổng điểm 10.0) trên LMS.
 
 ---
 

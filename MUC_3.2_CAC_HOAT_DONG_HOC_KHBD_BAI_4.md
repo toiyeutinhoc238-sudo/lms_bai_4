@@ -210,43 +210,41 @@
 **a. Mục tiêu:**
 - *(1) Năng lực tin học / YCCĐ (6.B1.1):* Vận dụng kiến thức về tính hai mặt của AI để chủ động đề xuất và áp dụng các thao tác kỹ thuật nhằm kiểm soát thuật toán gợi ý, phá vỡ "Bong bóng thông tin" và bảo vệ quyền riêng tư cá nhân.
 - *(2) Năng lực tự chủ, tự học:* Tự giác nghiên cứu chủ đề, độc lập lập dàn ý giải pháp vào Sách học sinh và hoàn thành bài thảo luận trên hệ thống LMS đúng thời hạn.
-- *(4) Năng lực giao tiếp và hợp tác:* Trình bày ý kiến rõ ràng, mạch lạc; tích cực đọc, lắng nghe và phản hồi góp ý mang tính xây dựng cho bạn học trên Diễn đàn trực tuyến.
-- *(5) Phẩm chất Trách nhiệm & Đạo đức số:* Nâng cao ý thức tự bảo vệ dữ liệu cá nhân, thể hiện văn hóa ứng xử văn minh và trách nhiệm khi tham gia không gian mạng.
+- *(4) Năng lực giải quyết vấn đề và sáng tạo:* Phân tích được nguyên nhân cốt lõi khiến người dùng bị thuật toán bám đuổi và đề xuất các giải pháp kỹ thuật hợp tình, hợp lý, khả thi cao.
+- *(5) Phẩm chất Trách nhiệm & Đạo đức số:* Nâng cao ý thức tự chịu trách nhiệm đối với hành vi sử dụng thiết bị, bảo vệ dữ liệu cá nhân trên không gian mạng.
 
 **b. Nội dung:**
-- Đề xuất cách giải quyết thực tế để bảo vệ quyền riêng tư và thoát khỏi bong bóng thông tin trên Diễn đàn. HS lập dàn ý trong sách trước khi gõ câu trả lời lên mạng.
+- Đề xuất cách giải quyết thực tế để bảo vệ quyền riêng tư và thoát khỏi bong bóng thông tin trên Diễn đàn LMS. HS lập dàn ý trong Sách học sinh trước khi soạn thảo và đăng bài hoàn chỉnh lên mạng.
 
 **c. Sản phẩm:**
-- Dàn ý trong Sách học sinh (Mục IV – Vận dụng).
-- Bình luận thực tế của HS trên Diễn đàn LMS.
-- Ít nhất 01 phản hồi góp ý lịch sự, tích cực cho bài viết của bạn học trong lớp.
-- Điểm đánh giá định lượng của GV dựa trên Bảng kiểm Rubric 3 tiêu chí (thang điểm 10/10) trên hệ thống LMS.
+- Dàn ý giải pháp trong Sách học sinh (Mục IV – Vận dụng).
+- Bài đăng hoàn chỉnh của HS trên Diễn đàn LMS (gồm đúng tiêu đề theo cú pháp `[Họ và tên - Lớp]` và nội dung 2 phần: Thao tác kỹ thuật & Cơ sở khoa học).
+- Điểm đánh giá chất lượng nội dung của GV dựa trên Bảng kiểm Rubric 3 tiêu chí (thang điểm 10/10) được thiết lập trực tiếp trên LMS.
 
 **d. Tổ chức thực hiện:**
 
 **Bước 1: Chuyển giao nhiệm vụ:**
 
 - **GV thiết lập trên hệ thống LMS:**
-  + GV cấu hình hoạt động Diễn đàn thảo luận trên LMS với chủ đề: *"Làm sao để thoát khỏi bong bóng thông tin?"*.
+  + GV cấu hình hoạt động Diễn đàn thảo luận trên LMS với chủ đề: *"Làm sao để thoát khỏi bong bóng thông tin và bảo vệ quyền riêng tư số?"*.
   + Cài đặt điều kiện tiên quyết: HS phải hoàn thành Hoạt động 3 (đạt điểm bài tập Kéo – Thả $\ge 8/10$) mới được mở khóa tham gia Diễn đàn.
-  + Công khai Bảng kiểm Rubric 3 tiêu chí (tổng điểm 10) ngay đầu chủ đề diễn đàn để học sinh nắm rõ tiêu chuẩn đánh giá:
-    * *Tiêu chí 1: Tính khả thi của giải pháp kỹ thuật* (Tối đa 6.0 điểm: Mức Tốt 5.0–6.0đ; Mức Đạt 3.0–4.5đ; Cần cố gắng 0–2.5đ).
-    * *Tiêu chí 2: Hiểu bản chất cách thuật toán thu thập và khai thác dữ liệu* (Tối đa 2.0 điểm: Mức Tốt 2.0đ; Mức Đạt 1.0đ; Cần cố gắng 0đ).
-    * *Tiêu chí 3: Trình bày bài viết và phản hồi bạn học tích cực* (Tối đa 2.0 điểm: Mức Tốt 2.0đ; Mức Đạt 1.0đ; Cần cố gắng 0đ).
+  + Công khai Bảng kiểm Rubric 3 tiêu chí đánh giá chất lượng nội dung (tổng điểm 10.0) ngay đầu chủ đề diễn đàn để học sinh nắm rõ tiêu chuẩn đánh giá:
+    * *Tiêu chí 1: Tính đúng đắn & khả thi của thao tác kỹ thuật* (Trọng số: 5.0 điểm).
+    * *Tiêu chí 2: Giải thích cơ sở khoa học theo bản chất thuật toán AI* (Trọng số: 3.0 điểm).
+    * *Tiêu chí 3: Tính hoàn thiện, logic & thuyết phục của nội dung* (Trọng số: 2.0 điểm).
   + GV gửi thông báo nhắc học sinh chuẩn bị bút viết và mở sẵn Sách học sinh (Mục IV – Vận dụng).
 
 - **Nhiệm vụ cụ thể giao cho Học sinh:**
   + *Yêu cầu 1 (Lập dàn ý vào Sách học sinh):* Đọc kỹ chủ đề thảo luận; suy nghĩ và đề xuất ít nhất **02 thao tác kỹ thuật thực tế** có thể thực hiện ngay trên máy tính hoặc điện thoại để hạn chế sự thao túng của thuật toán và bảo vệ quyền riêng tư. Dùng bút ghi nháp dàn ý vào Sách học sinh (Mục IV) gồm 2 phần:  
     (1) Tên thao tác kỹ thuật;  
-    (2) Giải thích cơ sở khoa học (Vì sao thao tác này lại hiệu quả dựa trên bản chất thuật toán?).
-  + *Yêu cầu 2 (Soạn thảo và đăng bài lên Diễn đàn LMS):* Truy cập Diễn đàn Hoạt động 4 trên LMS, học sinh nhập Tiêu đề và Nội dung bài viết hoàn chỉnh.
-  + *Yêu cầu 3 (Tự đối chiếu Rubric & Kiểm tra tiêu chuẩn):* Quan sát bộ kiểm tra tiêu chuẩn tự động (Checklist validator: đủ 2 giải pháp, có giải thích cơ sở, độ dài $\ge 30$ từ) và đối chiếu bảng Rubric trước khi bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
-  + *Yêu cầu 4 (Đọc và phản hồi bạn học):* Đọc các bài chia sẻ của các bạn trong lớp trên Diễn đàn, chọn ít nhất 01 bài để bấm *"💬 Phản hồi"*, viết ý kiến góp ý lịch sự, tích cực; đồng thời ghi lại tên bạn và ý kiến phản hồi vào Sách học sinh (Mục IV – Phần 2).
+    (2) Giải thích cơ sở khoa học (Vì sao thao tác này lại hiệu quả dựa trên bản chất thuật toán AI?).
+  + *Yêu cầu 2 (Soạn thảo và đăng bài lên Diễn đàn LMS):* Truy cập Diễn đàn Hoạt động 4 trên LMS, học sinh nhập Tiêu đề theo đúng cú pháp `[Họ và tên - Lớp]` (Ví dụ: `[Nguyễn Văn An - Lớp 6A]`) và soạn thảo Nội dung bài viết hoàn chỉnh gồm 2 phần: Thao tác kỹ thuật & Cơ sở khoa học.
+  + *Yêu cầu 3 (Tự đối chiếu Rubric & Kiểm tra tiêu chuẩn):* Quan sát bộ kiểm tra tiêu chuẩn tự động (Checklist validator: Đặt đúng tiêu đề `[Họ tên - Lớp]`, đủ từ 2 thao tác kỹ thuật, có giải thích cơ sở khoa học, độ dài $\ge 30$ từ) và đối chiếu bảng Rubric trước khi bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
 
 - **Dự kiến câu trả lời / Dự kiến sản phẩm của học sinh:**
   + *5 Thao tác kỹ thuật thực tế học sinh thường đề xuất:*
     * **Thao tác 1 (Xóa lịch sử xem & tìm kiếm định kỳ):** Vào Cài đặt tài khoản $\rightarrow$ Chọn *Xóa toàn bộ lịch sử xem và tìm kiếm*.  
-      $\rightarrow$ *Cơ sở khoa học:* Lịch sử xem là dữ liệu huấn luyện chủ đạo để AI phán đoán sở thích. Xóa dữ liệu cũ sẽ làm mất "dấu vết hành vi", thuật toán không còn căn cứ bám đuổi, buộc trang chủ phải gợi ý nội dung phong phú và mới mẻ hơn.
+      $\rightarrow$ *Cơ sở khoa học:* Lịch sử xem là nguồn dữ liệu huấn luyện chủ đạo để AI phán đoán sở thích. Xóa dữ liệu cũ sẽ làm mất "dấu vết hành vi", thuật toán không còn căn cứ bám đuổi, buộc trang chủ phải gợi ý nội dung phong phú và mới mẻ hơn.
     * **Thao tác 2 (Duyệt web ở Chế độ Ẩn danh - Incognito Mode):** Bật tab Ẩn danh (`Ctrl + Shift + N`) khi tra cứu các chủ đề lạ.  
       $\rightarrow$ *Cơ sở khoa học:* Ngăn trình duyệt và thuật toán liên kết các tìm kiếm nhất thời vào hồ sơ tài khoản cá nhân, tránh bị quảng cáo bám đuổi và giữ kín thông tin riêng tư.
     * **Thao tác 3 (Tắt Autoplay & Đặt thông báo nghỉ ngơi):** Tắt công tắc *Tự động phát* và cài *Nhắc tôi nghỉ ngơi* sau 45 phút.  
@@ -254,42 +252,56 @@
     * **Thao tác 4 (Chủ động tìm kiếm từ khóa đối lập, đa chiều):** Tìm kiếm các chủ đề khoa học, văn hóa khác nhau và xem các kênh có quan điểm đa dạng.  
       $\rightarrow$ *Cơ sở khoa học:* Cung cấp nguồn dữ liệu đa dạng để "huấn luyện ngược" lại AI, phá vỡ hiện tượng Bong bóng thông tin một chiều.
     * **Thao tác 5 (Tắt cá nhân hóa quảng cáo):** Vào Cài đặt tài khoản $\rightarrow$ Chuyển mục *Cá nhân hóa quảng cáo* sang trạng thái Tắt (Off).  
-      $\rightarrow$ *Cơ sở khoa học:* Hạn chế tối đa việc nền tảng thu thập và bán hồ sơ hành vi chi tiết cho bên thứ ba, bảo vệ quyền riêng tư số.
-  + *Dự kiến bài đăng hoàn chỉnh mẫu của HS trên Diễn đàn (Đạt 10/10 điểm Rubric):*
-    > *"Chào thầy cô và các bạn, để không bị kẹt trong 'Bong bóng thông tin' và bảo vệ quyền riêng tư trên YouTube, mình xin chia sẻ 2 thao tác kỹ thuật thực tế mà mình thường áp dụng:  
-    > 1. Định kỳ mỗi cuối tuần, mình vào Cài đặt tài khoản chọn 'Xóa toàn bộ lịch sử xem và tìm kiếm'. Cơ sở khoa học: Dữ liệu lịch sử là nguồn huấn luyện chính để thuật toán AI phân tích sở thích. Khi ta xóa lịch sử, hệ thống mất đi 'dấu vết hành vi' để bám đuổi, buộc trang chủ phải gợi ý các nội dung phong phú và mới mẻ hơn.  
-    > 2. Mình luôn tắt tính năng Tự động phát video (Autoplay) và cài đặt thông báo 'Nhắc tôi nghỉ ngơi' sau mỗi 45 phút. Cơ sở khoa học: Cách này giúp mình chủ động kiểm soát thời gian sử dụng thiết bị, ngăn chặn bẫy cuốn xem liên tục của thuật toán như bạn Nam trong bài học."*
-  + *Dự kiến bình luận phản hồi bạn học (Đạt chuẩn giao tiếp mạng tích cực):*
-    > *"Chào bạn Minh Thư, mình rất đồng ý với giải pháp bật Chế độ Ẩn danh khi tra cứu chủ đề lạ của bạn. Mình xin bổ sung thêm một mẹo là sau khi xem xong trên tab ẩn danh, ta nên đóng hẳn cửa sổ để trình duyệt xóa sạch bộ nhớ tạm. Cảm ơn chia sẻ rất thực tế và hữu ích của bạn!"*
-  + *Dự kiến nội dung ghi chép trong Sách học sinh (Mục IV):* Hoàn thành dàn ý 2 giải pháp, lý do giải thích và nhật ký phản hồi bạn học (tên bạn và nội dung phản hồi) đầy đủ, sạch đẹp.
+      $\rightarrow$ *Cơ sở khoa học:* Hạn chế tối đa việc nền tảng thu thập và phân tích hồ sơ hành vi chi tiết để bán cho bên thứ ba, bảo vệ quyền riêng tư số.
+  + *Dự kiến bài đăng hoàn chỉnh mẫu của HS trên Diễn đàn (Đạt 10.0/10.0 điểm Rubric):*
+    > **Tiêu đề:** `[Nguyễn Văn An - Lớp 6A] Giải pháp kiểm soát thuật toán gợi ý và bảo vệ quyền riêng tư`  
+    > **Nội dung:**  
+    > *"Kính thưa thầy cô, để không bị kẹt trong 'Bong bóng thông tin' và bảo vệ dữ liệu cá nhân trên không gian mạng, em xin đề xuất 02 thao tác kỹ thuật thực tế sau:  
+    > 1. Thao tác 1 - Xóa định kỳ lịch sử xem và tìm kiếm: Em vào mục Cài đặt tài khoản YouTube/Google và chọn xóa sạch lịch sử. Cơ sở khoa học: Lịch sử hoạt động chính là dữ liệu đầu vào quan trọng nhất để thuật toán AI phân tích sở thích. Khi xóa lịch sử cũ, thuật toán bị mất 'dấu vết hành vi', không còn căn cứ bám đuổi, buộc trang chủ phải làm mới luồng gợi ý với nhiều chủ đề đa dạng hơn.  
+    > 2. Thao tác 2 - Tắt tính năng Tự động phát (Autoplay) và cài đặt hẹn giờ nghỉ ngơi: Em chuyển công tắc Tự động phát sang Tắt và cài đặt ứng dụng 'Nhắc tôi nghỉ ngơi' sau mỗi 45 phút. Cơ sở khoa học: Tính năng tự động phát là chiếc bẫy tâm lý giữ chân người dùng liên hoàn. Việc chủ động ngắt tính năng này giúp người dùng kiểm soát thời gian sử dụng thiết bị, tránh rơi vào trạng thái xem thụ động và không bị thuật toán dẫn dắt."*
+  + *Dự kiến nội dung ghi chép trong Sách học sinh (Mục IV):* Hoàn thành đầy đủ dàn ý 2 thao tác kỹ thuật, cơ sở khoa học và đánh dấu tích kiểm tra bảng tự đối chiếu tiêu chuẩn.
 
 **Bước 2: Thực hiện nhiệm vụ:**
 
 - **Hoạt động của Học sinh:**
-  + HS suy nghĩ và viết nháp dàn ý giải pháp, lý do vào Sách học sinh (Mục IV).
-  + HS truy cập Diễn đàn Hoạt động 4 trên LMS, lựa chọn chế độ soạn thảo (theo dàn ý Sách học sinh hoặc tự do), nhập Tiêu đề và Nội dung bài viết.
-  + HS quan sát bộ kiểm tra tiêu chuẩn tự động (Checklist validator) và đối chiếu với Bảng kiểm Rubric 3 tiêu chí để rà soát chất lượng bài viết trước khi bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
-  + HS đọc bài của các bạn cùng lớp trên diễn đàn, chọn ít nhất 01 bài để bấm *"💬 Phản hồi"*, nhập ý kiến nhận xét mang tính xây dựng, lịch sự và gửi đi.
-  + HS ghi chép tên bạn và nội dung phản hồi vào phần Nhật ký tương tác trong Sách học sinh (Mục IV).
+  + HS suy nghĩ, phân tích và viết nháp dàn ý giải pháp, cơ sở khoa học vào Sách học sinh (Mục IV).
+  + HS truy cập Diễn đàn Hoạt động 4 trên hệ thống LMS.
+  + HS nhập đúng tiêu đề bài viết: `[Họ và tên - Lớp] Tên bài viết` và soạn thảo nội dung hoàn chỉnh gồm 2 phần rõ ràng.
+  + HS quan sát bộ kiểm tra tiêu chuẩn tự động (Checklist validator) và đối chiếu với Bảng kiểm Rubric 3 tiêu chí để rà soát kỹ chất lượng nội dung trước khi bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
 - **Hoạt động hỗ trợ của Giáo viên:**
-  + GV theo dõi luồng bài đăng và bình luận thời gian thực trên hệ thống LMS.
-  + GV kịp thời hướng dẫn, giải đáp thắc mắc cho các học sinh còn lúng túng về mặt kỹ thuật hoặc lập luận cơ sở khoa học.
-  + GV khích lệ không khí thảo luận sôi nổi, đồng thời duy trì văn hóa giao tiếp mạng tích cực, văn minh.
+  + GV theo dõi luồng bài đăng thời gian thực của học sinh trên hệ thống LMS.
+  + Kịp thời hỗ trợ, giải đáp cho những học sinh gặp khó khăn về thao tác kỹ thuật hoặc cách diễn đạt cơ sở khoa học.
+  + Nhắc nhở học sinh tuân thủ đúng quy định đặt tiêu đề và cấu trúc nội dung bài viết.
 
 **Bước 3: Báo cáo, thảo luận:**
 
-- Dựa trên dàn ý đã viết, HS gõ bình luận hoàn chỉnh đăng lên Diễn đàn và đọc, phản hồi ý kiến của ít nhất 1 bạn học khác.
-- Toàn bộ bài đăng và bình luận của học sinh được hiển thị công khai, trực quan trên giao diện Diễn đàn của lớp trên LMS.
-- Học sinh đọc các bài viết hay của nhau, trao đổi sôi nổi về các tình huống thuật toán thực tế mà các em từng trải nghiệm trên YouTube, TikTok, Facebook.
-- Một số học sinh chia sẻ thêm các giải pháp sáng tạo (như tạo nhiều tài khoản cho các mục đích học tập/giải trí riêng biệt, cài tiện ích trình duyệt chặn bám đuổi quảng cáo...).
+- HS hoàn thành việc gửi bài đăng lên Diễn đàn LMS đúng thời hạn quy định.
+- Toàn bộ bài đăng của học sinh được hiển thị minh bạch, trực quan trên giao diện Diễn đàn của lớp.
+- GV chọn lọc và trình chiếu 2 - 3 bài viết tiêu biểu, lập luận sắc bén trên hệ thống để cả lớp cùng quan sát, tham khảo các cách tiếp cận kỹ thuật phong phú.
+- HS đọc tham khảo các giải pháp đa dạng của các bạn trong lớp để mở rộng hiểu biết về cách bảo vệ quyền riêng tư số trên các nền tảng khác nhau (YouTube, TikTok, Facebook, trình duyệt web).
 
 **Bước 4: Kết luận, nhận định:**
 
 - **Đánh giá trên hệ thống LMS:**
-  + GV duyệt và chấm điểm câu trả lời bằng Rubric đã thiết lập trên hệ thống (Tổng điểm 10: Tính khả thi giải pháp 6đ; Bản chất thuật toán 2đ; Trình bày và phản hồi bạn học 2đ).
-  + Hệ thống LMS tự động ghi nhận điểm số chính thức vào Sổ điểm (Gradebook) và cấp huy hiệu hoàn thành bài học cho học sinh.
+  + GV trực tiếp duyệt và chấm điểm từng bài viết của học sinh trên tính năng chấm điểm Forum của LMS dựa trên Bảng kiểm Rubric 3 tiêu chí:
+    * Tiêu chí 1 (Tính đúng đắn & khả thi của thao tác kỹ thuật): tối đa 5.0 điểm.
+    * Tiêu chí 2 (Giải thích cơ sở khoa học theo bản chất thuật toán AI): tối đa 3.0 điểm.
+    * Tiêu chí 3 (Tính hoàn thiện, logic & thuyết phục của nội dung): tối đa 2.0 điểm.
+  + Hệ thống LMS tự động tổng hợp điểm (thang 10.0), lưu vào Sổ điểm (Gradebook) và gửi thông báo kết quả kèm phản hồi của giáo viên đến tài khoản học sinh.
 - **Nhận định sư phạm của Giáo viên:**
-  + GV nhận xét tổng kết buổi học trực tuyến: Biểu dương tinh thần tự học, kỹ năng công nghệ và thái độ thảo luận nghiêm túc, văn minh của cả lớp.
-  + GV chốt thông điệp giáo dục: *"Trí tuệ nhân tạo và các thuật toán gợi ý sinh ra nhằm phục vụ con người, mang lại trải nghiệm cá nhân hóa vô cùng tiện lợi. Tuy nhiên, nếu không hiểu bản chất của chúng, chúng ta rất dễ bị thao túng, đánh mất thời gian và rơi vào chiếc lồng 'Bong bóng thông tin'. Hãy luôn là những người dùng công nghệ thông thái, biết chủ động làm chủ thiết bị và bảo vệ dữ liệu cá nhân của mình trên không gian số!"*.
-  + GV dặn dò học sinh hoàn thiện các phần ghi chú trong Sách học sinh để mang đến lớp trong buổi học trực tiếp tiếp theo cho giáo viên kiểm tra và ký xác nhận.
+  + GV tổng kết bài học: Đánh giá cao tinh thần tự học, khả năng phân tích nguyên nhân và đề xuất các giải pháp kỹ thuật rất thiết thực của học sinh.
+  + GV nhấn mạnh thông điệp cốt lõi: *"Thuật toán AI gợi ý mang lại sự tiện lợi vượt bậc, nhưng nếu thiếu hiểu biết công nghệ, chúng ta rất dễ bị dẫn dắt và đánh mất quyền riêng tư số. Bằng những thao tác kỹ thuật chủ động mà các em đã đề xuất hôm nay, các em đã thực sự làm chủ thiết bị và trở thành những người dùng công nghệ thông thái!"*.
+  + GV dặn dò học sinh hoàn tất các mục ghi chú trong Sách học sinh để nộp giáo viên kiểm tra, ký xác nhận trong buổi học trực tiếp kế tiếp.
+
+---
+
+### BẢNG KIỂM RUBRIC ĐÁNH GIÁ CHẤT LƯỢNG NỘI DUNG (HOẠT ĐỘNG 4 - DIỄN ĐÀN LMS)
+*(Giáo viên thiết lập Rubric này trực tiếp trên tính năng chấm điểm Forum của LMS)*
+
+| Tiêu chí đánh giá | Mức Tốt (Xuất sắc) | Mức Đạt (Trung bình) | Mức Cần cố gắng | Điểm tối đa |
+|:---|:---|:---|:---|:---:|
+| **1. Tính đúng đắn & khả thi của thao tác kỹ thuật**<br>*(Trọng số: 5.0 điểm)* | **(4.5 – 5.0 điểm)**<br>Đề xuất được từ **02 thao tác kỹ thuật thực tế trở lên**, hoàn toàn chính xác, khả thi cao và dễ áp dụng ngay trên thiết bị. | **(2.5 – 4.0 điểm)**<br>Chỉ nêu được **01 thao tác kỹ thuật chính xác**; hoặc có 2 thao tác nhưng giải pháp còn chung chung, mang tính khẩu hiệu cảm tính. | **(0.0 – 2.0 điểm)**<br>Đề xuất sai thao tác kỹ thuật, không khả thi hoặc giải pháp không liên quan đến việc kiểm soát thuật toán gợi ý và bảo vệ dữ liệu số. | **5.0 đ** |
+| **2. Giải thích cơ sở khoa học theo bản chất thuật toán AI**<br>*(Trọng số: 3.0 điểm)* | **(2.5 – 3.0 điểm)**<br>Giải thích **rõ ràng, chuẩn xác cơ sở khoa học** của từng giải pháp dựa trên cách thuật toán thu thập và khai thác dữ liệu. | **(1.5 – 2.0 điểm)**<br>Nêu được lý do nhưng **giải thích còn đơn giản**, chưa làm nổi bật được mối liên hệ bản chất giữa thao tác kỹ thuật và cách thức hoạt động của thuật toán. | **(0.0 – 1.0 điểm)**<br>Không giải thích cơ sở khoa học, hoặc giải thích sai lệch hoàn toàn về bản chất cách thuật toán thu thập và xử lý dữ liệu người dùng. | **3.0 đ** |
+| **3. Tính hoàn thiện, logic & thuyết phục của nội dung**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đặt đúng tiêu đề `[Họ tên - Lớp]`, nộp bài đúng hạn.<br>- Bố cục chặt chẽ, lập luận logic, câu từ gãy gọn, không viết tắt, không sai chính tả.<br>- Trình bày đầy đủ cả 2 phần: Thao tác kỹ thuật và Cơ sở khoa học. | **(1.0 điểm)**<br>- Nộp bài đúng thời hạn.<br>- Trình bày đủ nội dung cơ bản nhưng diễn đạt còn sơ sài, câu từ chưa gãy gọn hoặc còn một số lỗi chính tả, lập luận chưa thật chặt chẽ. | **(0.0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, cụt lủn, chắp vá, sai nhiều lỗi chính tả hoặc thiếu hẳn một trong các phần nội dung bắt buộc. | **2.0 đ** |
+| **TỔNG ĐIỂM ĐÁNH GIÁ CHẤT LƯỢNG NỘI DUNG:** | | | | **10.0 đ** |
 

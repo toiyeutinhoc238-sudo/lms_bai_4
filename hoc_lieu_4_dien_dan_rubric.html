@@ -961,16 +961,16 @@
       </div>
     </div>
     <div class="stat-card">
-      <div class="stat-icon">👥</div>
+      <div class="stat-icon">📊</div>
       <div class="stat-meta">
-        <span class="stat-val" id="totalRepliesVal">38</span>
-        <span class="stat-lbl">Lượt phản hồi chéo</span>
+        <span class="stat-val" id="totalRepliesVal">100%</span>
+        <span class="stat-lbl">Tỉ lệ đạt chuẩn</span>
       </div>
     </div>
     <div class="stat-card">
       <div class="stat-icon">🎯</div>
       <div class="stat-meta">
-        <span class="stat-val" id="userScoreDisplay">10 / 10</span>
+        <span class="stat-val" id="userScoreDisplay">10.0 / 10</span>
         <span class="stat-lbl">Điểm Rubric chuẩn</span>
       </div>
     </div>
@@ -985,11 +985,11 @@
 
   <!-- GUIDANCE BOX -->
   <div class="guidance-box">
-    <h4><span>🎯</span> 3 Yêu Cầu Cốt Lõi Khi Tham Gia Thảo Luận:</h4>
+    <h4><span>🎯</span> 3 Tiêu Chí Chấm Điểm Bài Viết Theo Rubric Diễn Đàn LMS:</h4>
     <ol>
-      <li><b>Đề xuất từ 02 thao tác kỹ thuật thực tế</b> (Ví dụ: Xóa lịch sử, dùng tab ẩn danh, tắt Autoplay/đặt giờ xem, tắt cá nhân hóa quảng cáo).</li>
-      <li><b>Giải thích cơ sở khoa học:</b> Vì sao thao tác đó lại có hiệu quả dựa trên bản chất cách thuật toán thu thập và khai thác dữ liệu hành vi?</li>
-      <li><b>Tương tác tích cực:</b> Đọc và viết ít nhất <b>01 phản hồi có tính xây dựng</b> cho bài viết của một bạn khác trong lớp.</li>
+      <li><b>1. Tính đúng đắn &amp; khả thi của thao tác kỹ thuật (5.0 điểm):</b> Đề xuất từ 02 thao tác kỹ thuật thực tế trở lên có thể làm ngay trên máy tính hoặc điện thoại.</li>
+      <li><b>2. Giải thích cơ sở khoa học theo bản chất thuật toán AI (3.0 điểm):</b> Giải thích rõ ràng nguyên lý cách AI thu thập, phân tích và khai thác dữ liệu hành vi.</li>
+      <li><b>3. Tính hoàn thiện, logic &amp; thuyết phục của nội dung (2.0 điểm):</b> Đặt đúng tiêu đề <code>[Họ tên - Lớp]</code>, nộp bài đúng hạn, câu từ gãy gọn, không viết tắt, không sai chính tả, đầy đủ 2 phần Thao tác &amp; Cơ sở khoa học.</li>
     </ol>
   </div>
 
@@ -1020,7 +1020,7 @@
   <!-- INTERACTIVE RUBRIC STUDIO -->
   <div class="rubric-box">
     <div class="rubric-title">
-      <h3><span>📋</span> Bảng Kiểm Rubric Đánh Giá Diễn Đàn (Thang điểm 10)</h3>
+      <h3><span>📋</span> Bảng Kiểm Rubric Đánh Giá Diễn Đàn (Thang điểm 10.0)</h3>
       <div class="rubric-mode-switch">
         <button class="rubric-mode-btn active" id="btnRubricSelf" onclick="setRubricMode('self')">Tự đối chiếu</button>
         <button class="rubric-mode-btn" id="btnRubricTeacher" onclick="setRubricMode('teacher')">Tiêu chuẩn GV</button>
@@ -1032,66 +1032,66 @@
         <thead>
           <tr>
             <th style="width: 25%;">Tiêu chí đánh giá</th>
-            <th style="width: 32%;">Mức Tốt (Điểm tối đa)</th>
+            <th style="width: 32%;">Mức Tốt (Xuất sắc)</th>
             <th style="width: 25%;">Mức Đạt (Trung bình)</th>
-            <th style="width: 18%;">Cần cố gắng</th>
+            <th style="width: 18%;">Mức Cần cố gắng</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <div class="criterion-meta">1. Tính khả thi của giải pháp</div>
-              <span class="criterion-max">Tối đa: 6.0 điểm</span>
+              <div class="criterion-meta">1. Tính đúng đắn &amp; khả thi kỹ thuật</div>
+              <span class="criterion-max">Trọng số: 5.0 điểm</span>
             </td>
-            <td class="rubric-cell-interactive active" onclick="selectRubric(1, 6, this)">
-              <span class="chip chip-high">5.0 - 6.0 điểm</span>
-              <div>Nêu từ <b>2 thao tác kỹ thuật hợp lý trở lên</b>, có thể thực hiện ngay trên thiết bị thực tế.</div>
+            <td class="rubric-cell-interactive active" onclick="selectRubric(1, 5, this)">
+              <span class="chip chip-high">4.5 - 5.0 điểm</span>
+              <div>Nêu từ <b>02 thao tác kỹ thuật thực tế trở lên</b>, hoàn toàn chính xác, khả thi cao và dễ áp dụng ngay trên thiết bị.</div>
             </td>
-            <td class="rubric-cell-interactive" onclick="selectRubric(1, 4, this)">
-              <span class="chip chip-mid">3.0 - 4.5 điểm</span>
-              <div>Chỉ nêu <b>1 thao tác</b> hoặc giải pháp chung chung cảm tính ("ít dùng máy lại").</div>
+            <td class="rubric-cell-interactive" onclick="selectRubric(1, 3.5, this)">
+              <span class="chip chip-mid">2.5 - 4.0 điểm</span>
+              <div>Chỉ nêu <b>01 thao tác chính xác</b>; hoặc có 2 thao tác nhưng giải pháp còn chung chung mang tính cảm tính.</div>
             </td>
-            <td class="rubric-cell-interactive" onclick="selectRubric(1, 1.5, this)">
-              <span class="chip chip-low">0 - 2.5 điểm</span>
-              <div>Đề xuất sai phương pháp hoặc không liên quan đến thuật toán.</div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="criterion-meta">2. Hiểu bản chất thuật toán</div>
-              <span class="criterion-max">Tối đa: 2.0 điểm</span>
-            </td>
-            <td class="rubric-cell-interactive active" onclick="selectRubric(2, 2, this)">
-              <span class="chip chip-high">2.0 điểm</span>
-              <div>Giải thích rõ cơ sở: Xóa lịch sử là xóa dữ liệu huấn luyện của AI; tìm kiếm mới giúp AI mở rộng nguồn gợi ý.</div>
-            </td>
-            <td class="rubric-cell-interactive" onclick="selectRubric(2, 1, this)">
-              <span class="chip chip-mid">1.0 điểm</span>
-              <div>Nêu được thao tác nhưng giải thích sơ sài, chưa gắn với cách AI thu thập dữ liệu.</div>
-            </td>
-            <td class="rubric-cell-interactive" onclick="selectRubric(2, 0, this)">
-              <span class="chip chip-low">0 điểm</span>
-              <div>Không giải thích hoặc giải thích sai hoàn toàn nguyên lý thuật toán.</div>
+            <td class="rubric-cell-interactive" onclick="selectRubric(1, 1, this)">
+              <span class="chip chip-low">0.0 - 2.0 điểm</span>
+              <div>Đề xuất sai thao tác kỹ thuật, không khả thi hoặc không liên quan đến thuật toán gợi ý và bảo vệ dữ liệu số.</div>
             </td>
           </tr>
 
           <tr>
             <td>
-              <div class="criterion-meta">3. Trình bày & Tương tác</div>
-              <span class="criterion-max">Tối đa: 2.0 điểm</span>
+              <div class="criterion-meta">2. Giải thích cơ sở khoa học theo AI</div>
+              <span class="criterion-max">Trọng số: 3.0 điểm</span>
+            </td>
+            <td class="rubric-cell-interactive active" onclick="selectRubric(2, 3, this)">
+              <span class="chip chip-high">2.5 - 3.0 điểm</span>
+              <div>Giải thích <b>rõ ràng, chuẩn xác cơ sở khoa học</b> của từng giải pháp dựa trên cách thuật toán thu thập và khai thác dữ liệu.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(2, 1.8, this)">
+              <span class="chip chip-mid">1.5 - 2.0 điểm</span>
+              <div>Nêu được lý do nhưng <b>giải thích còn đơn giản</b>, chưa làm nổi bật được mối liên hệ bản chất thuật toán.</div>
+            </td>
+            <td class="rubric-cell-interactive" onclick="selectRubric(2, 0.5, this)">
+              <span class="chip chip-low">0.0 - 1.0 điểm</span>
+              <div>Không giải thích cơ sở khoa học, hoặc giải thích sai lệch hoàn toàn về bản chất thuật toán thu thập dữ liệu.</div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="criterion-meta">3. Hoàn thiện, logic &amp; thuyết phục</div>
+              <span class="criterion-max">Trọng số: 2.0 điểm</span>
             </td>
             <td class="rubric-cell-interactive active" onclick="selectRubric(3, 2, this)">
               <span class="chip chip-high">2.0 điểm</span>
-              <div>Đúng hạn, câu cú mạch lạc, chuẩn chính tả; <b>có phản hồi tích cực cho ít nhất 1 bạn học</b>.</div>
+              <div>Đặt đúng tiêu đề <code>[Họ tên - Lớp]</code>, nộp đúng hạn, câu từ gãy gọn, chuẩn chính tả, đủ 2 phần Thao tác &amp; Cơ sở.</div>
             </td>
             <td class="rubric-cell-interactive" onclick="selectRubric(3, 1, this)">
               <span class="chip chip-mid">1.0 điểm</span>
-              <div>Bài viết rõ ràng nhưng <b>chưa thực hiện phản hồi</b> cho bạn học nào trong lớp.</div>
+              <div>Nộp bài đúng hạn, đủ ý cơ bản nhưng diễn đạt còn sơ sài, câu từ chưa gãy gọn hoặc còn một số lỗi chính tả.</div>
             </td>
             <td class="rubric-cell-interactive" onclick="selectRubric(3, 0, this)">
-              <span class="chip chip-low">0 điểm</span>
-              <div>Nộp quá hạn hoặc cẩu thả, ngôn từ thiếu văn hóa giao tiếp mạng.</div>
+              <span class="chip chip-low">0.0 điểm</span>
+              <div>Nộp trễ hạn, trình bày cẩu thả, cụt lủn, chắp vá, sai nhiều lỗi chính tả hoặc thiếu hẳn một phần nội dung bắt buộc.</div>
             </td>
           </tr>
         </tbody>
@@ -1099,7 +1099,7 @@
     </div>
 
     <div class="rubric-score-bar">
-      <span>Điểm ước tính theo Rubric hiện tại: <strong class="rubric-score-val" id="rubricScoreCalc">10 / 10 điểm</strong></span>
+      <span>Điểm ước tính theo Rubric hiện tại: <strong class="rubric-score-val" id="rubricScoreCalc">10.0 / 10 điểm</strong></span>
       <span style="font-size: 0.82rem; color: #94a3b8;">(Thang điểm định lượng hỗ trợ GV chấm chính thức trên LMS)</span>
     </div>
   </div>
@@ -1167,19 +1167,19 @@
 
     <!-- CHECKLIST VALIDATOR -->
     <div class="checklist-box">
-      <div class="checklist-title">Kiểm tra tiêu chí tự động trước khi đăng:</div>
+      <div class="checklist-title">Kiểm tra tiêu chuẩn bài viết trước khi đăng:</div>
       <div class="checklist-items">
+        <span class="chk-item" id="chkTitle"><span class="chk-icon">⚪</span> Tiêu đề [Họ tên - Lớp]</span>
         <span class="chk-item" id="chkSolCount"><span class="chk-icon">⚪</span> Đủ 2 giải pháp kỹ thuật</span>
-        <span class="chk-item" id="chkExplanation"><span class="chk-icon">⚪</span> Có giải thích cơ sở thuật toán</span>
-        <span class="chk-item" id="chkLength"><span class="chk-icon">⚪</span> Độ dài đạt chuẩn (≥ 40 từ)</span>
-        <span class="chk-item" id="chkInteraction"><span class="chk-icon">⚪</span> Phản hồi tương tác bạn học</span>
+        <span class="chk-item" id="chkExplanation"><span class="chk-icon">⚪</span> Có giải thích cơ sở khoa học</span>
+        <span class="chk-item" id="chkLength"><span class="chk-icon">⚪</span> Bố cục & độ dài (≥ 30 từ)</span>
       </div>
     </div>
 
     <!-- ACTIONS -->
     <div class="form-action-row">
       <button class="btn-outline-aux" type="button" onclick="showExemplarModal()">
-        <span>👁️ Xem bài viết mẫu đạt 10/10</span>
+        <span>👁️ Xem bài viết mẫu đạt 10.0/10.0</span>
       </button>
 
       <div style="display: flex; gap: 10px;">
@@ -1211,36 +1211,20 @@
           <div class="author-wrap">
             <div class="author-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">MT</div>
             <div class="author-details">
-              <span class="author-name">Trần Minh Thư (Lớp 6A) 🌟</span>
+              <span class="author-name">[Trần Minh Thư - Lớp 6A] 🌟</span>
               <span class="author-time">15 phút trước • Tiêu biểu</span>
             </div>
           </div>
-          <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10/10 ⭐</span>
+          <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10.0/10 ⭐</span>
         </div>
-        <div class="post-title-text">Cách kiểm soát gợi ý trên YouTube cá nhân của mình</div>
-        <div class="post-body-text">Chào thầy cô và các bạn, để không bị cuốn vào "Bong bóng thông tin", mình áp dụng 2 cách:
-1. Cứ mỗi cuối tuần, mình vào Cài đặt tài khoản chọn "Xóa toàn bộ lịch sử xem và tìm kiếm". Lý do: Xóa dữ liệu cũ thì thuật toán AI không còn cơ sở để nhồi nhét video cùng một chủ đề nữa.
-2. Bật tab Ẩn danh (Incognito) khi muốn tra cứu các chủ đề lạ. Lý do: Giúp ngăn YouTube ghi nhận các tò mò nhất thời vào hồ sơ sở thích cá nhân, tránh bị quảng cáo bám đuổi!</div>
+        <div class="post-title-text">[Trần Minh Thư - Lớp 6A] Cách kiểm soát gợi ý trên YouTube cá nhân</div>
+        <div class="post-body-text">Kính thưa thầy cô, để không bị cuốn vào "Bong bóng thông tin" và bảo vệ dữ liệu cá nhân, em xin đề xuất 2 thao tác kỹ thuật:
+1. Thao tác 1 - Định kỳ cuối tuần vào Cài đặt chọn "Xóa toàn bộ lịch sử xem và tìm kiếm". Cơ sở khoa học: Xóa dữ liệu cũ thì thuật toán AI không còn cơ sở để nhồi nhét video cùng một chủ đề nữa, mất dấu vết bám đuổi.
+2. Thao tác 2 - Bật tab Ẩn danh (Incognito Mode) khi muốn tra cứu các chủ đề lạ. Cơ sở khoa học: Giúp ngăn YouTube ghi nhận các tò mò nhất thời vào hồ sơ sở thích cá nhân, tránh bị quảng cáo bám đuổi và giữ kín quyền riêng tư số.</div>
 
         <div class="post-actions-row">
-          <button class="btn-action" onclick="toggleLike(this, 12)"><span>❤️ Thích</span> <strong>12</strong></button>
-          <button class="btn-action" onclick="toggleReplyBox('replyBox1')"><span>💬 Phản hồi</span> <strong>2</strong></button>
-          <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">Đã duyệt bởi GV</span>
-        </div>
-
-        <div class="replies-wrap" id="repliesWrap1">
-          <div class="reply-item">
-            <div class="reply-header">
-              <span class="reply-author">Hoàng Tuấn:</span>
-              <span style="color: #64748b;">10 phút trước</span>
-            </div>
-            <div>Mình cũng áp dụng cách dùng tab ẩn danh giống bạn Thư và thấy trang chủ bớt bị lặp lại video cũ hẳn! Cảm ơn chia sẻ rất thực tế của bạn.</div>
-          </div>
-        </div>
-
-        <div class="reply-input-box" id="replyBox1">
-          <textarea class="reply-textarea" rows="2" placeholder="Nhập ý kiến góp ý mang tính xây dựng của em cho bạn Minh Thư..."></textarea>
-          <button class="reply-btn-submit" onclick="submitReply('replyBox1', 'repliesWrap1', 'Trần Minh Thư')">Gửi phản hồi 🚀</button>
+          <span style="font-size: 0.8rem; color: #34d399; font-weight: 700;">✅ Điểm nội dung: 10.0 / 10.0</span>
+          <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">Đã duyệt bởi GV bộ môn</span>
         </div>
       </div>
 
@@ -1250,36 +1234,20 @@
           <div class="author-wrap">
             <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #0ea5e9);">QB</div>
             <div class="author-details">
-              <span class="author-name">Lê Quốc Bảo (Lớp 6A)</span>
-              <span class="author-time">30 phút trước</span>
+              <span class="author-name">[Lê Quốc Bảo - Lớp 6A] 🌟</span>
+              <span class="author-time">30 phút trước • Tiêu biểu</span>
             </div>
           </div>
-          <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10/10 ⭐</span>
+          <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10.0/10 ⭐</span>
         </div>
-        <div class="post-title-text">Kết hợp tắt Tự động phát và cài đặt giới hạn thời gian</div>
-        <div class="post-body-text">Sau khi chơi trò chơi mô phỏng AI ở Hoạt động 2, em nhận thấy nguy hiểm nhất là bị thuật toán giữ chân liên tục qua tính năng phát liên hoàn. Do đó em đề xuất:
-1. Tắt công tắc "Tự động phát video tiếp theo" (Autoplay) trên màn hình YouTube. Cơ sở: Chặn đứng bẫy chuỗi gợi ý video của AI, buộc bản thân phải chủ động dừng lại suy nghĩ trước khi xem clip mới.
-2. Cài đặt tính năng "Nhắc tôi nghỉ ngơi" sau mỗi 45 phút trong Cài đặt chung của ứng dụng. Cơ sở: Giúp học sinh kiểm soát thời lượng sử dụng thiết bị, không bị rơi vào trạng thái xem vô thức như bạn Nam trong bài học.</div>
+        <div class="post-title-text">[Lê Quốc Bảo - Lớp 6A] Tắt Tự động phát và cài đặt giới hạn thời gian</div>
+        <div class="post-body-text">Kính thưa thầy cô, sau khi chơi trò chơi mô phỏng AI ở Hoạt động 2, em nhận thấy nguy hiểm nhất là bị thuật toán giữ chân liên tục qua tính năng phát liên hoàn. Do đó em đề xuất:
+1. Thao tác 1 - Tắt công tắc "Tự động phát video tiếp theo" (Autoplay) trên màn hình YouTube. Cơ sở khoa học: Chặn đứng bẫy chuỗi gợi ý video của AI, buộc bản thân phải chủ động dừng lại suy nghĩ trước khi xem clip mới.
+2. Thao tác 2 - Cài đặt tính năng "Nhắc tôi nghỉ ngơi" sau mỗi 45 phút trong Cài đặt chung của ứng dụng. Cơ sở khoa học: Giúp học sinh kiểm soát thời lượng sử dụng thiết bị, không bị rơi vào trạng thái xem vô thức như bạn Nam trong bài học.</div>
 
         <div class="post-actions-row">
-          <button class="btn-action" onclick="toggleLike(this, 9)"><span>❤️ Thích</span> <strong>9</strong></button>
-          <button class="btn-action" onclick="toggleReplyBox('replyBox2')"><span>💬 Phản hồi</span> <strong>1</strong></button>
-          <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">Đã duyệt bởi GV</span>
-        </div>
-
-        <div class="replies-wrap" id="repliesWrap2">
-          <div class="reply-item">
-            <div class="reply-header">
-              <span class="reply-author">Vũ Mai Anh:</span>
-              <span style="color: #64748b;">18 phút trước</span>
-            </div>
-            <div>Ý kiến đặt giới hạn 45 phút rất chuẩn luôn bạn ơi, nhiều hôm mình xem Minecraft quên cả giờ làm bài tập!</div>
-          </div>
-        </div>
-
-        <div class="reply-input-box" id="replyBox2">
-          <textarea class="reply-textarea" rows="2" placeholder="Nhập ý kiến góp ý của em cho bạn Quốc Bảo..."></textarea>
-          <button class="reply-btn-submit" onclick="submitReply('replyBox2', 'repliesWrap2', 'Lê Quốc Bảo')">Gửi phản hồi 🚀</button>
+          <span style="font-size: 0.8rem; color: #34d399; font-weight: 700;">✅ Điểm nội dung: 10.0 / 10.0</span>
+          <span style="font-size: 0.78rem; color: #94a3b8; margin-left: auto;">Đã duyệt bởi GV bộ môn</span>
         </div>
       </div>
     </div>
@@ -1465,12 +1433,16 @@
   }
 
   // ================= CHECKLIST VALIDATOR =================
-  let hasRepliedToPeer = false;
-
   function validateChecklist() {
     let solCount = 0;
     let hasWhy = false;
     let wordCount = 0;
+    let hasTitle = false;
+
+    const titleText = (document.getElementById('postTitleInput')?.value || '').trim();
+    if (titleText.startsWith('[') && titleText.includes(']') && titleText.length >= 10) {
+      hasTitle = true;
+    }
 
     if (currentInputMode === 'guided') {
       const op1 = document.getElementById('op1Name').value.trim();
@@ -1492,12 +1464,12 @@
       if (text.toLowerCase().includes('lý do') || text.toLowerCase().includes('cơ sở') || text.toLowerCase().includes('vì')) hasWhy = true;
     }
 
+    updateChk('chkTitle', hasTitle, `Tiêu đề [Họ tên - Lớp]`);
     updateChk('chkSolCount', solCount >= 2, `Đủ 2 giải pháp (${solCount}/2)`);
     updateChk('chkExplanation', hasWhy, `Có giải thích cơ sở`);
-    updateChk('chkLength', wordCount >= 30, `Độ dài đạt chuẩn (${wordCount} từ)`);
-    updateChk('chkInteraction', hasRepliedToPeer, `Phản hồi bạn học (${hasRepliedToPeer ? '1' : '0'}/1)`);
+    updateChk('chkLength', wordCount >= 30, `Bố cục & độ dài (${wordCount} từ)`);
 
-    return (solCount >= 2 && hasWhy && wordCount >= 25);
+    return (hasTitle && solCount >= 2 && hasWhy && wordCount >= 25);
   }
 
   function updateChk(id, valid, text) {
@@ -1514,7 +1486,7 @@
   });
 
   // ================= RUBRIC LOGIC =================
-  let rubricScores = { c1: 6, c2: 2, c3: 2 };
+  let rubricScores = { c1: 5.0, c2: 3.0, c3: 2.0 };
 
   function selectRubric(criterion, val, cell) {
     playSound('click');
@@ -1526,8 +1498,8 @@
     if (criterion === 2) rubricScores.c2 = val;
     if (criterion === 3) rubricScores.c3 = val;
 
-    const total = rubricScores.c1 + rubricScores.c2 + rubricScores.c3;
-    document.getElementById('rubricScoreCalc').innerText = `${total} / 10 điểm`;
+    const total = (rubricScores.c1 + rubricScores.c2 + rubricScores.c3).toFixed(1);
+    document.getElementById('rubricScoreCalc').innerText = `${total} / 10.0 điểm`;
   }
 
   function setRubricMode(mode) {
@@ -1536,68 +1508,17 @@
     document.getElementById('btnRubricTeacher').classList.toggle('active', mode === 'teacher');
 
     if (mode === 'teacher') {
-      showToast("📋 Đang hiển thị Bảng kiểm tiêu chuẩn của Giáo viên (Thang điểm 10/10)");
+      showToast("📋 Đang hiển thị Bảng kiểm tiêu chuẩn của Giáo viên (Thang điểm 10.0)");
     } else {
       showToast("✍️ Chế độ Tự đối chiếu: Em có thể tự nhấp vào từng ô để tính điểm bài làm của mình");
     }
-  }
-
-  // ================= REPLIES & INTERACTIONS =================
-  function toggleLike(btn, baseCount) {
-    playSound('like');
-    const isLiked = btn.classList.toggle('liked');
-    const countEl = btn.querySelector('strong');
-    let count = parseInt(countEl.innerText) || baseCount;
-    count = isLiked ? count + 1 : count - 1;
-    countEl.innerText = count;
-  }
-
-  function toggleReplyBox(boxId) {
-    playSound('click');
-    const box = document.getElementById(boxId);
-    if (box) box.classList.toggle('open');
-  }
-
-  function submitReply(boxId, wrapId, targetAuthor) {
-    const box = document.getElementById(boxId);
-    const textarea = box.querySelector('.reply-textarea');
-    const replyText = textarea.value.trim();
-
-    if (!replyText) {
-      alert("Em vui lòng nhập nội dung góp ý trước khi gửi nhé!");
-      return;
-    }
-
-    playSound('post');
-    const wrap = document.getElementById(wrapId);
-    const newReply = document.createElement('div');
-    newReply.className = 'reply-item';
-    newReply.innerHTML = `
-      <div class="reply-header">
-        <span class="reply-author" style="color: #34d399;">Nguyễn Văn An (Em):</span>
-        <span style="color: #64748b;">Vừa xong</span>
-      </div>
-      <div>${replyText.replace(/\n/g, '<br>')}</div>
-    `;
-    wrap.appendChild(newReply);
-    textarea.value = '';
-    box.classList.remove('open');
-
-    hasRepliedToPeer = true;
-    validateChecklist();
-
-    // Increment replies counter
-    const repVal = document.getElementById('totalRepliesVal');
-    if (repVal) repVal.innerText = (parseInt(repVal.innerText) || 38) + 1;
-
-    showToast(`🎉 Em đã gửi phản hồi thành công cho bạn <b>${targetAuthor}</b>! Tiêu chí tương tác đã hoàn thành.`);
   }
 
   // ================= POST SUBMIT =================
   let hasSubmittedPost = false;
 
   function handlePostSubmit() {
-    const title = document.getElementById('postTitleInput').value.trim() || "Hai thao tác kỹ thuật giúp mình làm chủ thuật toán gợi ý";
+    const title = document.getElementById('postTitleInput').value.trim() || "[Nguyễn Văn An - Lớp 6A] Giải pháp kiểm soát thuật toán gợi ý và bảo vệ quyền riêng tư";
     const authorName = document.getElementById('authorNameInput').value.trim() || "Nguyễn Văn An";
     const authorClass = document.getElementById('authorClassInput').value.trim() || "Lớp 6A";
 
@@ -1612,7 +1533,7 @@
         alert("Em cần nhập đủ ít nhất 2 thao tác kỹ thuật (hoặc nhấp chọn các gợi ý trong Ngân hàng giải pháp ở trên) trước khi đăng nhé!");
         return;
       }
-      bodyText = `Chào thầy cô và các bạn, để thoát khỏi bong bóng thông tin, mình xin đề xuất 2 thao tác kỹ thuật:\n\n1. ${op1}\nCơ sở khoa học: ${why1 || 'Giúp xóa dấu vết hành vi cũ để AI không thể bám đuổi gợi ý lặp lại.'}\n\n2. ${op2}\nCơ sở khoa học: ${why2 || 'Hạn chế việc hệ thống ghi nhận hồ sơ cá nhân và mở rộng góc nhìn nội dung.'}`;
+      bodyText = `Kính thưa thầy cô, để không bị kẹt trong 'Bong bóng thông tin' và bảo vệ dữ liệu cá nhân, em xin đề xuất 02 thao tác kỹ thuật thực tế sau:\n\n1. Thao tác 1 - ${op1}\nCơ sở khoa học: ${why1 || 'Giúp xóa dấu vết hành vi cũ để AI không thể bám đuổi gợi ý lặp lại.'}\n\n2. Thao tác 2 - ${op2}\nCơ sở khoa học: ${why2 || 'Hạn chế việc hệ thống ghi nhận hồ sơ cá nhân và mở rộng góc nhìn nội dung.'}`;
     } else {
       bodyText = document.getElementById('postContentFree').value.trim();
       if (bodyText.length < 20) {
@@ -1637,16 +1558,16 @@
         <div class="author-wrap">
           <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">VA</div>
           <div class="author-details">
-            <span class="author-name">${authorName} (${authorClass}) • Bài của em ⭐</span>
+            <span class="author-name">[${authorName} - ${authorClass}] • Bài của em ⭐</span>
             <span class="author-time">Vừa xong • Trạng thái: Đã lưu LMS</span>
           </div>
         </div>
-        <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10/10 ⭐</span>
+        <span class="post-rubric-badge badge-score-10">Điểm Rubric: 10.0/10 ⭐</span>
       </div>
       <div class="post-title-text">${title}</div>
       <div class="post-body-text">${bodyText.replace(/\n/g, '<br>')}</div>
       <div class="post-actions-row">
-        <button class="btn-action liked" onclick="toggleLike(this, 1)"><span>❤️ Thích</span> <strong>1</strong></button>
+        <span style="font-size: 0.8rem; color: #34d399; font-weight: 700;">✅ Điểm nội dung: 10.0 / 10.0</span>
         <span style="font-size: 0.78rem; color: #34d399; margin-left: auto;">✅ Đã gửi tín hiệu hoàn thành lên LMS</span>
       </div>
     `;
