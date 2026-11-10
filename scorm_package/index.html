@@ -947,46 +947,29 @@
       display: flex;
       justify-content: center;
       gap: 14px;
-      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
-    .btn-finish-next {
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    .btn-replay {
+      background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
       color: white;
-      border: none;
-      padding: 14px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 13px 28px;
       border-radius: 12px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
       font-weight: 800;
+      font-size: 0.95rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
-      transition: all 0.2s;
-    }
-
-    .btn-finish-next:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
-    }
-
-    .btn-replay {
-      background: rgba(255, 255, 255, 0.1);
-      color: #e2e8f0;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 14px 22px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.4);
       transition: all 0.2s;
     }
 
     .btn-replay:hover {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
     }
 
     #confettiCanvas {
@@ -1679,39 +1662,42 @@
       </div>
     </div>
 
-    <!-- Takeaways for Student Workbook -->
-    <div class="takeaways-card">
-      <div class="takeaway-header">
-        <span>📝</span> 3 TỪ KHÓA CỐT LÕI CẦN GHI VÀO SÁCH HỌC SINH
+    <!-- Unified Workbook Alignment Card (Khớp 100% với Sách học sinh Mục II) -->
+    <div class="takeaways-card" style="background: rgba(30, 27, 75, 0.85); border: 1.5px solid #6366f1; border-radius: 16px; padding: 22px 26px; max-width: 820px; margin: 0 auto 28px; text-align: left;">
+      <div class="takeaway-header" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 800; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+        <span>📖</span> BƯỚC 3: MỞ SÁCH HỌC SINH ĐỂ HOÀN THÀNH MỤC II (HÌNH THÀNH KIẾN THỨC)
       </div>
-      <div class="takeaway-item">
-        <div class="takeaway-bullet">1</div>
-        <div><strong>Cá nhân hóa:</strong> Thuật toán theo dõi lịch sử xem, thời gian dừng và tương tác của người dùng để liên tục đề xuất các video cùng sở thích nhằm tối đa hóa thời gian ở lại ứng dụng.</div>
-      </div>
-      <div class="takeaway-item">
-        <div class="takeaway-bullet">2</div>
-        <div><strong>Bong bóng thông tin:</strong> Hiện tượng người dùng bị cô lập trong "chiếc lồng nhận thức" chỉ chứa nội dung mà thuật toán nghĩ là họ thích, ngăn chặn các quan điểm mới và thông tin đa chiều.</div>
-      </div>
-      <div class="takeaway-item">
-        <div class="takeaway-bullet">3</div>
-        <div><strong>Quyền riêng tư & Thu thập dữ liệu:</strong> Để gợi ý ngày càng chính xác, thuật toán âm thầm thu thập toàn diện hành vi số của người dùng, làm gia tăng nguy cơ lộ lọt dữ liệu cá nhân.</div>
-      </div>
-    </div>
-
-    <!-- Workbook Guidance Box (Step 3) -->
-    <div class="workbook-prompt-box">
-      <div class="workbook-header">
-        <span>📖</span> BƯỚC 3: MỞ SÁCH HỌC SINH ĐỂ HOÀN THÀNH ĐIỀN KHUYẾT (MỤC II)
-      </div>
-      <p style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 10px; line-height: 1.5;">
-        Em hãy mở <strong>Sách học sinh (Mục II - Hình thành kiến thức)</strong>, sử dụng kiến thức từ video và trải nghiệm vừa rồi để hoàn thành 4 mục từ khóa điền khuyết:
+      <p style="font-size: 0.92rem; color: #cbd5e1; margin-bottom: 14px; line-height: 1.5;">
+        Em hãy mở <strong>Sách học sinh (Mục II - Nội dung bài học: Khám phá thuật toán gợi ý và "Bong bóng thông tin")</strong> để tóm tắt kiến thức dùng làm tài liệu ôn tập nhé:
       </p>
-      <ol style="margin-left: 20px; line-height: 1.65; font-size: 0.88rem; color: #e2e8f0;">
-        <li><strong>Cá nhân hóa:</strong> Phân tích lịch sử xem để <em>dự đoán sở thích</em> và tối đa hóa thời gian ở lại.</li>
-        <li><strong>Mặt tích cực:</strong> Giúp <em>tiết kiệm thời gian tìm kiếm</em> và gợi ý nội dung hữu ích.</li>
-        <li><strong>Bong bóng thông tin:</strong> Chỉ gợi ý nội dung cùng gu, <em>cô lập người dùng khỏi các góc nhìn đa chiều</em>.</li>
-        <li><strong>Quyền riêng tư:</strong> Âm thầm thu thập hành vi số, làm tăng nguy cơ <em>mất an toàn thông tin cá nhân</em>.</li>
-      </ol>
+
+      <!-- 1. Ghi chú sau trò chơi -->
+      <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 16px 20px; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+          <span style="font-size: 0.95rem; font-weight: 800; color: #38bdf8;">1. Ghi chú sau trò chơi:</span>
+          <span style="font-size: 0.78rem; background: rgba(99, 102, 241, 0.2); color: #c7d2fe; border: 1px solid rgba(99, 102, 241, 0.4); padding: 3px 12px; border-radius: 999px; font-weight: 700;">Gợi ý từ khóa: cá nhân hóa, bong bóng thông tin, quyền riêng tư</span>
+        </div>
+        <p style="font-size: 0.94rem; line-height: 1.75; color: #e2e8f0; margin: 0;">
+          "Để giữ chân người dùng, thuật toán AI sẽ liên tục ghi nhận thói quen và <b style="color: #38bdf8; text-decoration: underline;">cá nhân hóa</b> nội dung sao cho đúng với sở thích của họ. Việc này tạo ra một hiện tượng gọi là '<b style="color: #f472b6; text-decoration: underline;">bong bóng thông tin</b>' và làm tăng nguy cơ mất <b style="color: #fbbf24; text-decoration: underline;">quyền riêng tư</b> của người dùng."
+        </p>
+      </div>
+
+      <!-- 2. Hộp kiến thức -->
+      <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 16px 20px;">
+        <div style="font-size: 0.95rem; font-weight: 800; color: #a78bfa; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+          <span>📌</span> Hộp kiến thức: Tính hai mặt của thuật toán AI gợi ý
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 12px 14px;">
+            <div style="font-weight: 800; color: #34d399; font-size: 0.88rem; margin-bottom: 4px;">✅ Mặt tích cực:</div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">Cá nhân hóa trải nghiệm. Người dùng nhanh chóng tìm được nội dung đúng sở thích mà không mất thời gian tìm kiếm.</div>
+          </div>
+          <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px; padding: 12px 14px;">
+            <div style="font-weight: 800; color: #f87171; font-size: 0.88rem; margin-bottom: 4px;">⚠️ Mặt hạn chế:</div>
+            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">Người dùng bị giới hạn thông tin, góc nhìn bị thu hẹp. Hơn nữa, việc hệ thống liên tục thu thập lịch sử hoạt động gây ra rủi ro mất quyền riêng tư.</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="finish-actions">
@@ -2468,15 +2454,6 @@
     document.getElementById('simStage').style.display = 'block';
 
     renderRound(1);
-  }
-
-  function proceedToActivity3() {
-    playSound('click');
-    if (window.parent && window.parent.goToActivity) {
-      window.parent.goToActivity(3);
-    } else {
-      window.location.href = "hoc_lieu_3_gamification_keo_tha.html";
-    }
   }
 
   // ================= CONFETTI CANVAS ENGINE =================
