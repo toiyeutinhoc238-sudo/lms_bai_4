@@ -37,22 +37,18 @@
 ---
 
 ### HOẠT ĐỘNG 2: HÌNH THÀNH KIẾN THỨC MỚI (15 PHÚT)
-#### 📌 Nhiệm vụ: Ghi chép sau khi hoàn thành Trò chơi mô phỏng "Em là Thuật toán Gợi ý"
+#### 📌 Nhiệm vụ: Ghi chép sau khi hoàn thành Trò chơi mô phỏng "Đóng vai hệ thống AI"
 
-Sau khi trải nghiệm đóng vai thuật toán AI trên LMS, em hãy điền các từ khóa thích hợp vào chỗ trống để chốt lại kiến thức cốt lõi:
+*Em hãy mở Bài tập tương tác "Đóng vai hệ thống AI" trên LMS để giữ chân người dùng ảo tên Nam. Sau khi hoàn thành trò chơi, em hãy điền vào chỗ trống dưới đây:*
 
-1. **Khái niệm Cá nhân hóa:**  
-   Hệ thống gợi ý hoạt động bằng cách thu thập và phân tích dữ liệu lịch sử tương tác của người dùng để .................................................... và đề xuất những nội dung phù hợp nhất với sở thích cá nhân.
+> 💡 **Gợi ý từ khóa:** *cá nhân hóa*, *bong bóng thông tin*, *quyền riêng tư*
 
-2. **Mặt tích cực của tính năng gợi ý AI:**  
-   Giúp người dùng ...........................................................................................................................................................  
-   và tiết kiệm thời gian tìm kiếm thông tin, giải trí hoặc học tập.
+1. **Ghi chú tóm tắt sau trò chơi:**  
+   "Để giữ chân người dùng, thuật toán AI sẽ liên tục ghi nhận thói quen và .................................................... nội dung sao cho đúng với sở thích của họ. Việc này tạo ra một hiện tượng gọi là '....................................................'."
 
-3. **Hiện tượng "Bong bóng thông tin":**  
-   Khi thuật toán liên tục ưu tiên những nội dung người dùng thích để giữ chân họ trên mạng xã hội, người dùng sẽ rơi vào một "chiếc bong bóng" chỉ toàn những thông tin ..........................................................................................., khiến họ bị cô lập khỏi các ....................................................................................................................................................
-
-4. **Rủi ro về Quyền riêng tư:**  
-   Để đưa ra gợi ý ngày càng chính xác, các nền tảng công nghệ âm thầm thu thập lượng lớn ................................................................... (vị trí, thao tác nhấp chuột, thời gian dừng màn hình...), khiến người dùng có nguy cơ ..........................................................................................................................................................
+2. **📌 Hộp kiến thức: Tính hai mặt của thuật toán AI gợi ý:**  
+   * **Mặt tích cực:** Cá nhân hóa trải nghiệm. Người dùng nhanh chóng tìm được nội dung đúng sở thích mà không mất thời gian tìm kiếm.  
+   * **Mặt hạn chế:** Người dùng bị giới hạn thông tin, góc nhìn bị thu hẹp. Hơn nữa, việc hệ thống liên tục thu thập lịch sử hoạt động gây ra rủi ro mất quyền riêng tư.
 
 * **Mã xác nhận hoàn thành Hoạt động 2 trên LMS của em:** `[............................................................]`
 
