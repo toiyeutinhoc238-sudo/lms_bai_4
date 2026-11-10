@@ -1423,11 +1423,6 @@
         <span>🎬 HỌC LIỆU 2 • VIDEO TƯƠNG TÁC & MÔ PHỎNG THUẬT TOÁN AI</span>
       </div>
     </div>
-    <div class="hud-controls">
-      <span class="badge-pill badge-scorm" id="scormStatusPill">⚡ SCORM 1.2 READY</span>
-      <span class="badge-pill badge-timer" id="timerDisplay">⏱️ 00:00</span>
-      <button class="btn-sound-toggle" onclick="toggleAudio()" id="btnAudioToggle">🔊 Âm thanh: BẬT</button>
-    </div>
   </header>
 
   <!-- Flow Stepper Navigation -->
@@ -1488,26 +1483,7 @@
       </div>
     </div>
 
-    <!-- Video Action & Lock Status Bar -->
-    <div class="video-action-bar">
-      <div style="display: flex; flex-direction: column; gap: 6px;">
-        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-          <span class="video-lock-badge" id="videoLockBadge">🔒 KHÓA TUA NHANH</span>
-          <span class="video-status-text">
-            ⏱️ Đã xem: <strong id="timeCurrent" style="color: var(--neon-cyan);">00:00</strong> / <span id="timeDuration">02:50</span> (<strong id="videoWatchProgress" style="color: var(--neon-cyan);">0%</strong>)
-          </span>
-        </div>
-        <div style="font-size: 0.8rem; color: #94a3b8;">
-          ⏳ Thời gian còn lại: <strong id="timeRemaining" style="color: #cbd5e1;">--:--</strong> • Video đang phát tuần tự, hệ thống sẽ tự động mở trò chơi khi xem hết.
-        </div>
-      </div>
 
-      <div id="videoActionBtnContainer">
-        <button id="btnLockSim" class="btn-locked-sim" disabled title="Em cần theo dõi hết video để mở khóa">
-          <span>🔒 Đang khóa • Hãy xem hết video</span>
-        </button>
-      </div>
-    </div>
 
 
   </section>
@@ -2004,13 +1980,15 @@
   function toggleAudio() {
     audioEnabled = !audioEnabled;
     const btn = document.getElementById('btnAudioToggle');
-    if (audioEnabled) {
-      btn.innerText = "🔊 Âm thanh: BẬT";
-      btn.style.color = "#c7d2fe";
-      playSound('click');
-    } else {
-      btn.innerText = "🔇 Âm thanh: TẮT";
-      btn.style.color = "#94a3b8";
+    if (btn) {
+      if (audioEnabled) {
+        btn.innerText = "🔊 Âm thanh: BẬT";
+        btn.style.color = "#c7d2fe";
+        playSound('click');
+      } else {
+        btn.innerText = "🔇 Âm thanh: TẮT";
+        btn.style.color = "#94a3b8";
+      }
     }
   }
 
@@ -2021,7 +1999,8 @@
       timerSeconds++;
       const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
       const s = (timerSeconds % 60).toString().padStart(2, '0');
-      document.getElementById('timerDisplay').innerText = `⏱️ ${m}:${s}`;
+      const timerEl = document.getElementById('timerDisplay');
+      if (timerEl) timerEl.innerText = `⏱️ ${m}:${s}`;
     }, 1000);
   }
 
