@@ -240,64 +240,47 @@ Thiết kế kịch bản dựa trên các trích dẫn khoa học từ tài li�
 
 ---
 
-# PHẦN 4: DIỄN ĐÀN THẢO LUẬN TRÊN BẢNG TƯỜNG ẢO PADLET KÈM RUBRIC — HOẠT ĐỘNG 4 (VẬN DỤNG - 20 PHÚT)
+# PHẦN 4: DIỄN ĐÀN THẢO LUẬN (FORUM) KÈM RUBRIC — HOẠT ĐỘNG 4 (VẬN DỤNG - 20 PHÚT)
 
-* **Tên hoạt động trên LMS:** `[HĐ 4 - Vận dụng] Bảng thảo luận Padlet: "Làm sao để thoát khỏi bong bóng thông tin?"`
-* **Loại công cụ:** Bảng tường ảo đa phương tiện Padlet (Wall/Shelf) được nhúng trực tiếp qua mã iframe hoặc liên kết URL trên khóa học LMS.
+* **Tên hoạt động trên LMS:** `[HĐ 4 - Vận dụng] Diễn đàn: "Làm sao để thoát khỏi bong bóng thông tin?"`
+* **Loại hoạt động:** Standard forum for general use (Diễn đàn chuẩn có chấm điểm Whole Forum Grading bằng Rubric).
 * **Thời gian thực hiện:** 20 phút.
-* **Thang điểm:** 10 điểm (Giáo viên đánh giá theo Rubric 3 tiêu chí trực tiếp trên Padlet hoặc nhập điểm vào LMS).
-* **Điều kiện tiên quyết mở khóa trên LMS:** Đã đạt từ 8/10 điểm trở lên ở Hoạt động 3.
+* **Thang điểm:** 10 điểm (Chấm theo Rubric định lượng 3 tiêu chí).
+* **Điều kiện tiên quyết mở khóa:** Đã đạt từ 8/10 điểm trở lên ở Hoạt động 3.
 
 ---
 
-### 1. HƯỚNG DẪN GIÁO VIÊN THIẾT LẬP BẢNG PADLET
-1. **Khởi tạo bảng Padlet:**
-   - Chọn định dạng: **Tường (Wall)** hoặc **Giá sách (Shelf)**.
-   - Đặt tiêu đề: `CHỦ ĐỀ: "LÀM SAO ĐỂ THOÁT KHỎI BONG BÓNG THÔNG TIN?"`.
-   - Mô tả bảng: Nêu rõ nhiệm vụ đăng bài, quy chuẩn tiêu đề `[Họ tên - Lớp]`, yêu cầu lập dàn ý vào Sách học sinh trước khi viết và quy định tương tác (Thả tim + Bình luận bạn học).
-2. **Cấu hình tương tác & an toàn mạng:**
-   - **Tương tác (Reactions):** Bật chức năng *Thích/Thả tim* (`❤️ Like / Heart`).
-   - **Bình luận (Comments):** Bật công tắc cho phép bình luận (`Allow comments: ON`).
-   - **Bảo vệ môi trường số:** Bật *Bộ lọc ngôn từ xấu (Filter profanity: ON)* và bật duyệt bài (*Require approval: ON*) nếu cần kiểm soát luồng bài trước khi công khai.
-3. **Ghim bài Rubric 10 điểm (Pinned Post):**
-   - GV tạo một thẻ bài đầu tiên, chọn tính năng *Ghim bài (Pin post)* để học sinh luôn nhìn thấy tiêu chuẩn chấm điểm và bài mẫu hướng dẫn.
-4. **Nhúng vào LMS:**
-   - Lấy mã nhúng Padlet (Share $\rightarrow$ Embed in your blog or website $\rightarrow$ Copy embed code).
-   - Trên khóa học LMS (Moodle/vnEdu/K12Online), tạo một hoạt động *Page* hoặc *URL*, dán mã nhúng iframe để học sinh làm bài ngay trên giao diện LMS mà không cần chuyển hướng.
-
----
-
-### 2. NỘI DUNG CHỦ ĐỀ VÀ BÀI GHIM TRÊN PADLET
+### 1. NỘI DUNG CHỦ ĐỀ THẢO LUẬN (TOPIC PROMPT)
 > ### 💬 CHỦ ĐỀ THẢO LUẬN: "LÀM SAO ĐỂ THOÁT KHỎI BONG BÓNG THÔNG TIN?"
 > 
 > Chào các em học sinh lớp 6,  
 > Qua trò chơi mô phỏng ở Hoạt động 2 và bài tập phân loại ở Hoạt động 3, chúng ta đều nhận thấy thuật toán gợi ý AI rất tiện lợi nhưng cũng có thể "nhốt" chúng ta vào **bong bóng thông tin** và âm thầm **thu thập dữ liệu cá nhân**.
 > 
-> 🎯 **Nhiệm vụ của em trên bảng tường Padlet:**
-> 1. **Viết nháp vào Sách học sinh (Mục IV):** Đề xuất **ít nhất 02 thao tác kỹ thuật thực tế** và giải thích cơ sở khoa học (Vì sao cách đó giúp hạn chế sự thao túng của thuật toán?).
-> 2. **Đăng bài mới trên Padlet:** Bấm biểu tượng dấu cộng (`+`), đặt tiêu đề: `[Họ tên - Lớp]`, gõ nội dung giải pháp hoàn chỉnh. Khuyến khích bấm 📷 tải ảnh chụp dàn ý trong sách hoặc ảnh chụp màn hình thao tác kỹ thuật để đính kèm.
-> 3. **Tự đối chiếu Rubric:** Đối chiếu bài viết với Bảng kiểm Rubric 10 điểm (chấm theo chất lượng nội dung) được ghim ở đầu trang trước khi bấm Xuất bản.
+> 🎯 **Nhiệm vụ của em trên Diễn đàn:**
+> 1. **Lập dàn ý vào Sách học sinh (Mục IV):** Đề xuất **ít nhất 02 thao tác kỹ thuật thực tế** và giải thích cơ sở khoa học (Vì sao cách đó giúp hạn chế sự thao túng của thuật toán?).
+> 2. **Soạn thảo và đăng bài lên Diễn đàn LMS:** Nhập Tiêu đề và Nội dung bài viết hoàn chỉnh.
+> 3. **Tự đối chiếu Rubric & Kiểm tra tiêu chuẩn:** Quan sát bộ kiểm tra tiêu chuẩn tự động (Checklist validator: đủ 2 giải pháp, có giải thích cơ sở, độ dài $\ge 30$ từ) và đối chiếu bảng Rubric trước khi bấm nút *"ĐĂNG BÀI LÊN DIỄN ĐÀN"*.
+> 4. **Đọc và phản hồi bạn học:** Đọc bài của các bạn trong lớp, chọn ít nhất 01 bài để bấm *"💬 Phản hồi"*, viết ý kiến góp ý lịch sự, tích cực; đồng thời ghi lại tên bạn và ý kiến phản hồi vào Sách học sinh (Mục IV – Phần 2).
 
 ---
 
-### 3. MA TRẬN RUBRIC CHẤM ĐIỂM ĐỊNH LƯỢNG NỘI DUNG (PADLET CONTENT RUBRIC)
+### 2. MA TRẬN RUBRIC CHẤM ĐIỂM ĐỊNH LƯỢNG (WHOLE FORUM GRADING RUBRIC)
 
 | Tiêu chí đánh giá | Mức Tốt (Mức cao) | Mức Đạt (Mức TB) | Mức Cần cố gắng (Mức thấp) |
 |:---|:---|:---|:---|
-| **Tiêu chí 1: Tính đúng đắn và khả thi của thao tác kỹ thuật**<br>*(Trọng số: 5.0 điểm)* | **(4.5 – 5.0 điểm)**<br>Đề xuất được **từ 2 thao tác kỹ thuật hợp lý trở lên**, chính xác, dễ thực hiện trong thực tế.<br>*Ví dụ:* Xóa lịch sử duyệt web/xem video định kỳ; dùng chế độ duyệt web ẩn danh; chủ động tìm kiếm từ khóa trái chiều; tắt autoplay/hẹn giờ nghỉ ngơi sau 45 phút; tắt cá nhân hóa quảng cáo. | **(2.5 – 4.0 điểm)**<br>Chỉ nêu được **1 thao tác kỹ thuật**, hoặc các giải pháp còn chung chung, mang tính khẩu hiệu cảm tính.<br>*Ví dụ:* "Ít dùng điện thoại lại", "Chuyển sang xem kênh khác", "Không xem linh tinh". | **(0 – 2.0 điểm)**<br>Đề xuất sai phương pháp, mang tính tiêu cực hoặc giải pháp không liên quan gì đến việc tác động vào dữ liệu của thuật toán gợi ý và bảo vệ quyền riêng tư. |
-| **Tiêu chí 2: Giải thích cơ sở khoa học theo bản chất thuật toán AI**<br>*(Trọng số: 3.0 điểm)* | **(2.5 – 3.0 điểm)**<br>Giải thích được **cơ sở khoa học** của từng giải pháp dựa trên cách thuật toán hoạt động.<br>*Ví dụ:* Xóa lịch sử là xóa nguồn dữ liệu đầu vào mà AI dùng để dự đoán; tìm từ khóa mới sẽ "huấn luyện lại" AI để thuật toán đa dạng hóa nội dung gợi ý; duyệt ẩn danh ngăn thuật toán liên kết với hồ sơ cá nhân. | **(1.5 – 2.0 điểm)**<br>Nêu được giải pháp đúng nhưng **chưa giải thích được hoặc giải thích lúng túng** vì sao cách làm đó lại hạn chế được sự thao túng của thuật toán. | **(0 – 1.0 điểm)**<br>Không giải thích hoặc hoàn toàn không thể hiện được sự hiểu biết về cách thuật toán AI thu thập và xử lý dữ liệu người dùng. |
-| **Tiêu chí 3: Tính hoàn thiện, logic và độ thuyết phục của nội dung**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đặt đúng cú pháp tiêu đề `[Họ tên - Lớp]`, nộp bài đúng hạn.<br>- Bố cục rõ ràng, lập luận mạch lạc, câu cú gãy gọn, không viết tắt, không sai chính tả.<br>- Trình bày đầy đủ cả 2 phần: Thao tác kỹ thuật và Cơ sở khoa học. | **(1.0 điểm)**<br>- Đăng bài đúng hạn, câu cú cơ bản rõ ràng.<br>- Tuy nhiên cách diễn đạt còn sơ sài, câu từ chưa gãy gọn hoặc còn một số lỗi chính tả, lập luận chưa thật chặt chẽ. | **(0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, cụt lủn, chắp vá, sai nhiều lỗi chính tả hoặc thiếu hẳn một trong các phần nội dung bắt buộc. |
+| **Tiêu chí 1: Tính khả thi của giải pháp kỹ thuật**<br>*(Trọng số: 6.0 điểm)* | **(5.0 – 6.0 điểm)**<br>Đề xuất được **từ 2 thao tác kỹ thuật hợp lý trở lên**, dễ thực hiện trong thực tế.<br>*Ví dụ:* Xóa lịch sử duyệt web/xem video định kỳ; dùng chế độ duyệt web ẩn danh; chủ động tìm kiếm từ khóa trái chiều; tắt autoplay/hẹn giờ nghỉ ngơi sau 45 phút; tắt cá nhân hóa quảng cáo. | **(3.0 – 4.5 điểm)**<br>Chỉ nêu được **1 thao tác kỹ thuật**, hoặc các giải pháp còn chung chung, mang tính khẩu hiệu cảm tính.<br>*Ví dụ:* "Ít dùng điện thoại lại", "Chuyển sang xem kênh khác", "Không xem linh tinh". | **(0 – 2.5 điểm)**<br>Đề xuất sai phương pháp, mang tính tiêu cực hoặc giải pháp không liên quan gì đến việc tác động vào dữ liệu của thuật toán gợi ý và bảo vệ quyền riêng tư. |
+| **Tiêu chí 2: Hiểu bản chất cách thuật toán thu thập & khai thác dữ liệu**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>Giải thích được **cơ sở khoa học** của giải pháp dựa trên cách thuật toán hoạt động.<br>*Ví dụ:* Xóa lịch sử là xóa nguồn dữ liệu đầu vào mà AI dùng để dự đoán; tìm từ khóa mới sẽ "huấn luyện lại" AI để thuật toán đa dạng hóa nội dung gợi ý; duyệt ẩn danh ngăn thuật toán liên kết với hồ sơ cá nhân. | **(1.0 điểm)**<br>Nêu được giải pháp đúng nhưng **chưa giải thích được hoặc giải thích lúng túng** vì sao cách làm đó lại hạn chế được sự thao túng của thuật toán. | **(0 điểm)**<br>Không giải thích hoặc hoàn toàn không thể hiện được sự hiểu biết về cách thuật toán AI thu thập và xử lý dữ liệu người dùng. |
+| **Tiêu chí 3: Trình bày bài viết và phản hồi bạn học tích cực**<br>*(Trọng số: 2.0 điểm)* | **(2.0 điểm)**<br>- Đăng bài đúng thời hạn.<br>- Trình bày rõ ràng, câu cú gãy gọn, không viết tắt, không sai chính tả.<br>- **Có phản hồi mang tính xây dựng, lịch sự với bài của ít nhất 01 bạn khác**. | **(1.0 điểm)**<br>- Đăng bài đúng thời hạn, câu cú rõ ràng.<br>- Tuy nhiên **chưa có tương tác** phản hồi bài viết của bạn bè trong lớp. | **(0 điểm)**<br>- Nộp bài trễ hạn.<br>- Trình bày cẩu thả, sai nhiều lỗi chính tả hoặc dùng ngôn từ thiếu văn hóa, không tương tác với ai. |
 
 ---
 
-### 4. BÀI ĐĂNG MẪU ĐỊNH HƯỚNG TRÊN PADLET (ĐẠT 10/10 ĐIỂM)
-* **Thẻ bài đăng mẫu của học sinh trên Padlet:**
-  > **Tiêu đề (Subject):** `Nguyễn Văn Nam - Lớp 6A1: 2 giải pháp công nghệ làm chủ thuật toán YouTube`  
-  > *"Chào cô và các bạn, để không bị cuốn vào bong bóng thông tin của YouTube, mình đã áp dụng 2 thao tác kỹ thuật thực tế sau:*  
-  > *1. **Định kỳ xóa lịch sử xem và tìm kiếm (Clear Watch History):** Thuật toán AI phân tích lịch sử để đoán sở thích của mình. Khi xóa dữ liệu cũ, AI sẽ không còn căn cứ để nhồi nhét mãi các video cùng chủ đề nữa.*  
-  > *2. **Bật chế độ Ẩn danh (Incognito Mode) khi tra cứu chủ đề mới hoặc tìm bài tập:** Chế độ này không lưu lại cookie và lịch sử, giúp thuật toán không gắn nhãn sở thích và không gửi quảng cáo bám đuổi.*  
-  > *Rất mong nhận được ý kiến đóng góp của cô và các bạn!"*  
-  > *(Đính kèm: Ảnh chụp trang Sách học sinh Mục IV đã viết dàn ý)*
+### 3. BÀI ĐĂNG MẪU VÀ BÌNH LUẬN TƯƠNG TÁC ĐỊNH HƯỚNG
+* **Bài đăng mẫu của học sinh trên Diễn đàn (Đạt 10/10 điểm Rubric):**
+  > *"Chào thầy cô và các bạn, để không bị kẹt trong 'Bong bóng thông tin' và bảo vệ quyền riêng tư trên YouTube, mình xin chia sẻ 2 thao tác kỹ thuật thực tế mà mình thường áp dụng:  
+  > 1. **Định kỳ mỗi cuối tuần, mình vào Cài đặt tài khoản chọn 'Xóa toàn bộ lịch sử xem và tìm kiếm'.** Cơ sở khoa học: Dữ liệu lịch sử là nguồn huấn luyện chính để thuật toán AI phân tích sở thích. Khi ta xóa lịch sử, hệ thống mất đi 'dấu vết hành vi' để bám đuổi, buộc trang chủ phải gợi ý các nội dung phong phú và mới mẻ hơn.  
+  > 2. **Mình luôn tắt tính năng Tự động phát video (Autoplay) và cài đặt thông báo 'Nhắc tôi nghỉ ngơi' sau mỗi 45 phút.** Cơ sở khoa học: Cách này giúp mình chủ động kiểm soát thời gian sử dụng thiết bị, ngăn chặn bẫy cuốn xem liên tục của thuật toán như bạn Nam trong bài học."*
+* **Bình luận tương tác mẫu của bạn học (Đạt chuẩn giao tiếp mạng tích cực):**
+  > *"Chào bạn Minh Thư, mình rất đồng ý với giải pháp bật Chế độ Ẩn danh khi tra cứu chủ đề lạ của bạn. Mình xin bổ sung thêm một mẹo là sau khi xem xong trên tab ẩn danh, ta nên đóng hẳn cửa sổ để trình duyệt xóa sạch bộ nhớ tạm. Cảm ơn chia sẻ rất thực tế và hữu ích của bạn!"*
 
 ---
 

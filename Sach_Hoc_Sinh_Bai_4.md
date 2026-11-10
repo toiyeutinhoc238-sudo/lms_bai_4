@@ -68,9 +68,9 @@
 ---
 
 ### HOẠT ĐỘNG 4: VẬN DỤNG (20 PHÚT)
-#### 📌 Nhiệm vụ: Lập dàn ý bài thảo luận Diễn đàn Padlet "Làm sao để thoát khỏi bong bóng thông tin?"
+#### 📌 Nhiệm vụ: Lập dàn ý bài thảo luận Diễn đàn "Làm sao để thoát khỏi bong bóng thông tin?"
 
-*Em hãy viết nháp dàn ý giải pháp vào các khung dưới đây trước khi đăng bài chính thức lên bảng tường Padlet (được nhúng trên LMS):*
+*Em hãy viết nháp dàn ý giải pháp vào các khung dưới đây trước khi gõ đăng bài chính thức lên Diễn đàn LMS:*
 
 #### 1. Dàn ý giải pháp của em (Yêu cầu ít nhất 2 thao tác kỹ thuật thực tế):
 
@@ -86,17 +86,18 @@
     ..........................................................................................................................................................................  
     ..........................................................................................................................................................................  
 
-#### 2. Bảng tự kiểm tra chất lượng nội dung theo Rubric (10 điểm):
-* [ ] Đã đề xuất đủ ít nhất 02 thao tác kỹ thuật thực tế, khả thi trên thiết bị (Tiêu chí 1: tối đa 5.0 điểm).
-* [ ] Đã giải thích rõ ràng cơ sở khoa học theo bản chất cách thuật toán AI thu thập/xử lý dữ liệu (Tiêu chí 2: tối đa 3.0 điểm).
-* [ ] Đặt đúng tiêu đề `[Họ tên - Lớp]`, nội dung hoàn chỉnh, lập luận logic, không sai chính tả (Tiêu chí 3: tối đa 2.0 điểm).
+#### 2. Nhật ký phản hồi bạn học trên Diễn đàn LMS:
+* Em đã đọc bài viết của bạn: ....................................................................................................................
+* Ý kiến phản hồi / góp ý của em cho bạn:  
+  ..........................................................................................................................................................................  
+  ..........................................................................................................................................................................  
 
 ---
 
 ### 📝 PHẦN ĐÁNH GIÁ CỦA GIÁO VIÊN (Kiểm tra chéo trên lớp)
 * **Mức độ hoàn thành trên hệ thống LMS:** [  ] Đầy đủ 4 HĐ   [  ] Chưa hoàn thành  
 * **Điểm bài tập kéo thả LMS:** ........ / 10  
-* **Điểm Rubric nội dung Padlet / LMS:** ........ / 10  
+* **Điểm Rubric diễn đàn LMS:** ........ / 10  
 * **Nhận xét của Giáo viên về Sách học sinh:**  
   ..........................................................................................................................................................................  
   **Chữ ký của Giáo viên:** ......................................................
