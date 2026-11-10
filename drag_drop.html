@@ -951,9 +951,6 @@
       <button class="btn-action btn-reset" onclick="resetAll()">
         <span>Xếp lại từ đầu</span> 🔄
       </button>
-      <button class="btn-action btn-hint" onclick="openHintModal()">
-        <span>Gợi ý phân loại</span> 💡
-      </button>
     </div>
     <div class="pass-info-text">
       🎯 Ngưỡng đạt yêu cầu: <span>Tối thiểu 8/10 (80%)</span>
@@ -964,36 +961,7 @@
   <div class="result-alert" id="resultAlert"></div>
 </div>
 
-<!-- Hint Modal -->
-<div class="hint-modal-overlay" id="hintModal">
-  <div class="hint-card">
-    <div class="hint-header">
-      <h3>💡 Gợi ý phân loại tính hai mặt của AI</h3>
-      <button class="btn-close-modal" onclick="closeHintModal()">✕</button>
-    </div>
-    <div class="hint-grid">
-      <div class="hint-col hint-pos">
-        <h4>👍 Mặt tích cực (Lợi ích):</h4>
-        <ul>
-          <li>Cá nhân hóa trải nghiệm theo sở thích cá nhân.</li>
-          <li>Tiết kiệm thời gian tìm kiếm thông tin, bài giảng, bài hát.</li>
-          <li>Hỗ trợ nâng cao hiệu quả học tập, giải trí và sinh hoạt hàng ngày.</li>
-        </ul>
-      </div>
-      <div class="hint-col hint-neg">
-        <h4>⚠️ Mặt hạn chế (Rủi ro):</h4>
-        <ul>
-          <li>Tạo ra 'Bong bóng thông tin', thu hẹp góc nhìn đa chiều.</li>
-          <li>Gây nghiện số, làm người dùng mất kiểm soát thời gian sử dụng.</li>
-          <li>Âm thầm thu thập dữ liệu hành vi, xâm phạm quyền riêng tư.</li>
-        </ul>
-      </div>
-    </div>
-    <button class="btn-action btn-check" style="width: 100%; justify-content: center;" onclick="closeHintModal()">
-      Đã hiểu! Quay lại làm bài 🚀
-    </button>
-  </div>
-</div>
+
 
 <!-- Celebration Modal -->
 <div class="celebrate-modal-overlay" id="modalCelebrate">
@@ -1539,15 +1507,7 @@
   }
 
   // ================= MODALS =================
-  function openHintModal() {
-    playSound('tap');
-    document.getElementById('hintModal').style.display = 'flex';
-  }
 
-  function closeHintModal() {
-    playSound('tap');
-    document.getElementById('hintModal').style.display = 'none';
-  }
 
   function proceedToAct4() {
     document.getElementById('modalCelebrate').style.display = 'none';
