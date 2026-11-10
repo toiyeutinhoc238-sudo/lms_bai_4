@@ -147,9 +147,9 @@ Tiết học được cấu hình thành **Chuỗi học tập tuần tự có �
 ## 2.3. Giai đoạn Phát triển học liệu (Hồ sơ thẻ What – Why – How cho 4 học liệu)
 
 ### THẺ HỌC LIỆU 1: BÀI TẬP NỘP FILE (ASSIGNMENT)
-* **WHAT (Học liệu là gì?):** Là một bài tập trực tuyến yêu cầu học sinh mở YouTube cá nhân, đếm số video gợi ý trùng khớp sở thích gần đây trên 10 video đầu tiên, chụp ảnh màn hình và nộp lên LMS kèm ghi chú cảm nghĩ.
+* **WHAT (Học liệu là gì?):** Là một bài tập trực tuyến yêu cầu học sinh mở YouTube cá nhân, đếm số video gợi ý trùng khớp sở thích gần đây trên 10 video đầu tiên, chụp ảnh màn hình và nộp lên Thư mục Google Drive tiếp nhận của lớp (`https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing`) hoặc đính kèm trực tiếp trên LMS kèm ghi chú cảm nghĩ.
 * **WHY (Tại sao dùng học liệu này?):** Để học sinh tự mình "chứng thực" việc thuật toán theo dõi và cá nhân hóa trang chủ của chính mình, thay vì chỉ nghe giáo viên nói lý thuyết suông; biến trải nghiệm hàng ngày thành ngữ liệu bài học.
-* **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh tải ảnh $\rightarrow$ Bấm Nộp bài $\rightarrow$ LMS tự động gửi phản hồi sư phạm chúc mừng, gợi mở bí mật thuật toán và tự động mở khóa Hoạt động 2.
+* **HOW (Tổ chức thực hiện và phản hồi thế nào?):** Học sinh tải ảnh lên Drive/LMS $\rightarrow$ Bấm Nộp bài $\rightarrow$ LMS tự động gửi phản hồi sư phạm chúc mừng, gợi mở bí mật thuật toán và tự động mở khóa Hoạt động 2.
 
 ### THẺ HỌC LIỆU 2: TRÒ CHƠI MÔ PHỎNG (SCORM / H5P BRANCHING SCENARIO)
 * **WHAT (Học liệu là gì?):** Là phần mềm mô phỏng tương tác đóng vai Kỹ sư AI điều khiển thuật toán mạng xã hội VideoTube để giữ chân người dùng ảo (bạn Nam 12 tuổi), trực quan hóa sự hình thành của "Bong bóng thông tin" (Filter Bubbles).

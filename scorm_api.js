@@ -85,3 +85,4 @@ window.addEventListener("load", function() {
 window.addEventListener("unload", function() {
     scorm.finish();
 });
+

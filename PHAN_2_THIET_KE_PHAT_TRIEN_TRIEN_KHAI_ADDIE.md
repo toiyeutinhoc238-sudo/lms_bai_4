@@ -57,10 +57,10 @@ flowchart TD
 ## 2.3. Giai đoạn Phát triển học liệu (Hồ sơ thẻ What – Why – How cho 4 học liệu)
 
 ### THẺ HỌC LIỆU 1: BÀI TẬP NỘP FILE (ASSIGNMENT)
-* **WHAT (Học liệu là gì?):** Module giao bài tập trực tuyến trên LMS tích hợp tải tệp ảnh (`.png`, `.jpg`) và nhập dữ liệu văn bản trực tuyến.
+* **WHAT (Học liệu là gì?):** Module giao bài tập trực tuyến trên LMS tích hợp tải tệp ảnh (`.png`, `.jpg`), kết nối [Thư mục Google Drive tiếp nhận bài nộp của lớp](https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing) và nhập dữ liệu văn bản trực tuyến.
 * **WHY (Tại sao sử dụng?):** Kích hoạt tri thức nền từ chính tài khoản YouTube cá nhân của học sinh; biến trải nghiệm thực tế đời thường thành ngữ liệu học tập sinh động; chứng thực trực quan mức độ theo dõi của AI.
 * **HOW (Tổ chức thực hiện & Phản hồi):**
-  - Học sinh đếm 10 video đầu tiên $\rightarrow$ Chụp ảnh màn hình $\rightarrow$ Nộp file và nhập số lượng.
+  - Học sinh đếm 10 video đầu tiên $\rightarrow$ Chụp ảnh màn hình $\rightarrow$ Nộp file lên Google Drive/LMS và nhập số lượng, cảm nghĩ.
   - *Phản hồi tự động:* Hệ thống lập tức gửi tin nhắn động viên, gợi mở bí mật phía sau thuật toán gợi ý và tự động mở khóa Hoạt động 2.
 
 ### THẺ HỌC LIỆU 2: TRÒ CHƠI MÔ PHỎNG TƯƠNG TÁC (SCORM / H5P BRANCHING SCENARIO)
