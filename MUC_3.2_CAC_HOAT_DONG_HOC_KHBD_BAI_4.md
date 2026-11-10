@@ -82,7 +82,7 @@
 **Nhiệm vụ: Xem video lý thuyết và tham gia trò chơi mô phỏng "Đóng vai hệ thống AI"**
 
 - GV yêu cầu HS thực hiện các nhiệm vụ cụ thể:
-  + *Nhiệm vụ 1 (Xem video lý thuyết):* Tập trung theo dõi trọn vẹn video hoạt hình *"Thuật toán mạng xã hội là gì và nó hoạt động thế nào?"* (thời lượng ~3 phút, hệ thống khóa tua nhanh để xem tuần tự). Chú ý tìm câu trả lời cho 3 câu hỏi định hướng:
+  + *Nhiệm vụ 1 (Xem video lý thuyết):* Tập trung theo dõi trọn vẹn video hoạt hình *"Thuật toán mạng xã hội là gì và nó hoạt động thế nào?"* (thời lượng ~3 phút, link YouTube trực tuyến: https://youtu.be/HwhHHdbmcBE, hệ thống khóa tua nhanh để xem tuần tự). Chú ý tìm câu trả lời cho 3 câu hỏi định hướng:
     1. Thuật toán thu thập những hành vi nào của người dùng?
     2. Mục tiêu lớn nhất của các nền tảng mạng xã hội là gì?
     3. Điều gì sẽ xảy ra nếu người dùng chỉ tiếp cận các nội dung cùng sở thích?
