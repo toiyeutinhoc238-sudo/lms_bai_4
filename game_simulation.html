@@ -751,12 +751,80 @@
       border-color: #10b981 !important;
       color: #a7f3d0 !important;
       font-weight: 700;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
     }
 
     .quiz-option-btn.opt-wrong {
       background: rgba(127, 29, 29, 0.85) !important;
       border-color: #ef4444 !important;
       color: #fecaca !important;
+    }
+
+    .quiz-badge-correct {
+      background: #10b981;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-left: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .quiz-badge-wrong {
+      background: #ef4444;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-left: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .quiz-feedback-box {
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      animation: fadeIn 0.3s ease;
+      text-align: left;
+    }
+
+    .quiz-feedback-box.correct {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #a7f3d0;
+    }
+
+    .quiz-feedback-box.wrong {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #fef3c7;
+    }
+
+    .feedback-title {
+      font-weight: 800;
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quiz-feedback-box.correct .feedback-title {
+      color: #34d399;
+    }
+
+    .quiz-feedback-box.wrong .feedback-title {
+      color: #fbbf24;
     }
 
     /* Finish & Certification Screen */
@@ -1580,6 +1648,7 @@
     </div>
     <div class="checkpoint-q" id="checkpointQuestionText"></div>
     <div class="options-stack" id="checkpointOptionsStack"></div>
+    <div id="checkpointExplanationBox" style="display: none;"></div>
     <div style="text-align: center; margin-top: 14px;">
       <button class="btn-action-primary" id="btnResumeSim" onclick="resumeSimulationFromQuiz()">
         <span>Tiếp tục mô phỏng</span> ➡️
@@ -2139,27 +2208,78 @@
 
     document.getElementById('checkpointRoundNum').innerText = quiz.roundNum;
     document.getElementById('checkpointQuestionText').innerText = quiz.question;
-    document.getElementById('btnResumeSim').style.display = 'none';
+    
+    const btnResume = document.getElementById('btnResumeSim');
+    btnResume.style.display = 'none';
+
+    const feedbackBox = document.getElementById('checkpointExplanationBox');
+    if (feedbackBox) {
+      feedbackBox.style.display = 'none';
+      feedbackBox.innerHTML = '';
+    }
 
     const stack = document.getElementById('checkpointOptionsStack');
     stack.innerHTML = '';
 
+    let hasAnswered = false;
+    const btnRefs = [];
+
     quiz.options.forEach(opt => {
       const btn = document.createElement('div');
       btn.className = 'quiz-option-btn';
-      btn.innerHTML = `<span>${opt.text}</span>`;
+      btn.innerHTML = `<span style="flex: 1;">${opt.text}</span>`;
+      btnRefs.push({ btn, opt });
+
       btn.onclick = () => {
+        if (hasAnswered) return;
+        hasAnswered = true;
+
+        // Vô hiệu hóa toàn bộ các lựa chọn (chỉ được nhấn 1 lần duy nhất)
+        document.querySelectorAll('.quiz-option-btn').forEach(b => {
+          b.style.pointerEvents = 'none';
+          b.style.cursor = 'default';
+        });
+
         if (opt.correct) {
           btn.classList.add('opt-correct');
-          btn.innerHTML += ` <span>✔ ĐÚNG!</span>`;
+          btn.innerHTML += ` <span class="quiz-badge-correct">✔ ĐÚNG!</span>`;
           playSound('success');
-          // disable all
-          document.querySelectorAll('.quiz-option-btn').forEach(b => b.style.pointerEvents = 'none');
-          document.getElementById('btnResumeSim').style.display = 'inline-flex';
+
+          if (feedbackBox) {
+            feedbackBox.className = 'quiz-feedback-box correct';
+            feedbackBox.innerHTML = `
+              <div class="feedback-title">🎉 Xuất sắc! Em đã chọn câu trả lời chính xác.</div>
+              <div><b>Giải thích kiến thức:</b> ${quiz.explanation}</div>
+            `;
+            feedbackBox.style.display = 'block';
+          }
+
+          btnResume.innerHTML = '<span>Tiếp tục mô phỏng</span> ➡️';
+          btnResume.style.display = 'inline-flex';
         } else {
           btn.classList.add('opt-wrong');
-          btn.innerHTML += ` <span>✖ Chưa chính xác</span>`;
-          playSound('error');
+          btn.innerHTML += ` <span class="quiz-badge-wrong">✖ Lựa chọn của em</span>`;
+          playSound('buzz');
+
+          // Tự động làm nổi bật đáp án đúng
+          btnRefs.forEach(item => {
+            if (item.opt.correct) {
+              item.btn.classList.add('opt-correct');
+              item.btn.innerHTML += ` <span class="quiz-badge-correct">✔ ĐÁP ÁN ĐÚNG</span>`;
+            }
+          });
+
+          if (feedbackBox) {
+            feedbackBox.className = 'quiz-feedback-box wrong';
+            feedbackBox.innerHTML = `
+              <div class="feedback-title">💡 Chưa chính xác! Hệ thống đã hiển thị đáp án đúng ở trên.</div>
+              <div><b>Giải thích kiến thức:</b> ${quiz.explanation}</div>
+            `;
+            feedbackBox.style.display = 'block';
+          }
+
+          btnResume.innerHTML = '<span>Đã hiểu • Tiếp tục</span> ➡️';
+          btnResume.style.display = 'inline-flex';
         }
       };
       stack.appendChild(btn);
