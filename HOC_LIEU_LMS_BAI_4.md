@@ -24,14 +24,39 @@
 
 ---
 
-### 1. ĐỀ BÀI VÀ HƯỚNG DẪN THỰC HIỆN DÀNH CHO HỌC SINH
-> **Nhiệm vụ của em:**
-> 1. Mở ứng dụng hoặc trang web **YouTube** trên điện thoại/máy tính cá nhân (đăng nhập tài khoản em thường dùng xem video ở nhà).
-> 2. Quan sát kỹ **10 video đầu tiên** xuất hiện trên trang chủ (Home).
-> 3. Hãy đếm xem có bao nhiêu video trùng khớp hoặc có liên quan trực tiếp đến các chủ đề em vừa tìm kiếm hoặc xem gần đây (ví dụ: mẹo chơi game, ca nhạc, bài giảng, nấu ăn...).
-> 4. **Chụp ảnh màn hình (Screenshot)** trang chủ YouTube thể hiện các video được gợi ý đó.
-> 5. Nộp file ảnh chụp lên [Thư mục Google Drive tiếp nhận của lớp](https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing).
-> 6. Tại bài tập trên LMS, điền số lượng video trùng khớp và cảm nghĩ ngắn rồi bấm "Nộp bài tập lên LMS".
+### 1. TIẾN TRÌNH TỔ CHỨC DẠY HỌC CHUẨN KHBD (4 BƯỚC E-LEARNING)
+
+* **Bước 1: Chuyển giao nhiệm vụ:**
+  - GV cấu hình bài tập Khởi động trên LMS (tích hợp nút dẫn đến Thư mục Google Drive tiếp nhận bài nộp của lớp).
+  - GV thông báo qua nhóm học tập trực tuyến, yêu cầu học sinh mở Sách học sinh (Mục I - Khởi động) để hoàn thành nhiệm vụ trước thời hạn quy định (10 phút đầu buổi học).
+
+  **Nhiệm vụ: Trải nghiệm thực tế "Trang chủ YouTube của em"**
+  - GV yêu cầu HS thực hiện các thao tác:
+    + *Thao tác 1:* Mở ứng dụng hoặc trang web YouTube trên máy tính hoặc điện thoại (đăng nhập tài khoản cá nhân em thường dùng).
+    + *Thao tác 2:* Quan sát kỹ 10 video đầu tiên xuất hiện trên trang chủ.
+    + *Thao tác 3:* Đếm xem có bao nhiêu video trùng khớp hoặc có liên quan đến các chủ đề em vừa xem/tìm kiếm gần đây.
+    + *Thao tác 4:* Chụp ảnh màn hình trang chủ YouTube thể hiện các video được gợi ý đó.
+    + *Thao tác 5:* Tải ảnh chụp màn hình lên Thư mục Google Drive tiếp nhận của lớp theo quy ước tên file: `HoTen_Lop_Bai4_YouTube.png`.
+    + *Thao tác 6:* Ghi số liệu thống kê và viết 1–2 câu cảm nghĩ ngắn vào Sách học sinh (Mục I).
+
+  **Dự kiến câu trả lời / sản phẩm của học sinh:**
+  - *Số liệu thống kê:* Phần lớn học sinh đếm được từ 6 đến 9 video trùng khớp sở thích tìm kiếm gần đây (chiếm khoảng 60% – 90% trang chủ).
+  - *Ảnh chụp màn hình:* Ảnh chụp rõ nét 10 video đầu tiên trên trang chủ thể hiện đúng các chủ đề quen thuộc của lứa tuổi học sinh (video game Minecraft/Roblox, ca nhạc thiếu nhi, phim hoạt hình anime, video thí nghiệm khoa học vui, hướng dẫn vẽ tranh...).
+  - *Cảm nghĩ ngắn của học sinh:*
+    + Học sinh cảm thấy bất ngờ và ngạc nhiên: *"Em rất ngạc nhiên vì tối qua vừa tìm mẹo chơi Minecraft thì sáng nay trang chủ YouTube đã hiện đúng 8/10 video liên quan đến trò chơi này. Thuật toán gợi ý cực kỳ nhanh và chính xác."*
+    + Học sinh nhận thấy vừa tiện lợi vừa có chút lo ngại: *"Em thấy rất tiện lợi vì không mất công tìm kiếm nội dung mình thích, nhưng cũng hơi giật mình và lo lắng vì có cảm giác YouTube theo dõi mọi thói quen của mình."*
+
+* **Bước 2: Thực hiện nhiệm vụ:**
+  - HS tự giác đăng nhập tài khoản YouTube, quan sát, đếm số video, chụp màn hình và ghi chép vào Sách học sinh.
+  - GV theo dõi tiến độ nộp bài qua Thư mục Drive, kịp thời hỗ trợ kỹ thuật trực tuyến nếu học sinh gặp sự cố tải tệp.
+
+* **Bước 3: Báo cáo, thảo luận:**
+  - HS hoàn thành việc tải file ảnh lên Google Drive lớp và ghi chép đầy đủ vào Sách học sinh.
+  - Một số học sinh chia sẻ nhanh số lượng video đếm được lên khung trò chuyện (chat) của buổi học trực tuyến để so sánh với các bạn khác.
+
+* **Bước 4: Kết luận, nhận định:**
+  - Hệ thống LMS tự động gửi thông điệp dẫn dắt: *"Chúc mừng em đã hoàn thành trải nghiệm thực tế! Em có nhận thấy YouTube dường như đang 'đọc vị' được sở thích của em không? Đó chính là nhờ thuật toán gợi ý dựa trên dữ liệu người dùng. Hãy cùng bước sang Hoạt động 2 để giải mã cơ chế bí mật này nhé!"*.
+  - Hệ thống tự động ghi nhận hoàn thành và mở khóa Hoạt động 2.
 
 ---
 
@@ -76,12 +101,50 @@
 
 ## 1. TIẾN TRÌNH TỔ CHỨC DẠY HỌC CHUẨN KHBD (4 BƯỚC E-LEARNING)
 
-* **Bước 1: Chuyển giao nhiệm vụ:** GV cấu hình học liệu Video tương tác trên LMS. Yêu cầu HS truy cập hệ thống, tập trung theo dõi video hoạt hình *"Thuật toán mạng xã hội là gì và nó hoạt động thế nào?"* (~3 phút) và sẵn sàng vượt qua thử thách trò chơi mô phỏng xuất hiện ngay cuối video.
-* **Bước 2: Thực hiện nhiệm vụ:** 
-  - HS theo dõi video (~3 phút) để hiểu nguyên lý thuật toán phân tích hành vi và mục tiêu giữ chân người dùng.
-  - Khi video kết thúc, hệ thống tự động hiển thị trò chơi rẽ nhánh (Branching Scenario), HS thao tác chọn các phương án *"Đóng vai hệ thống AI"* để liên tục gợi ý video nhằm giữ chân bạn Nam (12 tuổi) ảo.
-* **Bước 3: Báo cáo, thảo luận:** Ngay khi hoàn thành trò chơi trên LMS, HS mở Sách học sinh (Mục II - Hình thành kiến thức), sử dụng kiến thức vừa học để điền các từ khóa (*cá nhân hóa, mặt tích cực, bong bóng thông tin, quyền riêng tư*) vào phần Ghi chú lý thuyết.
-* **Bước 4: Kết luận, nhận định:** Hệ thống LMS tự động ghi nhận kết quả tương tác, lưu tiến trình hoàn thành (Passed / 100 điểm) và cấp quyền truy cập sang Hoạt động 3 (Luyện tập).
+* **Bước 1: Chuyển giao nhiệm vụ:**
+  - GV cấu hình gói học liệu Video tương tác & Mô phỏng SCORM trên LMS.
+  - GV yêu cầu HS truy cập hệ thống, chuẩn bị bút viết và mở Sách học sinh (Mục II - Hình thành kiến thức).
+
+  **Nhiệm vụ: Xem video lý thuyết và tham gia trò chơi mô phỏng "Đóng vai hệ thống AI"**
+  - GV yêu cầu HS thực hiện các nhiệm vụ cụ thể:
+    + *Nhiệm vụ 1 (Xem video lý thuyết):* Theo dõi trọn vẹn đoạn phim hoạt hình *"Thuật toán mạng xã hội là gì và nó hoạt động thế nào?"* (~3 phút, hệ thống khóa tua nhanh để đảm bảo theo dõi tuần tự). Tập trung vào 3 câu hỏi định hướng:
+      1. Thuật toán thu thập những hành vi nào của người dùng?
+      2. Mục tiêu lớn nhất của các nền tảng mạng xã hội là gì?
+      3. Điều gì xảy ra khi người dùng chỉ xem các nội dung cùng sở thích?
+    + *Nhiệm vụ 2 (Chơi trò chơi mô phỏng):* Khi video kết thúc, hệ thống tự động kích hoạt trò chơi mô phỏng. Đóng vai "Kỹ sư Thuật toán AI", đưa ra 3 quyết định gợi ý video nhằm giữ chân người dùng ảo là bạn Nam (12 tuổi, học sinh lớp 6) đang xem YouTube vào tối Chủ nhật.
+    + *Nhiệm vụ 3 (Quan sát số liệu & Bong bóng thông tin):* Quan sát 3 đồng hồ đo chỉ số (Thời gian giữ chân Nam, Tỷ lệ bong bóng thông tin, Dữ liệu cá nhân thu thập) và sự co hẹp của quả cầu Bong bóng thông tin qua từng vòng lựa chọn.
+    + *Nhiệm vụ 4 (Trả lời câu hỏi trắc nghiệm chốt kiến thức):* Trả lời 2 câu hỏi neo chặn xuất hiện sau Vòng 1 và Vòng 2 để củng cố lý thuyết.
+    + *Nhiệm vụ 5 (Điền khuyết vào Sách học sinh):* Sau khi hoàn thành trò chơi (đạt 100 điểm SCORM), mở Sách học sinh (Mục II) dùng bút điền các từ khóa vào 4 nội dung lý thuyết.
+
+  **Dự kiến câu trả lời / sản phẩm của học sinh:**
+  - *Nhận thức từ video lý thuyết:*
+    + Thuật toán thu thập: Lượt nhấp chuột, thời gian dừng màn hình, lượt thích, chia sẻ, bình luận, vị trí và lịch sử tìm kiếm.
+    + Mục tiêu lớn nhất: Tối đa hóa thời gian người dùng ở lại ứng dụng để xem nhiều quảng cáo hơn, gia tăng doanh thu cho nền tảng.
+    + Hệ quả: Tạo ra hiện tượng "Bong bóng thông tin", giam lỏng góc nhìn người dùng trong một chiều nội dung hạn hẹp.
+  - *Các quyết định trong trò chơi mô phỏng:*
+    + Vòng 1 (Khởi tạo sở thích): Học sinh chọn phương án **A** (Video Minecraft *"100 ngày sinh tồn"*) $\rightarrow$ Thời gian giữ chân Nam tăng thêm 45 phút, Bong bóng thông tin tăng lên 45%.
+    + Vòng 2 (Bẫy Thỏ chui hang): Học sinh chọn phương án **A** (Video giật gân, tiêu đề sốc *"Quái vật Minecraft đêm khuya"*) $\rightarrow$ Nam tò mò thức khuya xem tiếp thêm 75 phút, Bong bóng thông tin co hẹp lên 75%.
+    + Vòng 3 (Khép kín bong bóng): Học sinh chọn phương án **A** (Tự động phát liên hoàn livestream game) $\rightarrow$ Thời gian giữ chân đạt đỉnh 210 phút (nghiện xem), Bong bóng thông tin đạt 98%, Dữ liệu cá nhân bị thu thập 99%.
+  - *Câu hỏi trắc nghiệm neo chặn:*
+    + Câu 1 (Sau Vòng 1): 100% học sinh chọn đúng phương án **A** (*Để giúp học sinh tiết kiệm thời gian tìm kiếm và tối đa hóa thời gian học sinh ở lại trên ứng dụng*).
+    + Câu 2 (Sau Vòng 2): 100% học sinh chọn đúng phương án **B** (*Học sinh rơi vào 'Bong bóng thông tin', góc nhìn bị bó hẹp, dễ tin vào nội dung phóng đại và mất kiểm soát thời gian sử dụng thiết bị*).
+  - *Điền khuyết Sách học sinh (Mục II):*
+    1. Cá nhân hóa: ... *dự đoán sở thích* ...
+    2. Mặt tích cực của tính năng AI gợi ý: ... *tiếp cận thông tin nhanh chóng* và *tiết kiệm thời gian tìm kiếm* ...
+    3. Hiện tượng "Bong bóng thông tin": ... *cùng sở thích* ..., khiến họ bị cô lập khỏi các *góc nhìn đa chiều* ...
+    4. Rủi ro về Quyền riêng tư: ... *dữ liệu cá nhân* ..., làm tăng nguy cơ người dùng *mất kiểm soát dữ liệu cá nhân / bị lộ lọt thông tin riêng tư* ...
+
+* **Bước 2: Thực hiện nhiệm vụ:**
+  - HS nghiêm túc theo dõi video hoạt hình từ đầu đến hết (không thể tua nhanh), sau đó thao tác trên giao diện trò chơi mô phỏng để đưa ra các quyết định gợi ý video.
+  - GV giám sát bảng điều khiển tiến trình trực tuyến trên LMS, nhắc nhở các học sinh còn chậm tiến độ.
+
+* **Bước 3: Báo cáo, thảo luận:**
+  - Sau khi hoàn thành 3 vòng chơi và nhận thông báo hoàn tất (Passed / 100 điểm) từ hệ thống, HS mở Sách học sinh (Mục II) dùng bút điền đầy đủ các từ khóa chốt lý thuyết.
+  - Một vài học sinh chia sẻ cảm xúc sau trò chơi lên nhóm lớp (bất ngờ khi thấy bạn Nam bị cuốn vào màn hình hơn 3 tiếng và trang chủ hoàn toàn bị cô lập).
+
+* **Bước 4: Kết luận, nhận định:**
+  - Hệ thống LMS tự động lưu tiến trình học tập, ghi nhận kết quả đạt chuẩn SCORM 100 điểm và tự động cấp quyền truy cập mở khóa Hoạt động 3 (Luyện tập).
+  - GV nhận xét nhanh: *"Qua video và trải nghiệm đóng vai AI, các em đã thấy rõ tính hai mặt của thuật toán: rất hữu ích khi gợi ý đúng nhu cầu nhưng cũng rất dễ gây nghiện và tạo ra bong bóng thông tin. Bây giờ hãy bước sang Hoạt động 3 để cùng phân loại cụ thể các tình huống thực tế nhé!"*.
 
 ### 💡 Lợi ích sư phạm của việc tích hợp Video trước Trò chơi mô phỏng:
 1. **Rõ ràng hóa nhiệm vụ (Bước 1 & 2):** Học sinh không bị "ném" thẳng vào một trò chơi mô phỏng phức tạp khi chưa có kiến thức nền. Các em được xem video giải thích trực quan ~3 phút trước, sau đó mới đóng vai áp dụng vào trò chơi để kiểm chứng thực tế.
