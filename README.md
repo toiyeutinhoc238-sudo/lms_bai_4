@@ -20,9 +20,8 @@ flowchart LR
 ---
 
 ### 1. `hoc_lieu_1_assignment.html` (Hoạt động 1: Khởi động - 10 phút)
-* **Loại công cụ LMS:** Bài tập nộp file (Assignment: File submission + Online text) kết hợp Google Drive.
-* **Thư mục Google Drive tiếp nhận bài nộp:** [Thư mục Drive nộp bài của lớp (drive.google.com)](https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing)
-* **Nhiệm vụ học sinh:** Tự quan sát 10 video đầu tiên trên trang chủ YouTube cá nhân, đếm số video trùng khớp chủ đề vừa xem gần đây, chụp ảnh màn hình và nộp lên Drive/LMS kèm cảm nghĩ ngắn.
+* **Loại công cụ LMS:** Bài tập nộp file (Assignment: File submission).
+* **Nhiệm vụ học sinh:** Tự quan sát 10 video đầu tiên trên trang chủ YouTube cá nhân, đếm số video trùng khớp chủ đề vừa xem gần đây và ghi chú vào Sách học sinh, chụp ảnh màn hình nộp lên hệ thống LMS kèm phản hồi tự động dẫn dắt vào bài mới.
 * **Cơ chế sư phạm:** Tự động gửi thông điệp phản hồi sư phạm (Automated Feedback) ngay sau khi nộp bài để tạo hứng thú và tự động mở khóa Hoạt động 2.
 
 ### 2. `hoc_lieu_2_game_mophong.html` (Hoạt động 2: Hình thành kiến thức - 15 phút)

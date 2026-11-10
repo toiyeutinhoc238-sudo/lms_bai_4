@@ -16,8 +16,6 @@
       --success-light: #ecfdf5;
       --warning: #f59e0b;
       --danger: #ef4444;
-      --drive-blue: #1a73e8;
-      --drive-bg: #e8f0fe;
       --card-bg: #ffffff;
       --text: #0f172a;
       --text-muted: #64748b;
@@ -100,92 +98,7 @@
       margin-bottom: 6px;
     }
 
-    /* Google Drive Banner Card */
-    .drive-banner {
-      background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
-      border: 1.5px solid #bae6fd;
-      border-radius: 14px;
-      padding: 18px 20px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .drive-banner-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .drive-title-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .drive-icon {
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-    }
-
-    .drive-title {
-      font-weight: 800;
-      font-size: 1rem;
-      color: #0369a1;
-    }
-
-    .drive-btn {
-      background: #0284c7;
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.88rem;
-      padding: 9px 16px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
-      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
-    }
-
-    .drive-btn:hover {
-      background: #0369a1;
-      transform: translateY(-1px);
-    }
-
-    .drive-note {
-      font-size: 0.85rem;
-      color: #0c4a6e;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 8px 12px;
-      border-radius: 8px;
-      line-height: 1.5;
-    }
-
     /* Form Fields */
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: 600px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
     .form-group {
       margin-bottom: 18px;
     }
@@ -434,7 +347,7 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px dashed #cbd5e1;
-      padding: 4px 0;
+      padding: 6px 0;
     }
 
     .receipt-row:last-child {
@@ -468,26 +381,6 @@
       background: var(--primary-hover);
     }
 
-    .btn-view-drive {
-      background: #f0f9ff;
-      border: 1.5px solid #0284c7;
-      color: #0284c7;
-      text-decoration: none;
-      padding: 11px 20px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s;
-    }
-
-    .btn-view-drive:hover {
-      background: #e0f2fe;
-    }
-
     #confettiCanvas {
       position: fixed;
       top: 0;
@@ -508,56 +401,16 @@
   <h2>Bài tập nộp file: Trải nghiệm "Trang chủ YouTube của em"</h2>
   <p class="subtitle">Khám phá mức độ cá nhân hóa và khả năng "đọc vị sở thích" của thuật toán gợi ý video YouTube.</p>
 
-  <!-- Hướng dẫn nhiệm vụ học sinh -->
+  <!-- Hướng dẫn nhiệm vụ học sinh chuẩn KHBD -->
   <div class="instruction-box">
     <strong>📋 Hướng dẫn nhiệm vụ học sinh:</strong>
     <ol>
       <li>Mở ứng dụng hoặc trang web <b>YouTube</b> trên máy tính hoặc điện thoại của em (tài khoản cá nhân em thường dùng).</li>
       <li>Quan sát kỹ <b>10 video đầu tiên</b> xuất hiện trên trang chủ.</li>
-      <li>Đếm xem có bao nhiêu video trùng khớp hoặc có liên quan đến các chủ đề em vừa xem/tìm kiếm gần đây.</li>
-      <li><b>Chụp ảnh màn hình</b> và tải lên bài tập này (hoặc nộp trực tiếp vào Thư mục Google Drive của lớp).</li>
-      <li>Điền số lượng và cảm nghĩ ngắn vào ô bên dưới.</li>
+      <li>Đếm xem có bao nhiêu video trùng khớp hoặc có liên quan đến các chủ đề em vừa xem/tìm kiếm gần đây và ghi chú vào <b>Sách học sinh (Mục I - Khởi động)</b>.</li>
+      <li><b>Chụp ảnh màn hình</b> trang chủ YouTube và tải lên bài tập này.</li>
+      <li>Điền số lượng video trùng khớp và cảm nghĩ ngắn vào ô bên dưới.</li>
     </ol>
-  </div>
-
-  <!-- Google Drive Submission Banner -->
-  <div class="drive-banner">
-    <div class="drive-banner-header">
-      <div class="drive-title-wrap">
-        <div class="drive-icon">
-          <svg width="22" height="22" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
-            <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
-            <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#00ac47"/>
-            <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.5l5.85 10.15z" fill="#ea4335"/>
-            <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
-            <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
-            <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
-          </svg>
-        </div>
-        <div>
-          <div class="drive-title">Thư mục Google Drive tiếp nhận bài nộp của lớp</div>
-          <div style="font-size: 0.8rem; color: #0284c7;">Nơi lưu trữ ảnh chụp minh chứng bài tập Hoạt động 1</div>
-        </div>
-      </div>
-      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="drive-btn">
-        <span>📂 Mở Thư mục Google Drive nộp bài</span> ↗
-      </a>
-    </div>
-    <div class="drive-note">
-      💡 <b>Quy ước đặt tên file khi tải lên Drive:</b> <code>HoTen_Lop_Bai4_YouTube.png</code> (Ví dụ: <code>NguyenVanAn_6A1_Bai4_YouTube.png</code>). Sau khi tải lên Drive, em có thể dán link Drive hoặc đính kèm ảnh bên dưới để nộp lên LMS.
-    </div>
-  </div>
-
-  <!-- Form thông tin học sinh -->
-  <div class="form-row">
-    <div class="form-group">
-      <label for="inpStudentName">Họ và tên học sinh: <span style="color: var(--danger)">*</span></label>
-      <input type="text" id="inpStudentName" class="form-control" placeholder="Ví dụ: Nguyễn Văn An">
-    </div>
-    <div class="form-group">
-      <label for="inpStudentClass">Lớp: <span style="color: var(--danger)">*</span></label>
-      <input type="text" id="inpStudentClass" class="form-control" placeholder="Ví dụ: 6A1">
-    </div>
   </div>
 
   <!-- Khu vực đính kèm ảnh chụp màn hình -->
@@ -570,7 +423,7 @@
       <div id="uploadPrompt" style="font-weight: 700; color: #1e293b; font-size: 0.95rem;">
         Kéo thả ảnh chụp màn hình vào đây, hoặc chọn phương thức bên dưới
       </div>
-      <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Hỗ trợ: .PNG, .JPG, .JPEG (Dung lượng tối đa: 15 MB)</div>
+      <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Định dạng: .PNG, .JPG, .JPEG (Dung lượng tối đa: 15 MB)</div>
 
       <div class="upload-actions">
         <button type="button" class="btn-file-select" onclick="triggerFileInput()">
@@ -593,12 +446,6 @@
         <button type="button" class="btn-remove-file" onclick="removeAttachedFile()">✕ Bỏ chọn</button>
       </div>
     </div>
-  </div>
-
-  <!-- Tùy chọn: Link Google Drive nếu nộp qua Drive -->
-  <div class="form-group">
-    <label for="inpDriveLink">Liên kết tệp trên Google Drive (Tùy chọn nếu em đã tải vào Drive lớp):</label>
-    <input type="url" id="inpDriveLink" class="form-control" placeholder="Dán link chia sẻ ảnh trên Google Drive (nếu có)">
   </div>
 
   <!-- Câu hỏi 1: Số lượng video trùng khớp -->
@@ -631,7 +478,7 @@
     <div style="font-size: 3.2rem; margin-bottom: 8px;">🎉</div>
     <h3 style="color: #1e1b4b; font-size: 1.35rem; margin-bottom: 8px;">Nộp bài tập Khởi động thành công!</h3>
     <p style="color: #475569; font-size: 0.92rem; line-height: 1.5;">
-      Bài tập của em đã được ghi nhận trên hệ thống LMS và đối chiếu với thư mục Google Drive của lớp.
+      Bài tập của em đã được ghi nhận thành công trên hệ thống LMS.
     </p>
 
     <div class="receipt-box" id="receiptSummary">
@@ -647,16 +494,12 @@
       <button class="btn-next-act" onclick="proceedToActivity2()">
         <span>Tiến vào Hoạt động 2: Trò chơi mô phỏng thuật toán AI</span> ➡️
       </button>
-      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-view-drive">
-        <span>📁 Xem bài nộp trong Thư mục Google Drive của lớp</span> ↗
-      </a>
     </div>
   </div>
 </div>
 
 <script>
   let attachedFile = null;
-  const DRIVE_FOLDER_URL = "https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing";
 
   // Web Audio Synthesizer
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -751,16 +594,9 @@
       size: "2.85 MB",
       isDemo: true
     };
-    // Default mock image or svg
     const demoSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='%23e0e7ff'%3E%3Crect width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' fill='%234338ca' font-size='16' text-anchor='middle' dominant-baseline='middle'%3EYoutube+Demo%3C/text%3E%3C/svg%3E";
     showFilePreview(attachedFile.name, attachedFile.size, demoSvg);
 
-    if (!document.getElementById('inpStudentName').value) {
-      document.getElementById('inpStudentName').value = "Trần Bảo Nam";
-    }
-    if (!document.getElementById('inpStudentClass').value) {
-      document.getElementById('inpStudentClass').value = "6A2";
-    }
     if (!document.getElementById('inpThoughts').value) {
       document.getElementById('inpThoughts').value = "Em thấy 8/10 video trên trang chủ YouTube của em đều đúng các kênh khoa học, game và bài hát em mới tìm hôm qua. Em thấy thuật toán ghi nhớ rất nhanh và chính xác!";
     }
@@ -802,29 +638,12 @@
 
   // Submit Handler
   function submitWork() {
-    const studentName = document.getElementById('inpStudentName').value.trim();
-    const studentClass = document.getElementById('inpStudentClass').value.trim();
     const count = document.getElementById('inpCount').value;
     const thoughts = document.getElementById('inpThoughts').value.trim();
-    const driveLink = document.getElementById('inpDriveLink').value.trim();
 
-    if (!studentName) {
+    if (!attachedFile) {
       playSound('error');
-      alert("Em vui lòng nhập Họ và tên nhé!");
-      document.getElementById('inpStudentName').focus();
-      return;
-    }
-
-    if (!studentClass) {
-      playSound('error');
-      alert("Em vui lòng nhập Lớp nhé!");
-      document.getElementById('inpStudentClass').focus();
-      return;
-    }
-
-    if (!attachedFile && !driveLink) {
-      playSound('error');
-      alert("Em hãy đính kèm ảnh chụp màn hình YouTube hoặc dán link nộp trên Google Drive nhé!");
+      alert("Em hãy đính kèm ảnh chụp màn hình 10 video trang chủ YouTube nhé!");
       return;
     }
 
@@ -834,9 +653,9 @@
       return;
     }
 
-    if (thoughts.length < 8) {
+    if (thoughts.length < 5) {
       playSound('error');
-      alert("Em hãy viết vài câu cảm nghĩ ngắn (tối thiểu 8 ký tự) nhé!");
+      alert("Em hãy viết vài câu cảm nghĩ ngắn nhé!");
       document.getElementById('inpThoughts').focus();
       return;
     }
@@ -847,12 +666,10 @@
 
     // Build Receipt
     const receiptHtml = `
-      <div class="receipt-row"><span>👤 Họ và tên:</span> <strong>${escapeHtml(studentName)}</strong></div>
-      <div class="receipt-row"><span>🏫 Lớp:</span> <strong>${escapeHtml(studentClass)}</strong></div>
+      <div class="receipt-row"><span>📎 Tệp minh chứng:</span> <strong>${escapeHtml(attachedFile.name)} (${attachedFile.size})</strong></div>
       <div class="receipt-row"><span>🎯 Tỉ lệ trùng khớp:</span> <strong>${count}/10 video (${count * 10}%)</strong></div>
-      <div class="receipt-row"><span>📎 Tệp minh chứng:</span> <strong>${attachedFile ? escapeHtml(attachedFile.name) : 'Nộp qua Drive'}</strong></div>
-      ${driveLink ? `<div class="receipt-row"><span>🔗 Link Drive:</span> <a href="${escapeHtml(driveLink)}" target="_blank" style="color: #0284c7;">Xem bài nộp</a></div>` : ''}
-      <div style="margin-top: 8px; font-style: italic; color: #475569;">💬 Cảm nghĩ: "${escapeHtml(thoughts)}"</div>
+      <div class="receipt-row"><span>📝 Ghi chú Sách học sinh:</span> <strong>Đã hoàn thành Mục I</strong></div>
+      <div style="margin-top: 10px; font-style: italic; color: #475569; font-size: 0.86rem;">💬 Cảm nghĩ: "${escapeHtml(thoughts)}"</div>
     `;
     document.getElementById('receiptSummary').innerHTML = receiptHtml;
 
@@ -863,12 +680,9 @@
       window.parent.postMessage({
         type: 'ACTIVITY_COMPLETED',
         activityId: 1,
-        studentName: studentName,
-        studentClass: studentClass,
         matchedCount: count,
         thoughts: thoughts,
-        fileName: attachedFile ? attachedFile.name : null,
-        driveLink: driveLink
+        fileName: attachedFile ? attachedFile.name : null
       }, '*');
     }
   }

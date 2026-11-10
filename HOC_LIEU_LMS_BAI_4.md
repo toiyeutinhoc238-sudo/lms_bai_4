@@ -37,10 +37,8 @@
 
 ---
 
-### 2. CẤU HÌNH KỸ THUẬT NỘP BÀI TRÊN LMS & GOOGLE DRIVE
-* **Thư mục Google Drive tiếp nhận bài nộp của lớp:** [https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing](https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing)
-* **Hình thức nộp bài:** File submissions (Nộp tệp ảnh trực tiếp hoặc tải vào Google Drive) kết hợp Online text (Văn bản trực tuyến).
-* **Quy ước đặt tên file minh chứng:** `HoTen_Lop_Bai4_YouTube.png` (Ví dụ: `NguyenVanAn_6A1_Bai4_YouTube.png`).
+### 2. CẤU HÌNH KỸ THUẬT NỘP BÀI TRÊN LMS
+* **Hình thức nộp bài:** File submissions (Nộp tệp ảnh chụp màn hình YouTube lên LMS).
 * **Định dạng file cho phép:** `.png`, `.jpg`, `.jpeg`.
 * **Số tệp tối đa:** 01 - 02 tệp (dung lượng tối đa 15 MB).
 * **Điều kiện hoàn thành (Activity Completion):** Học sinh phải nộp bài tập (Student must submit to this activity to complete it).
