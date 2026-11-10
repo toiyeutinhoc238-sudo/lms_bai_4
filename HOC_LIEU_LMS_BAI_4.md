@@ -30,18 +30,15 @@
 > 2. Quan sát kỹ **10 video đầu tiên** xuất hiện trên trang chủ (Home).
 > 3. Hãy đếm xem có bao nhiêu video trùng khớp hoặc có liên quan trực tiếp đến các chủ đề em vừa tìm kiếm hoặc xem gần đây (ví dụ: mẹo chơi game, ca nhạc, bài giảng, nấu ăn...).
 > 4. **Chụp ảnh màn hình (Screenshot)** trang chủ YouTube thể hiện các video được gợi ý đó.
-> 5. Nộp file ảnh chụp lên hệ thống LMS tại bài nộp này.
-> 6. Tại ô văn bản trực tuyến, hãy nhập câu trả lời ngắn theo mẫu:
->    - *Số video trùng khớp chủ đề em vừa xem gần đây:* ... / 10 video.
->    - *Cảm nghĩ nhanh của em khi quan sát trang chủ:* (Ví dụ: Em thấy YouTube nắm rất rõ sở thích của em / Em thấy hơi bất ngờ vì vừa tìm xong là YouTube hiện ra ngay...).
+> 5. Nộp file ảnh chụp lên [Thư mục Google Drive tiếp nhận của lớp](https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing).
+> 6. Tại bài tập trên LMS, điền số lượng video trùng khớp và cảm nghĩ ngắn rồi bấm "Nộp bài tập lên LMS".
 
 ---
 
-### 2. CẤU HÌNH KỸ THUẬT NỘP BÀI TRÊN LMS
-* **Hình thức nộp bài:** File submissions (Nộp tệp ảnh chụp màn hình YouTube lên LMS).
-* **Định dạng file cho phép:** `.png`, `.jpg`, `.jpeg`.
-* **Số tệp tối đa:** 01 - 02 tệp (dung lượng tối đa 15 MB).
-* **Điều kiện hoàn thành (Activity Completion):** Học sinh phải nộp bài tập (Student must submit to this activity to complete it).
+### 2. CẤU HÌNH KỸ THUẬT NỘP BÀI TRÊN LMS & GOOGLE DRIVE
+* **Nơi tiếp nhận file ảnh minh chứng:** [Thư mục Google Drive của lớp](https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing).
+* **Hình thức nộp bài trên LMS:** Online text (Ghi nhận số lượng video trùng khớp & cảm nghĩ) kết hợp nộp file ảnh lên Google Drive.
+* **Điều kiện hoàn thành (Activity Completion):** Học sinh hoàn thành và bấm nộp bài tập (Student must submit to this activity to complete it).
 * **Hạn chế truy cập (Restrict Access):** Không có (mở sẵn cho học sinh khi bắt đầu tiết học).
 
 ---

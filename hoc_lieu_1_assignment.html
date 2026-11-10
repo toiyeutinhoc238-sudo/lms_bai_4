@@ -16,6 +16,7 @@
       --success-light: #ecfdf5;
       --warning: #f59e0b;
       --danger: #ef4444;
+      --drive-blue: #0284c7;
       --card-bg: #ffffff;
       --text: #0f172a;
       --text-muted: #64748b;
@@ -98,6 +99,91 @@
       margin-bottom: 6px;
     }
 
+    /* Google Drive Submission Card */
+    .drive-submit-box {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1.5px solid #bae6fd;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .drive-submit-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .drive-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .drive-icon {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .drive-title {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #0369a1;
+    }
+
+    .drive-btn {
+      background: #0284c7;
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 10px 18px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.25);
+    }
+
+    .drive-btn:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+    }
+
+    .check-drive-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #bae6fd;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0369a1;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .check-drive-wrap input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #0284c7;
+      cursor: pointer;
+    }
+
     /* Form Fields */
     .form-group {
       margin-bottom: 18px;
@@ -152,131 +238,6 @@
       border: 1px solid #c7d2fe;
       min-width: 120px;
       text-align: center;
-    }
-
-    /* Upload Area */
-    .upload-container {
-      border: 2px dashed #94a3b8;
-      border-radius: 14px;
-      padding: 24px;
-      text-align: center;
-      background: #f8fafc;
-      transition: all 0.2s;
-      margin-bottom: 18px;
-      position: relative;
-    }
-
-    .upload-container.dragover {
-      border-color: var(--primary);
-      background: #eff6ff;
-    }
-
-    .upload-icon {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
-    }
-
-    .file-input-hidden {
-      display: none;
-    }
-
-    .upload-actions {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn-file-select {
-      background: white;
-      border: 1.5px solid #cbd5e1;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      cursor: pointer;
-      color: #334155;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
-    }
-
-    .btn-file-select:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: #f8fafc;
-    }
-
-    .btn-demo-file {
-      background: #f1f5f9;
-      border: 1.5px solid #cbd5e1;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      cursor: pointer;
-      color: #475569;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
-    }
-
-    .btn-demo-file:hover {
-      background: #e2e8f0;
-    }
-
-    /* Preview card when file attached */
-    .file-preview {
-      display: none;
-      align-items: center;
-      justify-content: space-between;
-      background: #ffffff;
-      border: 1.5px solid #10b981;
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin-top: 12px;
-      text-align: left;
-    }
-
-    .preview-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .preview-thumb {
-      width: 48px;
-      height: 48px;
-      border-radius: 6px;
-      object-fit: cover;
-      border: 1px solid #cbd5e1;
-    }
-
-    .preview-details {
-      font-size: 0.85rem;
-    }
-
-    .preview-name {
-      font-weight: 700;
-      color: #0f172a;
-    }
-
-    .preview-size {
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    .btn-remove-file {
-      background: none;
-      border: none;
-      color: var(--danger);
-      font-weight: 700;
-      font-size: 0.85rem;
-      cursor: pointer;
-      padding: 4px 8px;
     }
 
     /* Submit Button */
@@ -381,6 +342,26 @@
       background: var(--primary-hover);
     }
 
+    .btn-view-drive {
+      background: #f0f9ff;
+      border: 1.5px solid #0284c7;
+      color: #0284c7;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-view-drive:hover {
+      background: #e0f2fe;
+    }
+
     #confettiCanvas {
       position: fixed;
       top: 0;
@@ -401,51 +382,46 @@
   <h2>Bài tập nộp file: Trải nghiệm "Trang chủ YouTube của em"</h2>
   <p class="subtitle">Khám phá mức độ cá nhân hóa và khả năng "đọc vị sở thích" của thuật toán gợi ý video YouTube.</p>
 
-  <!-- Hướng dẫn nhiệm vụ học sinh chuẩn KHBD -->
+  <!-- Hướng dẫn nhiệm vụ học sinh -->
   <div class="instruction-box">
     <strong>📋 Hướng dẫn nhiệm vụ học sinh:</strong>
     <ol>
       <li>Mở ứng dụng hoặc trang web <b>YouTube</b> trên máy tính hoặc điện thoại của em (tài khoản cá nhân em thường dùng).</li>
       <li>Quan sát kỹ <b>10 video đầu tiên</b> xuất hiện trên trang chủ.</li>
       <li>Đếm xem có bao nhiêu video trùng khớp hoặc có liên quan đến các chủ đề em vừa xem/tìm kiếm gần đây và ghi chú vào <b>Sách học sinh (Mục I - Khởi động)</b>.</li>
-      <li><b>Chụp ảnh màn hình</b> trang chủ YouTube và tải lên bài tập này.</li>
+      <li><b>Chụp ảnh màn hình</b> và tải lên Thư mục Google Drive tiếp nhận của lớp theo liên kết bên dưới.</li>
       <li>Điền số lượng video trùng khớp và cảm nghĩ ngắn vào ô bên dưới.</li>
     </ol>
   </div>
 
-  <!-- Khu vực đính kèm ảnh chụp màn hình -->
-  <div class="form-group">
-    <label>Ảnh chụp màn hình 10 video trang chủ YouTube của em: <span style="color: var(--danger)">*</span></label>
-    
-    <div class="upload-container" id="dropZone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
-      <input type="file" id="fileInput" class="file-input-hidden" accept="image/*,.png,.jpg,.jpeg,.pdf" onchange="handleFileChosen(event)">
-      <div class="upload-icon">📸</div>
-      <div id="uploadPrompt" style="font-weight: 700; color: #1e293b; font-size: 0.95rem;">
-        Kéo thả ảnh chụp màn hình vào đây, hoặc chọn phương thức bên dưới
-      </div>
-      <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">Định dạng: .PNG, .JPG, .JPEG (Dung lượng tối đa: 15 MB)</div>
-
-      <div class="upload-actions">
-        <button type="button" class="btn-file-select" onclick="triggerFileInput()">
-          📁 Chọn tệp từ máy / điện thoại
-        </button>
-        <button type="button" class="btn-demo-file" onclick="useDemoFile()">
-          ✨ Dùng ảnh chụp mẫu (Demo nhanh)
-        </button>
-      </div>
-
-      <!-- Preview container -->
-      <div class="file-preview" id="filePreview">
-        <div class="preview-info">
-          <img id="previewImg" class="preview-thumb" src="" alt="Minh chứng">
-          <div class="preview-details">
-            <div class="preview-name" id="previewFileName">Screenshot_YouTube.png</div>
-            <div class="preview-size" id="previewFileSize">2.4 MB • Đã sẵn sàng nộp</div>
-          </div>
+  <!-- Nộp file lên Google Drive của lớp -->
+  <div class="drive-submit-box">
+    <div class="drive-submit-header">
+      <div class="drive-title-wrap">
+        <div class="drive-icon">
+          <svg width="22" height="22" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+            <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+            <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" fill="#00ac47"/>
+            <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.5l5.85 10.15z" fill="#ea4335"/>
+            <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+            <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+            <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+          </svg>
         </div>
-        <button type="button" class="btn-remove-file" onclick="removeAttachedFile()">✕ Bỏ chọn</button>
+        <div>
+          <div class="drive-title">Thư mục Google Drive tiếp nhận bài nộp của lớp</div>
+          <div style="font-size: 0.8rem; color: #0284c7;">Nơi lưu trữ ảnh chụp màn hình 10 video YouTube của em</div>
+        </div>
       </div>
+      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="drive-btn">
+        <span>📂 Mở Thư mục Google Drive nộp ảnh</span> ↗
+      </a>
     </div>
+
+    <label class="check-drive-wrap">
+      <input type="checkbox" id="chkDriveDone" checked>
+      <span>✅ Em đã mở Thư mục Drive và tải ảnh chụp màn hình YouTube lên lớp</span>
+    </label>
   </div>
 
   <!-- Câu hỏi 1: Số lượng video trùng khớp -->
@@ -461,7 +437,7 @@
   <!-- Câu hỏi 2: Cảm nghĩ ngắn -->
   <div class="form-group">
     <label for="inpThoughts">2. Cảm nghĩ ngắn của em khi thấy các video YouTube đề xuất: <span style="color: var(--danger)">*</span></label>
-    <textarea id="inpThoughts" class="form-control" rows="3" placeholder="Nhập cảm nghĩ của em (Ví dụ: Em rất ngạc nhiên vì YouTube đề xuất đúng các video ôn tập Tin học và Minecraft em vừa tìm tối qua. Thuật toán nắm bắt sở thích người dùng cực kỳ nhanh...)"></textarea>
+    <textarea id="inpThoughts" class="form-control" rows="3" placeholder="Nhập cảm nghĩ của em (Ví dụ: Em rất ngạc nhiên vì YouTube đề xuất đúng các video ôn tập Tin học và Minecraft em vừa tìm tối qua. Thuật toán nắm bắt sở thích người dùng cực kỳ nhanh...)">Em thấy 8/10 video trên trang chủ YouTube của em đều đúng các kênh khoa học, game và bài hát em mới tìm hôm qua. Em thấy thuật toán ghi nhớ rất nhanh và chính xác!</textarea>
     <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
       💡 Gợi ý: Em cảm thấy tiện lợi hay có một chút lo lắng khi thuật toán biết rõ mọi sở thích của mình?
     </div>
@@ -494,13 +470,14 @@
       <button class="btn-next-act" onclick="proceedToActivity2()">
         <span>Tiến vào Hoạt động 2: Trò chơi mô phỏng thuật toán AI</span> ➡️
       </button>
+      <a href="https://drive.google.com/drive/folders/1RA1o9JvlDXp3BnDLokHaDFk0aG4DcCX-?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-view-drive">
+        <span>📁 Xem lại Thư mục Google Drive bài nộp</span> ↗
+      </a>
     </div>
   </div>
 </div>
 
 <script>
-  let attachedFile = null;
-
   // Web Audio Synthesizer
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
   let audioCtx = null;
@@ -562,88 +539,15 @@
     document.getElementById('badgeMatch').innerText = `${val}/10 video (${pct}%)`;
   }
 
-  // File Handling
-  function triggerFileInput() {
-    document.getElementById('fileInput').click();
-  }
-
-  function handleFileChosen(event) {
-    const file = event.target.files[0];
-    if (file) {
-      processSelectedFile(file);
-    }
-  }
-
-  function processSelectedFile(file) {
-    attachedFile = {
-      name: file.name,
-      size: (file.size / (1024 * 1024)).toFixed(2) + ' MB',
-      isDemo: false
-    };
-
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      showFilePreview(file.name, attachedFile.size, e.target.result);
-    };
-    reader.readAsDataURL(file);
-  }
-
-  function useDemoFile() {
-    attachedFile = {
-      name: "MinhChung_YouTube_Home_Nam12Tuoi.png",
-      size: "2.85 MB",
-      isDemo: true
-    };
-    const demoSvg = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='%23e0e7ff'%3E%3Crect width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' fill='%234338ca' font-size='16' text-anchor='middle' dominant-baseline='middle'%3EYoutube+Demo%3C/text%3E%3C/svg%3E";
-    showFilePreview(attachedFile.name, attachedFile.size, demoSvg);
-
-    if (!document.getElementById('inpThoughts').value) {
-      document.getElementById('inpThoughts').value = "Em thấy 8/10 video trên trang chủ YouTube của em đều đúng các kênh khoa học, game và bài hát em mới tìm hôm qua. Em thấy thuật toán ghi nhớ rất nhanh và chính xác!";
-    }
-  }
-
-  function showFilePreview(fileName, fileSize, imgSrc) {
-    document.getElementById('uploadPrompt').style.display = 'none';
-    document.getElementById('filePreview').style.display = 'flex';
-    document.getElementById('previewFileName').innerText = fileName;
-    document.getElementById('previewFileSize').innerText = `${fileSize} • Đã sẵn sàng nộp`;
-    document.getElementById('previewImg').src = imgSrc;
-  }
-
-  function removeAttachedFile() {
-    attachedFile = null;
-    document.getElementById('fileInput').value = '';
-    document.getElementById('filePreview').style.display = 'none';
-    document.getElementById('uploadPrompt').style.display = 'block';
-  }
-
-  // Drag and Drop
-  function handleDragOver(e) {
-    e.preventDefault();
-    document.getElementById('dropZone').classList.add('dragover');
-  }
-
-  function handleDragLeave(e) {
-    e.preventDefault();
-    document.getElementById('dropZone').classList.remove('dragover');
-  }
-
-  function handleDrop(e) {
-    e.preventDefault();
-    document.getElementById('dropZone').classList.remove('dragover');
-    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      processSelectedFile(e.dataTransfer.files[0]);
-    }
-  }
-
   // Submit Handler
   function submitWork() {
     const count = document.getElementById('inpCount').value;
     const thoughts = document.getElementById('inpThoughts').value.trim();
+    const isDriveChecked = document.getElementById('chkDriveDone').checked;
 
-    if (!attachedFile) {
+    if (!isDriveChecked) {
       playSound('error');
-      alert("Em hãy đính kèm ảnh chụp màn hình 10 video trang chủ YouTube nhé!");
+      alert("Em hãy mở Thư mục Google Drive để nộp ảnh minh chứng, sau đó tích chọn xác nhận nhé!");
       return;
     }
 
@@ -666,7 +570,7 @@
 
     // Build Receipt
     const receiptHtml = `
-      <div class="receipt-row"><span>📎 Tệp minh chứng:</span> <strong>${escapeHtml(attachedFile.name)} (${attachedFile.size})</strong></div>
+      <div class="receipt-row"><span>📁 Nơi nộp minh chứng:</span> <strong>Thư mục Google Drive của lớp</strong></div>
       <div class="receipt-row"><span>🎯 Tỉ lệ trùng khớp:</span> <strong>${count}/10 video (${count * 10}%)</strong></div>
       <div class="receipt-row"><span>📝 Ghi chú Sách học sinh:</span> <strong>Đã hoàn thành Mục I</strong></div>
       <div style="margin-top: 10px; font-style: italic; color: #475569; font-size: 0.86rem;">💬 Cảm nghĩ: "${escapeHtml(thoughts)}"</div>
@@ -682,7 +586,7 @@
         activityId: 1,
         matchedCount: count,
         thoughts: thoughts,
-        fileName: attachedFile ? attachedFile.name : null
+        submissionMode: 'GoogleDrive'
       }, '*');
     }
   }
